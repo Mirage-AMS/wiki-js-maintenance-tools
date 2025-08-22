@@ -332,9 +332,14 @@ class WikiJSGraphQLClient:
 
         return None
 
-    def update_page(self, page_id: int, title: Optional[str] = None, path: Optional[str] = None,
-                    content: Optional[str] = None, is_published: Optional[bool] = None,
-                    editor: Optional[str] = None, tags: Optional[List[str]] = None) -> Optional[Dict]:
+    def update_page(self, page_id: int,
+                    title: Optional[str] = None,
+                    path: Optional[str] = None,
+                    content: Optional[str] = None,
+                    editor: Optional[str] = None,
+                    tags: Optional[List[str]] = None,
+                    locale: Optional[str] = None,  # 新增参数
+                    description: Optional[str] = None) -> Optional[Dict]:  # 新增参数
         """
         更新现有页面
 
@@ -342,51 +347,71 @@ class WikiJSGraphQLClient:
         :param title: 新标题，可选
         :param path: 新路径，可选
         :param content: 新内容，可选
-        :param is_published: 是否发布，可选
         :param editor: 编辑器类型，可选
         :param tags: 标签列表，可选
+        :param locale: 语言区域，可选
+        :param description: 页面描述，可选
         :return: 更新后的页面信息，出错时返回None
         """
-        # 构建要更新的字段字典
-        page_data = {}
-        if title is not None:
-            page_data["title"] = title
-        if path is not None:
-            page_data["path"] = path
-        if content is not None:
-            page_data["content"] = content
-        if is_published is not None:
-            page_data["isPublished"] = is_published
-        if editor is not None:
-            page_data["editor"] = editor
-        if tags is not None:
-            page_data["tags"] = tags
-
-        if not page_data:
-            print("没有提供要更新的字段")
-            return None
 
         query = """
-        mutation updatePage($id: Int!, $page: PageUpdateInput!) {
+        mutation updatePage(
+            $id: Int!,
+            $locale: String,
+            $path: String,
+            $description: String,
+            $editor: String,
+            $title: String,
+            $content: String,
+            $tags: [String]
+        ) {
             pages {
-                update(id: $id, page: $page) {
-                    id
-                    path
-                    title
-                    isPublished
-                    updatedAt
+                update(
+                    id: $id, 
+                    locale: $locale,
+                    path: $path,
+                    description: $description,
+                    editor: $editor,
+                    title: $title,
+                    content: $content,
+                    tags: $tags
+                ) {
+                    responseResult {
+                        succeeded
+                        errorCode
+                        slug
+                        message
+                    }
+                    page {
+                        id
+                    }
                 }
             }
         }
         """
 
-        variables = {
-            "id": page_id,
-            "page": page_data
-        }
+        variables: Dict[str, Any] = {"id": page_id}
 
+        # 动态添加非None的可选参数
+        if title is not None:
+            variables["title"] = title
+        if path is not None:
+            variables["path"] = path
+        if content is not None:
+            variables["content"] = content
+        if editor is not None:
+            variables["editor"] = editor
+        if tags is not None:
+            variables["tags"] = tags
+        if locale is not None:
+            variables["locale"] = locale
+        if description is not None:
+            variables["description"] = description
+
+        # 发送请求
         response = self.graphql_request(query, variables)
 
+        # 处理响应
         if response and "data" in response and "pages" in response["data"]:
             return response["data"]["pages"]["update"]
 
@@ -480,25 +505,38 @@ if __name__ == "__main__":
     # print(page_info)
 
     # 创建新页面示例
-    new_page = wiki_client.create_page(
-        title="新API测试页面",
-        description="这是一个通过API创建的新页面",
-        locale="zh",
-        path="api-test-page-3",
-        content="# 这是一个测试页面\n\n通过API创建的示例页面",
-        tags=["api", "test"]
-    )
-    if new_page:
-        create_result = new_page["responseResult"]
-        page_info = new_page["page"]
-        if create_result.get("succeeded", False):
-            print(f"创建成功: {page_info.get('id', -1)}")
-        else:
-            print(f"创建失败: {create_result.get('message')}")
+    # new_page = wiki_client.create_page(
+    #     title="新API测试页面",
+    #     description="这是一个通过API创建的新页面",
+    #     locale="zh",
+    #     path="api-test-page-3",
+    #     content="# 这是一个测试页面\n\n通过API创建的示例页面",
+    #     tags=["api", "test"]
+    # )
+    # if new_page:
+    #     create_result = new_page["responseResult"]
+    #     page_info = new_page["page"]
+    #     if create_result.get("succeeded", False):
+    #         print(f"创建成功: {page_info.get('id', -1)}")
+    #     else:
+    #         print(f"创建失败: {create_result.get('message')}")
 
     # 获取页面详情示例
-    # if pages and len(pages) > 0:
-    #     page_details = wiki_client.get_page(pages[0]['id'])
-    #     if page_details:
-    #         print(f"\n页面详情: {page_details['title']}")
-    #         print(f"内容预览: {page_details['content'][:100]}...")
+    page_info = wiki_client.get_page(page_id=6)
+    print(page_info)
+    resp = wiki_client.update_page(
+        page_id=3,
+        title="更新后的API测试页面",
+        description="这是一个通过API更新的页面",
+        locale="zh",
+        content="# 这是一个测试页面\n\n通过API更新的示例页面",
+        tags=["api", "test", "updated"],
+    )
+
+    if resp:
+        resp_result = resp["responseResult"]
+        page_info = resp["page"]
+        if resp_result.get("succeeded", False):
+            print(f"创建成功: {page_info.get('id', -1)}")
+        else:
+            print(f"创建失败: {resp_result.get('message')}")
