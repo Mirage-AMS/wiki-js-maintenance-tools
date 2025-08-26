@@ -1,0 +1,20 @@
+{
+  "children": {
+    "accessory": {
+      "index": "content.json"
+    },
+    "exploration": {
+      "index": "content.json"
+    },
+    "intelligence": {
+      "index": "content.json",
+      "template": "../../templates/card_intelligence_template.html"
+    },
+    "role": {
+      "index": "content.json"
+    },
+    "trading": {
+      "index": "content.json"
+    }
+  }
+}

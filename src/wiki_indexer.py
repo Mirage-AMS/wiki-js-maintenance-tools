@@ -152,7 +152,7 @@ if __name__ == "__main__":
             content = doc.render()
             # 这里可以添加上传到Wiki.js的代码
             # 示例：仅打印前100个字符
-            print(f"渲染结果:\n{content[:100]}")
+            print(f"渲染结果:\n{content[:300]}")
         except Exception as e:
             print(f"渲染失败: {str(e)}")
 
