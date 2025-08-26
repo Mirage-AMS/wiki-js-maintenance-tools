@@ -1,0 +1,10 @@
+{
+  "children": {
+    "accessory": {
+      "index": "card_accessory.json"
+    },
+    "intelligence": {
+      "index": "card_intelligence.json"
+    }
+  }
+}

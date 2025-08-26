@@ -1,0 +1,13 @@
+{
+  "template": "templates/main_template.md",
+  "children": {
+    "rule": {
+      "index": "rule.json",
+      "template": "../templates/rule_template.md"
+    },
+    "card": {
+      "index": "card.json",
+      "template": "../templates/card_template.md"
+    }
+  }
+}

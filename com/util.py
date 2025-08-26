@@ -29,8 +29,8 @@ class PathUtil(metaclass=SingletonType):
     def getSrcDir(self) -> Path:
         return self.rootPath / "src"
 
-    def getDocDir(self) -> Path:
-        return self.rootPath / "doc"
+    def getDataDir(self) -> Path:
+        return self.rootPath / "data"
 
     def getModelsDir(self) -> Path:
         return self.rootPath / "models"

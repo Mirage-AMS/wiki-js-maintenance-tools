@@ -1,0 +1,10 @@
+{
+  "children": {
+    "chap_01": {
+      "data": "chap_01_introduction.md"
+    },
+    "chap_02": {
+      "data": "chap_02_setup.md"
+    }
+  }
+}
