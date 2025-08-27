@@ -1,0 +1,50 @@
+{
+    "path": "zh/card/intelligence/card_dlc01_co_29",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "元素洪流",
+        "card_level": "低级",
+        "card_resource_type": "事件",
+        "card_resource_tag_1": null,
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 1,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<n02> \n<n00>选以下1个效果发动，\n<n00><无措> · 临时获得${eC01}${eC01}\n<n00><调养> · 重置最多4个已消耗的元素\n<n00><充实> · 永久获得1个基础元素（${eE01}·${eW01}·${eF01}·${eA01}）\n<n24> ",
+        "card_info_description": "<n02>“你感受到一股元素洪流在心中涌动” ",
+        "card_picture_path": "dlc01_element_tide.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": "EVENT_REQ",
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_conventicle_dlc01_29.jpg",
+        "card_attribute": "低级 / 事件",
+        "card_tag": "",
+        "effects": [
+            {
+                "name": "未知",
+                "type": "未知",
+                "type_color": "gray-100",
+                "type_text_color": "gray-700",
+                "location": null,
+                "consumption": null,
+                "text": "<无措> · 临时获得${eC01}${eC01}<br><调养> · 重置最多4个已消耗的元素<br><充实> · 永久获得1个基础元素（${eE01}·${eW01}·${eF01}·${eA01}）"
+            }
+        ]
+    }
+}

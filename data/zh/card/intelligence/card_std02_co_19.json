@@ -1,0 +1,51 @@
+{
+    "path": "zh/card/intelligence/card_std02_co_19",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "扭转乾坤",
+        "card_level": "中级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "法术",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 1,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>解锁：${eW01}${eF01}${eR02} \n<b00>快速 / ${eW01}或${eF01} / 扭转\n<n02>${tR02}，你的回合中，骰子点数结算前：选最多2个骰子重骰",
+        "card_info_description": null,
+        "card_picture_path": "retrieve_all.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_conventicle_std_49.jpg",
+        "card_attribute": "中级 / 情报 / 法术",
+        "card_tag": "法术",
+        "unlock": "${eW01}${eF01}${eR02}",
+        "effects": [
+            {
+                "name": "扭转",
+                "type": "快速",
+                "type_color": "red-100",
+                "type_text_color": "red-700",
+                "location": null,
+                "consumption": "${eW01}或${eF01}",
+                "text": "${tR02}，你的回合中，骰子点数结算前：选最多2个骰子重骰"
+            }
+        ]
+    }
+}

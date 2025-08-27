@@ -1,0 +1,50 @@
+{
+    "path": "zh/card/trading/card_std01_ma_12",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "黄金",
+        "card_level": "中级",
+        "card_resource_type": "矿物",
+        "card_resource_tag_1": null,
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 7,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": 1,
+        "card_element_num_water": null,
+        "card_element_num_fire": 1,
+        "card_element_num_air": 1,
+        "card_info_effect": "<n02>  \n<b00>快速（背包） / 吸金\n<n02>${tR01}，你的开始阶段时：你获得${aP01}",
+        "card_info_description": null,
+        "card_picture_path": "gold.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": "SALE_HALF_PRICE",
+        "card_info_element_tooltip": null,
+        "card_element_mark": "${eE01}${eF01}${eA01}",
+        "card_image_url": "./image/deck_market_std_12.jpg",
+        "card_attribute": "中级 / 矿物",
+        "card_tag": "",
+        "effects": [
+            {
+                "name": "吸金",
+                "type": "快速",
+                "type_color": "red-100",
+                "type_text_color": "red-700",
+                "location": "背包",
+                "consumption": null,
+                "text": "${tR01}，你的开始阶段时：你获得${aP01}"
+            }
+        ]
+    }
+}

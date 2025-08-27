@@ -1,0 +1,50 @@
+{
+    "path": "zh/card/exploration/card_std01_fo_25",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "翡翠",
+        "card_level": "高级",
+        "card_resource_type": "矿物",
+        "card_resource_tag_1": null,
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 8,
+        "card_hp": 8,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": 1,
+        "card_element_num_fire": 1,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>永久（探索区） / 闪耀\n<n02>只在你明置该资源时，额外明置相邻栏位的1张卡牌\n<n02> <n02> <n02> <n20> ",
+        "card_info_description": "<n02>掩映绿叶丛中，日光所及，熠熠生辉          ",
+        "card_picture_path": "emerald.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "${eW01}${eF01}",
+        "card_image_url": "./image/deck_forest_std_16.jpg",
+        "card_attribute": "高级 / 矿物",
+        "card_tag": "",
+        "effects": [
+            {
+                "name": "闪耀",
+                "type": "永久",
+                "type_color": "blue-100",
+                "type_text_color": "blue-700",
+                "location": "探索区",
+                "consumption": null,
+                "text": "只在你明置该资源时，额外明置相邻栏位的1张卡牌"
+            }
+        ]
+    }
+}

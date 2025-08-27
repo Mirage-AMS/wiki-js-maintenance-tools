@@ -147,12 +147,24 @@ if __name__ == "__main__":
     print(f"找到 {len(documents)} 个资料文件")
 
     for doc in documents:
+        if "card" not in doc.name:
+            continue
         print(f"\n渲染资料: {doc.name}")
         try:
             content = doc.render()
             # 这里可以添加上传到Wiki.js的代码
             # 示例：仅打印前100个字符
-            print(f"渲染结果:\n{content[:300]}")
+            print(f"渲染结果:\n{content[:100]}")
+            doc_path = doc.path / doc.data_file
+            template_file_suffix = doc.template.template_path.suffix
+            rel_path = doc_path.relative_to(pathUtil.getDataDir())
+            tmp_path = pathUtil.getTmpDir() / rel_path
+            tmp_path.parent.mkdir(parents=True, exist_ok=True)
+            target_file = tmp_path.with_suffix(template_file_suffix)
+            print(target_file)
+            with open(target_file, 'w', encoding='utf-8') as f:
+                f.write(content)
+
         except Exception as e:
             print(f"渲染失败: {str(e)}")
 

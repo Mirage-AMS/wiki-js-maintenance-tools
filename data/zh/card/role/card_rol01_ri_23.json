@@ -1,0 +1,51 @@
+{
+    "path": "zh/card/role/card_rol01_ri_23",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "圣泉赐福",
+        "card_level": "低级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": "法术",
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b01>解锁：${eW01}${eR01}\n<b01>启动 / ${eW01} / 赐福\n<n03>${tR01}，你的准备阶段中：移除被消耗的${eW01}，你获得1个【赐福圣水】（低级/造物，无价值，不能废除，启动/移除该造物，你永久获得${eW01}）<n16> ",
+        "card_info_description": "<n02>泉水成为祝福的媒介 ",
+        "card_picture_path": "phyllis_spring.png",
+        "card_inner_base_path": "base_inner_role_phyllis.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_role_info01_23.jpg",
+        "card_attribute": "低级 / 情报 / 专属 · 法术",
+        "card_tag": "专属 · 法术",
+        "unlock": "${eW01}${eR01}",
+        "effects": [
+            {
+                "name": "赐福",
+                "type": "启动",
+                "type_color": "yellow-100",
+                "type_text_color": "yellow-700",
+                "location": null,
+                "consumption": "${eW01}",
+                "text": "${tR01}，你的准备阶段中：移除被消耗的${eW01}，你获得1个【赐福圣水】（低级/造物，无价值，不能废除，启动/移除该造物，你永久获得${eW01}）"
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "path": "zh/card/role/card_rol01_ri_03",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "卓越战技：诱敌深入",
+        "card_level": "低级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": "技能",
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>解锁：${aP03}\n<b00>启动 / 诱敌\n<n02>${tR01}：本回合你受到的下次伤害-2\n<n02> <n02> <n02> <n20> ",
+        "card_info_description": "<n02>千回百转，诱敌深入 ",
+        "card_picture_path": "warrior_dodge.png",
+        "card_inner_base_path": "base_inner_role_warrior.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_role_info01_03.jpg",
+        "card_attribute": "低级 / 情报 / 专属 · 技能",
+        "card_tag": "专属 · 技能",
+        "unlock": "${aP03}",
+        "effects": [
+            {
+                "name": "诱敌",
+                "type": "启动",
+                "type_color": "yellow-100",
+                "type_text_color": "yellow-700",
+                "location": null,
+                "consumption": null,
+                "text": "${tR01}：本回合你受到的下次伤害-2"
+            }
+        ]
+    }
+}

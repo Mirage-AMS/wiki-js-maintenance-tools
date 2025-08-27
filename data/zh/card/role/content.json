@@ -1,0 +1,85 @@
+{
+    "children": {
+        "card_rol01_ac_01": {
+            "data": "card_rol01_ac_01.json"
+        },
+        "card_rol01_ri_01": {
+            "data": "card_rol01_ri_01.json"
+        },
+        "card_rol01_ri_02": {
+            "data": "card_rol01_ri_02.json"
+        },
+        "card_rol01_ri_03": {
+            "data": "card_rol01_ri_03.json"
+        },
+        "card_rol01_ri_04": {
+            "data": "card_rol01_ri_04.json"
+        },
+        "card_rol01_ri_05": {
+            "data": "card_rol01_ri_05.json"
+        },
+        "card_rol01_ri_06": {
+            "data": "card_rol01_ri_06.json"
+        },
+        "card_rol01_ri_07": {
+            "data": "card_rol01_ri_07.json"
+        },
+        "card_rol01_ri_08": {
+            "data": "card_rol01_ri_08.json"
+        },
+        "card_rol01_ri_09": {
+            "data": "card_rol01_ri_09.json"
+        },
+        "card_rol01_ri_10": {
+            "data": "card_rol01_ri_10.json"
+        },
+        "card_rol01_ri_11": {
+            "data": "card_rol01_ri_11.json"
+        },
+        "card_rol01_ri_12": {
+            "data": "card_rol01_ri_12.json"
+        },
+        "card_rol01_ri_13": {
+            "data": "card_rol01_ri_13.json"
+        },
+        "card_rol01_ri_14": {
+            "data": "card_rol01_ri_14.json"
+        },
+        "card_rol01_ri_15": {
+            "data": "card_rol01_ri_15.json"
+        },
+        "card_rol01_ri_16": {
+            "data": "card_rol01_ri_16.json"
+        },
+        "card_rol01_ri_17": {
+            "data": "card_rol01_ri_17.json"
+        },
+        "card_rol01_ri_18": {
+            "data": "card_rol01_ri_18.json"
+        },
+        "card_rol01_ri_19": {
+            "data": "card_rol01_ri_19.json"
+        },
+        "card_rol01_ri_20": {
+            "data": "card_rol01_ri_20.json"
+        },
+        "card_rol01_ri_21": {
+            "data": "card_rol01_ri_21.json"
+        },
+        "card_rol01_ri_22": {
+            "data": "card_rol01_ri_22.json"
+        },
+        "card_rol01_ri_23": {
+            "data": "card_rol01_ri_23.json"
+        },
+        "card_rol01_ri_24": {
+            "data": "card_rol01_ri_24.json"
+        },
+        "card_rol02_ac_02": {
+            "data": "card_rol02_ac_02.json"
+        },
+        "card_rol02_ac_03": {
+            "data": "card_rol02_ac_03.json"
+        }
+    }
+}

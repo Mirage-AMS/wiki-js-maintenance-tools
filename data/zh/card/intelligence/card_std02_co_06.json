@@ -1,0 +1,51 @@
+{
+    "path": "zh/card/intelligence/card_std02_co_06",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "一千零一夜",
+        "card_level": "高级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "造物",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 2,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>解锁：中级以上情报×2+任意情报×2\n<b00>快速 / 旧事\n<n02>${tR01}，你的回合中：选1个素材，直到本轮结束前该造物获得其记述的所有效果\n<n02> <n02> <n20> ",
+        "card_info_description": "<n02>见未见之城邦，闻未闻之故事 ",
+        "card_picture_path": "spell_book.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_conventicle_std_36.jpg",
+        "card_attribute": "高级 / 情报 / 造物",
+        "card_tag": "造物",
+        "unlock": "中级以上情报×2+任意情报×2",
+        "effects": [
+            {
+                "name": "旧事",
+                "type": "快速",
+                "type_color": "red-100",
+                "type_text_color": "red-700",
+                "location": null,
+                "consumption": null,
+                "text": "${tR01}，你的回合中：选1个素材，直到本轮结束前该造物获得其记述的所有效果"
+            }
+        ]
+    }
+}

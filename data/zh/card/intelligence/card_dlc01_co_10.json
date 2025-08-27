@@ -1,0 +1,60 @@
+{
+    "path": "zh/card/intelligence/card_dlc01_co_10",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "智慧树",
+        "card_level": "低级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "造物",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 1,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b02>解锁：含${eE01}植物\n<b02>启动 / 生长\n<n04>${tR01}：弃置探索区·交易区任意1张卡牌，为该造物累积1个慧树标记\n<n32> \n<b02>启动 / 收获\n<n04>根据该造物累积的慧树标记的数目获得金币，那之后移除该造物",
+        "card_info_description": null,
+        "card_picture_path": "dlc01_wisdom_tree.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_conventicle_dlc01_10.jpg",
+        "card_attribute": "低级 / 情报 / 造物",
+        "card_tag": "造物",
+        "unlock": "含${eE01}植物",
+        "effects": [
+            {
+                "name": "生长",
+                "type": "启动",
+                "type_color": "yellow-100",
+                "type_text_color": "yellow-700",
+                "location": null,
+                "consumption": null,
+                "text": "${tR01}：弃置探索区·交易区任意1张卡牌，为该造物累积1个慧树标记"
+            },
+            {
+                "name": "收获",
+                "type": "启动",
+                "type_color": "yellow-100",
+                "type_text_color": "yellow-700",
+                "location": null,
+                "consumption": null,
+                "text": "根据该造物累积的慧树标记的数目获得金币，那之后移除该造物"
+            }
+        ]
+    }
+}

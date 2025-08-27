@@ -1,0 +1,139 @@
+{
+    "children": {
+        "card_dlc01_ma_01": {
+            "data": "card_dlc01_ma_01.json"
+        },
+        "card_dlc01_ma_02": {
+            "data": "card_dlc01_ma_02.json"
+        },
+        "card_dlc01_ma_03": {
+            "data": "card_dlc01_ma_03.json"
+        },
+        "card_dlc01_ma_04": {
+            "data": "card_dlc01_ma_04.json"
+        },
+        "card_dlc01_ma_05": {
+            "data": "card_dlc01_ma_05.json"
+        },
+        "card_dlc01_ma_06": {
+            "data": "card_dlc01_ma_06.json"
+        },
+        "card_dlc01_ma_07": {
+            "data": "card_dlc01_ma_07.json"
+        },
+        "card_dlc01_ma_08": {
+            "data": "card_dlc01_ma_08.json"
+        },
+        "card_dlc01_ma_09": {
+            "data": "card_dlc01_ma_09.json"
+        },
+        "card_dlc01_ma_10": {
+            "data": "card_dlc01_ma_10.json"
+        },
+        "card_dlc01_ma_11": {
+            "data": "card_dlc01_ma_11.json"
+        },
+        "card_dlc01_ma_12": {
+            "data": "card_dlc01_ma_12.json"
+        },
+        "card_dlc01_ma_13": {
+            "data": "card_dlc01_ma_13.json"
+        },
+        "card_dlc01_ma_14": {
+            "data": "card_dlc01_ma_14.json"
+        },
+        "card_dlc01_ma_15": {
+            "data": "card_dlc01_ma_15.json"
+        },
+        "card_std01_ma_01": {
+            "data": "card_std01_ma_01.json"
+        },
+        "card_std01_ma_02": {
+            "data": "card_std01_ma_02.json"
+        },
+        "card_std01_ma_03": {
+            "data": "card_std01_ma_03.json"
+        },
+        "card_std01_ma_04": {
+            "data": "card_std01_ma_04.json"
+        },
+        "card_std01_ma_05": {
+            "data": "card_std01_ma_05.json"
+        },
+        "card_std01_ma_06": {
+            "data": "card_std01_ma_06.json"
+        },
+        "card_std01_ma_07": {
+            "data": "card_std01_ma_07.json"
+        },
+        "card_std01_ma_08": {
+            "data": "card_std01_ma_08.json"
+        },
+        "card_std01_ma_09": {
+            "data": "card_std01_ma_09.json"
+        },
+        "card_std01_ma_10": {
+            "data": "card_std01_ma_10.json"
+        },
+        "card_std01_ma_11": {
+            "data": "card_std01_ma_11.json"
+        },
+        "card_std01_ma_12": {
+            "data": "card_std01_ma_12.json"
+        },
+        "card_std01_ma_13": {
+            "data": "card_std01_ma_13.json"
+        },
+        "card_std01_ma_14": {
+            "data": "card_std01_ma_14.json"
+        },
+        "card_std01_ma_15": {
+            "data": "card_std01_ma_15.json"
+        },
+        "card_std01_ma_16": {
+            "data": "card_std01_ma_16.json"
+        },
+        "card_std01_ma_17": {
+            "data": "card_std01_ma_17.json"
+        },
+        "card_std01_ma_18": {
+            "data": "card_std01_ma_18.json"
+        },
+        "card_std01_ma_19": {
+            "data": "card_std01_ma_19.json"
+        },
+        "card_std01_ma_20": {
+            "data": "card_std01_ma_20.json"
+        },
+        "card_std01_ma_21": {
+            "data": "card_std01_ma_21.json"
+        },
+        "card_std01_ma_22": {
+            "data": "card_std01_ma_22.json"
+        },
+        "card_std01_ma_23": {
+            "data": "card_std01_ma_23.json"
+        },
+        "card_std01_ma_24": {
+            "data": "card_std01_ma_24.json"
+        },
+        "card_std01_ma_25": {
+            "data": "card_std01_ma_25.json"
+        },
+        "card_std01_ma_26": {
+            "data": "card_std01_ma_26.json"
+        },
+        "card_std01_ma_27": {
+            "data": "card_std01_ma_27.json"
+        },
+        "card_std01_ma_28": {
+            "data": "card_std01_ma_28.json"
+        },
+        "card_std01_ma_29": {
+            "data": "card_std01_ma_29.json"
+        },
+        "card_std01_ma_30": {
+            "data": "card_std01_ma_30.json"
+        }
+    }
+}

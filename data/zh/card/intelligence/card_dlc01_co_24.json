@@ -1,0 +1,61 @@
+{
+    "path": "zh/card/intelligence/card_dlc01_co_24",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "迅风快斩",
+        "card_level": "中级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "法术",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 1,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b03>解锁：${eA01}${eA01}${eR02}\n<b03>精通：狩猎中级以上生物成功\n<b03>快速 / ${eA01} / 迅风\n<n05>${tR01}，你的回合中：对1个生物造成4点伤害\n<n32> \n<b03>快速 / ${eA01} / 快斩\n<n05>${tR01}，若精通，你的回合中：为1个基础资源累积2点采集进度或者造成2点伤害",
+        "card_info_description": null,
+        "card_picture_path": "dlc01_wind_blade.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_conventicle_dlc01_24.jpg",
+        "card_attribute": "中级 / 情报 / 法术",
+        "card_tag": "法术",
+        "unlock": "${eA01}${eA01}${eR02}",
+        "master": "狩猎中级以上生物成功",
+        "effects": [
+            {
+                "name": "迅风",
+                "type": "快速",
+                "type_color": "red-100",
+                "type_text_color": "red-700",
+                "location": null,
+                "consumption": "${eA01}",
+                "text": "${tR01}，你的回合中：对1个生物造成4点伤害"
+            },
+            {
+                "name": "快斩",
+                "type": "快速",
+                "type_color": "red-100",
+                "type_text_color": "red-700",
+                "location": null,
+                "consumption": "${eA01}",
+                "text": "${tR01}，若精通，你的回合中：为1个基础资源累积2点采集进度或者造成2点伤害"
+            }
+        ]
+    }
+}

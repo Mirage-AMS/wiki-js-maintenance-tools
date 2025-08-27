@@ -32,24 +32,33 @@ class WikiSynchronizer:
 
     @staticmethod
     def init_card_json(path: str):
-        return
+        saved_info = {
+            "path": path,
+            "stat": {
+                "win-rate": None,
+                "unlock-rate": None,
+                "keep-rate": None,
+            },
+            "faq": [],
+            "revise": [],
+            "card": {},
+        }
+        return saved_info
 
     def load_card_info(self, target_path: Path, force_sync: bool) -> Dict:
+        rel_path = target_path.relative_to(self.data_dir)
+        info_path = rel_path.as_posix().replace(".json", "")
+
+        if not target_path.exists():
+            target_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(target_path, "w", encoding='utf-8') as f:
+                f.write("{}")
+
         with open(target_path, "r+", encoding='utf-8') as f:
             saved_info = json.load(f)
             if saved_info is None or saved_info == {} or force_sync:
-                rel_path = target_path.relative_to(self.data_dir)
-                saved_info = {
-                    "path": rel_path.as_posix().replace(".json", ""),
-                    "stat": {
-                        "win-rate": None,
-                        "unlock-rate": None,
-                        "keep-rate": None,
-                    },
-                    "faq": [],
-                    "revise": [],
-                    "card": {},
-                }
+                saved_info = self.init_card_json(info_path)
+
         return saved_info
 
     @staticmethod

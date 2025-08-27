@@ -1,0 +1,10 @@
+{
+    "children": {
+        "card_dlc01_ac_01": {
+            "data": "card_dlc01_ac_01.json"
+        },
+        "card_std01_ac_01": {
+            "data": "card_std01_ac_01.json"
+        }
+    }
+}

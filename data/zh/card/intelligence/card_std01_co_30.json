@@ -1,0 +1,51 @@
+{
+    "path": "zh/card/intelligence/card_std01_co_30",
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "洞察烟斗",
+        "card_level": "中级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "造物",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": 1,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>解锁：中级以上含${eF01}植物\n<b00>启动 / 洞察\n<n02>${tR01}，你的准备阶段中：翻开任意探索区牌堆顶2张卡牌，弃置其中1张卡牌，那之后选该探索区1个栏位清空并填充，或选该探索区牌堆洗切",
+        "card_info_description": null,
+        "card_picture_path": "pipe_of_insight.png",
+        "card_inner_base_path": null,
+        "card_medal_path": null,
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_element_mark": "",
+        "card_image_url": "./image/deck_conventicle_std_30.jpg",
+        "card_attribute": "中级 / 情报 / 造物",
+        "card_tag": "造物",
+        "unlock": "中级以上含${eF01}植物",
+        "effects": [
+            {
+                "name": "洞察",
+                "type": "启动",
+                "type_color": "yellow-100",
+                "type_text_color": "yellow-700",
+                "location": null,
+                "consumption": null,
+                "text": "${tR01}，你的准备阶段中：翻开任意探索区牌堆顶2张卡牌，弃置其中1张卡牌，那之后选该探索区1个栏位清空并填充，或选该探索区牌堆洗切"
+            }
+        ]
+    }
+}
