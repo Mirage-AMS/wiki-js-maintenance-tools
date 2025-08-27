@@ -52,18 +52,18 @@
                     <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                     <!-- 卡牌图片 -->
-                    <div class="relative z-10 w-full max-w-md aspect-[3/4] bg-gradient-to-br from-{{ card.color_gradient_start }} to-{{ card.color_gradient_end }} rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 group-hover:scale-105">
+                    <div class="relative z-10 w-full max-w-md aspect-[3/4] bg-gradient-to-br from-{{ data.color_gradient_start }} to-{{ data.color_gradient_end }} rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 group-hover:scale-105">
                         <img src="{{ data.card_image_url }}" alt="{{ data.card_name }}卡牌图" class="w-full h-full object-cover mix-blend-overlay">
 
                         <!-- 卡牌稀有度 -->
-                        <div class="absolute top-4 left-4 bg-{{ card.rarity_color }} text-white text-sm font-bold px-3 py-1 rounded-full shadow-md">
-                            {{ card.rarity }}
+                        <div class="absolute top-4 left-4 bg-{{ data.rarity_color }} text-white text-sm font-bold px-3 py-1 rounded-full shadow-md">
+                            {{ data.rarity }}
                         </div>
 
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
                             <div class="flex justify-between items-center">
-                                <span class="text-sm"><i class="{{ card.element_icon }} mr-1"></i> {{ card.element }}</span>
-                                <span class="text-sm"><i class="fa fa-star mr-1"></i> {{ card.stars }}星</span>
+                                <span class="text-sm"><i class="{{ data.element_icon }} mr-1"></i> {{ data.element }}</span>
+                                <span class="text-sm"><i class="fa fa-star mr-1"></i> {{ data.stars }}星</span>
                             </div>
                         </div>
                     </div>
@@ -88,7 +88,7 @@
                     <div class="flex flex-col md:flex-row md:items-end justify-between mb-6">
                         <div>
                             <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-shadow mb-2">{{ data.card_name }}</h2>
-                            <p class="text-gray-500 text-lg">{{ card.english_name }}</p>
+                            <p class="text-gray-500 text-lg">{{ data.card_name }}</p>
                         </div>
                         <div class="mt-4 md:mt-0 bg-gray-100 rounded-full px-4 py-2 flex items-center">
                             <span class="text-gray-700 font-medium mr-2">等级</span>
@@ -112,10 +112,53 @@
                         </div>
                     </div>
 
+                    <!-- 解锁条件 -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fa fa-unlock-alt text-primary mr-2"></i>
+                            解锁
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            {{ data.unlock }}
+                        </p>
+                    </div>
+
+                    <!-- 精通条件 -->
+                    {% if data.master %}
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fa fa-star text-primary mr-2"></i>
+                            精通
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            {{ data.master }}
+                        </p>
+                    </div>
+                    {% endif %}
+
+                    <!-- 效果列表 -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-semibold mb-3 flex items-center">
+                            <i class="fa fa-bolt text-accent mr-2"></i>
+                            效果
+                        </h3>
+                        <div class="space-y-4">
+                            {% for effect in data.effects %}
+                            <div class="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="font-bold">{{ effect.name }}</h4>
+                                    <span class="text-xs bg-{{ effect.type_color }} text-{{ effect.type_text_color }} px-2 py-1 rounded-full">{{ effect.type }}</span>
+                                </div>
+                                <p class="text-gray-700 text-sm">{{ effect.text }}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
                     <!-- 卡牌描述 -->
                     <div class="mb-8">
                         <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-info-circle text-primary mr-2"></i>
+                            <i class="fa fa-book text-primary mr-2"></i>
                             卡牌描述
                         </h3>
                         <p class="text-gray-700 leading-relaxed">
@@ -123,82 +166,9 @@
                         </p>
                     </div>
 
-                    <!-- 技能列表 -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-bolt text-accent mr-2"></i>
-                            技能
-                        </h3>
-                        <div class="space-y-4">
-                            {% for skill in card.skills %}
-                            <div class="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">{{ skill.name }}</h4>
-                                    <span class="text-xs bg-{{ skill.type_color }} text-{{ skill.type_text_color }} px-2 py-1 rounded-full">{{ skill.type }}</span>
-                                </div>
-                                <p class="text-gray-700 text-sm">{{ skill.description }}</p>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-
-                    <!-- 相关信息 -->
-                    <div>
-                        <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-link text-secondary mr-2"></i>
-                            相关信息
-                        </h3>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <div class="text-gray-500 text-sm mb-1">获取方式</div>
-                                <div class="flex flex-wrap gap-2">
-                                    {% for method in card.obtain_methods %}
-                                    <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">{{ method }}</span>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            <div>
-                                <div class="text-gray-500 text-sm mb-1">所属系列</div>
-                                <div class="text-gray-700">{{ card.series }}</div>
-                            </div>
-                            <div>
-                                <div class="text-gray-500 text-sm mb-1">发布日期</div>
-                                <div class="text-gray-700">{{ card.release_date }}</div>
-                            </div>
-                            <div>
-                                <div class="text-gray-500 text-sm mb-1">声优</div>
-                                <div class="text-gray-700">{{ card.voice_actor }}</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- 相关卡牌 -->
-        {% if card.related_cards and card.related_cards|length > 0 %}
-        <div class="mb-6">
-            <h3 class="text-xl font-bold mb-6 flex items-center">
-                <i class="fa fa-th-large text-primary mr-2"></i>
-                相关卡牌
-            </h3>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {% for related_card in card.related_cards %}
-                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-card transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
-                    <div class="aspect-[3/4] bg-gradient-to-br from-{{ related_card.color_gradient_start }} to-{{ related_card.color_gradient_end }} relative">
-                        <img src="{{ related_card.image_url }}" alt="{{ related_card.name }}卡牌缩略图" class="w-full h-full object-cover mix-blend-overlay">
-                        <div class="absolute top-2 left-2 bg-{{ related_card.rarity_color }} text-white text-xs px-2 py-1 rounded">{{ related_card.rarity }}</div>
-                    </div>
-                    <div class="p-3">
-                        <h4 class="font-bold text-sm truncate">{{ related_card.name }}</h4>
-                        <p class="text-gray-500 text-xs">{{ related_card.series }}</p>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
     </main>
 
     <!-- JavaScript -->
