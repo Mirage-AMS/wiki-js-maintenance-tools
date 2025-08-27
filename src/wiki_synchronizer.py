@@ -11,6 +11,7 @@
 # import from official
 import json
 from typing import Dict, Optional
+from pathlib import Path
 # import from third-party
 
 # import from self-defined
@@ -31,10 +32,74 @@ class WikiSynchronizer:
 
     @staticmethod
     def init_card_json(path: str):
-        return {
-            "path": path,
-            "data": {}
+        return
+
+    def load_card_info(self, target_path: Path, force_sync: bool) -> Dict:
+        with open(target_path, "r+", encoding='utf-8') as f:
+            saved_info = json.load(f)
+            if saved_info is None or saved_info == {} or force_sync:
+                rel_path = target_path.relative_to(self.data_dir)
+                saved_info = {
+                    "path": rel_path.as_posix().replace(".json", ""),
+                    "stat": {
+                        "win-rate": None,
+                        "unlock-rate": None,
+                        "keep-rate": None,
+                    },
+                    "faq": [],
+                    "revise": [],
+                    "card": {},
+                }
+        return saved_info
+
+    @staticmethod
+    def dispose_card_info(card_json_file: str, idx: int, card_design_info: Dict):
+        # ---------------------------------------------------------------------------
+        # 处理卡牌图片并更新
+        card_json_file_prefix = card_json_file.split(".")[0]
+        card_index = str(idx+1).zfill(2)
+        card_image_url = f"./image/{card_json_file_prefix}_{str(card_index)}.jpg"
+
+        # ---------------------------------------------------------------------------
+        # 处理卡牌元素
+        element_mappings = {
+            "card_element_num_earth": "${eE01}",
+            "card_element_num_water": "${eW01}",
+            "card_element_num_fire": "${eF01}",
+            "card_element_num_air": "${eA01}"
         }
+        card_element_list = [
+            marker for key, marker in element_mappings.items()
+            if card_design_info.get(key)
+        ]
+        card_element_mark = "".join(card_element_list)
+
+        # 处理卡牌标签
+        tag_keys = ["card_resource_tag_1", "card_resource_tag_2", "card_resource_tag_3"]
+        card_tags = [str(card_design_info.get(key)) for key in tag_keys
+                     if card_design_info.get(key) not in (None, "")]
+        card_tag = " · ".join(card_tags)
+
+        # 处理属性标签
+        card_items = [card_design_info.get("card_level"), card_design_info.get("card_resource_type"), card_tag]
+        card_attribute = " / ".join([str(item) for item in card_items if item not in (None, "")])
+
+        # 处理卡牌效果并更新
+        undisposed_card_info_effect = card_design_info.get("card_info_effect") or ""
+        disposed_card_info_effect = TextFormatter().parse_from_text(undisposed_card_info_effect).to_dict()
+
+        # ---------------------------------------------------------------------------
+        # 统一更新
+        info = {
+            "card_element_mark": card_element_mark,
+            "card_image_url": card_image_url,
+            "card_attribute": card_attribute,
+            "card_tag": card_tag,
+            **disposed_card_info_effect
+        }
+        card_design_info.update(info)
+        return card_design_info
+
 
     def sync(self, locale: str = "zh", design_dir: str = "card_json", force_sync: bool = False):
         """
@@ -57,26 +122,17 @@ class WikiSynchronizer:
             if len(card_design_infos) != len(card_infos):
                 raise ValueError(f"{card_design_path} has {len(card_design_infos)} cards, but {len(card_infos)} cards in register file")
             for idx in range(len(card_design_infos)):
-                card_info = card_infos[idx]
-                card_design_info = card_design_infos[idx]
+                card_register_info = card_infos[idx]
+                target_dir = card_register_info["dir"]
+                target_filename = card_register_info["file"]
+                target_path = sync_dir / target_dir / target_filename
+
+                # load saved info (or init it)
+                saved_info = self.load_card_info(target_path, force_sync)
 
                 # --特殊处理-----------------------------------
-                undisposed_card_info_effect = card_design_info.get("card_info_effect") or ""
-                disposed_card_info_effect = TextFormatter().parse_from_text(undisposed_card_info_effect).to_dict()
-                card_design_info.update(disposed_card_info_effect)
+                saved_info["card"] = self.dispose_card_info(card_json_file, idx, card_design_infos[idx])
                 # -------------------------------------------
-                target_dir = card_info["dir"]
-                target_filename = card_info["file"]
-                target_path = sync_dir / target_dir / target_filename
-                rel_path = target_path.relative_to(locale_dir)
-                print(target_path)
-                with open(target_path, "r+", encoding='utf-8') as f:
-                    saved_info = json.load(f)
-                    if saved_info is None or saved_info == {} or force_sync:
-                        save_path = rel_path.as_posix().replace(".json", "")
-                        saved_info = self.init_card_json(save_path)
-
-                saved_info["data"] = card_design_info
 
                 with open(target_path, 'w', encoding='utf-8') as f:
                     json.dump(saved_info, f, indent=4, ensure_ascii=False)

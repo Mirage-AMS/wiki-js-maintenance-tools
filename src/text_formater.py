@@ -110,7 +110,7 @@ class EffectFormatter:
             'type_text_color': type_text_color,
             'location': self.location,
             'consumption': self.consumption,
-            'text': self.text,
+            'text': self.text.replace("\n", "<br>"),
         }
 
 class KeywordFormatter:

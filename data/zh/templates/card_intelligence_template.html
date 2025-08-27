@@ -1,190 +1,155 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ data.card_name }} - 卡牌知识库</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="card-container" style="width: 900px; margin: 20px auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <!-- 卡牌标题栏 -->
+    <div class="card-header" style="background: #2c3e50; color: #ffffff; padding: 15px 20px;">
+        <h2 style="margin: 0; font-size: 24px; font-weight: 700; color: #ffffff;">{{ card.card_name }}</h2>
+        <div style="font-size: 14px; opacity: 0.9; margin-top: 5px; color: #e0e0e0;">{{ card.card_attribute }}</div>
+    </div>
 
-    <!-- Tailwind 配置 -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#165DFF',
-                        secondary: '#7B61FF',
-                        accent: '#FF7D00',
-                        dark: '#1E293B',
-                        light: '#F8FAFC'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'card': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
-                        'card-hover': '0 20px 35px -10px rgba(0, 0, 0, 0.15), 0 10px 15px -5px rgba(0, 0, 0, 0.1)',
-                    }
-                },
-            }
-        }
-    </script>
+    <!-- 上半部分：图片和效果说明 -->
+    <div class="card-upper" style="display: flex; padding: 20px; gap: 25px; background: #f8f9fa;">
+        <!-- 左侧：仅展示卡牌图片 -->
+        <div class="card-image-container" style="flex: 2;">
+            <div class="card-image" style="border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <img src="{{ card.card_image_url }}" alt="{{ card.card_name }}卡牌图片" style="width: 100%; display: block;">
+            </div>
+        </div>
 
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-        }
-    </style>
-</head>
-<body class="bg-gray-50 font-sans text-dark">
-    <main class="container mx-auto px-4 py-6">
-        <!-- 卡牌详情 -->
-        <div class="bg-white rounded-2xl shadow-card overflow-hidden mb-8 transform transition-all duration-300 hover:shadow-card-hover">
-            <div class="flex flex-col md:flex-row">
-                <!-- 左侧卡图 -->
-                <div class="md:w-2/5 lg:w-1/3 bg-gray-100 p-6 md:p-8 flex items-center justify-center relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                    <!-- 卡牌图片 -->
-                    <div class="relative z-10 w-full max-w-md aspect-[3/4] bg-gradient-to-br from-{{ data.color_gradient_start }} to-{{ data.color_gradient_end }} rounded-lg overflow-hidden shadow-lg transform transition-transform duration-500 group-hover:scale-105">
-                        <img src="{{ data.card_image_url }}" alt="{{ data.card_name }}卡牌图" class="w-full h-full object-cover mix-blend-overlay">
-
-                        <!-- 卡牌稀有度 -->
-                        <div class="absolute top-4 left-4 bg-{{ data.rarity_color }} text-white text-sm font-bold px-3 py-1 rounded-full shadow-md">
-                            {{ data.rarity }}
-                        </div>
-
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-white">
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm"><i class="{{ data.element_icon }} mr-1"></i> {{ data.element }}</span>
-                                <span class="text-sm"><i class="fa fa-star mr-1"></i> {{ data.stars }}星</span>
-                            </div>
+        <!-- 右侧：卡牌效果说明和基本信息 -->
+        <div class="card-description" style="flex: 3;">
+            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; font-size: 18px;">基本信息</h3>
+                <div style="margin-top: 10px;">
+                    <!-- 价值区域，左侧添加两个空栏位使其与下方对齐 -->
+                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                        <!-- 左侧第一个空栏位 -->
+                        <div style="flex: 1; padding: 8px; background: transparent; border-radius: 4px;"></div>
+                        <!-- 左侧第二个空栏位 -->
+                        <div style="flex: 1; padding: 8px; background: transparent; border-radius: 4px;"></div>
+                        <!-- 价值内容 -->
+                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+                            <span  style="font-weight: 600;">价值</span>
+                            <span>{{ card.card_price or "无"}}</span>
                         </div>
                     </div>
-
-                    <!-- 悬浮操作按钮 -->
-                    <div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
-                        <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:text-primary transition-colors" title="收藏">
-                            <i class="fa fa-heart-o"></i>
-                        </button>
-                        <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:text-primary transition-colors" title="分享">
-                            <i class="fa fa-share-alt"></i>
-                        </button>
-                        <button class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:text-primary transition-colors" title="下载">
-                            <i class="fa fa-download"></i>
-                        </button>
+                    <!-- 等级、类型、属性在下方一行显示 -->
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+                            <span  style="font-weight: 600;">等级</span>
+                            <span>{{ card.card_level }}</span>
+                        </div>
+                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+                            <span  style="font-weight: 600;">类型</span>
+                            <span>{{ card.card_resource_type }}</span>
+                        </div>
+                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
+                            <span  style="font-weight: 600;">属性</span>
+                            <span>{{ card.card_tag }}</span>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- 右侧信息 -->
-                <div class="md:w-3/5 lg:w-2/3 p-6 md:p-8">
-                    <!-- 卡牌名称与等级 -->
-                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-6">
-                        <div>
-                            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-shadow mb-2">{{ data.card_name }}</h2>
-                            <p class="text-gray-500 text-lg">{{ data.card_name }}</p>
-                        </div>
-                        <div class="mt-4 md:mt-0 bg-gray-100 rounded-full px-4 py-2 flex items-center">
-                            <span class="text-gray-700 font-medium mr-2">等级</span>
-                            <span class="text-primary font-bold text-xl">{{ data.card_level }}</span>
-                        </div>
-                    </div>
 
-                    <!-- 基本属性 -->
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-                        <div class="bg-gray-50 rounded-xl p-4 text-center">
-                            <div class="text-gray-500 text-sm mb-1">价值</div>
-                            <div class="text-lg font-bold text-accent">{{ data.card_price }}</div>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 text-center">
-                            <div class="text-gray-500 text-sm mb-1">类型</div>
-                            <div class="text-lg font-bold text-primary">{{ data.card_resource_type }}</div>
-                        </div>
-                        <div class="bg-gray-50 rounded-xl p-4 text-center">
-                            <div class="text-gray-500 text-sm mb-1">属性</div>
-                            <div class="text-lg font-bold text-green-500">{{ data.card_resource_tag_1 }}</div>
-                        </div>
-                    </div>
+            <!-- 解锁条件 -->
+            {% if card.unlock and card.unlock.strip() %}
+            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                <h3 style="display: inline-block; margin-top: 0; margin-bottom: 0; color: #2c3e50; font-size: 18px; font-weight: bold; margin-right: 10px;">解锁：</h3>
+                <div style="display: inline-block; font-size: 16px; color: #555; line-height: 1.5;">
+                    {{ card.unlock }}
+                </div>
+            </div>
+            {% endif %}
 
-                    <!-- 解锁条件 -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-unlock-alt text-primary mr-2"></i>
-                            解锁
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            {{ data.unlock }}
-                        </p>
-                    </div>
+            <!-- 精通条件 -->
+            {% if card.master and card.master.strip() %}
+            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                <h3 style="display: inline-block; margin-top: 0; margin-bottom: 0; color: #2c3e50; font-size: 18px; font-weight: bold; margin-right: 10px;">精通：</h3>
+                <div style="display: inline-block; font-size: 16px; color: #555; line-height: 1.5;">
+                    {{ card.master }}
+                </div>
+            </div>
+            {% endif %}
 
-                    <!-- 精通条件 -->
-                    {% if data.master %}
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-star text-primary mr-2"></i>
-                            精通
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            {{ data.master }}
-                        </p>
+            <!-- 卡牌效果 -->
+            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; font-size: 18px;">卡牌效果</h3>
+                <div style="line-height: 1.6; color: #34495e; font-size: 15px;">
+                    {% for effect in card.effects %}
+                    <div style="margin: 15px 0; padding-left: 10px; border-left: 3px solid #{{ effect.type_color }};">
+                        <div style="font-weight: 600; color: #{{ effect.type_text_color }};">{{ effect.name }}（{{ effect.type }}）</div>
+                        {% if effect.consumption %}
+                        <div style="font-size: 14px; color: #7f8c8d; margin: 5px 0;">消耗：{{ effect.consumption }}</div>
+                        {% endif %}
+                        <div style="margin: 5px 0;">{{ effect.text }}</div>
                     </div>
+                    {% endfor %}
+                    {% if card.card_info_description %}
+                    <p style="margin: 10px 0; color: #7f8c8d; font-style: italic;">{{ card.card_info_description }}</p>
                     {% endif %}
+                </div>
+            </div>
 
-                    <!-- 效果列表 -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-bolt text-accent mr-2"></i>
-                            效果
-                        </h3>
-                        <div class="space-y-4">
-                            {% for effect in data.effects %}
-                            <div class="bg-gray-50 rounded-xl p-4 hover:bg-gray-100 transition-colors">
-                                <div class="flex justify-between items-start mb-2">
-                                    <h4 class="font-bold">{{ effect.name }}</h4>
-                                    <span class="text-xs bg-{{ effect.type_color }} text-{{ effect.type_text_color }} px-2 py-1 rounded-full">{{ effect.type }}</span>
-                                </div>
-                                <p class="text-gray-700 text-sm">{{ effect.text }}</p>
-                            </div>
-                            {% endfor %}
+            <!-- 统计信息（胜率等整合为一行） -->
+            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; font-size: 18px;">卡牌数据</h3>
+                <div style="display: flex; justify-content: space-between; padding: 10px; background: #f0f4f8; border-radius: 4px; margin-top: 10px;">
+                    <div style="display: flex; gap: 20px; width: 100%; justify-content: space-around;">
+                        <div style="text-align: center;">
+                            <span style="display: block; font-size: 14px; color: #6c757d;">胜率</span>
+                            <span style="font-weight: 600; font-size: 15px;">{{ "%.1f%%"|format(stat['win-rate'] * 100) if stat['win-rate'] else 'N/A' }}</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="display: block; font-size: 14px; color: #6c757d;">解锁率</span>
+                            <span style="font-weight: 600; font-size: 15px;">{{ "%.1f%%"|format(stat['unlock-rate'] * 100) if stat['unlock-rate'] else 'N/A' }}</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span style="display: block; font-size: 14px; color: #6c757d;">保留率</span>
+                            <span style="font-weight: 600; font-size: 15px;">{{ "%.1f%%"|format(stat['keep-rate'] * 100) if stat['keep-rate'] else 'N/A' }}</span>
                         </div>
                     </div>
-
-                    <!-- 卡牌描述 -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold mb-3 flex items-center">
-                            <i class="fa fa-book text-primary mr-2"></i>
-                            卡牌描述
-                        </h3>
-                        <p class="text-gray-700 leading-relaxed">
-                            {{ data.card_description or "暂无描述信息" }}
-                        </p>
-                    </div>
-
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
-    <!-- JavaScript -->
-<!--    <script>-->
-<!--        // 为相关卡牌添加点击事件-->
-<!--        document.addEventListener('DOMContentLoaded', function() {-->
-<!--            const relatedCards = document.querySelectorAll('.grid .bg-white.rounded-xl');-->
-<!--            relatedCards.forEach(card => {-->
-<!--                card.addEventListener('click', () => {-->
-<!--                    // 在实际应用中，这里会跳转到相应的卡牌详情页-->
-<!--                    const cardName = card.querySelector('h4').textContent;-->
-<!--                    // 可以根据需要修改跳转逻辑-->
-<!--                    alert('查看卡牌详情: ' + cardName);-->
-<!--                });-->
-<!--            });-->
-<!--        });-->
-<!--    </script>-->
-</body>
-</html>
+    <!-- 底栏：双栏布局（左侧调整历史，右侧FAQ） -->
+    <div class="card-footer" style="background: white; padding: 20px; border-top: 1px solid #e1e4e8; display: flex; gap: 20px;">
+        <!-- 左侧：版本调整历史 -->
+        <div class="card-revise" style="flex: 1;">
+            <h3 style="margin-top: 0; color: #2c3e50; font-size: 18px;">版本调整历史</h3>
+            <div style="margin-top: 15px;">
+                {% for revision in revise %}
+                    {% if revision.date and revision.content %}
+                    <div style="padding: 12px; border-left: 3px solid #3498db; background: #f8f9fa; margin-bottom: 12px; border-radius: 0 4px 4px 0;">
+                        <div style="font-weight: 600; color: #2980b9;">{{ revision.date }}</div>
+                        <div style="margin-top: 5px; color: #34495e; font-size: 14px;">{{ revision.content }}</div>
+                    </div>
+                    {% endif %}
+                {% else %}
+                <div style="padding: 12px; background: #f8f9fa; margin-bottom: 12px; border-radius: 4px; text-align: center; color: #7f8c8d;">
+                    暂无调整记录
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- 右侧：FAQ信息 -->
+        <div class="card-faq" style="flex: 1;">
+            <h3 style="margin-top: 0; color: #2c3e50; font-size: 18px;">常见问题（FAQ）</h3>
+            <div style="margin-top: 15px;">
+                {% for item in faq %}
+                    {% if item.question and item.answer %}
+                    <div style="padding: 12px; border-left: 3px solid #2ecc71; background: #f8f9fa; margin-bottom: 12px; border-radius: 0 4px 4px 0;">
+                        <div style="font-weight: 600; color: #27ae60;">Q：{{ item.question }}</div>
+                        <div style="margin-top: 5px; color: #34495e; font-size: 14px;">A：{{ item.answer }}</div>
+                    </div>
+                    {% endif %}
+                {% else %}
+                <div style="padding: 12px; background: #f8f9fa; margin-bottom: 12px; border-radius: 4px; text-align: center; color: #7f8c8d;">
+                    暂无常见问题记录
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
