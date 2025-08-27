@@ -67,13 +67,13 @@ class EffectFormatter:
 
     def get_color_by_type(self) -> Tuple[str, str]:
         if self.type == EnumEffectType.EFFECT_TYPE_PERMANENT:
-            return "blue-100", "blue-700"
+            return "e0e7ff", "3b82f6"  # 永久效果：靛蓝色系（稳定感）
         elif self.type == EnumEffectType.EFFECT_TYPE_LAUNCH:
-            return "yellow-100", "yellow-700"
+            return "dbeafe", "1e40af"  # 启动效果：蓝色系（主色调，醒目）
         elif self.type == EnumEffectType.EFFECT_TYPE_QUICK:
-            return "red-100", "red-700"
+            return "fee2e2", "dc2626"  # 快速效果：红色系（迅捷、紧急感）
         elif self.type == EnumEffectType.EFFECT_TYPE_UNKNOWN:
-            return "gray-100", "gray-700"
+            return "f3f4f6", "6b7280"  # 未知效果：灰色系（中性、不确定）
         else:
             raise ValueError(f"Invalid effect type {self.type}")
 
@@ -83,21 +83,23 @@ class EffectFormatter:
         # 按 '/' 分割并去除每个部分的空白
         parts = [part.strip() for part in first_line.split('/') if part.strip()]
 
+        # 先处理公共的文本内容（根据不同情况调整lines的切片）
+        text_lines = lines[1:] if len(parts) in (2, 3) else lines
+        self.text = '\n'.join(text_lines).strip()
+
+        # 初始化默认值
+        self.type = EnumEffectType.EFFECT_TYPE_UNKNOWN
+        self.consumption = None
+        self.name = "未知"
+
+        # 根据parts长度进行赋值
         if len(parts) == 2:
             self.type, self.name = parts
-            self.consumption = None
         elif len(parts) == 3:
             self.type, self.consumption, self.name = parts
-        else:
-            self.type = EnumEffectType.EFFECT_TYPE_UNKNOWN
-            self.consumption = None
-            self.name = "未知"
 
-        # 分离a_part中的主要部分和额外的self.location
+        # 最后统一处理位置检查（无论哪种情况都需要执行）
         self.type, self.location = self._check_effect_location(self.type)
-
-        # 剩余行合并为self.effect
-        self.text = '\n'.join(lines[1:]).strip()
 
         return self
 
@@ -148,8 +150,6 @@ class TextFormatter:
         self.blocks: List[str] = []
 
     def parse_from_text(self, text: str):
-        if text == "":
-            print()
         pattern = r'<[bn]\d+>'
         parts = re.split(pattern, text)
         tags = re.findall(pattern, text)
@@ -190,26 +190,20 @@ class TextFormatter:
 
 # 测试代码
 if __name__ == "__main__":
-    # test_text = """
-    # <b00>解锁：${eE01}${eR01}
-    # <b00>启动 / ${eE01} / 祈愿
-    # <n02>${tR01}：选以下1个效果发动，
-    # <n02>· 为1个植物累积2点采集进度
-    # <n02>· 弃置你已解锁造物的1个素材，将其对应弃牌堆返回牌堆洗切
-    # <n20>
-    # <b00>精通：${mS03}
-    # <b00>快速（背包） / 重击
-    # <n02>对目标造成3点伤害
-    # <n02>· 若目标已被标记，额外造成2点伤害
-    # """
-
     test_text = """
-    <n02> 
-    <n02>直到本轮结束前其他玩家不能进入探索区；其他玩家可以在各自回合中选以下1个可适用的效果适用，以终止对其影响
-    <n02><行贿> · 立即消耗${aP04}
-    <n02><闯关> · 立即受到3点伤害
-    <n16> 
+    <b00>解锁：${eE01}${eR01}
+    <b00>启动 / ${eE01} / 祈愿
+    <n02>${tR01}：选以下1个效果发动，
+    <n02>· 为1个植物累积2点采集进度
+    <n02>· 弃置你已解锁造物的1个素材，将其对应弃牌堆返回牌堆洗切
+    <n20>
+    <b00>精通：${mS03}
+    <b00>快速（背包） / 重击
+    <n02>对目标造成3点伤害
+    <n02>· 若目标已被标记，额外造成2点伤害
     """
+
+    # test_text = "<n02> \n<n02>直到本轮结束前其他玩家需要消耗的元素翻倍；其他玩家可以在各自回合中选以下1个可适用的效果适用，以终止对其影响\n<n02><探究> · 本回合不能进入探索区\n<n02><破立> · 立即受到3点伤害\n<n16> "
 
     # 先分割为块
     f = TextFormatter().parse_from_text(test_text)
