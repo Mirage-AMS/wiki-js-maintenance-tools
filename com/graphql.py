@@ -332,49 +332,59 @@ class WikiJSGraphQLClient:
 
         return None
 
-    def update_page(self, page_id: int,
-                    title: Optional[str] = None,
-                    path: Optional[str] = None,
-                    content: Optional[str] = None,
-                    editor: Optional[str] = None,
-                    tags: Optional[List[str]] = None,
-                    locale: Optional[str] = None,  # 新增参数
-                    description: Optional[str] = None) -> Optional[Dict]:  # 新增参数
+    def update_page(
+            self,
+            page_id: int,
+            content: Optional[str] = None,
+            description: Optional[str] = None,
+            editor: Optional[str] = None,
+            isPrivate: Optional[bool] = False,
+            isPublished: Optional[bool] = True,
+            locale: Optional[str] = None,
+            path: Optional[str] = None,
+            tags: Optional[List[str]] = None,
+            title: Optional[str] = None,
+    ) -> Optional[Dict]:  # 新增参数
         """
         更新现有页面
-
-        :param page_id: 要更新的页面ID
-        :param title: 新标题，可选
-        :param path: 新路径，可选
-        :param content: 新内容，可选
-        :param editor: 编辑器类型，可选
-        :param tags: 标签列表，可选
-        :param locale: 语言区域，可选
-        :param description: 页面描述，可选
-        :return: 更新后的页面信息，出错时返回None
+        :param page_id: 页面ID
+        :param content: 页面内容
+        :param description: 页面描述
+        :param editor: 编辑器类型
+        :param isPrivate: 是否私有
+        :param isPublished: 是否发布
+        :param locale: 语言代码
+        :param path: 页面路径
+        :param tags: 标签列表
+        :param title: 页面标题
+        :return: 更新后的页面信息
         """
 
         query = """
         mutation updatePage(
             $id: Int!,
-            $locale: String,
-            $path: String,
+            $content: String,
             $description: String,
             $editor: String,
-            $title: String,
-            $content: String,
-            $tags: [String]
+            $isPrivate: Boolean,
+            $isPublished: Boolean,
+            $locale: String,
+            $path: String,
+            $tags: [String],
+            $title: String
         ) {
             pages {
                 update(
                     id: $id, 
-                    locale: $locale,
-                    path: $path,
+                    content: $content,
                     description: $description,
                     editor: $editor,
-                    title: $title,
-                    content: $content,
-                    tags: $tags
+                    isPrivate: $isPrivate,
+                    isPublished: $isPublished,
+                    locale: $locale,
+                    path: $path,
+                    tags: $tags,
+                    title: $title
                 ) {
                     responseResult {
                         succeeded
@@ -390,7 +400,11 @@ class WikiJSGraphQLClient:
         }
         """
 
-        variables: Dict[str, Any] = {"id": page_id}
+        variables: Dict[str, Any] = {
+            "id": page_id,
+            "isPrivate": isPrivate,
+            "isPublished": isPublished
+        }
 
         # 动态添加非None的可选参数
         if title is not None:
