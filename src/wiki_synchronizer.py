@@ -20,7 +20,8 @@ from src.text_formater import TextFormatter
 
 
 class WikiSynchronizer:
-    def __init__(self, register_file: str = "deck_json_register.json"):
+    def __init__(self, locale: str = "zh", register_file: str = "deck_json_register.json"):
+        self.locale = locale
         self.register_file = pathUtil.getSrcDir() / register_file
         self.data_dir = pathUtil.getDataDir()
         self.register_dict: Optional[Dict] = None
@@ -34,6 +35,7 @@ class WikiSynchronizer:
     def init_card_json(path: str):
         saved_info = {
             "path": path,
+            "tags": [],
             "stat": {
                 "win-rate": None,
                 "unlock-rate": None,
@@ -46,7 +48,7 @@ class WikiSynchronizer:
         return saved_info
 
     def load_card_info(self, target_path: Path, force_sync: bool) -> Dict:
-        rel_path = target_path.relative_to(self.data_dir)
+        rel_path = target_path.relative_to(self.data_dir / self.locale)
         info_path = rel_path.as_posix().replace(".json", "")
 
         if not target_path.exists():
@@ -62,14 +64,15 @@ class WikiSynchronizer:
         return saved_info
 
     @staticmethod
-    def dispose_card_info(card_json_file: str, idx: int, card_design_info: Dict):
+    def dispose_card_info(card_json_file: str, idx: int, card_design_info: Dict, saved_info: Dict):
         # ---------------------------------------------------------------------------
         # 处理卡牌图片并更新
         card_json_file_prefix = card_json_file.split(".")[0]
         card_index = str(idx+1).zfill(2)
-        card_image_url = f"./image/{card_json_file_prefix}_{str(card_index)}.jpg"
+        card_image_url = f"/image/{card_json_file_prefix}_{str(card_index)}.jpg"
 
         # ---------------------------------------------------------------------------
+        card_design_tag = ["卡牌"]
         # 处理卡牌元素
         element_mappings = {
             "card_element_num_earth": "${eE01}",
@@ -87,10 +90,17 @@ class WikiSynchronizer:
         tag_keys = ["card_resource_tag_1", "card_resource_tag_2", "card_resource_tag_3"]
         card_tags = [str(card_design_info.get(key)) for key in tag_keys
                      if card_design_info.get(key) not in (None, "")]
+        card_design_tag.extend(card_tags)
         card_tag = " · ".join(card_tags)
 
         # 处理属性标签
-        card_items = [card_design_info.get("card_level"), card_design_info.get("card_resource_type"), card_tag]
+        card_level = card_design_info.get("card_level", None)
+        card_resource_type = card_design_info.get("card_resource_type", None)
+        if card_level is not None:
+            card_design_tag.append(card_level)
+        if card_resource_type is not None:
+            card_design_tag.append(card_resource_type)
+        card_items = [card_level, card_resource_type, card_tag]
         card_attribute = " / ".join([str(item) for item in card_items if item not in (None, "")])
 
         # 处理卡牌效果并更新
@@ -107,17 +117,19 @@ class WikiSynchronizer:
             **disposed_card_info_effect
         }
         card_design_info.update(info)
-        return card_design_info
 
+        # final update
+        saved_info["card"] = card_design_info
+        saved_info["tags"] = list(set(saved_info["tags"]).union(set(card_design_tag)))
 
-    def sync(self, locale: str = "zh", design_dir: str = "card_json", force_sync: bool = False):
+    def sync(self, design_dir: str = "card_json", force_sync: bool = False):
         """
         同步卡牌的设计资料到Wiki资料
-        :param locale: 语言
         :param design_dir: 设计文件夹
         :param force_sync: 是否强制同步
         :return:
         """
+        locale = self.locale
         locale_dir = self.data_dir / locale
         design_dir = locale_dir / design_dir
         sync_dir = locale_dir / "card"
@@ -140,26 +152,27 @@ class WikiSynchronizer:
                 saved_info = self.load_card_info(target_path, force_sync)
 
                 # --特殊处理-----------------------------------
-                saved_info["card"] = self.dispose_card_info(card_json_file, idx, card_design_infos[idx])
+                self.dispose_card_info(card_json_file, idx, card_design_infos[idx], saved_info)
                 # -------------------------------------------
 
                 with open(target_path, 'w', encoding='utf-8') as f:
                     json.dump(saved_info, f, indent=4, ensure_ascii=False)
 
-        self.sync_content(locale)
+        # sync contents.json
+        self.sync_content()
 
-    def sync_content(self, locale: str = "zh"):
-        sync_dir = self.data_dir / locale / "card"
+    def sync_content(self):
+        sync_dir = self.data_dir / self.locale / "card"
 
         for each_dir in sync_dir.iterdir():
             if each_dir.is_file():
                 continue
-            content_file_name = each_dir / f"content.json"
+            content_file_name = each_dir / f"contents.json"
             content = {"children": {}}
             for each_file in each_dir.iterdir():
                 if not each_file.is_file():
                     continue
-                if each_file.name == "content.json":
+                if each_file.name == "contents.json":
                     continue
                 if each_file.suffix != ".json":
                     continue

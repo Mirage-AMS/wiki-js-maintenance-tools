@@ -76,7 +76,7 @@ class DocumentNode(WikiNode):
                 self.data = json.load(f)
         elif full_path.suffix == '.md':
             with open(full_path, 'r', encoding='utf-8') as f:
-                self.data = {'content': f.read()}
+                self.data = {'text': f.read()}
 
     def set_template(self, template: Template) -> None:
         """设置用于渲染该资料的模板"""

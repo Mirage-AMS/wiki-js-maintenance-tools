@@ -23,7 +23,7 @@ from src.wiki_template import Template
 class WikiIndexer:
     """Wiki索引管理器，负责构建整个资料树"""
 
-    def __init__(self, locale: str = "zh", root_index: str = "content.json"):
+    def __init__(self, locale: str = "zh", root_index: str = "contents.json"):
         """初始化索引管理器
         Args:
             locale: 语言

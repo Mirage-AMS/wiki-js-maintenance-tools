@@ -32,7 +32,7 @@ class WikiPTLRenderer(WikiRenderer):
     """
     在模板渲染前对原始数据进行预渲染处理的类，主要处理HTML转义和图标替换
     """
-    IMAGE_STORAGE_PATH = Path("./icon")
+    IMAGE_STORAGE_PATH = "/icon"
     # 优化正则表达式，只匹配符合命名规范的图标（字母、数字、下划线、连字符）
     ICON_PATTERN = re.compile(r"\$\{([a-zA-Z0-9_-]+)\}")
 
@@ -50,8 +50,8 @@ class WikiPTLRenderer(WikiRenderer):
 
         def replace_icon(match: re.Match) -> str:
             image_name = match.group(1)
-            image_path = self.IMAGE_STORAGE_PATH / f"{image_name}.png"
-            return f'<img src="{image_path.as_posix()}" alt="{image_name}">'
+            image_path = f"{self.IMAGE_STORAGE_PATH}/{image_name}.png"
+            return f'<img src="{image_path}" alt="{image_name}" style="height: 1em; vertical-align: -0.15em;">'
 
         return self.ICON_PATTERN.sub(replace_icon, content)
 

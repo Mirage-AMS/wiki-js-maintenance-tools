@@ -67,7 +67,7 @@ class EffectFormatter:
 
     def get_color_by_type(self) -> Tuple[str, str]:
         if self.type == EnumEffectType.EFFECT_TYPE_PERMANENT:
-            return "e0e7ff", "3b82f6"  # 永久效果：靛蓝色系（稳定感）
+            return "dcfce7", "16a34a"  # 永久效果：绿色系（稳定、持续感）
         elif self.type == EnumEffectType.EFFECT_TYPE_LAUNCH:
             return "dbeafe", "1e40af"  # 启动效果：蓝色系（主色调，醒目）
         elif self.type == EnumEffectType.EFFECT_TYPE_QUICK:
