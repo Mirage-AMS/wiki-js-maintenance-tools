@@ -15,7 +15,8 @@ from pathlib import Path
 # import from third-party
 
 # import from self-defined
-from wiki_template import Template
+from src.wiki_template import Template
+from src.wiki_renderer import WikiRenderer
 
 class WikiNode:
     """Wiki节点基类"""
@@ -81,7 +82,7 @@ class DocumentNode(WikiNode):
         """设置用于渲染该资料的模板"""
         self.template = template
 
-    def render(self) -> str:
+    def render(self, pre_renderer: Optional[WikiRenderer] = None) -> str:
         """渲染资料内容"""
         if not self.data:
             self.load_data()
@@ -89,4 +90,9 @@ class DocumentNode(WikiNode):
         if not self.template:
             raise ValueError(f"资料 {self.name} 没有设置模板")
 
-        return self.template.render(self.data)
+        # 使用传入的预渲染器处理数据
+        render_data = self.data
+        if pre_renderer and self.data is not None:
+            render_data = pre_renderer.render(self.data)
+
+        return self.template.render(render_data)

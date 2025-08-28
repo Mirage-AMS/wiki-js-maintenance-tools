@@ -33,7 +33,7 @@ class WikiIndexer:
         self.root_index_file = self.root_path / root_index
         self.root_node: Optional[DirectoryNode] = None
 
-    def build_index(self) -> DirectoryNode:
+    def build_index(self) -> 'WikiIndexer':
         """构建整个Wiki的索引结构
 
         Returns:
@@ -58,7 +58,8 @@ class WikiIndexer:
 
         # 递归解析子节点
         self._parse_directory(self.root_node, root_data)
-        return self.root_node
+
+        return self
 
     def _parse_directory(self, directory_node: DirectoryNode, dir_data: Dict[str, Any]) -> None:
         """递归解析目录节点
