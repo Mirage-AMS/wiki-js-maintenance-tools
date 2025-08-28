@@ -96,10 +96,12 @@ class WikiSynchronizer:
         # 处理属性标签
         card_level = card_design_info.get("card_level", None)
         card_resource_type = card_design_info.get("card_resource_type", None)
-        if card_level is not None:
+        if isinstance(card_level, str):
             card_design_tag.append(card_level)
-        if card_resource_type is not None:
-            card_design_tag.append(card_resource_type)
+        if isinstance(card_resource_type, str):
+            card_resource_type_list = card_resource_type.split("·")
+            for each in card_resource_type_list:
+                card_design_tag.append(each.strip())
         card_items = [card_level, card_resource_type, card_tag]
         card_attribute = " / ".join([str(item) for item in card_items if item not in (None, "")])
 
@@ -142,8 +144,11 @@ class WikiSynchronizer:
                 card_design_infos = json.load(f)
             if len(card_design_infos) != len(card_infos):
                 raise ValueError(f"{card_design_path} has {len(card_design_infos)} cards, but {len(card_infos)} cards in register file")
+
+            image_idx = 0
             for idx in range(len(card_design_infos)):
                 card_register_info = card_infos[idx]
+                card_design_info = card_design_infos[idx]
                 target_dir = card_register_info["dir"]
                 target_filename = card_register_info["file"]
                 target_path = sync_dir / target_dir / target_filename
@@ -152,7 +157,9 @@ class WikiSynchronizer:
                 saved_info = self.load_card_info(target_path, force_sync)
 
                 # --特殊处理-----------------------------------
-                self.dispose_card_info(card_json_file, idx, card_design_infos[idx], saved_info)
+                card_num = card_design_info.get("card_num", 0)
+                self.dispose_card_info(card_json_file, image_idx, card_design_info, saved_info)
+                image_idx += card_num
                 # -------------------------------------------
 
                 with open(target_path, 'w', encoding='utf-8') as f:

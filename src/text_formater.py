@@ -4,24 +4,6 @@ from typing import Dict, List, Any, Optional, Tuple
 
 
 @unique
-class EnumElementMark(str, Enum):
-    ELEMENT_EARTH = "${eE01}"
-    ELEMENT_WATER = "${ew01}"
-    ELEMENT_FIRE = "${eF01}"
-    ELEMENT_AIR = "${eA01}"
-    ELEMENT_COMMON = "${eC01}"
-    ELEMENT_ARBITRARY_01 = "${eR01}"
-    ELEMENT_ARBITRARY_02 = "${eR02}"
-    ELEMENT_ARBITRARY_03 = "${eR03}"
-    ELEMENT_ARBITRARY_04 = "${eR04}"
-    ELEMENT_ARBITRARY_05 = "${eR05}"
-    ELEMENT_ARBITRARY_06 = "${eR06}"
-    ELEMENT_ARBITRARY_07 = "${eR07}"
-    ELEMENT_ARBITRARY_08 = "${eR08}"
-    ELEMENT_ARBITRARY_09 = "${eR09}"
-    ELEMENT_ARBITRARY_10 = "${eR10}"
-
-@unique
 class EnumEffectType(str, Enum):
     EFFECT_TYPE_PERMANENT = "永久"
     EFFECT_TYPE_LAUNCH = "启动"
@@ -65,18 +47,6 @@ class EffectFormatter:
         else:
             return a_part.strip(), None
 
-    def get_color_by_type(self) -> Tuple[str, str]:
-        if self.type == EnumEffectType.EFFECT_TYPE_PERMANENT:
-            return "dcfce7", "16a34a"  # 永久效果：绿色系（稳定、持续感）
-        elif self.type == EnumEffectType.EFFECT_TYPE_LAUNCH:
-            return "dbeafe", "1e40af"  # 启动效果：蓝色系（主色调，醒目）
-        elif self.type == EnumEffectType.EFFECT_TYPE_QUICK:
-            return "fee2e2", "dc2626"  # 快速效果：红色系（迅捷、紧急感）
-        elif self.type == EnumEffectType.EFFECT_TYPE_UNKNOWN:
-            return "f3f4f6", "6b7280"  # 未知效果：灰色系（中性、不确定）
-        else:
-            raise ValueError(f"Invalid effect type {self.type}")
-
     def parse_from_lines(self, lines: List[str]) -> 'EffectFormatter':
         first_line = lines[0]
         
@@ -104,12 +74,9 @@ class EffectFormatter:
         return self
 
     def to_dict(self) -> Dict:
-        type_color, type_text_color = self.get_color_by_type()
         return {
             'name': self.name,
             'type': self.type,
-            'type_color': type_color,
-            'type_text_color': type_text_color,
             'location': self.location,
             'consumption': self.consumption,
             'text': self.text,

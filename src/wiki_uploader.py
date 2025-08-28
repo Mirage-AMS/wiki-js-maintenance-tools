@@ -166,4 +166,7 @@ if __name__ == '__main__':
         return True
 
     uploader = WikiUploader(renderer=WikiPTLRenderer())
-    uploader.upload(filter_func=template_filter)
+    uploader.upload(
+        is_upload=True,
+        filter_func=template_filter
+    )
