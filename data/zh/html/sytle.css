@@ -7,7 +7,8 @@
 .search-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px
+  padding: 20px;
+  position: relative; /* 作为固定元素的参考容器 */
 }
 .search-header {
   display: flex;
@@ -145,29 +146,41 @@
     font-size: 1.1rem
   }
 }
+
+/* 固定搜索框相关样式 */
 #header-placeholder {
   display: none;
-  transition: height .3s ease
+  transition: height 0.3s ease;
 }
+
+/* 修改固定搜索框的样式约束 - 修复超出容器问题 */
 .search-header.sticky {
   position: fixed;
   top: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 8px 20px;
+  animation: slideDown 0.3s ease forwards;
+
+  /* 修正定位：使用左右边界和margin auto实现居中，避免与动画冲突 */
   left: 0;
   right: 0;
-  z-index: 1000;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,.1);
-  padding: 8px 20px;
-  animation: slideDown .3s ease forwards
+  max-width: 1200px; /* 与容器最大宽度一致 */
+  margin: 0 auto; /* 水平居中 */
+  width: 100%;
 }
+
 @keyframes slideDown {
   from {
-    transform: translateY(-100%)
+    transform: translateY(-100%);
   }
   to {
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
+
+/* 调整结果区域的上边距，避免被固定搜索框遮挡 */
 .results-container {
-  transition: margin-top .3s ease
+  transition: margin-top 0.3s ease;
 }

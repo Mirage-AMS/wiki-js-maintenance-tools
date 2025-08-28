@@ -29,21 +29,20 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 监听滚动事件，实现搜索框固定效果
   window.addEventListener('scroll', function() {
-    if (searchHeader.classList.contains('active')) {
-      if (window.scrollY > headerHeight / 2) {
-        searchHeader.classList.add('sticky');
-        headerPlaceholder.style.display = 'block';
-      } else {
-        searchHeader.classList.remove('sticky');
-        headerPlaceholder.style.display = 'none';
-      }
+    const header = document.querySelector('.search-header');
+    const placeholder = document.getElementById('header-placeholder');
+
+    if (window.scrollY > 100) { // 滚动超过100px时固定
+      header.classList.add('sticky', 'active');
+      placeholder.style.display = 'block';
+      placeholder.style.height = header.offsetHeight + 'px';
     } else {
-      // 未搜索状态不固定
-      searchHeader.classList.remove('sticky');
-      headerPlaceholder.style.display = 'none';
+      header.classList.remove('sticky', 'active');
+      placeholder.style.display = 'none';
+      placeholder.style.height = '0';
     }
   });
-  
+
   // 表单提交处理
   searchForm.addEventListener('submit', function(e) {
     e.preventDefault();
