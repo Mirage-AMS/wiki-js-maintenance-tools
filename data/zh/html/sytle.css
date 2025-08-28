@@ -145,3 +145,29 @@
     font-size: 1.1rem
   }
 }
+#header-placeholder {
+  display: none;
+  transition: height .3s ease
+}
+.search-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  padding: 8px 20px;
+  animation: slideDown .3s ease forwards
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%)
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+.results-container {
+  transition: margin-top .3s ease
+}
