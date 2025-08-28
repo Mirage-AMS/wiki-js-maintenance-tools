@@ -84,6 +84,7 @@ class EffectFormatter:
 
 class KeywordFormatter:
     def __init__(self):
+        self.is_match: bool = False
         self.keyword: str = ""
         self.text: str = ""
 
@@ -100,17 +101,17 @@ class KeywordFormatter:
             key = parts[0].strip()
             value = parts[1].strip()
             if key in keyword_reflection:
+                self.is_match = True
                 self.keyword = keyword_reflection[key]
                 self.text = value
-            else:
-                raise ValueError(f"Invalid keyword {key}")
 
         return self
 
-    def to_dict(self) -> Dict:
-        return {
-            self.keyword: self.text
-        }
+    def to_dict(self) -> Optional[Dict]:
+        ret = None
+        if self.is_match:
+            ret = {self.keyword: self.text}
+        return ret
 
 class TextFormatter:
     def __init__(self):
@@ -143,12 +144,11 @@ class TextFormatter:
         effects = []
         for current_block in self.blocks:
             lines = [line.strip() for line in current_block.split('\n') if line.strip()]
-            line_count = len(lines)
 
-            # 处理单行块，支持英文冒号和中文冒号
-            if line_count == 1:
-                result.update(KeywordFormatter().parse_from_lines(lines).to_dict())
-            # 处理多行块
+            # 处理A:B结构, 如果无法匹配则按照效果匹配
+            keyword_result = KeywordFormatter().parse_from_lines(lines).to_dict()
+            if keyword_result:
+                result.update(keyword_result)
             else:
                 effects.append(EffectFormatter().parse_from_lines(lines).to_dict())
         if effects:
@@ -158,6 +158,7 @@ class TextFormatter:
 # 测试代码
 if __name__ == "__main__":
     test_text = """
+    <n02>单行文字内容
     <b00>解锁：${eE01}${eR01}
     <b00>启动 / ${eE01} / 祈愿
     <n02>${tR01}：选以下1个效果发动，
@@ -170,7 +171,7 @@ if __name__ == "__main__":
     <n02>· 若目标已被标记，额外造成2点伤害
     """
 
-    # test_text = "<n02> \n<n02>直到本轮结束前其他玩家需要消耗的元素翻倍；其他玩家可以在各自回合中选以下1个可适用的效果适用，以终止对其影响\n<n02><探究> · 本回合不能进入探索区\n<n02><破立> · 立即受到3点伤害\n<n16> "
+    test_text = "<n02> \n<n00>弃置1张手牌，选情报区弃牌堆1张情报卡牌获得\n<n00> \n<n00> <n00> <n24> "
 
     # 先分割为块
     f = TextFormatter().parse_from_text(test_text)

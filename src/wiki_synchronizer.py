@@ -109,6 +109,13 @@ class WikiSynchronizer:
         undisposed_card_info_effect = card_design_info.get("card_info_effect") or ""
         disposed_card_info_effect = TextFormatter().parse_from_text(undisposed_card_info_effect).to_dict()
 
+        # 事件卡牌特殊处理
+        if card_resource_type == "事件":
+            effects = disposed_card_info_effect.get("effects", [])
+            for effect in effects:
+                effect["name"] = "事件"
+                effect["type"] = "启动"
+
         # ---------------------------------------------------------------------------
         # 统一更新
         info = {
