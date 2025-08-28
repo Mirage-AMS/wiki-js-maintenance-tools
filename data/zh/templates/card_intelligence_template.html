@@ -28,22 +28,22 @@
                         <!-- 价值内容 -->
                         <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
                             <span  style="font-weight: 600;">价值</span>
-                            <span>{{ card.card_price or "无"}}</span>
+                            <span>{{ card.card_price or "无" }}</span>
                         </div>
                     </div>
                     <!-- 等级、类型、属性在下方一行显示 -->
                     <div style="display: flex; gap: 10px;">
                         <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
                             <span  style="font-weight: 600;">等级</span>
-                            <span>{{ card.card_level }}</span>
+                            <span>{{ card.card_level or "无" }}</span>
                         </div>
                         <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
                             <span  style="font-weight: 600;">类型</span>
-                            <span>{{ card.card_resource_type }}</span>
+                            <span>{{ card.card_resource_type or "无" }}</span>
                         </div>
                         <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
                             <span  style="font-weight: 600;">属性</span>
-                            <span>{{ card.card_tag }}</span>
+                            <span>{{ card.card_tag or "无" }}</span>
                         </div>
                     </div>
                 </div>
@@ -76,13 +76,28 @@
                 <div style="line-height: 1.6; color: #34495e; font-size: 15px;">
                     {% for effect in card.effects %}
                     <div style="margin: 15px 0; padding-left: 10px; border-left: 3px solid #{{ effect.type_color }};">
-                        <div style="font-weight: 600; color: #{{ effect.type_text_color }};">{{ effect.name }}（{{ effect.type }}）</div>
-                        {% if effect.consumption %}
-                        <div style="font-size: 14px; color: #7f8c8d; margin: 5px 0;">消耗：{{ effect.consumption }}</div>
-                        {% endif %}
+                        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-weight: 600; margin-bottom: 5px;">
+                            <!-- 类型标签块 -->
+                            <span style="background-color: #{{ effect.type_color }}; color: #{{ effect.type_text_color }}; padding: 3px 8px; border-radius: 4px; font-size: 13px;">
+                                {{ effect.type }}{% if effect.location %} ({{ effect.location }}){% endif %}
+                            </span>
+
+                            <!-- 效果名称 -->
+                            <span>{{ effect.name }}</span>
+
+                            <!-- 消耗信息（如存在） -->
+                            {% if effect.consumption %}
+                            <span style="font-size: 14px; color: #7f8c8d;">
+                                （消耗：{{ effect.consumption }}）
+                            </span>
+                            {% endif %}
+                        </div>
+
+                        <!-- 效果描述文本 -->
                         <div style="margin: 5px 0;">{{ effect.text }}</div>
                     </div>
                     {% endfor %}
+
                     {% if card.card_info_description %}
                     <p style="margin: 10px 0; color: #7f8c8d; font-style: italic;">{{ card.card_info_description }}</p>
                     {% endif %}

@@ -1,23 +1,23 @@
 {
   "children": {
     "accessory": {
-      "index": "content.json",
+      "index": "contents.json",
       "template": "../../templates/card_intelligence_template.html"
     },
     "exploration": {
-      "index": "content.json",
+      "index": "contents.json",
       "template": "../../templates/card_intelligence_template.html"
     },
     "intelligence": {
-      "index": "content.json",
+      "index": "contents.json",
       "template": "../../templates/card_intelligence_template.html"
     },
     "role": {
-      "index": "content.json",
+      "index": "contents.json",
       "template": "../../templates/card_intelligence_template.html"
     },
     "trading": {
-      "index": "content.json",
+      "index": "contents.json",
       "template": "../../templates/card_intelligence_template.html"
     }
   }
