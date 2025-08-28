@@ -1,0 +1,37 @@
+<div class="search-container">
+  <!-- 搜索区域 -->
+  <div class="search-header">
+    <div class="logo">卡牌百科</div>
+    <form id="search-form" class="search-form">
+      <div class="search-bar">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="搜索卡牌..."
+          autocomplete="off"
+        >
+        <button type="submit" class="search-button">
+          <i class="search-icon">🔍</i>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- 搜索结果区域 (默认隐藏) -->
+  <div id="results-container" class="results-container hidden">
+    <div class="results-info">
+      <p>找到约 <span id="results-count">0</span> 个结果</p>
+    </div>
+
+    <ul id="results-list" class="results-list">
+      <!-- 搜索结果将通过JS动态插入 -->
+    </ul>
+
+    <!-- 分页控件 -->
+    <div class="pagination" id="pagination">
+      <button id="prev-page" class="pagination-btn" disabled>上一页</button>
+      <span id="page-info" class="page-info">第 1 页</span>
+      <button id="next-page" class="pagination-btn">下一页</button>
+    </div>
+  </div>
+</div>
