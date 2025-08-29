@@ -73,44 +73,57 @@ class WikiSynchronizer:
 
         # ---------------------------------------------------------------------------
         card_design_tag = ["卡牌"]
-        # 处理卡牌元素
+
+        # # 等级值
+        card_level = card_design_info.get("card_level", None)
+
+        # # 类型列表
+        card_type_info = card_design_info.get("card_resource_type", None)
+        if isinstance(card_level, str):
+            card_design_tag.append(card_level)
+        card_types = []
+        if isinstance(card_type_info, str):
+            card_types = [_each.strip() for _each in card_type_info.split("·")]
+            for each in card_types:
+                card_design_tag.append(each.strip())
+
+        # # 卡牌标签列表
+        tag_keys = ["card_resource_tag_1", "card_resource_tag_2", "card_resource_tag_3"]
+        card_tags = [str(card_design_info.get(key)) for key in tag_keys
+                     if card_design_info.get(key) not in (None, "")]
+        card_design_tag.extend(card_tags)
+        card_tag_info = " · ".join(card_tags)
+
+        # # 基础信息
+        card_items = [card_level, card_type_info, card_tag_info]
+        card_basic_info = " / ".join([str(item) for item in card_items if item not in (None, "")])
+
+        # # 卡牌元素
         element_mappings = {
             "card_element_num_earth": "${eE01}",
             "card_element_num_water": "${eW01}",
             "card_element_num_fire": "${eF01}",
             "card_element_num_air": "${eA01}"
         }
-        card_element_list = [
+        element_num_mappings = {"低级": 1, "中级": 2, "高级": 4, "传奇": 8}
+        card_element_marks = [
             marker for key, marker in element_mappings.items()
             if card_design_info.get(key)
         ]
-        card_element_mark = "".join(card_element_list)
-
-        # 处理卡牌标签
-        tag_keys = ["card_resource_tag_1", "card_resource_tag_2", "card_resource_tag_3"]
-        card_tags = [str(card_design_info.get(key)) for key in tag_keys
-                     if card_design_info.get(key) not in (None, "")]
-        card_design_tag.extend(card_tags)
-        card_tag = " · ".join(card_tags)
-
-        # 处理属性标签
-        card_level = card_design_info.get("card_level", None)
-        card_resource_type = card_design_info.get("card_resource_type", None)
-        if isinstance(card_level, str):
-            card_design_tag.append(card_level)
-        if isinstance(card_resource_type, str):
-            card_resource_type_list = card_resource_type.split("·")
-            for each in card_resource_type_list:
-                card_design_tag.append(each.strip())
-        card_items = [card_level, card_resource_type, card_tag]
-        card_attribute = " / ".join([str(item) for item in card_items if item not in (None, "")])
+        card_element_mark_info = "".join(card_element_marks)
+        card_element_num = 0
+        if len(card_element_marks) > 0:
+            card_element_num = element_num_mappings[card_level] if card_level in element_num_mappings else 0
+            card_element_tooltip = card_design_info.get("card_element_tooltip", "")
+            if card_element_tooltip and card_element_tooltip != "":
+                card_element_num = int(card_element_tooltip)
 
         # 处理卡牌效果并更新
         undisposed_card_info_effect = card_design_info.get("card_info_effect") or ""
         disposed_card_info_effect = TextFormatter().parse_from_text(undisposed_card_info_effect).to_dict()
 
         # 事件卡牌特殊处理
-        if card_resource_type == "事件":
+        if "事件" in card_types:
             effects = disposed_card_info_effect.get("effects", [])
             for effect in effects:
                 effect["name"] = "事件"
@@ -119,10 +132,20 @@ class WikiSynchronizer:
         # ---------------------------------------------------------------------------
         # 统一更新
         info = {
-            "card_element_mark": card_element_mark,
+            # 图片链接
             "card_image_url": card_image_url,
-            "card_attribute": card_attribute,
-            "card_tag": card_tag,
+            # 基础信息 (显示在卡名下方)
+            "card_basic_info": card_basic_info,
+            # 元素标记（类型, 数目）
+            "card_element_marks": card_element_marks,
+            "card_element_mark_num": card_element_num,
+            "card_element_mark_info": card_element_mark_info,
+            # 卡牌类型
+            "card_types": card_types,
+            "card_type_info": card_type_info,
+            # 标签信息
+            "card_tags": card_tags,
+            "card_tag_info": card_tag_info,
             **disposed_card_info_effect
         }
         card_design_info.update(info)
@@ -201,17 +224,13 @@ class WikiSynchronizer:
                 idx += 1
                 with open(each_file, 'r', encoding='utf-8') as f:
                     each_data = json.load(f)
-                    card_type = each_data["card"]["card_resource_type"]
-                    card_type_list = [_each.strip() for _each in card_type.split("·")] if card_type else []
-                    card_tag = each_data["card"]["card_tag"]
-                    card_tag_list = [_each.strip() for _each in card_tag.split("·")] if card_tag else []
                     new_data = {
                         "id": idx,
                         "url": "/" + each_data["path"],
                         "name": each_data["card"]["card_name"],
                         "level": each_data["card"]["card_level"],
-                        "type": card_type_list,
-                        "attribute":  card_tag_list,
+                        "type": each_data["card"]["card_types"],
+                        "attribute":  each_data["card"]["card_tags"],
                         "image": each_data["card"]["card_image_url"],
                     }
                     bucket.append(new_data)
