@@ -130,10 +130,11 @@
 /* 卡牌网格样式增强 */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 25px;
   margin-bottom: 30px;
-  min-height: calc(2 * (180px + 60px) + 25px); /* 最小2行高度 */
+  /* 根据新尺寸调整最小高度计算 */
+  min-height: calc(2 * (180px + 60px) + 25px);
   align-content: flex-start;
 }
 
@@ -146,8 +147,8 @@
   transition: all 0.3s;
   cursor: pointer;
   position: relative;
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 320px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
 }
@@ -168,17 +169,18 @@
 }
 
 .card-image img {
-  width: 150%; /* 放大图片50%，显示更多细节 */
-  height: 150%; /* 与宽度等比例放大 */
-  object-fit: cover; /* 保持图片比例，裁剪多余部分 */
-  transition: transform 0.5s ease;
-  /* 调整重心：X轴居中（抵消130%宽度的偏移），Y轴向上偏移5% */
-  transform: translate(0%, 10%);
+  width: 300%; /* 原代码保留（放大图片尺寸，提供更多裁剪空间） */
+  height: 300%;
+  object-fit: cover;
+  transition: transform 0.5s ease; /* 确保过渡效果生效 */
+  /* 合并 translate 和 scale：先位移，再缩放 */
+  transform: translate(0%, 19.2%) scale(1.0); /* 示例：默认缩小到100% */
 }
 
 /* 悬停时的增强效果（可选） */
 .card:hover .card-image img {
-  transform: translate(0%, 10%) scale(1.05); /* 保持重心，再略微放大 */
+  /* 保持 translate(0%, 10%) 位移，只修改 scale 数值 */
+  transform: translate(0%, 19.2%) scale(1.05); /* 示例：悬停放大到105% */
 }
 
 .card-badges {
@@ -363,12 +365,12 @@
 /* 响应式调整 */
 @media (max-width: 1200px) {
   .card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
 
   .card {
-    min-width: 220px;
-    max-width: 220px;
+    min-width: 280px;
+    max-width: 280px;
   }
 }
 
@@ -378,12 +380,12 @@
   }
 
   .card-grid {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 
   .card {
-    min-width: 180px;
-    max-width: 180px;
+    min-width: 240px;
+    max-width: 240px;
   }
 
   .card-image {

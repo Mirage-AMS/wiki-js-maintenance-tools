@@ -173,9 +173,9 @@ class WikiSynchronizer:
                     json.dump(saved_info, f, indent=4, ensure_ascii=False)
 
         # sync contents.json
-        self.sync_content()
+        self.sync_contents()
 
-    def sync_content(self):
+    def sync_contents(self):
         sync_dir = self.data_dir / self.locale / "card"
 
         for each_dir in sync_dir.iterdir():
@@ -183,21 +183,46 @@ class WikiSynchronizer:
                 continue
             content_file_name = each_dir / f"contents.json"
             content = {"children": {}}
+
+            idx = 0
+            bucket = []
             for each_file in each_dir.iterdir():
+                # skip not json file
                 if not each_file.is_file():
                     continue
                 if each_file.name == "contents.json":
                     continue
                 if each_file.suffix != ".json":
                     continue
+
                 content["children"][each_file.stem] = {
                     "data": each_file.name
                 }
+                idx += 1
+                with open(each_file, 'r', encoding='utf-8') as f:
+                    each_data = json.load(f)
+                    card_type = each_data["card"]["card_resource_type"]
+                    card_type_list = [_each.strip() for _each in card_type.split("·")] if card_type else []
+                    card_tag = each_data["card"]["card_tag"]
+                    card_tag_list = [_each.strip() for _each in card_tag.split("·")] if card_tag else []
+                    new_data = {
+                        "id": idx,
+                        "url": "/" + each_data["path"],
+                        "name": each_data["card"]["card_name"],
+                        "level": each_data["card"]["card_level"],
+                        "type": card_type_list,
+                        "attribute":  card_tag_list,
+                        "image": each_data["card"]["card_image_url"],
+                    }
+                    bucket.append(new_data)
 
             with open(content_file_name, 'w', encoding='utf-8') as f:
                 json.dump(content, f, indent=4, ensure_ascii=False)
 
-
+            target_bucket_file = sync_dir / f"{each_dir.name}.json"
+            print(target_bucket_file)
+            with open(target_bucket_file, 'w', encoding='utf-8') as f:
+                json.dump(bucket, f, indent=4, ensure_ascii=False)
 
 if __name__ == '__main__':
     ws = WikiSynchronizer()
