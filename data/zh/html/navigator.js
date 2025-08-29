@@ -2,18 +2,30 @@
 document.addEventListener('DOMContentLoaded', function() {
     // 全局变量
     let currentPage = 1;
-    const cardsPerPage = 6;
+    const cardsPerPage = 8;
     let cardData = [];
     let filteredCards = [];
+    let filterOptions = {
+        levels: new Set(),
+        types: new Set(),
+        attributes: new Set()
+    };
+    let allFilterValues = {
+        levels: new Set(),
+        types: new Set(),
+        attributes: new Set()
+    };
 
     // DOM 元素
     const cardContainer = document.getElementById('card-container');
     const pageNumbersContainer = document.getElementById('page-numbers');
     const prevPageBtn = document.getElementById('prev-page');
     const nextPageBtn = document.getElementById('next-page');
-    const levelFilter = document.getElementById('level-filter');
-    const typeFilter = document.getElementById('type-filter');
-    const attributeFilter = document.getElementById('attribute-filter');
+    const filterToggle = document.getElementById('filter-toggle');
+    const filtersContainer = document.getElementById('filters-container');
+    const filterGroups = document.querySelector('.filter-groups');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+    const filterCount = document.getElementById('filter-count');
 
     // 从本地JSON文件加载卡牌数据
     loadCardData();
@@ -21,15 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 事件监听器
     prevPageBtn.addEventListener('click', goToPrevPage);
     nextPageBtn.addEventListener('click', goToNextPage);
-    levelFilter.addEventListener('change', applyFilters);
-    typeFilter.addEventListener('change', applyFilters);
-    attributeFilter.addEventListener('change', applyFilters);
+    filterToggle.addEventListener('click', toggleFilters);
+    clearFiltersBtn.addEventListener('click', clearAllFilters);
 
     // 从JSON文件加载数据
     function loadCardData() {
         // 显示加载状态
         cardContainer.innerHTML = '<p class="loading">加载卡牌数据中...</p>';
-        
+
         // 从本地JSON文件获取数据
         fetch('/assets/card.json')
             .then(response => {
@@ -41,8 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 cardData = data;
                 filteredCards = [...cardData];
+                extractFilterValues();
+                renderFilterOptions();
                 renderCards();
                 renderPagination();
+                updateFilterCount();
             })
             .catch(error => {
                 console.error('加载数据时出错:', error);
@@ -50,10 +64,156 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
+    // 提取所有筛选选项值
+    function extractFilterValues() {
+        cardData.forEach(card => {
+            allFilterValues.levels.add(card.level.toString());
+            allFilterValues.types.add(card.type);
+            allFilterValues.attributes.add(card.attribute);
+        });
+    }
+
+    // 渲染筛选选项
+    function renderFilterOptions() {
+        filterGroups.innerHTML = '';
+
+        // 等级筛选
+        const levelGroup = createFilterGroup(
+            '卡牌等级',
+            'levels',
+            Array.from(allFilterValues.levels).sort((a, b) => a - b),
+            (value) => value + '级'
+        );
+        filterGroups.appendChild(levelGroup);
+
+        // 类型筛选
+        const typeGroup = createFilterGroup(
+            '卡牌类型',
+            'types',
+            Array.from(allFilterValues.types),
+            getTypeName
+        );
+        filterGroups.appendChild(typeGroup);
+
+        // 属性筛选
+        const attributeGroup = createFilterGroup(
+            '卡牌属性',
+            'attributes',
+            Array.from(allFilterValues.attributes),
+            (value) => {
+                const attrMap = {
+                    'fire': '火',
+                    'water': '水',
+                    'earth': '土',
+                    'air': '风',
+                    'light': '光',
+                    'dark': '暗'
+                };
+                return attrMap[value] || value;
+            }
+        );
+        filterGroups.appendChild(attributeGroup);
+    }
+
+    // 创建筛选组
+    function createFilterGroup(label, type, values, displayFn) {
+        const group = document.createElement('div');
+        group.className = 'filter-group';
+
+        const groupLabel = document.createElement('label');
+        groupLabel.className = 'filter-group-label';
+        groupLabel.textContent = label;
+        group.appendChild(groupLabel);
+
+        const optionsContainer = document.createElement('div');
+        optionsContainer.className = 'filter-options';
+
+        values.forEach(value => {
+            const option = document.createElement('label');
+            option.className = 'filter-option';
+            option.innerHTML = `
+                <input type="checkbox" name="${type}" value="${value}">
+                <span>${displayFn(value)}</span>
+            `;
+
+            const checkbox = option.querySelector('input');
+            checkbox.addEventListener('change', (e) => {
+                handleFilterChange(type, e.target.value, e.target.checked);
+            });
+
+            optionsContainer.appendChild(option);
+        });
+
+        group.appendChild(optionsContainer);
+        return group;
+    }
+
+    // 处理筛选变化
+    function handleFilterChange(type, value, checked) {
+        if (checked) {
+            filterOptions[type].add(value);
+        } else {
+            filterOptions[type].delete(value);
+        }
+
+        applyFilters();
+        updateFilterCount();
+    }
+
+    // 应用筛选条件
+    function applyFilters() {
+        filteredCards = cardData.filter(card => {
+            const levelMatch = filterOptions.levels.size === 0 ||
+                              filterOptions.levels.has(card.level.toString());
+            const typeMatch = filterOptions.types.size === 0 ||
+                             filterOptions.types.has(card.type);
+            const attributeMatch = filterOptions.attributes.size === 0 ||
+                                  filterOptions.attributes.has(card.attribute);
+
+            return levelMatch && typeMatch && attributeMatch;
+        });
+
+        // 重置到第一页
+        currentPage = 1;
+        renderCards();
+        renderPagination();
+    }
+
+    // 清除所有筛选
+    function clearAllFilters() {
+        // 重置筛选选项
+        filterOptions = {
+            levels: new Set(),
+            types: new Set(),
+            attributes: new Set()
+        };
+
+        // 取消所有勾选
+        document.querySelectorAll('.filter-option input:checked').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        applyFilters();
+        updateFilterCount();
+    }
+
+    // 更新筛选计数
+    function updateFilterCount() {
+        const totalFilters = filterOptions.levels.size +
+                            filterOptions.types.size +
+                            filterOptions.attributes.size;
+        filterCount.textContent = `(${totalFilters})`;
+    }
+
+    // 切换筛选面板显示/隐藏
+    function toggleFilters() {
+        filtersContainer.classList.toggle('filters-visible');
+    }
+
     // 渲染卡牌
     function renderCards() {
         cardContainer.innerHTML = '';
-        
+
         const startIndex = (currentPage - 1) * cardsPerPage;
         const endIndex = startIndex + cardsPerPage;
         const currentCards = filteredCards.slice(startIndex, endIndex);
@@ -77,11 +237,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="card-type">${getTypeName(card.type)}</span>
                 </div>
             `;
-            
+
             cardElement.addEventListener('click', () => {
                 window.location.href = card.url;
             });
-            
+
             cardContainer.appendChild(cardElement);
         });
     }
@@ -89,9 +249,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 渲染分页
     function renderPagination() {
         pageNumbersContainer.innerHTML = '';
-        
+
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-        
+
         // 更新按钮状态
         prevPageBtn.disabled = currentPage === 1;
         nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
@@ -134,26 +294,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPage < totalPages) {
             goToPage(currentPage + 1);
         }
-    }
-
-    // 应用筛选条件
-    function applyFilters() {
-        const level = levelFilter.value;
-        const type = typeFilter.value;
-        const attribute = attributeFilter.value;
-
-        filteredCards = cardData.filter(card => {
-            const levelMatch = level === 'all' || card.level.toString() === level;
-            const typeMatch = type === 'all' || card.type === type;
-            const attributeMatch = attribute === 'all' || card.attribute === attribute;
-            
-            return levelMatch && typeMatch && attributeMatch;
-        });
-
-        // 重置到第一页
-        currentPage = 1;
-        renderCards();
-        renderPagination();
     }
 
     // 辅助函数：获取类型的显示名称

@@ -5,58 +5,108 @@
   font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
   color: #333
 }
-.catalog-header {
-  text-align: center;
-  margin-bottom: 30px
+
+/* 筛选相关样式 */
+.filter-toggle-container {
+  margin-bottom: 20px;
 }
-.catalog-header h1 {
-  color: #2c3e50;
-  margin-bottom: 10px;
-  font-size: 2.2rem
-}
-.catalog-header p {
-  color: #7f8c8d;
-  font-size: 1.1rem
-}
-.filters {
+
+.filter-toggle-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 30px;
-  padding: 15px;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s;
+}
+
+.filter-toggle-btn:hover {
+  background-color: #2980b9;
+}
+
+.filters {
+  display: none;
+  margin-top: 15px;
+  padding: 20px;
   background-color: #f8f9fa;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.1)
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
-.filter-group {
-  flex: 1;
-  min-width: 200px
-}
-.filter-group label {
+
+.filters.filters-visible {
   display: block;
-  margin-bottom: 8px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group-label {
+  display: block;
+  margin-bottom: 10px;
   font-weight: 600;
-  color: #2c3e50
+  color: #2c3e50;
+  font-size: 1.1rem;
 }
-.filter-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 5px 10px;
   border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.filter-option:hover {
+  background-color: #eaeaea;
+}
+
+.filter-option input {
+  cursor: pointer;
+}
+
+.clear-filters-btn {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
   font-size: 1rem;
-  background-color: #fff;
-  transition: border-color .3s
 }
-.filter-group select:focus {
-  border-color: #3498db;
-  outline: 0
+
+.clear-filters-btn:hover {
+  background-color: #c0392b;
 }
+
+/* 卡牌网格样式 */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 25px;
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  /* 关键修改：固定2行高度 */
+  height: calc(2 * (180px + 60px) + 25px); /* 2行(图片180px+信息区60px) + 行间距25px */
+  align-content: flex-start; /* 内容顶部对齐 */
+  overflow: hidden; /* 隐藏超出部分 */
 }
+
+/* 卡片尺寸固定 */
 .card {
   background-color: #fff;
   border-radius: 10px;
@@ -64,12 +114,16 @@
   box-shadow: 0 4px 8px rgba(0,0,0,.1);
   transition: transform .3s,box-shadow .3s;
   cursor: pointer;
-  position: relative
+  position: relative;
+  min-width: 250px; /* 与网格列宽一致 */
+  max-width: 250px; /* 固定最大宽度 */
 }
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,.15)
 }
+
 .card-image {
   height: 180px;
   background-color: #ecf0f1;
@@ -79,15 +133,18 @@
   position: relative;
   overflow: hidden
 }
+
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform .5s
 }
+
 .card:hover .card-image img {
   transform: scale(1.05)
 }
+
 .card-level {
   position: absolute;
   top: 10px;
@@ -102,6 +159,7 @@
   justify-content: center;
   font-weight: 700
 }
+
 .card-attribute {
   position: absolute;
   top: 10px;
@@ -110,32 +168,46 @@
   height: 30px;
   border-radius: 50%
 }
+
 .attribute-fire {
   background-color: #e74c3c
 }
+
 .attribute-water {
   background-color: #3498db
 }
+
 .attribute-earth {
   background-color: #27ae60
 }
+
 .attribute-air {
   background-color: #9b59b6
 }
+
 .attribute-light {
   background-color: #f1c40f
 }
+
 .attribute-dark {
   background-color: #34495e
 }
+
 .card-info {
-  padding: 15px
+  padding: 15px;
+  height: 60px; /* 固定信息区高度 */
+  box-sizing: border-box; /* 确保padding不影响总高度 */
 }
+
 .card-name {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #2c3e50
+  color: #2c3e50;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
 .card-type {
   color: #7f8c8d;
   font-size: .9rem;
@@ -144,6 +216,8 @@
   padding: 3px 8px;
   border-radius: 4px
 }
+
+/* 分页样式 */
 .pagination {
   display: flex;
   align-items: center;
@@ -151,6 +225,7 @@
   gap: 15px;
   margin-top: 20px
 }
+
 .page-btn {
   padding: 8px 16px;
   border: none;
@@ -161,17 +236,21 @@
   transition: background-color .3s;
   font-size: 1rem
 }
+
 .page-btn:hover {
   background-color: #2980b9
 }
+
 .page-btn:disabled {
   background-color: #bdc3c7;
   cursor: not-allowed
 }
+
 .page-numbers {
   display: flex;
   gap: 8px
 }
+
 .page-number {
   width: 36px;
   height: 36px;
@@ -183,19 +262,29 @@
   transition: background-color .3s,color .3s;
   font-size: 1rem
 }
+
 .page-number:hover {
   background-color: #f1f1f1
 }
+
 .page-number.active {
   background-color: #3498db;
   color: #fff;
   font-weight: 700
 }
+
 @media (max-width:768px) {
-  .filters {
-    flex-direction: column
+  .filter-options {
+    gap: 8px;
   }
+
   .card-grid {
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr))
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    height: calc(2 * (180px + 60px) + 25px); /* 移动设备保持2行高度 */
+  }
+
+  .card {
+    min-width: 200px;
+    max-width: 200px;
   }
 }
