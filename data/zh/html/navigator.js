@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const clearFiltersBtn = document.getElementById('clear-filters');
     const filterCount = document.getElementById('filter-count');
 
-    // 从本地JSON文件加载卡牌数据
+    // 初始化
     loadCardData();
 
     // 事件监听器
@@ -38,15 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 从JSON文件加载数据
     function loadCardData() {
-        // 显示加载状态
         cardContainer.innerHTML = '<p class="loading">加载卡牌数据中...</p>';
 
-        // 从本地JSON文件获取数据
-        fetch('/assets/card.json')
+        fetch('/assets/intelligence.json')
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('网络响应不正常');
-                }
+                if (!response.ok) throw new Error('网络响应不正常');
                 return response.json();
             })
             .then(data => {
@@ -64,55 +60,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // 提取所有筛选选项值
+    // 提取所有筛选选项值（支持数组类型）
     function extractFilterValues() {
         cardData.forEach(card => {
-            allFilterValues.levels.add(card.level.toString());
-            allFilterValues.types.add(card.type);
-            allFilterValues.attributes.add(card.attribute);
-        });
-    }
+            // 处理等级（字符串）
+            allFilterValues.levels.add(card.level);
 
-    // 渲染筛选选项
-    function renderFilterOptions() {
-        filterGroups.innerHTML = '';
-
-        // 等级筛选
-        const levelGroup = createFilterGroup(
-            '卡牌等级',
-            'levels',
-            Array.from(allFilterValues.levels).sort((a, b) => a - b),
-            (value) => value + '级'
-        );
-        filterGroups.appendChild(levelGroup);
-
-        // 类型筛选
-        const typeGroup = createFilterGroup(
-            '卡牌类型',
-            'types',
-            Array.from(allFilterValues.types),
-            getTypeName
-        );
-        filterGroups.appendChild(typeGroup);
-
-        // 属性筛选
-        const attributeGroup = createFilterGroup(
-            '卡牌属性',
-            'attributes',
-            Array.from(allFilterValues.attributes),
-            (value) => {
-                const attrMap = {
-                    'fire': '火',
-                    'water': '水',
-                    'earth': '土',
-                    'air': '风',
-                    'light': '光',
-                    'dark': '暗'
-                };
-                return attrMap[value] || value;
+            // 处理类型（数组）
+            if (Array.isArray(card.type)) {
+                card.type.forEach(type => allFilterValues.types.add(type));
+            } else {
+                allFilterValues.types.add(card.type);
             }
-        );
-        filterGroups.appendChild(attributeGroup);
+
+            // 处理属性（数组）
+            if (Array.isArray(card.attribute) && card.attribute.length > 0) {
+                card.attribute.forEach(attr => allFilterValues.attributes.add(attr));
+            }
+        });
     }
 
     // 创建筛选组
@@ -137,6 +102,11 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
 
             const checkbox = option.querySelector('input');
+            // 保持筛选状态
+            if (filterOptions[type].has(value)) {
+                checkbox.checked = true;
+            }
+
             checkbox.addEventListener('change', (e) => {
                 handleFilterChange(type, e.target.value, e.target.checked);
             });
@@ -146,6 +116,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
         group.appendChild(optionsContainer);
         return group;
+    }
+
+    // 渲染筛选选项
+    function renderFilterOptions() {
+        filterGroups.innerHTML = '';
+
+        // 等级筛选（排序）
+        const levelGroup = createFilterGroup(
+            '卡牌等级',
+            'levels',
+            Array.from(allFilterValues.levels).sort((a, b) => {
+                // 按低级、中级、高级、传奇排序
+                const order = { '低级': 1, '中级': 2, '高级': 3, '传奇': 4};
+                return order[a] - order[b];
+            }),
+            (value) => value
+        );
+        filterGroups.appendChild(levelGroup);
+
+        // 类型筛选
+        const typeGroup = createFilterGroup(
+            '卡牌类型',
+            'types',
+            Array.from(allFilterValues.types).sort(),
+            (value) => value
+        );
+        filterGroups.appendChild(typeGroup);
+
+        // 属性筛选
+        const attributeGroup = createFilterGroup(
+            '卡牌属性',
+            'attributes',
+            Array.from(allFilterValues.attributes).sort(),
+            (value) => value
+        );
+        filterGroups.appendChild(attributeGroup);
     }
 
     // 处理筛选变化
@@ -160,20 +166,27 @@ document.addEventListener('DOMContentLoaded', function() {
         updateFilterCount();
     }
 
-    // 应用筛选条件
+    // 应用筛选条件（支持多类型/属性匹配）
     function applyFilters() {
         filteredCards = cardData.filter(card => {
+            // 等级匹配
             const levelMatch = filterOptions.levels.size === 0 ||
-                              filterOptions.levels.has(card.level.toString());
+                              filterOptions.levels.has(card.level);
+
+            // 类型匹配（支持数组）
             const typeMatch = filterOptions.types.size === 0 ||
-                             filterOptions.types.has(card.type);
+                             (Array.isArray(card.type)
+                                ? card.type.some(t => filterOptions.types.has(t))
+                                : filterOptions.types.has(card.type));
+
+            // 属性匹配（支持数组和空数组）
             const attributeMatch = filterOptions.attributes.size === 0 ||
-                                  filterOptions.attributes.has(card.attribute);
+                                  (Array.isArray(card.attribute) &&
+                                   card.attribute.some(a => filterOptions.attributes.has(a)));
 
             return levelMatch && typeMatch && attributeMatch;
         });
 
-        // 重置到第一页
         currentPage = 1;
         renderCards();
         renderPagination();
@@ -181,14 +194,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 清除所有筛选
     function clearAllFilters() {
-        // 重置筛选选项
         filterOptions = {
             levels: new Set(),
             types: new Set(),
             attributes: new Set()
         };
 
-        // 取消所有勾选
         document.querySelectorAll('.filter-option input:checked').forEach(checkbox => {
             checkbox.checked = false;
         });
@@ -205,12 +216,12 @@ document.addEventListener('DOMContentLoaded', function() {
         filterCount.textContent = `(${totalFilters})`;
     }
 
-    // 切换筛选面板显示/隐藏
+    // 切换筛选面板
     function toggleFilters() {
         filtersContainer.classList.toggle('filters-visible');
     }
 
-    // 渲染卡牌
+    // 渲染卡牌（优化多类型/属性展示）
     function renderCards() {
         cardContainer.innerHTML = '';
 
@@ -226,15 +237,32 @@ document.addEventListener('DOMContentLoaded', function() {
         currentCards.forEach(card => {
             const cardElement = document.createElement('div');
             cardElement.className = 'card';
+
+            // 处理多类型展示（保持不变）
+            const typesHtml = Array.isArray(card.type)
+                ? card.type.map(type => `<span class="card-type">${type}</span>`).join('')
+                : `<span class="card-type">${card.type}</span>`;
+
+            // 处理多属性展示（保持不变，但后续会放入 badges 容器）
+            const attributesHtml = Array.isArray(card.attribute) && card.attribute.length > 0
+                ? card.attribute.map(attr => `
+                    <div class="card-attribute attribute-${attr.toLowerCase()}"></div>
+                  `).join('')
+                : '';
+
+            // 核心修改：将属性图标放入 .card-badges 容器，与等级分工定位
             cardElement.innerHTML = `
                 <div class="card-image">
                     <img src="${card.image}" alt="${card.name}">
-                    <div class="card-level">${card.level}</div>
-                    <div class="card-attribute attribute-${card.attribute}"></div>
+                    <!-- 等级：右上角（原逻辑保留） -->
+                    <div class="card-level level-${card.level.toLowerCase()}">${card.level}</div>
+                    <!-- 属性图标：左上角（用 .card-badges 统一包裹，方便横向排列） -->
+                    <div class="card-badges">${attributesHtml}</div>
                 </div>
                 <div class="card-info">
                     <h3 class="card-name">${card.name}</h3>
-                    <span class="card-type">${getTypeName(card.type)}</span>
+                    <!-- 原代码中是 .card-types，此处匹配 CSS 中的 .card-meta（避免样式失效） -->
+                    <div class="card-meta">${typesHtml}</div>
                 </div>
             `;
 
@@ -252,25 +280,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
 
-        // 更新按钮状态
         prevPageBtn.disabled = currentPage === 1;
         nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
 
-        // 只显示当前页附近的页码
+        // 优化页码显示逻辑
         for (let i = 1; i <= totalPages; i++) {
+            // 始终显示第一页、最后一页和当前页附近的页码
             if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
                 const pageNumber = document.createElement('div');
                 pageNumber.className = `page-number ${i === currentPage ? 'active' : ''}`;
                 pageNumber.textContent = i;
                 pageNumber.addEventListener('click', () => goToPage(i));
                 pageNumbersContainer.appendChild(pageNumber);
-            } else if (Math.abs(i - currentPage) === 2) {
-                // 添加省略号
+            } else if (
+                (i === 2 && currentPage > 3) ||
+                (i === totalPages - 1 && currentPage < totalPages - 2)
+            ) {
+                // 只在必要时显示省略号
                 const ellipsis = document.createElement('div');
                 ellipsis.className = 'page-number ellipsis';
                 ellipsis.textContent = '...';
                 ellipsis.style.pointerEvents = 'none';
-                pageNumbersContainer.appendChild(ellipsis);
+
+                // 避免重复添加省略号
+                const lastChild = pageNumbersContainer.lastChild;
+                if (!lastChild || lastChild.textContent !== '...') {
+                    pageNumbersContainer.appendChild(ellipsis);
+                }
             }
         }
     }
@@ -294,18 +330,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentPage < totalPages) {
             goToPage(currentPage + 1);
         }
-    }
-
-    // 辅助函数：获取类型的显示名称
-    function getTypeName(type) {
-        const typeMap = {
-            'warrior': '战士',
-            'mage': '法师',
-            'archer': '弓箭手',
-            'healer': '治疗师',
-            'tank': '坦克'
-        };
-        return typeMap[type] || type;
     }
 
     // 滚动到顶部
