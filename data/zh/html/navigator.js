@@ -1,121 +1,10 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // 模拟卡牌数据
-    const cardData = [
-        {
-            id: 1,
-            name: "火焰战士",
-            type: "warrior",
-            level: 3,
-            attribute: "fire",
-            image: "https://picsum.photos/seed/warrior1/300/300",
-            url: "#card1"
-        },
-        {
-            id: 2,
-            name: "水之法师",
-            type: "mage",
-            level: 4,
-            attribute: "water",
-            image: "https://picsum.photos/seed/mage1/300/300",
-            url: "#card2"
-        },
-        {
-            id: 3,
-            name: "大地弓箭手",
-            type: "archer",
-            level: 2,
-            attribute: "earth",
-            image: "https://picsum.photos/seed/archer1/300/300",
-            url: "#card3"
-        },
-        {
-            id: 4,
-            name: "风之治疗师",
-            type: "healer",
-            level: 5,
-            attribute: "air",
-            image: "https://picsum.photos/seed/healer1/300/300",
-            url: "#card4"
-        },
-        {
-            id: 5,
-            name: "光明坦克",
-            type: "tank",
-            level: 5,
-            attribute: "light",
-            image: "https://picsum.photos/seed/tank1/300/300",
-            url: "#card5"
-        },
-        {
-            id: 6,
-            name: "黑暗刺客",
-            type: "warrior",
-            level: 4,
-            attribute: "dark",
-            image: "https://picsum.photos/seed/warrior2/300/300",
-            url: "#card6"
-        },
-        {
-            id: 7,
-            name: "火焰法师",
-            type: "mage",
-            level: 3,
-            attribute: "fire",
-            image: "https://picsum.photos/seed/mage2/300/300",
-            url: "#card7"
-        },
-        {
-            id: 8,
-            name: "水之弓箭手",
-            type: "archer",
-            level: 2,
-            attribute: "water",
-            image: "https://picsum.photos/seed/archer2/300/300",
-            url: "#card8"
-        },
-        {
-            id: 9,
-            name: "大地守护者",
-            type: "tank",
-            level: 5,
-            attribute: "earth",
-            image: "https://picsum.photos/seed/tank2/300/300",
-            url: "#card9"
-        },
-        {
-            id: 10,
-            name: "风之信使",
-            type: "healer",
-            level: 1,
-            attribute: "air",
-            image: "https://picsum.photos/seed/healer2/300/300",
-            url: "#card10"
-        },
-        {
-            id: 11,
-            name: "光明使者",
-            type: "mage",
-            level: 4,
-            attribute: "light",
-            image: "https://picsum.photos/seed/mage3/300/300",
-            url: "#card11"
-        },
-        {
-            id: 12,
-            name: "黑暗巫师",
-            type: "mage",
-            level: 5,
-            attribute: "dark",
-            image: "https://picsum.photos/seed/mage4/300/300",
-            url: "#card12"
-        }
-    ];
-
     // 全局变量
     let currentPage = 1;
     const cardsPerPage = 6;
-    let filteredCards = [...cardData];
+    let cardData = [];
+    let filteredCards = [];
 
     // DOM 元素
     const cardContainer = document.getElementById('card-container');
@@ -126,9 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const typeFilter = document.getElementById('type-filter');
     const attributeFilter = document.getElementById('attribute-filter');
 
-    // 初始化页面
-    renderCards();
-    renderPagination();
+    // 从本地JSON文件加载卡牌数据
+    loadCardData();
 
     // 事件监听器
     prevPageBtn.addEventListener('click', goToPrevPage);
@@ -137,10 +25,35 @@ document.addEventListener('DOMContentLoaded', function() {
     typeFilter.addEventListener('change', applyFilters);
     attributeFilter.addEventListener('change', applyFilters);
 
+    // 从JSON文件加载数据
+    function loadCardData() {
+        // 显示加载状态
+        cardContainer.innerHTML = '<p class="loading">加载卡牌数据中...</p>';
+        
+        // 从本地JSON文件获取数据
+        fetch('/assets/card.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('网络响应不正常');
+                }
+                return response.json();
+            })
+            .then(data => {
+                cardData = data;
+                filteredCards = [...cardData];
+                renderCards();
+                renderPagination();
+            })
+            .catch(error => {
+                console.error('加载数据时出错:', error);
+                cardContainer.innerHTML = '<p class="error">加载卡牌数据失败，请稍后重试</p>';
+            });
+    }
+
     // 渲染卡牌
     function renderCards() {
         cardContainer.innerHTML = '';
-
+        
         const startIndex = (currentPage - 1) * cardsPerPage;
         const endIndex = startIndex + cardsPerPage;
         const currentCards = filteredCards.slice(startIndex, endIndex);
@@ -164,11 +77,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="card-type">${getTypeName(card.type)}</span>
                 </div>
             `;
-
+            
             cardElement.addEventListener('click', () => {
                 window.location.href = card.url;
             });
-
+            
             cardContainer.appendChild(cardElement);
         });
     }
@@ -176,9 +89,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // 渲染分页
     function renderPagination() {
         pageNumbersContainer.innerHTML = '';
-
+        
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-
+        
         // 更新按钮状态
         prevPageBtn.disabled = currentPage === 1;
         nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
@@ -233,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const levelMatch = level === 'all' || card.level.toString() === level;
             const typeMatch = type === 'all' || card.type === type;
             const attributeMatch = attribute === 'all' || card.attribute === attribute;
-
+            
             return levelMatch && typeMatch && attributeMatch;
         });
 
