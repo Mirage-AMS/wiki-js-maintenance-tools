@@ -69,7 +69,7 @@ class WikiSynchronizer:
         # 处理卡牌图片并更新
         card_json_file_prefix = card_json_file.split(".")[0]
         card_index = str(idx+1).zfill(2)
-        card_image_url = f"/image/{card_json_file_prefix}_{str(card_index)}.jpg"
+        card_image_url = f"/assets/image/{card_json_file_prefix}_{str(card_index)}.jpg"
 
         # ---------------------------------------------------------------------------
         card_design_tag = ["卡牌"]

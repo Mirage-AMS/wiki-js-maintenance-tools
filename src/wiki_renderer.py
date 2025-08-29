@@ -32,7 +32,7 @@ class WikiPTLRenderer(WikiRenderer):
     """
     在模板渲染前对原始数据进行预渲染处理的类，主要处理HTML转义和图标替换
     """
-    IMAGE_STORAGE_PATH = "/icon"
+    IMAGE_STORAGE_PATH = "/assets/icon"
     # 优化正则表达式，只匹配符合命名规范的图标（字母、数字、下划线、连字符）
     ICON_PATTERN = re.compile(r"\$\{([a-zA-Z0-9_-]+)\}")
 
