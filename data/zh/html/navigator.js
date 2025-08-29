@@ -16,31 +16,56 @@ document.addEventListener('DOMContentLoaded', function() {
         attributes: new Set()
     };
 
-    // DOM 元素
-    const cardContainer = document.getElementById('card-container');
-    const pageNumbersContainer = document.getElementById('page-numbers');
-    const prevPageBtn = document.getElementById('prev-page');
-    const nextPageBtn = document.getElementById('next-page');
-    const filterToggle = document.getElementById('filter-toggle');
-    const filtersContainer = document.getElementById('filters-container');
-    const filterGroups = document.querySelector('.filter-groups');
-    const clearFiltersBtn = document.getElementById('clear-filters');
-    const filterCount = document.getElementById('filter-count');
+    // DOM 元素 - 初始化为null，稍后获取
+    let cardContainer = null;
+    let pageNumbersContainer = null;
+    let prevPageBtn = null;
+    let nextPageBtn = null;
+    let filterToggle = null;
+    let filtersContainer = null;
+    let filterGroups = null;
+    let clearFiltersBtn = null;
+    let filterCount = null;
 
-    // 初始化
-    loadCardData();
+    // 初始化 - 使用轮询等待DOM元素加载完成
+    function init() {
+        // 尝试获取DOM元素
+        cardContainer = document.getElementById('card-container');
+        pageNumbersContainer = document.getElementById('page-numbers');
+        prevPageBtn = document.getElementById('prev-page');
+        nextPageBtn = document.getElementById('next-page');
+        filterToggle = document.getElementById('filter-toggle');
+        filtersContainer = document.getElementById('filters-container');
+        filterGroups = document.querySelector('.filter-groups');
+        clearFiltersBtn = document.getElementById('clear-filters');
+        filterCount = document.getElementById('filter-count');
 
-    // 事件监听器
-    prevPageBtn.addEventListener('click', goToPrevPage);
-    nextPageBtn.addEventListener('click', goToNextPage);
-    filterToggle.addEventListener('click', toggleFilters);
-    clearFiltersBtn.addEventListener('click', clearAllFilters);
+        // 检查所有必要元素是否已加载
+        if (cardContainer && pageNumbersContainer && prevPageBtn && nextPageBtn &&
+            filterToggle && filtersContainer && filterGroups && clearFiltersBtn && filterCount) {
+
+            // 元素加载完成，绑定事件并加载数据
+            bindEvents();
+            loadCardData();
+        } else {
+            // 元素未加载完成，继续轮询（每100ms检查一次）
+            setTimeout(init, 100);
+        }
+    }
+
+    // 绑定事件监听器
+    function bindEvents() {
+        prevPageBtn.addEventListener('click', goToPrevPage);
+        nextPageBtn.addEventListener('click', goToNextPage);
+        filterToggle.addEventListener('click', toggleFilters);
+        clearFiltersBtn.addEventListener('click', clearAllFilters);
+    }
 
     // 从JSON文件加载数据
     function loadCardData() {
         cardContainer.innerHTML = '<p class="loading">加载卡牌数据中...</p>';
 
-        fetch('/assets/intelligence.json')
+        fetch('/assets/json/intelligence.json')
             .then(response => {
                 if (!response.ok) throw new Error('网络响应不正常');
                 return response.json();
@@ -337,5 +362,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const catalog = document.getElementById('card-catalog');
         catalog.scrollIntoView({ behavior: 'smooth' });
     }
+
+    // 启动初始化流程
+    init();
 });
 </script>
