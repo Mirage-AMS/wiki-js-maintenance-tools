@@ -1,24 +1,30 @@
 {
+  "template": "card_contents_template.html",
   "children": {
     "accessory": {
       "index": "contents.json",
-      "template": "../../templates/card_intelligence_template.html"
+      "data": "accessory.json",
+      "template": "card_intelligence_template.html"
     },
     "exploration": {
       "index": "contents.json",
-      "template": "../../templates/card_intelligence_template.html"
+      "data": "exploration.json",
+      "template": "card_intelligence_template.html"
     },
     "intelligence": {
       "index": "contents.json",
-      "template": "../../templates/card_intelligence_template.html"
+      "data": "intelligence.json",
+      "template": "card_intelligence_template.html"
     },
     "role": {
       "index": "contents.json",
-      "template": "../../templates/card_intelligence_template.html"
+      "data": "role.json",
+      "template": "card_intelligence_template.html"
     },
     "trading": {
       "index": "contents.json",
-      "template": "../../templates/card_intelligence_template.html"
+      "data": "trading.json",
+      "template": "card_intelligence_template.html"
     }
   }
 }

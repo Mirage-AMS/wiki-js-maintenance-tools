@@ -1,0 +1,695 @@
+[
+    {
+        "id": 1,
+        "url": "/card/exploration/card_std01_du_01",
+        "name": "史莱姆",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_01.jpg"
+    },
+    {
+        "id": 2,
+        "url": "/card/exploration/card_std01_du_04",
+        "name": "暗影猫",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_04.jpg"
+    },
+    {
+        "id": 3,
+        "url": "/card/exploration/card_std01_du_07",
+        "name": "盲蛇",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_07.jpg"
+    },
+    {
+        "id": 4,
+        "url": "/card/exploration/card_std01_du_10",
+        "name": "元素精灵",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_10.jpg"
+    },
+    {
+        "id": 5,
+        "url": "/card/exploration/card_std01_du_12",
+        "name": "恐狼",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_12.jpg"
+    },
+    {
+        "id": 6,
+        "url": "/card/exploration/card_std01_du_14",
+        "name": "巨蜥",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_14.jpg"
+    },
+    {
+        "id": 7,
+        "url": "/card/exploration/card_std01_du_16",
+        "name": "梦魇",
+        "level": "高级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_16.jpg"
+    },
+    {
+        "id": 8,
+        "url": "/card/exploration/card_std01_du_17",
+        "name": "奇美拉",
+        "level": "高级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_17.jpg"
+    },
+    {
+        "id": 9,
+        "url": "/card/exploration/card_std01_du_18",
+        "name": "狮鹫",
+        "level": "高级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_18.jpg"
+    },
+    {
+        "id": 10,
+        "url": "/card/exploration/card_std01_du_19",
+        "name": "炎龙",
+        "level": "传奇",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_19.jpg"
+    },
+    {
+        "id": 11,
+        "url": "/card/exploration/card_std01_du_20",
+        "name": "不朽之誓·哈米尔",
+        "level": "传奇",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_20.jpg"
+    },
+    {
+        "id": 12,
+        "url": "/card/exploration/card_std01_du_21",
+        "name": "曼德拉草",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_21.jpg"
+    },
+    {
+        "id": 13,
+        "url": "/card/exploration/card_std01_du_22",
+        "name": "魔芋",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_22.jpg"
+    },
+    {
+        "id": 14,
+        "url": "/card/exploration/card_std01_du_23",
+        "name": "幽毒菇",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_23.jpg"
+    },
+    {
+        "id": 15,
+        "url": "/card/exploration/card_std01_du_24",
+        "name": "食人花",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_24.jpg"
+    },
+    {
+        "id": 16,
+        "url": "/card/exploration/card_std01_du_25",
+        "name": "水月镜花",
+        "level": "高级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_25.jpg"
+    },
+    {
+        "id": 17,
+        "url": "/card/exploration/card_std01_du_26",
+        "name": "锈铁",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_26.jpg"
+    },
+    {
+        "id": 18,
+        "url": "/card/exploration/card_std01_du_27",
+        "name": "绿松石",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_27.jpg"
+    },
+    {
+        "id": 19,
+        "url": "/card/exploration/card_std01_du_28",
+        "name": "夜明石",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_28.jpg"
+    },
+    {
+        "id": 20,
+        "url": "/card/exploration/card_std01_du_29",
+        "name": "刚玉",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_29.jpg"
+    },
+    {
+        "id": 21,
+        "url": "/card/exploration/card_std01_du_30",
+        "name": "水银",
+        "level": "高级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_dungeon_std_30.jpg"
+    },
+    {
+        "id": 22,
+        "url": "/card/exploration/card_std01_fo_01",
+        "name": "草木百合",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_01.jpg"
+    },
+    {
+        "id": 23,
+        "url": "/card/exploration/card_std01_fo_04",
+        "name": "红伞菇",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_04.jpg"
+    },
+    {
+        "id": 24,
+        "url": "/card/exploration/card_std01_fo_07",
+        "name": "槲寄生",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_07.jpg"
+    },
+    {
+        "id": 25,
+        "url": "/card/exploration/card_std01_fo_10",
+        "name": "沐光葵",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_10.jpg"
+    },
+    {
+        "id": 26,
+        "url": "/card/exploration/card_std01_fo_12",
+        "name": "箭毒木",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_12.jpg"
+    },
+    {
+        "id": 27,
+        "url": "/card/exploration/card_std01_fo_14",
+        "name": "狭影荚",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_14.jpg"
+    },
+    {
+        "id": 28,
+        "url": "/card/exploration/card_std01_fo_16",
+        "name": "含笑花",
+        "level": "高级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_16.jpg"
+    },
+    {
+        "id": 29,
+        "url": "/card/exploration/card_std01_fo_17",
+        "name": "尸生草",
+        "level": "高级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_17.jpg"
+    },
+    {
+        "id": 30,
+        "url": "/card/exploration/card_std01_fo_18",
+        "name": "接骨木",
+        "level": "高级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_18.jpg"
+    },
+    {
+        "id": 31,
+        "url": "/card/exploration/card_std01_fo_19",
+        "name": "古树新芽",
+        "level": "传奇",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_19.jpg"
+    },
+    {
+        "id": 32,
+        "url": "/card/exploration/card_std01_fo_20",
+        "name": "幻影花",
+        "level": "传奇",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_20.jpg"
+    },
+    {
+        "id": 33,
+        "url": "/card/exploration/card_std01_fo_21",
+        "name": "闪锌矿",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_21.jpg"
+    },
+    {
+        "id": 34,
+        "url": "/card/exploration/card_std01_fo_22",
+        "name": "黄玉",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_22.jpg"
+    },
+    {
+        "id": 35,
+        "url": "/card/exploration/card_std01_fo_23",
+        "name": "石膏",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_23.jpg"
+    },
+    {
+        "id": 36,
+        "url": "/card/exploration/card_std01_fo_24",
+        "name": "陨铁",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_24.jpg"
+    },
+    {
+        "id": 37,
+        "url": "/card/exploration/card_std01_fo_25",
+        "name": "翡翠",
+        "level": "高级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_25.jpg"
+    },
+    {
+        "id": 38,
+        "url": "/card/exploration/card_std01_fo_26",
+        "name": "蜂巢",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_26.jpg"
+    },
+    {
+        "id": 39,
+        "url": "/card/exploration/card_std01_fo_27",
+        "name": "狐狸",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_27.jpg"
+    },
+    {
+        "id": 40,
+        "url": "/card/exploration/card_std01_fo_28",
+        "name": "黄鹿",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_28.jpg"
+    },
+    {
+        "id": 41,
+        "url": "/card/exploration/card_std01_fo_29",
+        "name": "云豹",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_29.jpg"
+    },
+    {
+        "id": 42,
+        "url": "/card/exploration/card_std01_fo_30",
+        "name": "凶虎",
+        "level": "高级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_forest_std_30.jpg"
+    },
+    {
+        "id": 43,
+        "url": "/card/exploration/card_std01_mo_01",
+        "name": "黄铁",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_01.jpg"
+    },
+    {
+        "id": 44,
+        "url": "/card/exploration/card_std01_mo_04",
+        "name": "水晶",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_04.jpg"
+    },
+    {
+        "id": 45,
+        "url": "/card/exploration/card_std01_mo_07",
+        "name": "硫磺",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_07.jpg"
+    },
+    {
+        "id": 46,
+        "url": "/card/exploration/card_std01_mo_10",
+        "name": "黄铜",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_10.jpg"
+    },
+    {
+        "id": 47,
+        "url": "/card/exploration/card_std01_mo_12",
+        "name": "石榴石",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_12.jpg"
+    },
+    {
+        "id": 48,
+        "url": "/card/exploration/card_std01_mo_14",
+        "name": "朱砂",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_14.jpg"
+    },
+    {
+        "id": 49,
+        "url": "/card/exploration/card_std01_mo_16",
+        "name": "矽卡岩",
+        "level": "高级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_16.jpg"
+    },
+    {
+        "id": 50,
+        "url": "/card/exploration/card_std01_mo_17",
+        "name": "黑玛瑙",
+        "level": "高级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_17.jpg"
+    },
+    {
+        "id": 51,
+        "url": "/card/exploration/card_std01_mo_18",
+        "name": "黑曜石",
+        "level": "高级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_18.jpg"
+    },
+    {
+        "id": 52,
+        "url": "/card/exploration/card_std01_mo_19",
+        "name": "欧米伽",
+        "level": "传奇",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_19.jpg"
+    },
+    {
+        "id": 53,
+        "url": "/card/exploration/card_std01_mo_20",
+        "name": "女神之泪",
+        "level": "传奇",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_20.jpg"
+    },
+    {
+        "id": 54,
+        "url": "/card/exploration/card_std01_mo_21",
+        "name": "荧光藓",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_21.jpg"
+    },
+    {
+        "id": 55,
+        "url": "/card/exploration/card_std01_mo_22",
+        "name": "野蓝莓",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_22.jpg"
+    },
+    {
+        "id": 56,
+        "url": "/card/exploration/card_std01_mo_23",
+        "name": "高山杜鹃",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_23.jpg"
+    },
+    {
+        "id": 57,
+        "url": "/card/exploration/card_std01_mo_24",
+        "name": "剑棘花",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_24.jpg"
+    },
+    {
+        "id": 58,
+        "url": "/card/exploration/card_std01_mo_25",
+        "name": "熔炉之芯",
+        "level": "高级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_25.jpg"
+    },
+    {
+        "id": 59,
+        "url": "/card/exploration/card_std01_mo_26",
+        "name": "熔岩蛞蝓",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_26.jpg"
+    },
+    {
+        "id": 60,
+        "url": "/card/exploration/card_std01_mo_27",
+        "name": "岩鼠",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_27.jpg"
+    },
+    {
+        "id": 61,
+        "url": "/card/exploration/card_std01_mo_28",
+        "name": "山羊",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_28.jpg"
+    },
+    {
+        "id": 62,
+        "url": "/card/exploration/card_std01_mo_29",
+        "name": "豺",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_29.jpg"
+    },
+    {
+        "id": 63,
+        "url": "/card/exploration/card_std01_mo_30",
+        "name": "苍鹰",
+        "level": "高级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_mountain_std_30.jpg"
+    }
+]

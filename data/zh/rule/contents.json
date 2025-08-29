@@ -1,4 +1,5 @@
 {
+  "template": "rule_template.md",
   "children": {
     "chap_01": {
       "data": "chap_01_introduction.md"

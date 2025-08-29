@@ -1,0 +1,1154 @@
+[
+    {
+        "id": 1,
+        "url": "/card/intelligence/card_dlc01_co_01",
+        "name": "情报中介",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_01.jpg"
+    },
+    {
+        "id": 2,
+        "url": "/card/intelligence/card_dlc01_co_02",
+        "name": "后知后觉",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_02.jpg"
+    },
+    {
+        "id": 3,
+        "url": "/card/intelligence/card_dlc01_co_03",
+        "name": "荒野求生",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_03.jpg"
+    },
+    {
+        "id": 4,
+        "url": "/card/intelligence/card_dlc01_co_04",
+        "name": "非正规军",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_04.jpg"
+    },
+    {
+        "id": 5,
+        "url": "/card/intelligence/card_dlc01_co_05",
+        "name": "驯兽术",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_05.jpg"
+    },
+    {
+        "id": 6,
+        "url": "/card/intelligence/card_dlc01_co_06",
+        "name": "精华萃取",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_06.jpg"
+    },
+    {
+        "id": 7,
+        "url": "/card/intelligence/card_dlc01_co_07",
+        "name": "厚积薄发",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_07.jpg"
+    },
+    {
+        "id": 8,
+        "url": "/card/intelligence/card_dlc01_co_08",
+        "name": "精益求精",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_08.jpg"
+    },
+    {
+        "id": 9,
+        "url": "/card/intelligence/card_dlc01_co_09",
+        "name": "恃强凌弱",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_dlc01_09.jpg"
+    },
+    {
+        "id": 10,
+        "url": "/card/intelligence/card_dlc01_co_10",
+        "name": "智慧树",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_10.jpg"
+    },
+    {
+        "id": 11,
+        "url": "/card/intelligence/card_dlc01_co_11",
+        "name": "沙之书",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_11.jpg"
+    },
+    {
+        "id": 12,
+        "url": "/card/intelligence/card_dlc01_co_12",
+        "name": "专利文书",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_12.jpg"
+    },
+    {
+        "id": 13,
+        "url": "/card/intelligence/card_dlc01_co_13",
+        "name": "奥术原理",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_13.jpg"
+    },
+    {
+        "id": 14,
+        "url": "/card/intelligence/card_dlc01_co_14",
+        "name": "双生魔杖",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_14.jpg"
+    },
+    {
+        "id": 15,
+        "url": "/card/intelligence/card_dlc01_co_15",
+        "name": "冥冥魔药",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_15.jpg"
+    },
+    {
+        "id": 16,
+        "url": "/card/intelligence/card_dlc01_co_16",
+        "name": "幻梦之茧",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_16.jpg"
+    },
+    {
+        "id": 17,
+        "url": "/card/intelligence/card_dlc01_co_17",
+        "name": "魔鬼之契",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_17.jpg"
+    },
+    {
+        "id": 18,
+        "url": "/card/intelligence/card_dlc01_co_18",
+        "name": "神谕密诏",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_dlc01_18.jpg"
+    },
+    {
+        "id": 19,
+        "url": "/card/intelligence/card_dlc01_co_19",
+        "name": "土之枯竭",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_19.jpg"
+    },
+    {
+        "id": 20,
+        "url": "/card/intelligence/card_dlc01_co_20",
+        "name": "雨之时节",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_20.jpg"
+    },
+    {
+        "id": 21,
+        "url": "/card/intelligence/card_dlc01_co_21",
+        "name": "灼之地带",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_21.jpg"
+    },
+    {
+        "id": 22,
+        "url": "/card/intelligence/card_dlc01_co_22",
+        "name": "岚之轻语",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_22.jpg"
+    },
+    {
+        "id": 23,
+        "url": "/card/intelligence/card_dlc01_co_23",
+        "name": "生命汲取",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_23.jpg"
+    },
+    {
+        "id": 24,
+        "url": "/card/intelligence/card_dlc01_co_24",
+        "name": "迅风快斩",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_24.jpg"
+    },
+    {
+        "id": 25,
+        "url": "/card/intelligence/card_dlc01_co_25",
+        "name": "灵魂奇旅",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_25.jpg"
+    },
+    {
+        "id": 26,
+        "url": "/card/intelligence/card_dlc01_co_26",
+        "name": "灵识吞灭",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_26.jpg"
+    },
+    {
+        "id": 27,
+        "url": "/card/intelligence/card_dlc01_co_27",
+        "name": "点石成金",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_dlc01_27.jpg"
+    },
+    {
+        "id": 28,
+        "url": "/card/intelligence/card_dlc01_co_28",
+        "name": "开业酬宾",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_dlc01_28.jpg"
+    },
+    {
+        "id": 29,
+        "url": "/card/intelligence/card_dlc01_co_29",
+        "name": "元素洪流",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_dlc01_29.jpg"
+    },
+    {
+        "id": 30,
+        "url": "/card/intelligence/card_dlc01_co_30",
+        "name": "魔力凝滞",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_dlc01_30.jpg"
+    },
+    {
+        "id": 31,
+        "url": "/card/intelligence/card_std01_co_01",
+        "name": "情报购买",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_01.jpg"
+    },
+    {
+        "id": 32,
+        "url": "/card/intelligence/card_std01_co_02",
+        "name": "情报交换",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_02.jpg"
+    },
+    {
+        "id": 33,
+        "url": "/card/intelligence/card_std01_co_03",
+        "name": "隔墙有耳",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_03.jpg"
+    },
+    {
+        "id": 34,
+        "url": "/card/intelligence/card_std01_co_04",
+        "name": "不胫而走",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_04.jpg"
+    },
+    {
+        "id": 35,
+        "url": "/card/intelligence/card_std01_co_05",
+        "name": "酒桌谈资",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_05.jpg"
+    },
+    {
+        "id": 36,
+        "url": "/card/intelligence/card_std01_co_06",
+        "name": "道听途说",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_06.jpg"
+    },
+    {
+        "id": 37,
+        "url": "/card/intelligence/card_std01_co_07",
+        "name": "林野见闻",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_07.jpg"
+    },
+    {
+        "id": 38,
+        "url": "/card/intelligence/card_std01_co_08",
+        "name": "病中偶得",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_08.jpg"
+    },
+    {
+        "id": 39,
+        "url": "/card/intelligence/card_std01_co_09",
+        "name": "金融投资",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_09.jpg"
+    },
+    {
+        "id": 40,
+        "url": "/card/intelligence/card_std01_co_10",
+        "name": "情报筛选",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_10.jpg"
+    },
+    {
+        "id": 41,
+        "url": "/card/intelligence/card_std01_co_11",
+        "name": "侦查小队",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_11.jpg"
+    },
+    {
+        "id": 42,
+        "url": "/card/intelligence/card_std01_co_12",
+        "name": "紧急行动",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_12.jpg"
+    },
+    {
+        "id": 43,
+        "url": "/card/intelligence/card_std01_co_13",
+        "name": "躲避风头",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_13.jpg"
+    },
+    {
+        "id": 44,
+        "url": "/card/intelligence/card_std01_co_14",
+        "name": "通晓万物",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_14.jpg"
+    },
+    {
+        "id": 45,
+        "url": "/card/intelligence/card_std01_co_15",
+        "name": "命运骗徒",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_15.jpg"
+    },
+    {
+        "id": 46,
+        "url": "/card/intelligence/card_std01_co_16",
+        "name": "先遣军",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_16.jpg"
+    },
+    {
+        "id": 47,
+        "url": "/card/intelligence/card_std01_co_17",
+        "name": "猎杀行动",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_17.jpg"
+    },
+    {
+        "id": 48,
+        "url": "/card/intelligence/card_std01_co_18",
+        "name": "幕后主使",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_conventicle_std_18.jpg"
+    },
+    {
+        "id": 49,
+        "url": "/card/intelligence/card_std01_co_19",
+        "name": "矿镐",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_19.jpg"
+    },
+    {
+        "id": 50,
+        "url": "/card/intelligence/card_std01_co_20",
+        "name": "水晶灯",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_20.jpg"
+    },
+    {
+        "id": 51,
+        "url": "/card/intelligence/card_std01_co_21",
+        "name": "护身符",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_21.jpg"
+    },
+    {
+        "id": 52,
+        "url": "/card/intelligence/card_std01_co_22",
+        "name": "毒箭",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_22.jpg"
+    },
+    {
+        "id": 53,
+        "url": "/card/intelligence/card_std01_co_23",
+        "name": "占卜杖",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_23.jpg"
+    },
+    {
+        "id": 54,
+        "url": "/card/intelligence/card_std01_co_24",
+        "name": "营养液",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_24.jpg"
+    },
+    {
+        "id": 55,
+        "url": "/card/intelligence/card_std01_co_25",
+        "name": "地图工具",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_25.jpg"
+    },
+    {
+        "id": 56,
+        "url": "/card/intelligence/card_std01_co_26",
+        "name": "矿工手套",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_26.jpg"
+    },
+    {
+        "id": 57,
+        "url": "/card/intelligence/card_std01_co_27",
+        "name": "专业套装",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_27.jpg"
+    },
+    {
+        "id": 58,
+        "url": "/card/intelligence/card_std01_co_28",
+        "name": "启示者",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_28.jpg"
+    },
+    {
+        "id": 59,
+        "url": "/card/intelligence/card_std01_co_29",
+        "name": "体魄药剂",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_29.jpg"
+    },
+    {
+        "id": 60,
+        "url": "/card/intelligence/card_std01_co_30",
+        "name": "洞察烟斗",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_30.jpg"
+    },
+    {
+        "id": 61,
+        "url": "/card/intelligence/card_std02_co_01",
+        "name": "泉涌魔药",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_31.jpg"
+    },
+    {
+        "id": 62,
+        "url": "/card/intelligence/card_std02_co_02",
+        "name": "骨爪魔杖",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_32.jpg"
+    },
+    {
+        "id": 63,
+        "url": "/card/intelligence/card_std02_co_03",
+        "name": "闪灵机关",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_33.jpg"
+    },
+    {
+        "id": 64,
+        "url": "/card/intelligence/card_std02_co_04",
+        "name": "幻景法杖",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_34.jpg"
+    },
+    {
+        "id": 65,
+        "url": "/card/intelligence/card_std02_co_05",
+        "name": "无影披风",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_35.jpg"
+    },
+    {
+        "id": 66,
+        "url": "/card/intelligence/card_std02_co_06",
+        "name": "一千零一夜",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "造物"
+        ],
+        "image": "/image/deck_conventicle_std_36.jpg"
+    },
+    {
+        "id": 67,
+        "url": "/card/intelligence/card_std02_co_07",
+        "name": "地之震荡",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_37.jpg"
+    },
+    {
+        "id": 68,
+        "url": "/card/intelligence/card_std02_co_08",
+        "name": "山之共鸣",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_38.jpg"
+    },
+    {
+        "id": 69,
+        "url": "/card/intelligence/card_std02_co_09",
+        "name": "水之奔流",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_39.jpg"
+    },
+    {
+        "id": 70,
+        "url": "/card/intelligence/card_std02_co_10",
+        "name": "浪之激流",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_40.jpg"
+    },
+    {
+        "id": 71,
+        "url": "/card/intelligence/card_std02_co_11",
+        "name": "火之燎燃",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_41.jpg"
+    },
+    {
+        "id": 72,
+        "url": "/card/intelligence/card_std02_co_12",
+        "name": "炎之呼啸",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_42.jpg"
+    },
+    {
+        "id": 73,
+        "url": "/card/intelligence/card_std02_co_13",
+        "name": "风之轻抚",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_43.jpg"
+    },
+    {
+        "id": 74,
+        "url": "/card/intelligence/card_std02_co_14",
+        "name": "气之波动",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_44.jpg"
+    },
+    {
+        "id": 75,
+        "url": "/card/intelligence/card_std02_co_15",
+        "name": "大地孕育",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_45.jpg"
+    },
+    {
+        "id": 76,
+        "url": "/card/intelligence/card_std02_co_16",
+        "name": "凝冰成器",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_46.jpg"
+    },
+    {
+        "id": 77,
+        "url": "/card/intelligence/card_std02_co_17",
+        "name": "火力全开",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_47.jpg"
+    },
+    {
+        "id": 78,
+        "url": "/card/intelligence/card_std02_co_18",
+        "name": "强袭飓风",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_48.jpg"
+    },
+    {
+        "id": 79,
+        "url": "/card/intelligence/card_std02_co_19",
+        "name": "扭转乾坤",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_49.jpg"
+    },
+    {
+        "id": 80,
+        "url": "/card/intelligence/card_std02_co_20",
+        "name": "传送法阵",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_50.jpg"
+    },
+    {
+        "id": 81,
+        "url": "/card/intelligence/card_std02_co_21",
+        "name": "洪水审判",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_51.jpg"
+    },
+    {
+        "id": 82,
+        "url": "/card/intelligence/card_std02_co_22",
+        "name": "熔炉重塑",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_52.jpg"
+    },
+    {
+        "id": 83,
+        "url": "/card/intelligence/card_std02_co_23",
+        "name": "超越虚空",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_53.jpg"
+    },
+    {
+        "id": 84,
+        "url": "/card/intelligence/card_std02_co_24",
+        "name": "闪电霹雳",
+        "level": "高级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "法术"
+        ],
+        "image": "/image/deck_conventicle_std_54.jpg"
+    },
+    {
+        "id": 85,
+        "url": "/card/intelligence/card_std02_co_25",
+        "name": "彼端奇闻",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_std_55.jpg"
+    },
+    {
+        "id": 86,
+        "url": "/card/intelligence/card_std02_co_26",
+        "name": "沧海遗珠",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_std_56.jpg"
+    },
+    {
+        "id": 87,
+        "url": "/card/intelligence/card_std02_co_27",
+        "name": "赞助游说",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_std_57.jpg"
+    },
+    {
+        "id": 88,
+        "url": "/card/intelligence/card_std02_co_28",
+        "name": "独家秘闻",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_std_58.jpg"
+    },
+    {
+        "id": 89,
+        "url": "/card/intelligence/card_std02_co_29",
+        "name": "全城搜捕",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_std_59.jpg"
+    },
+    {
+        "id": 90,
+        "url": "/card/intelligence/card_std02_co_30",
+        "name": "全城封锁",
+        "level": "低级",
+        "type": [
+            "事件"
+        ],
+        "attribute": [],
+        "image": "/image/deck_conventicle_std_60.jpg"
+    }
+]

@@ -1,0 +1,517 @@
+[
+    {
+        "id": 1,
+        "url": "/card/trading/card_dlc01_ma_01",
+        "name": "石叶草",
+        "level": "低级",
+        "type": [
+            "矿物",
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_01.jpg"
+    },
+    {
+        "id": 2,
+        "url": "/card/trading/card_dlc01_ma_02",
+        "name": "结晶虫",
+        "level": "低级",
+        "type": [
+            "矿物",
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_02.jpg"
+    },
+    {
+        "id": 3,
+        "url": "/card/trading/card_dlc01_ma_03",
+        "name": "叶尾蜥",
+        "level": "低级",
+        "type": [
+            "植物",
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_03.jpg"
+    },
+    {
+        "id": 4,
+        "url": "/card/trading/card_dlc01_ma_04",
+        "name": "紫晶藤",
+        "level": "中级",
+        "type": [
+            "矿物",
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_04.jpg"
+    },
+    {
+        "id": 5,
+        "url": "/card/trading/card_dlc01_ma_05",
+        "name": "龙鲮",
+        "level": "中级",
+        "type": [
+            "矿物",
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_05.jpg"
+    },
+    {
+        "id": 6,
+        "url": "/card/trading/card_dlc01_ma_06",
+        "name": "幽冥海葵",
+        "level": "低级",
+        "type": [
+            "植物",
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_06.jpg"
+    },
+    {
+        "id": 7,
+        "url": "/card/trading/card_dlc01_ma_07",
+        "name": "囤积居奇",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_dlc01_07.jpg"
+    },
+    {
+        "id": 8,
+        "url": "/card/trading/card_dlc01_ma_08",
+        "name": "商业直觉",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_dlc01_08.jpg"
+    },
+    {
+        "id": 9,
+        "url": "/card/trading/card_dlc01_ma_09",
+        "name": "雇佣小队",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_dlc01_09.jpg"
+    },
+    {
+        "id": 10,
+        "url": "/card/trading/card_dlc01_ma_10",
+        "name": "遗忘魔药",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_10.jpg"
+    },
+    {
+        "id": 11,
+        "url": "/card/trading/card_dlc01_ma_11",
+        "name": "工匠笔记",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_11.jpg"
+    },
+    {
+        "id": 12,
+        "url": "/card/trading/card_dlc01_ma_12",
+        "name": "羊皮古卷",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_12.jpg"
+    },
+    {
+        "id": 13,
+        "url": "/card/trading/card_dlc01_ma_13",
+        "name": "探险笔记",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_13.jpg"
+    },
+    {
+        "id": 14,
+        "url": "/card/trading/card_dlc01_ma_14",
+        "name": "采集机巧",
+        "level": "中级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_14.jpg"
+    },
+    {
+        "id": 15,
+        "url": "/card/trading/card_dlc01_ma_15",
+        "name": "化身假面",
+        "level": "高级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_dlc01_15.jpg"
+    },
+    {
+        "id": 16,
+        "url": "/card/trading/card_std01_ma_01",
+        "name": "风信子",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_01.jpg"
+    },
+    {
+        "id": 17,
+        "url": "/card/trading/card_std01_ma_02",
+        "name": "颠茄",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_02.jpg"
+    },
+    {
+        "id": 18,
+        "url": "/card/trading/card_std01_ma_03",
+        "name": "薄荷",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_03.jpg"
+    },
+    {
+        "id": 19,
+        "url": "/card/trading/card_std01_ma_04",
+        "name": "曼陀罗",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_04.jpg"
+    },
+    {
+        "id": 20,
+        "url": "/card/trading/card_std01_ma_05",
+        "name": "罂粟果",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_05.jpg"
+    },
+    {
+        "id": 21,
+        "url": "/card/trading/card_std01_ma_06",
+        "name": "罗勒",
+        "level": "中级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_06.jpg"
+    },
+    {
+        "id": 22,
+        "url": "/card/trading/card_std01_ma_07",
+        "name": "锆石",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_07.jpg"
+    },
+    {
+        "id": 23,
+        "url": "/card/trading/card_std01_ma_08",
+        "name": "紫水晶",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_08.jpg"
+    },
+    {
+        "id": 24,
+        "url": "/card/trading/card_std01_ma_09",
+        "name": "橄榄石",
+        "level": "低级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_09.jpg"
+    },
+    {
+        "id": 25,
+        "url": "/card/trading/card_std01_ma_10",
+        "name": "秘银",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_10.jpg"
+    },
+    {
+        "id": 26,
+        "url": "/card/trading/card_std01_ma_11",
+        "name": "猫眼石",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_11.jpg"
+    },
+    {
+        "id": 27,
+        "url": "/card/trading/card_std01_ma_12",
+        "name": "黄金",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_12.jpg"
+    },
+    {
+        "id": 28,
+        "url": "/card/trading/card_std01_ma_13",
+        "name": "原牛",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_13.jpg"
+    },
+    {
+        "id": 29,
+        "url": "/card/trading/card_std01_ma_14",
+        "name": "水蛇",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_14.jpg"
+    },
+    {
+        "id": 30,
+        "url": "/card/trading/card_std01_ma_15",
+        "name": "狍子",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_15.jpg"
+    },
+    {
+        "id": 31,
+        "url": "/card/trading/card_std01_ma_16",
+        "name": "棕熊",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_16.jpg"
+    },
+    {
+        "id": 32,
+        "url": "/card/trading/card_std01_ma_17",
+        "name": "角鲨",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_17.jpg"
+    },
+    {
+        "id": 33,
+        "url": "/card/trading/card_std01_ma_18",
+        "name": "鳄鱼",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_18.jpg"
+    },
+    {
+        "id": 34,
+        "url": "/card/trading/card_std01_ma_19",
+        "name": "讨价还价",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_std_19.jpg"
+    },
+    {
+        "id": 35,
+        "url": "/card/trading/card_std01_ma_20",
+        "name": "清仓处理",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_std_20.jpg"
+    },
+    {
+        "id": 36,
+        "url": "/card/trading/card_std01_ma_21",
+        "name": "稀缺资源",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_std_21.jpg"
+    },
+    {
+        "id": 37,
+        "url": "/card/trading/card_std01_ma_22",
+        "name": "货品更换",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "技能"
+        ],
+        "image": "/image/deck_market_std_22.jpg"
+    },
+    {
+        "id": 38,
+        "url": "/card/trading/card_std01_ma_23",
+        "name": "圣水",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_23.jpg"
+    },
+    {
+        "id": 39,
+        "url": "/card/trading/card_std01_ma_24",
+        "name": "转换魔药",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_24.jpg"
+    },
+    {
+        "id": 40,
+        "url": "/card/trading/card_std01_ma_25",
+        "name": "兴奋剂",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_25.jpg"
+    },
+    {
+        "id": 41,
+        "url": "/card/trading/card_std01_ma_26",
+        "name": "铁铲",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_26.jpg"
+    },
+    {
+        "id": 42,
+        "url": "/card/trading/card_std01_ma_27",
+        "name": "铁剪",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_27.jpg"
+    },
+    {
+        "id": 43,
+        "url": "/card/trading/card_std01_ma_28",
+        "name": "短匕",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_28.jpg"
+    },
+    {
+        "id": 44,
+        "url": "/card/trading/card_std01_ma_29",
+        "name": "精制皮甲",
+        "level": "中级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_29.jpg"
+    },
+    {
+        "id": 45,
+        "url": "/card/trading/card_std01_ma_30",
+        "name": "时之沙漏",
+        "level": "高级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_market_std_30.jpg"
+    }
+]

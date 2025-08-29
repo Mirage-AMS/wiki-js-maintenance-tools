@@ -1,0 +1,371 @@
+[
+    {
+        "id": 1,
+        "url": "/card/role/card_rol01_ac_01",
+        "name": "赐福圣水",
+        "level": "低级",
+        "type": [
+            "造物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_accessory_std_03.jpg"
+    },
+    {
+        "id": 2,
+        "url": "/card/role/card_rol01_ri_01",
+        "name": "嗜血药剂",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_01.jpg"
+    },
+    {
+        "id": 3,
+        "url": "/card/role/card_rol01_ri_02",
+        "name": "达维安的巨人杀手",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_02.jpg"
+    },
+    {
+        "id": 4,
+        "url": "/card/role/card_rol01_ri_03",
+        "name": "卓越战技：诱敌深入",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_03.jpg"
+    },
+    {
+        "id": 5,
+        "url": "/card/role/card_rol01_ri_04",
+        "name": "卓越战技：决胜一击",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_04.jpg"
+    },
+    {
+        "id": 6,
+        "url": "/card/role/card_rol01_ri_05",
+        "name": "金刚铸魂",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_05.jpg"
+    },
+    {
+        "id": 7,
+        "url": "/card/role/card_rol01_ri_06",
+        "name": "激昂澎湃",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_06.jpg"
+    },
+    {
+        "id": 8,
+        "url": "/card/role/card_rol01_ri_07",
+        "name": "活力药剂",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_07.jpg"
+    },
+    {
+        "id": 9,
+        "url": "/card/role/card_rol01_ri_08",
+        "name": "润物无声",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_08.jpg"
+    },
+    {
+        "id": 10,
+        "url": "/card/role/card_rol01_ri_09",
+        "name": "波娜的记账簿",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_09.jpg"
+    },
+    {
+        "id": 11,
+        "url": "/card/role/card_rol01_ri_10",
+        "name": "冰火轮舞",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_10.jpg"
+    },
+    {
+        "id": 12,
+        "url": "/card/role/card_rol01_ri_11",
+        "name": "优雅之舞",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_11.jpg"
+    },
+    {
+        "id": 13,
+        "url": "/card/role/card_rol01_ri_12",
+        "name": "风之华舞",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_12.jpg"
+    },
+    {
+        "id": 14,
+        "url": "/card/role/card_rol01_ri_13",
+        "name": "弑魔者",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_13.jpg"
+    },
+    {
+        "id": 15,
+        "url": "/card/role/card_rol01_ri_14",
+        "name": "万象法咒",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_14.jpg"
+    },
+    {
+        "id": 16,
+        "url": "/card/role/card_rol01_ri_15",
+        "name": "漫游灵药",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_15.jpg"
+    },
+    {
+        "id": 17,
+        "url": "/card/role/card_rol01_ri_16",
+        "name": "冒险奇谭",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_16.jpg"
+    },
+    {
+        "id": 18,
+        "url": "/card/role/card_rol01_ri_17",
+        "name": "冒险启程",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_17.jpg"
+    },
+    {
+        "id": 19,
+        "url": "/card/role/card_rol01_ri_18",
+        "name": "勤能补拙",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_18.jpg"
+    },
+    {
+        "id": 20,
+        "url": "/card/role/card_rol01_ri_19",
+        "name": "货品退换",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_19.jpg"
+    },
+    {
+        "id": 21,
+        "url": "/card/role/card_rol01_ri_20",
+        "name": "垄断经营",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_20.jpg"
+    },
+    {
+        "id": 22,
+        "url": "/card/role/card_rol01_ri_21",
+        "name": "爆破专家",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "造物"
+        ],
+        "image": "/image/deck_role_info01_21.jpg"
+    },
+    {
+        "id": 23,
+        "url": "/card/role/card_rol01_ri_22",
+        "name": "山脊眺望",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_22.jpg"
+    },
+    {
+        "id": 24,
+        "url": "/card/role/card_rol01_ri_23",
+        "name": "圣泉赐福",
+        "level": "低级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "法术"
+        ],
+        "image": "/image/deck_role_info01_23.jpg"
+    },
+    {
+        "id": 25,
+        "url": "/card/role/card_rol01_ri_24",
+        "name": "圣女祝祷",
+        "level": "中级",
+        "type": [
+            "情报"
+        ],
+        "attribute": [
+            "专属",
+            "技能"
+        ],
+        "image": "/image/deck_role_info01_24.jpg"
+    },
+    {
+        "id": 26,
+        "url": "/card/role/card_rol02_ac_02",
+        "name": "雏鹰",
+        "level": "低级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_accessory_std_04.jpg"
+    },
+    {
+        "id": 27,
+        "url": "/card/role/card_rol02_ac_03",
+        "name": "矛隼",
+        "level": "中级",
+        "type": [
+            "生物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_accessory_std_05.jpg"
+    }
+]

@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "url": "/card/accessory/card_dlc01_ac_01",
+        "name": "足金",
+        "level": "中级",
+        "type": [
+            "矿物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_accessory_std_02.jpg"
+    },
+    {
+        "id": 2,
+        "url": "/card/accessory/card_std01_ac_01",
+        "name": "烂草",
+        "level": "低级",
+        "type": [
+            "植物"
+        ],
+        "attribute": [],
+        "image": "/image/deck_accessory_std_01.jpg"
+    }
+]

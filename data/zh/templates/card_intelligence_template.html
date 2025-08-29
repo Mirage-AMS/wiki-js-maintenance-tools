@@ -2,7 +2,7 @@
     <!-- 卡牌标题栏 -->
     <div class="card-header" style="background: #2c3e50; color: #ffffff; padding: 15px 20px;">
         <h2 style="margin: 0; font-size: 24px; font-weight: 700; color: #ffffff;">{{ card.card_name }}</h2>
-        <div style="font-size: 14px; opacity: 0.9; margin-top: 5px; color: #e0e0e0;">{{ card.card_attribute }}</div>
+        <div style="font-size: 14px; opacity: 0.9; margin-top: 5px; color: #e0e0e0;">{{ card.card_basic_info }}</div>
     </div>
 
     <!-- 上半部分：图片和效果说明 -->
@@ -39,11 +39,11 @@
                         </div>
                         <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
                             <span  style="font-weight: 600;">类型</span>
-                            <span>{{ card.card_resource_type or "无" }}</span>
+                            <span>{{ card.card_type_info or "无" }}</span>
                         </div>
                         <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
                             <span  style="font-weight: 600;">属性</span>
-                            <span>{{ card.card_tag or "无" }}</span>
+                            <span>{{ card.card_tag_info or "无" }}</span>
                         </div>
                     </div>
                 </div>

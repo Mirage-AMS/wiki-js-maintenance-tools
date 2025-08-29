@@ -1,13 +1,15 @@
 {
-  "template": "templates/main_template.md",
+  "template": "main_template.md",
   "children": {
     "rule": {
       "index": "contents.json",
-      "template": "../templates/rule_template.md"
+      "data": "rule.json",
+      "template": "rule_template.md"
     },
     "card": {
       "index": "contents.json",
-      "template": "../templates/card_template.md"
+      "data": "card.json",
+      "template": "card_template.md"
     }
   }
 }
