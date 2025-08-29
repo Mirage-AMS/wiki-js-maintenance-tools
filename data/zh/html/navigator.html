@@ -1,0 +1,61 @@
+<div id="card-catalog">
+    <!-- 页面标题 -->
+    <header class="catalog-header">
+        <h1>卡牌目录</h1>
+        <p>浏览和筛选所有可用卡牌</p>
+    </header>
+
+    <!-- 筛选控件 -->
+    <div class="filters">
+        <div class="filter-group">
+            <label for="level-filter">卡牌等级:</label>
+            <select id="level-filter">
+                <option value="all">所有等级</option>
+                <option value="1">1级</option>
+                <option value="2">2级</option>
+                <option value="3">3级</option>
+                <option value="4">4级</option>
+                <option value="5">5级</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="type-filter">卡牌类型:</label>
+            <select id="type-filter">
+                <option value="all">所有类型</option>
+                <option value="warrior">战士</option>
+                <option value="mage">法师</option>
+                <option value="archer">弓箭手</option>
+                <option value="healer">治疗师</option>
+                <option value="tank">坦克</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="attribute-filter">卡牌属性:</label>
+            <select id="attribute-filter">
+                <option value="all">所有属性</option>
+                <option value="fire">火</option>
+                <option value="water">水</option>
+                <option value="earth">土</option>
+                <option value="air">风</option>
+                <option value="light">光</option>
+                <option value="dark">暗</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- 卡牌展示区域 -->
+    <div class="card-grid" id="card-container">
+        <!-- 卡牌将通过JavaScript动态生成 -->
+    </div>
+
+    <!-- 分页控件 -->
+    <div class="pagination" id="pagination">
+        <button class="page-btn" id="prev-page" disabled>上一页</button>
+        <div class="page-numbers" id="page-numbers">
+            <!-- 页码将通过JavaScript动态生成 -->
+        </div>
+        <button class="page-btn" id="next-page">下一页</button>
+    </div>
+</div>
