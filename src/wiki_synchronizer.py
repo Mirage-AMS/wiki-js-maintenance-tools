@@ -204,8 +204,11 @@ class WikiSynchronizer:
         for each_dir in sync_dir.iterdir():
             if each_dir.is_file():
                 continue
-            content_file_name = each_dir / f"contents.json"
-            content = {"children": {}}
+            contents_file_name = each_dir / f"contents.json"
+            contents_json = {
+                "template": "card_contents_template.html",
+                "children": {}
+            }
 
             idx = 0
             bucket = []
@@ -218,8 +221,9 @@ class WikiSynchronizer:
                 if each_file.suffix != ".json":
                     continue
 
-                content["children"][each_file.stem] = {
-                    "data": each_file.name
+                contents_json["children"][each_file.stem] = {
+                    "template": "card_intelligence_template.html",
+                    "data": each_file.name,
                 }
                 idx += 1
                 with open(each_file, 'r', encoding='utf-8') as f:
@@ -235,13 +239,20 @@ class WikiSynchronizer:
                     }
                     bucket.append(new_data)
 
-            with open(content_file_name, 'w', encoding='utf-8') as f:
-                json.dump(content, f, indent=4, ensure_ascii=False)
+            with open(contents_file_name, 'w', encoding='utf-8') as f:
+                json.dump(contents_json, f, indent=4, ensure_ascii=False)
 
             target_bucket_file = sync_dir / f"{each_dir.name}.json"
-            print(target_bucket_file)
+            content_data = {
+                "path": f"card/{each_dir.name}",
+                "tags": ["卡牌"],
+                "contents": {
+                    "filename": each_dir.name + ".json",
+                    "data": bucket
+                }
+            }
             with open(target_bucket_file, 'w', encoding='utf-8') as f:
-                json.dump(bucket, f, indent=4, ensure_ascii=False)
+                json.dump(content_data, f, indent=4, ensure_ascii=False)
 
 if __name__ == '__main__':
     ws = WikiSynchronizer()

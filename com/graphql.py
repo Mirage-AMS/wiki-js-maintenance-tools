@@ -342,6 +342,8 @@ class WikiJSGraphQLClient:
             isPublished: Optional[bool] = True,
             locale: Optional[str] = None,
             path: Optional[str] = None,
+            scriptCss: Optional[str] = None,
+            scriptJs: Optional[str] = None,
             tags: Optional[List[str]] = None,
             title: Optional[str] = None,
     ) -> Optional[Dict]:  # 新增参数
@@ -355,6 +357,8 @@ class WikiJSGraphQLClient:
         :param isPublished: 是否发布
         :param locale: 语言代码
         :param path: 页面路径
+        :param scriptCss: 样式代码
+        :param scriptJs: 脚本代码
         :param tags: 标签列表
         :param title: 页面标题
         :return: 更新后的页面信息
@@ -370,6 +374,8 @@ class WikiJSGraphQLClient:
             $isPublished: Boolean,
             $locale: String,
             $path: String,
+            $scriptCss: String,
+            $scriptJs: String,
             $tags: [String],
             $title: String
         ) {
@@ -383,6 +389,8 @@ class WikiJSGraphQLClient:
                     isPublished: $isPublished,
                     locale: $locale,
                     path: $path,
+                    scriptCss: $scriptCss,
+                    scriptJs: $scriptJs,
                     tags: $tags,
                     title: $title
                 ) {
@@ -413,6 +421,10 @@ class WikiJSGraphQLClient:
             variables["path"] = path
         if content is not None:
             variables["content"] = content
+        if scriptCss is not None:
+            variables["scriptCss"] = scriptCss
+        if scriptJs is not None:
+            variables["scriptJs"] = scriptJs
         if editor is not None:
             variables["editor"] = editor
         if tags is not None:

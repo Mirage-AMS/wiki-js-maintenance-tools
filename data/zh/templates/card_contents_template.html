@@ -1,2 +1,822 @@
-<div>
+<div id="card-catalog">
+    <!-- 筛选按钮和区域 -->
+    <div class="filter-toggle-container">
+        <button id="filter-toggle" class="filter-toggle-btn">筛选 <span id="filter-count">(0)</span></button>
+        <div class="filters" id="filters-container">
+            <!-- 筛选内容将动态生成 -->
+            <div class="filter-groups"></div>
+            <button id="clear-filters" class="clear-filters-btn">一键清除筛选</button>
+        </div>
+    </div>
+
+    <!-- 卡牌展示区域 -->
+    <div class="card-grid" id="card-container">
+        <!-- 卡牌将通过JavaScript动态生成 -->
+    </div>
+
+    <!-- 分页控件 -->
+    <div class="pagination" id="pagination">
+        <button class="page-btn" id="prev-page" disabled>上一页</button>
+        <div class="page-numbers" id="page-numbers">
+            <!-- 页码将通过JavaScript动态生成 -->
+        </div>
+        <button class="page-btn" id="next-page">下一页</button>
+    </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 全局变量
+    let currentPage = 1;
+    const cardsPerPage = 8;
+    let cardData = [];
+    let filteredCards = [];
+    let filterOptions = {
+        levels: new Set(),
+        types: new Set(),
+        attributes: new Set()
+    };
+    let allFilterValues = {
+        levels: new Set(),
+        types: new Set(),
+        attributes: new Set()
+    };
+
+    // DOM 元素 - 初始化为null，稍后获取
+    let cardContainer = null;
+    let pageNumbersContainer = null;
+    let prevPageBtn = null;
+    let nextPageBtn = null;
+    let filterToggle = null;
+    let filtersContainer = null;
+    let filterGroups = null;
+    let clearFiltersBtn = null;
+    let filterCount = null;
+
+    // 初始化 - 使用轮询等待DOM元素加载完成
+    function init() {
+        // 尝试获取DOM元素
+        cardContainer = document.getElementById('card-container');
+        pageNumbersContainer = document.getElementById('page-numbers');
+        prevPageBtn = document.getElementById('prev-page');
+        nextPageBtn = document.getElementById('next-page');
+        filterToggle = document.getElementById('filter-toggle');
+        filtersContainer = document.getElementById('filters-container');
+        filterGroups = document.querySelector('.filter-groups');
+        clearFiltersBtn = document.getElementById('clear-filters');
+        filterCount = document.getElementById('filter-count');
+
+        // 检查所有必要元素是否已加载
+        if (cardContainer && pageNumbersContainer && prevPageBtn && nextPageBtn &&
+            filterToggle && filtersContainer && filterGroups && clearFiltersBtn && filterCount) {
+
+            // 元素加载完成，绑定事件并加载数据
+            bindEvents();
+            loadCardData();
+        } else {
+            // 元素未加载完成，继续轮询（每100ms检查一次）
+            setTimeout(init, 100);
+        }
+    }
+
+    // 绑定事件监听器
+    function bindEvents() {
+        prevPageBtn.addEventListener('click', goToPrevPage);
+        nextPageBtn.addEventListener('click', goToNextPage);
+        filterToggle.addEventListener('click', toggleFilters);
+        clearFiltersBtn.addEventListener('click', clearAllFilters);
+    }
+
+    // 从JSON文件加载数据
+    function loadCardData() {
+        cardContainer.innerHTML = '<p class="loading">加载卡牌数据中...</p>';
+
+        fetch('/assets/json/{{ contents.filename }}')
+            .then(response => {
+                if (!response.ok) throw new Error('网络响应不正常');
+                return response.json();
+            })
+            .then(data => {
+                cardData = data.contents.data;
+                filteredCards = [...cardData];
+                extractFilterValues();
+                renderFilterOptions();
+                renderCards();
+                renderPagination();
+                updateFilterCount();
+            })
+            .catch(error => {
+                console.error('加载数据时出错:', error);
+                cardContainer.innerHTML = '<p class="error">加载卡牌数据失败，请稍后重试</p>';
+            });
+    }
+
+    // 提取所有筛选选项值（支持数组类型）
+    function extractFilterValues() {
+        cardData.forEach(card => {
+            // 处理等级（字符串）
+            allFilterValues.levels.add(card.level);
+
+            // 处理类型（数组）
+            if (Array.isArray(card.type)) {
+                card.type.forEach(type => allFilterValues.types.add(type));
+            } else {
+                allFilterValues.types.add(card.type);
+            }
+
+            // 处理属性（数组）
+            if (Array.isArray(card.attribute) && card.attribute.length > 0) {
+                card.attribute.forEach(attr => allFilterValues.attributes.add(attr));
+            }
+        });
+    }
+
+    // 创建筛选组
+    function createFilterGroup(label, type, values, displayFn) {
+        const group = document.createElement('div');
+        group.className = 'filter-group';
+
+        const groupLabel = document.createElement('label');
+        groupLabel.className = 'filter-group-label';
+        groupLabel.textContent = label;
+        group.appendChild(groupLabel);
+
+        const optionsContainer = document.createElement('div');
+        optionsContainer.className = 'filter-options';
+
+        values.forEach(value => {
+            const option = document.createElement('label');
+            option.className = 'filter-option';
+            option.innerHTML = `
+                <input type="checkbox" name="${type}" value="${value}">
+                <span>${displayFn(value)}</span>
+            `;
+
+            const checkbox = option.querySelector('input');
+            // 保持筛选状态
+            if (filterOptions[type].has(value)) {
+                checkbox.checked = true;
+            }
+
+            checkbox.addEventListener('change', (e) => {
+                handleFilterChange(type, e.target.value, e.target.checked);
+            });
+
+            optionsContainer.appendChild(option);
+        });
+
+        group.appendChild(optionsContainer);
+        return group;
+    }
+
+    // 渲染筛选选项
+    function renderFilterOptions() {
+        filterGroups.innerHTML = '';
+
+        // 等级筛选（排序）
+        const levelGroup = createFilterGroup(
+            '卡牌等级',
+            'levels',
+            Array.from(allFilterValues.levels).sort((a, b) => {
+                // 按低级、中级、高级、传奇排序
+                const order = { '低级': 1, '中级': 2, '高级': 3, '传奇': 4};
+                return order[a] - order[b];
+            }),
+            (value) => value
+        );
+        filterGroups.appendChild(levelGroup);
+
+        // 类型筛选
+        const typeGroup = createFilterGroup(
+            '卡牌类型',
+            'types',
+            Array.from(allFilterValues.types).sort(),
+            (value) => value
+        );
+        filterGroups.appendChild(typeGroup);
+
+        // 属性筛选
+        const attributeGroup = createFilterGroup(
+            '卡牌属性',
+            'attributes',
+            Array.from(allFilterValues.attributes).sort(),
+            (value) => value
+        );
+        filterGroups.appendChild(attributeGroup);
+    }
+
+    // 处理筛选变化
+    function handleFilterChange(type, value, checked) {
+        if (checked) {
+            filterOptions[type].add(value);
+        } else {
+            filterOptions[type].delete(value);
+        }
+
+        applyFilters();
+        updateFilterCount();
+    }
+
+    // 应用筛选条件（支持多类型/属性匹配）
+    function applyFilters() {
+        filteredCards = cardData.filter(card => {
+            // 等级匹配
+            const levelMatch = filterOptions.levels.size === 0 ||
+                              filterOptions.levels.has(card.level);
+
+            // 类型匹配（支持数组）
+            const typeMatch = filterOptions.types.size === 0 ||
+                             (Array.isArray(card.type)
+                                ? card.type.some(t => filterOptions.types.has(t))
+                                : filterOptions.types.has(card.type));
+
+            // 属性匹配（支持数组和空数组）
+            const attributeMatch = filterOptions.attributes.size === 0 ||
+                                  (Array.isArray(card.attribute) &&
+                                   card.attribute.some(a => filterOptions.attributes.has(a)));
+
+            return levelMatch && typeMatch && attributeMatch;
+        });
+
+        currentPage = 1;
+        renderCards();
+        renderPagination();
+    }
+
+    // 清除所有筛选
+    function clearAllFilters() {
+        filterOptions = {
+            levels: new Set(),
+            types: new Set(),
+            attributes: new Set()
+        };
+
+        document.querySelectorAll('.filter-option input:checked').forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+        applyFilters();
+        updateFilterCount();
+    }
+
+    // 更新筛选计数
+    function updateFilterCount() {
+        const totalFilters = filterOptions.levels.size +
+                            filterOptions.types.size +
+                            filterOptions.attributes.size;
+        filterCount.textContent = `(${totalFilters})`;
+    }
+
+    // 切换筛选面板
+    function toggleFilters() {
+        filtersContainer.classList.toggle('filters-visible');
+    }
+
+    // 渲染卡牌（优化多类型/属性展示）
+    function renderCards() {
+        cardContainer.innerHTML = '';
+
+        const startIndex = (currentPage - 1) * cardsPerPage;
+        const endIndex = startIndex + cardsPerPage;
+        const currentCards = filteredCards.slice(startIndex, endIndex);
+
+        if (currentCards.length === 0) {
+            cardContainer.innerHTML = '<p class="no-cards">没有找到符合条件的卡牌</p>';
+            return;
+        }
+
+        currentCards.forEach(card => {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'card';
+
+            // 处理多类型展示（保持不变）
+            const typesHtml = Array.isArray(card.type)
+                ? card.type.map(type => `<span class="card-type">${type}</span>`).join('')
+                : `<span class="card-type">${card.type}</span>`;
+
+            // 处理多属性展示（保持不变，但后续会放入 badges 容器）
+            const attributesHtml = Array.isArray(card.attribute) && card.attribute.length > 0
+                ? card.attribute.map(attr => `
+                    <div class="card-attribute attribute-${attr.toLowerCase()}"></div>
+                  `).join('')
+                : '';
+
+            // 核心修改：将属性图标放入 .card-badges 容器，与等级分工定位
+            cardElement.innerHTML = `
+                <div class="card-image">
+                    <img src="${card.image}" alt="${card.name}">
+                    <!-- 等级：右上角（原逻辑保留） -->
+                    <div class="card-level level-${card.level.toLowerCase()}">${card.level}</div>
+                    <!-- 属性图标：左上角（用 .card-badges 统一包裹，方便横向排列） -->
+                    <div class="card-badges">${attributesHtml}</div>
+                </div>
+                <div class="card-info">
+                    <h3 class="card-name">${card.name}</h3>
+                    <!-- 原代码中是 .card-types，此处匹配 CSS 中的 .card-meta（避免样式失效） -->
+                    <div class="card-meta">${typesHtml}</div>
+                </div>
+            `;
+
+            cardElement.addEventListener('click', () => {
+                window.location.href = card.url;
+            });
+
+            cardContainer.appendChild(cardElement);
+        });
+    }
+
+    // 渲染分页
+    function renderPagination() {
+        pageNumbersContainer.innerHTML = '';
+
+        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+        prevPageBtn.disabled = currentPage === 1;
+        nextPageBtn.disabled = currentPage === totalPages || totalPages === 0;
+
+        // 优化页码显示逻辑
+        for (let i = 1; i <= totalPages; i++) {
+            // 始终显示第一页、最后一页和当前页附近的页码
+            if (i === 1 || i === totalPages || Math.abs(i - currentPage) <= 1) {
+                const pageNumber = document.createElement('div');
+                pageNumber.className = `page-number ${i === currentPage ? 'active' : ''}`;
+                pageNumber.textContent = i;
+                pageNumber.addEventListener('click', () => goToPage(i));
+                pageNumbersContainer.appendChild(pageNumber);
+            } else if (
+                (i === 2 && currentPage > 3) ||
+                (i === totalPages - 1 && currentPage < totalPages - 2)
+            ) {
+                // 只在必要时显示省略号
+                const ellipsis = document.createElement('div');
+                ellipsis.className = 'page-number ellipsis';
+                ellipsis.textContent = '...';
+                ellipsis.style.pointerEvents = 'none';
+
+                // 避免重复添加省略号
+                const lastChild = pageNumbersContainer.lastChild;
+                if (!lastChild || lastChild.textContent !== '...') {
+                    pageNumbersContainer.appendChild(ellipsis);
+                }
+            }
+        }
+    }
+
+    // 页面导航
+    function goToPage(page) {
+        currentPage = page;
+        renderCards();
+        renderPagination();
+        scrollToTop();
+    }
+
+    function goToPrevPage() {
+        if (currentPage > 1) {
+            goToPage(currentPage - 1);
+        }
+    }
+
+    function goToNextPage() {
+        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+        if (currentPage < totalPages) {
+            goToPage(currentPage + 1);
+        }
+    }
+
+    // 滚动到顶部
+    function scrollToTop() {
+        const catalog = document.getElementById('card-catalog');
+        catalog.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // 启动初始化流程
+    init();
+});
+</script>
+<style>
+    #card-catalog {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    /* 筛选相关样式增强 */
+    .filter-toggle-container {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .filter-toggle-btn {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s;
+    }
+
+    .filter-toggle-btn:hover {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    .filters {
+      display: none;
+      margin-top: 15px;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.1);
+      border: 1px solid #e1e4e8;
+    }
+
+    .filters.filters-visible {
+      display: block;
+      animation: filterFadeIn 0.3s ease-out;
+    }
+
+    @keyframes filterFadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .filter-groups {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .filter-group {
+      margin-bottom: 0;
+      padding: 15px;
+      background-color: white;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    }
+
+    .filter-group-label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 600;
+      color: #2c3e50;
+      font-size: 1.1rem;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .filter-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .filter-option:hover {
+      background-color: #e8f4fd;
+      border-color: #b3d7f5;
+    }
+
+    .filter-option input:checked + span {
+      font-weight: 600;
+      color: #3498db;
+    }
+
+    .filter-option input {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+    }
+
+    .clear-filters-btn {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+      grid-column: 1 / -1;
+      justify-self: flex-end;
+    }
+
+    .clear-filters-btn:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+
+    /* 卡牌网格样式增强 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+      margin-bottom: 30px;
+      /* 根据新尺寸调整最小高度计算 */
+      min-height: calc(2 * (180px + 60px) + 25px);
+      align-content: flex-start;
+    }
+
+    /* 卡片样式增强 */
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,.1);
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+      min-width: 320px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0,0,0,.15);
+    }
+
+    .card-image {
+      height: 180px;
+      background-color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative; /* 关键：作为内部绝对定位元素的参考 */
+      overflow: hidden;
+    }
+
+    .card-image img {
+      width: 300%; /* 原代码保留（放大图片尺寸，提供更多裁剪空间） */
+      height: 300%;
+      object-fit: cover;
+      transition: transform 0.5s ease; /* 确保过渡效果生效 */
+      /* 合并 translate 和 scale：先位移，再缩放 */
+      transform: translate(0%, 19.2%) scale(1.0); /* 示例：默认缩小到100% */
+    }
+
+    /* 悬停时的增强效果（可选） */
+    .card:hover .card-image img {
+      /* 保持 translate(0%, 10%) 位移，只修改 scale 数值 */
+      transform: translate(0%, 19.2%) scale(1.05); /* 示例：悬停放大到105% */
+    }
+
+    .card-badges {
+      position: absolute; /* 浮在图片上 */
+      top: 10px; /* 与等级的 top 一致，保持视觉统一 */
+      left: 10px; /* 左上角（与等级的 right 区分位置） */
+      display: flex;
+      gap: 5px; /* 多个属性图标之间的间距 */
+      z-index: 1; /* 确保在图片上方（避免被图片遮挡） */
+    }
+
+    .card-attribute {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,.2);
+      /* 新增：若属性需要显示文字（如“造”“法”），可加内容（可选） */
+      content: attr(class); /* 或直接写死，如 content: "造"; 需根据需求调整 */
+    }
+
+    .card-level {
+      position: absolute; /* 浮在图片上 */
+      top: 10px; /* 与属性容器的 top 一致 */
+      right: 10px; /* 右上角（与属性的 left 分工，避免重叠） */
+      background-color: rgba(0,0,0,.7);
+      z-index: 1; /* 与属性容器同层级，确保都在图片上方 */
+    }
+
+    /* 属性颜色标识 */
+    .attribute-造物 { background-color: #2ecc71; }
+    .attribute-法术 { background-color: #9b59b6; }
+    .attribute-技能 { background-color: #f39c12; }
+    .attribute-事件 { background-color: #34495e; }
+
+    /* 等级颜色标识 */
+    .level-低级 { border: 2px solid #e74c3c; }
+    .level-中级 { border: 2px solid #3498db; }
+    .level-高级 { border: 2px solid #f1c40f; }
+    .level-传奇 { border: 2px solid #8e44ad; }
+
+    .card-info {
+      padding: 15px;
+      flex: 1;
+      box-sizing: border-box;
+      background-color: white;
+      border-top: 1px solid #f1f1f1;
+    }
+
+    .card-name {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #2c3e50;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card-type {
+      color: #7f8c8d;
+      font-size: 0.9rem;
+      background-color: #f1f1f1;
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* 分页样式增强 */
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+    }
+
+    .page-btn {
+      padding: 8px 16px;
+      border: none;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .page-btn:hover:not(:disabled) {
+      background-color: #2980b9;
+      transform: translateY(-2px);
+    }
+
+    .page-btn:disabled {
+      background-color: #bdc3c7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .page-numbers {
+      display: flex;
+      gap: 8px;
+    }
+
+    .page-number {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    .page-number:hover:not(.active) {
+      background-color: #f1f1f1;
+      border-color: #bbb;
+    }
+
+    .page-number.active {
+      background-color: #3498db;
+      color: #fff;
+      font-weight: 700;
+      border-color: #3498db;
+    }
+
+    /* 空状态样式 */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: #7f8c8d;
+    }
+
+    .empty-state i {
+      font-size: 48px;
+      margin-bottom: 15px;
+      color: #bdc3c7;
+    }
+
+    /* 加载状态样式 */
+    .loading-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #3498db;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 1200px) {
+      .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+
+      .card {
+        min-width: 280px;
+        max-width: 280px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .filter-groups {
+        grid-template-columns: 1fr;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      }
+
+      .card {
+        min-width: 240px;
+        max-width: 240px;
+      }
+
+      .card-image {
+        height: 150px;
+      }
+
+      .pagination {
+        flex-wrap: wrap;
+        padding: 10px;
+      }
+
+      .page-number {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-width: 100%;
+        max-width: 100%;
+        flex-direction: row;
+      }
+
+      .card-image {
+        width: 40%;
+        height: auto;
+      }
+
+      .card-info {
+        width: 60%;
+      }
+    }
+</style>

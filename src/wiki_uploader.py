@@ -20,7 +20,7 @@ from com.graphql import WikiJSGraphQLClient
 from src.wiki_node import DocumentNode
 from src.wiki_indexer import WikiIndexer
 from src.wiki_renderer import WikiRenderer, WikiPTLRenderer
-
+from src.html_extractor import extract_html_parts
 
 
 class WikiUploader:
@@ -69,7 +69,9 @@ class WikiUploader:
         """
         name = doc.name
         data = doc.data
-        path = doc.path.as_posix()
+        scriptJs = ""
+        scriptCss = ""
+        # path = doc.path.as_posix()
         template_suffix = doc.template.template_path.suffix
 
 
@@ -78,6 +80,19 @@ class WikiUploader:
         wikijs_editor = "markdown"
         if template_suffix == ".html":
             wikijs_editor = "code"
+            try:
+                html_parts = extract_html_parts(content)
+            except Exception:
+                print("Failed to extract HTML parts, using the original content instead.")
+                html_parts = {
+                    'html': content,
+                    'script': "",
+                    'style': ""
+                }
+            content = html_parts['html']
+            scriptJs = html_parts['script']
+            scriptCss = html_parts['style']
+
         wikijs_title = name
         if data.get("card", {}).get("card_name", None):
             wikijs_title = data["card"]["card_name"]
@@ -109,12 +124,17 @@ class WikiUploader:
         u_resp = self.wiki_client.update_page(
             page_id=g_resp.get("id"),
             content=content,
+            scriptCss=scriptCss,
+            scriptJs=scriptJs,
             editor=wikijs_editor,
             tags=wikijs_tags,
         )
         if u_resp is None:
             raise Exception(f"Failed to update page: {name}")
-
+        if u_resp.get("responseResult").get("succeeded", False):
+            print(f"已更新页面: {name}")
+        else:
+            raise Exception(f"Failed to update page: {name}, error: {u_resp.get('responseResult').get('message')}")
 
     def upload(
             self,
@@ -159,9 +179,9 @@ class WikiUploader:
 
 if __name__ == '__main__':
     def template_filter(doc: DocumentNode):
-        if "card" not in doc.name:
+        if doc.path and "card" not in str(doc.path):
             return False
-        if "_dlc01_co_" not in doc.name:
+        if doc.name == "card":
             return False
         return True
 
