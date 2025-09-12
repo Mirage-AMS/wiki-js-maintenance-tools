@@ -525,15 +525,14 @@ document.addEventListener('DOMContentLoaded', function() {
     /* 卡牌网格样式增强 */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 25px;
       margin-bottom: 30px;
-      /* 根据新尺寸调整最小高度计算 */
       min-height: calc(2 * (180px + 60px) + 25px);
       align-content: flex-start;
     }
 
-    /* 卡片样式增强 */
+    /* 卡片样式 */
     .card {
       background-color: #fff;
       border-radius: 10px;
@@ -542,8 +541,8 @@ document.addEventListener('DOMContentLoaded', function() {
       transition: all 0.3s;
       cursor: pointer;
       position: relative;
-      min-width: 320px;
-      max-width: 320px;
+      min-width: 300px;
+      max-width: 300px;
       display: flex;
       flex-direction: column;
     }
@@ -554,23 +553,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .card-image {
-      height: 180px; /* 保持原容器高度不变（若需调整卡片视觉比例，可修改此值） */
-      background-color: #ecf0f1; /* 保留背景色，图片加载慢时显示 */
-      display: flex; /* 用 flex 实现子元素（图片）居中，比原定位更简单 */
-      align-items: center; /* 垂直居中 */
-      justify-content: center; /* 水平居中 */
-      overflow: hidden; /* 防止图片超出容器 */
-      position: relative; /* 保留定位，用于卡片徽章/等级标签 */
+      height: 180px; /* 保留原容器高度，避免卡片整体变形 */
+      aspect-ratio: 32 / 17; /* 新增：强制容器为 32:17 比例，与图片比例一致 */
+      background-color: #ecf0f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden; /* 保留：防止图片超出容器 */
+      position: relative;
     }
 
+    /* 卡片图片：覆盖容器，消除白边 */
     .card-image img {
-      width: auto; /* 取消原 300% 宽度，让图片按自身宽高比缩放 */
-      height: auto; /* 取消原 300% 高度，避免图片拉伸变形 */
-      max-width: 100%; /* 限制图片最大宽度不超过容器，防止过宽 */
-      max-height: 100%; /* 限制图片最大高度不超过容器，防止过高 */
-      object-fit: contain; /* 关键：保持图片原有宽高比，完全显示在容器内（不会裁剪） */
-      /* 取消原 translate 和 scale 定位，flex 已实现居中，无需额外偏移 */
-      transition: transform 0.5s ease; /* 保留 hover 缩放动画 */
+      width: 100%; /* 修改：从 auto 改为 100%，让图片宽度充满容器 */
+      height: 100%; /* 修改：从 auto 改为 100%，让图片高度充满容器 */
+      object-fit: cover; /* 修改：从 contain 改为 cover，按比例填充容器（无拉伸，裁剪边缘） */
+      transition: transform 0.5s ease;
     }
 
     /* 保留 hover 时的缩放效果（可选，按原需求保留） */
@@ -760,12 +758,12 @@ document.addEventListener('DOMContentLoaded', function() {
     /* 响应式调整 */
     @media (max-width: 1200px) {
       .card-grid {
-        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
       }
 
       .card {
-        min-width: 280px;
-        max-width: 280px;
+        min-width: 270px;
+        max-width: 270px;
       }
     }
 
