@@ -68,8 +68,11 @@ class WikiSynchronizer:
         # ---------------------------------------------------------------------------
         # 处理卡牌图片并更新
         card_json_file_prefix = card_json_file.split(".")[0]
+        card_main_picture = card_design_info.get("card_picture_path", "image_in_progress_1.jpg")
+        card_main_picture = card_main_picture.split("/")[-1].replace(".png", ".jpg")
         card_index = str(idx+1).zfill(2)
         card_image_url = f"/assets/image/{card_json_file_prefix}_{str(card_index)}.jpg"
+        card_thumbnail_url = f"/assets/thumbnail/{card_main_picture}"
 
         # ---------------------------------------------------------------------------
         card_design_tag = ["卡牌"]
@@ -134,6 +137,7 @@ class WikiSynchronizer:
         info = {
             # 图片链接
             "card_image_url": card_image_url,
+            "card_thumbnail_url": card_thumbnail_url,
             # 基础信息 (显示在卡名下方)
             "card_basic_info": card_basic_info,
             # 元素标记（类型, 数目）
@@ -235,7 +239,7 @@ class WikiSynchronizer:
                         "level": each_data["card"]["card_level"],
                         "type": each_data["card"]["card_types"],
                         "attribute":  each_data["card"]["card_tags"],
-                        "image": each_data["card"]["card_image_url"],
+                        "image": each_data["card"]["card_thumbnail_url"],
                     }
                     bucket.append(new_data)
 

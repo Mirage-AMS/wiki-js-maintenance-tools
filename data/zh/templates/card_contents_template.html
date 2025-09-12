@@ -554,28 +554,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     .card-image {
-      height: 180px;
-      background-color: #ecf0f1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative; /* 关键：作为内部绝对定位元素的参考 */
-      overflow: hidden;
+      height: 180px; /* 保持原容器高度不变（若需调整卡片视觉比例，可修改此值） */
+      background-color: #ecf0f1; /* 保留背景色，图片加载慢时显示 */
+      display: flex; /* 用 flex 实现子元素（图片）居中，比原定位更简单 */
+      align-items: center; /* 垂直居中 */
+      justify-content: center; /* 水平居中 */
+      overflow: hidden; /* 防止图片超出容器 */
+      position: relative; /* 保留定位，用于卡片徽章/等级标签 */
     }
 
     .card-image img {
-      width: 300%; /* 原代码保留（放大图片尺寸，提供更多裁剪空间） */
-      height: 300%;
-      object-fit: cover;
-      transition: transform 0.5s ease; /* 确保过渡效果生效 */
-      /* 合并 translate 和 scale：先位移，再缩放 */
-      transform: translate(0%, 19.2%) scale(1.0); /* 示例：默认缩小到100% */
+      width: auto; /* 取消原 300% 宽度，让图片按自身宽高比缩放 */
+      height: auto; /* 取消原 300% 高度，避免图片拉伸变形 */
+      max-width: 100%; /* 限制图片最大宽度不超过容器，防止过宽 */
+      max-height: 100%; /* 限制图片最大高度不超过容器，防止过高 */
+      object-fit: contain; /* 关键：保持图片原有宽高比，完全显示在容器内（不会裁剪） */
+      /* 取消原 translate 和 scale 定位，flex 已实现居中，无需额外偏移 */
+      transition: transform 0.5s ease; /* 保留 hover 缩放动画 */
     }
 
-    /* 悬停时的增强效果（可选） */
+    /* 保留 hover 时的缩放效果（可选，按原需求保留） */
     .card:hover .card-image img {
-      /* 保持 translate(0%, 10%) 位移，只修改 scale 数值 */
-      transform: translate(0%, 19.2%) scale(1.05); /* 示例：悬停放大到105% */
+      transform: scale(1.05); /* 仅保留缩放，取消原 translate 偏移 */
     }
 
     .card-badges {
@@ -799,24 +799,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    @media (max-width: 480px) {
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
+    @media (max-width:480px) {
       .card {
         min-width: 100%;
         max-width: 100%;
-        flex-direction: row;
+        flex-direction: row; /* 横向布局不变 */
       }
 
       .card-image {
-        width: 40%;
-        height: auto;
+        width: 40%; /* 保持原宽度占比 */
+        height: 100%; /* 关键：让图片容器高度充满卡片，避免纵向压缩 */
+        min-height: 120px; /* 可选：设置最小高度，防止卡片过矮时图片太小 */
       }
 
       .card-info {
-        width: 60%;
+        width: 60%; /* 保持原信息区占比 */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* 可选：让信息区文字垂直居中，视觉更协调 */
       }
     }
 </style>
