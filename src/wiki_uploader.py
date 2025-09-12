@@ -20,7 +20,7 @@ from com.graphql import WikiJSGraphQLClient
 from src.wiki_node import DocumentNode
 from src.wiki_indexer import WikiIndexer
 from src.wiki_renderer import WikiRenderer, WikiPTLRenderer
-from src.html_extractor import extract_html_parts
+from src.html_extractor import extract_html_parts, format_css
 
 
 class WikiUploader:
@@ -121,6 +121,29 @@ class WikiUploader:
             g_resp = self.wiki_client.get_page_by_path(locale=self.locale, path=wikijs_path)
             retry_num += 1
 
+        # 处理没有内容更新的情形
+        prev_editor = g_resp.get("editor")
+        prev_content = g_resp.get("content")
+        prev_scriptJs = g_resp.get("scriptJs")
+        prev_scriptCss = g_resp.get("scriptCss")
+        prev_tags = g_resp.get("tags")
+
+        # 计算需要比较的值
+        formatted_prev_css = format_css(prev_scriptCss) if prev_scriptCss else ""
+        curr_css = format_css(scriptCss) if scriptCss else ""
+        prev_tag_list = [tag.get("tag") for tag in prev_tags] if prev_tags else []
+        has_update = (
+                prev_editor != wikijs_editor or
+                prev_content != content or
+                prev_scriptJs != scriptJs or
+                formatted_prev_css != curr_css or   # 这个比较是不准确的, 因为网页端会把CSS转码部分，导致结果不一致
+                set(prev_tag_list) != set(wikijs_tags)
+        )
+
+        if not has_update:
+            print(f"无需更新页面: {name}")
+            return
+
         u_resp = self.wiki_client.update_page(
             page_id=g_resp.get("id"),
             content=content,
@@ -179,6 +202,8 @@ class WikiUploader:
 
 if __name__ == '__main__':
     def template_filter(doc: DocumentNode):
+        if doc.name not in ("accessory", "intelligence", "exploration", "trading", "role"):
+            return False
         if doc.path and "card" not in str(doc.path):
             return False
         if doc.name == "card":

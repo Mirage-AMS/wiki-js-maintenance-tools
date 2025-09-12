@@ -9,11 +9,32 @@
 # -----------------------------------------
 
 # import from official
-import re
+from typing import Literal
 # import from third-party
 from bs4 import BeautifulSoup
-import cssutils
+import sass
 # import from self-defined
+
+def format_css(css_content: str, output_mode: Literal["expanded", "compressed", "nested", "compact"] = "compressed"):
+    """
+    格式化CSS代码
+    :param css_content: CSS代码
+    :param output_mode: expanded（格式化） compressed（压缩）、nested（嵌套格式）、compact（紧凑格式）
+    :return:
+    """
+    # quick break
+    if not isinstance(css_content, str) or css_content == "":
+        return css_content
+
+    try:
+        formatted_css = sass.compile(
+            string=css_content,
+            output_style=output_mode,
+        )
+        return formatted_css.strip()
+    except Exception as e:
+        print(f"CSS格式化错误: {e}")
+        return css_content
 
 
 def extract_html_parts(html_content, main_div_identifier=None):
@@ -56,9 +77,9 @@ def extract_html_parts(html_content, main_div_identifier=None):
     css_part = ""
     style_tag = soup.find('style')
     if style_tag:
+        # 提取并清理CSS内容
         css_content = ''.join(map(str, style_tag.contents)).strip()
-        sheet = cssutils.parseString(css_content)
-        css_part = sheet.cssText.decode('utf-8')  # 会自动格式化CSS
+        css_part = format_css(css_content)
 
     # 验证提取结果
     extraction_result = {
@@ -78,7 +99,7 @@ def extract_html_parts(html_content, main_div_identifier=None):
 # 使用示例
 if __name__ == "__main__":
     # 测试用的渲染后HTML
-    html_path = r"D:\1_program\git_repository\wiki-js-maintenance-tools\data\zh\html\test.html"
+    html_path = r"D:\1_program\git_repository\wiki-js-maintenance-tools\tmp\zh\card\accessory.html"
     with open(html_path, encoding='utf-8') as f:
         rendered_html = f.read()
 
@@ -91,4 +112,4 @@ if __name__ == "__main__":
     print("\nScript部分:")
     print(parts['script'])
     print("\nCSS部分:")
-    print(parts['css'])
+    print(parts['style'])

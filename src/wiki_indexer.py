@@ -39,14 +39,14 @@ class WikiIndexer:
         """设置节点的数据文件和模板"""
         if "template" in node_info and node_info["template"] is not None:
             template_path = self.templates_path / node_info["template"]
-            print(f"{node.name}: 加载自定义模板 {template_path}")
+            # print(f"{node.name}: 加载自定义模板 {template_path}")
             node.template = Template(template_path)
             return
         elif node.template is not None:
-            print(f"{node.name}: 已有模板{node.template.template_path}")
+            # print(f"{node.name}: 已有模板{node.template.template_path}")
             return
         elif node.parent is not None and node.parent.template is not None:
-            print(f"{node.name}: 使用父级模板 {node.parent.template.template_path}")
+            # print(f"{node.name}: 使用父级模板 {node.parent.template.template_path}")
             node.template = node.parent.template
             return
 
