@@ -247,7 +247,15 @@ class WikiSynchronizer:
                 json.dump(contents_json, f, indent=4, ensure_ascii=False)
 
             target_bucket_file = sync_dir / f"{each_dir.name}.json"
+            card_content_title_reflection = {
+                "exploration": "探索区卡牌",
+                "intelligence": "情报区卡牌",
+                "trading": "交易区卡牌",
+                "role": "角色专属卡牌",
+                "accessory": "其他卡牌",
+            }
             content_data = {
+                "title": card_content_title_reflection[each_dir.name],
                 "path": f"card/{each_dir.name}",
                 "tags": ["卡牌"],
                 "contents": {

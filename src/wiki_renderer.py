@@ -51,7 +51,7 @@ class WikiPTLRenderer(WikiRenderer):
         def replace_icon(match: re.Match) -> str:
             image_name = match.group(1)
             image_path = f"{self.IMAGE_STORAGE_PATH}/{image_name}.png"
-            return f'<img src="{image_path}" alt="{image_name}" style="height: 1em; vertical-align: -0.15em;">'
+            return f'<img src="{image_path}" alt="{image_name}" style="height: 1.2em; vertical-align: -0.20em;">'
 
         return self.ICON_PATTERN.sub(replace_icon, content)
 

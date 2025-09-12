@@ -94,7 +94,9 @@ class WikiUploader:
             scriptCss = html_parts['style']
 
         wikijs_title = name
-        if data.get("card", {}).get("card_name", None):
+        if data.get("title"):
+            wikijs_title = data["title"]
+        elif data.get("card", {}).get("card_name", None):
             wikijs_title = data["card"]["card_name"]
 
         g_resp = self.wiki_client.get_page_by_path(locale=self.locale, path=wikijs_path)
@@ -127,12 +129,14 @@ class WikiUploader:
         prev_scriptJs = g_resp.get("scriptJs")
         prev_scriptCss = g_resp.get("scriptCss")
         prev_tags = g_resp.get("tags")
+        prev_title = g_resp.get("title")
 
         # 计算需要比较的值
         formatted_prev_css = format_css(prev_scriptCss) if prev_scriptCss else ""
         curr_css = format_css(scriptCss) if scriptCss else ""
         prev_tag_list = [tag.get("tag") for tag in prev_tags] if prev_tags else []
         has_update = (
+                prev_title != wikijs_title or
                 prev_editor != wikijs_editor or
                 prev_content != content or
                 prev_scriptJs != scriptJs or
@@ -151,6 +155,7 @@ class WikiUploader:
             scriptJs=scriptJs,
             editor=wikijs_editor,
             tags=wikijs_tags,
+            title=wikijs_title
         )
         if u_resp is None:
             raise Exception(f"Failed to update page: {name}")
