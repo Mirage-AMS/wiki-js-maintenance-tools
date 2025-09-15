@@ -4,12 +4,12 @@
     "rule": {
       "index": "contents.json",
       "data": "rule.json",
-      "template": "rule_template.md"
+      "template": "general_contents_template.html"
     },
     "card": {
       "index": "contents.json",
       "data": "card.json",
-      "template": "card_template.md"
+      "template": "general_contents_template.html"
     }
   }
 }

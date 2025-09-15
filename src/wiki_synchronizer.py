@@ -18,6 +18,34 @@ from pathlib import Path
 from com.util import pathUtil
 from src.text_formater import TextFormatter
 
+CARD_CONTENTS_REFLECTION = {
+    "exploration": {
+        "name": "探索区卡牌",
+        "description": "探索区的资源卡牌",
+        "color": "#3498db",  # 明亮的蓝色 - 代表探索、冒险和未知领域
+    },
+    "intelligence": {
+        "name": "情报区卡牌",
+        "description": "情报区的情报和事件卡牌",
+        "color": "#9b59b6",  # 紫色 - 代表智慧、神秘和信息
+    },
+    "trading": {
+        "name": "交易区卡牌",
+        "description": "交易区的商品卡牌",
+        "color": "#f1c40f",  # 金色/黄色 - 代表财富、交易和价值
+    },
+    "role": {
+        "name": "角色专属卡牌",
+        "description": "角色和其专属卡牌",
+        "color": "#e74c3c",  # 红色 - 代表个性、活力和独特身份
+    },
+    "accessory": {
+        "name": "其他卡牌",
+        "description": "其它配件卡牌",
+        "color": "#2ecc71",  # 绿色 - 代表补充、辅助和多样性
+    },
+}
+
 
 class WikiSynchronizer:
     def __init__(self, locale: str = "zh", register_file: str = "deck_json_register.json"):
@@ -203,8 +231,10 @@ class WikiSynchronizer:
         self.sync_contents()
 
     def sync_contents(self):
+
         sync_dir = self.data_dir / self.locale / "card"
 
+        card_content_data = []
         for each_dir in sync_dir.iterdir():
             if each_dir.is_file():
                 continue
@@ -243,28 +273,52 @@ class WikiSynchronizer:
                     }
                     bucket.append(new_data)
 
+            # 写入 /card/XXX/contents.json
             with open(contents_file_name, 'w', encoding='utf-8') as f:
                 json.dump(contents_json, f, indent=4, ensure_ascii=False)
 
-            target_bucket_file = sync_dir / f"{each_dir.name}.json"
-            card_content_title_reflection = {
-                "exploration": "探索区卡牌",
-                "intelligence": "情报区卡牌",
-                "trading": "交易区卡牌",
-                "role": "角色专属卡牌",
-                "accessory": "其他卡牌",
-            }
+
+            content_name = CARD_CONTENTS_REFLECTION[each_dir.name]["name"]
+            content_desc = CARD_CONTENTS_REFLECTION[each_dir.name]["description"]
+            content_color = CARD_CONTENTS_REFLECTION[each_dir.name]["color"]
+            content_path = f"card/{each_dir.name}"
             content_data = {
-                "title": card_content_title_reflection[each_dir.name],
-                "path": f"card/{each_dir.name}",
-                "tags": ["卡牌"],
+                "title": content_name,
+                "path": content_path,
+                "tags": ["目录"],
                 "contents": {
                     "filename": each_dir.name + ".json",
                     "data": bucket
                 }
             }
+
+            card_content_data.append({
+                "title": content_name,
+                "path": "/" + content_path,
+                "description": content_desc,
+                "color": content_color,
+                "itemCount": len(bucket),
+            })
+
+            # 写入 /card/XXX.json
+            target_bucket_file = sync_dir / f"{each_dir.name}.json"
             with open(target_bucket_file, 'w', encoding='utf-8') as f:
                 json.dump(content_data, f, indent=4, ensure_ascii=False)
+
+        # 写入 /card/card.json
+        card_content_json = {
+            "title": "卡牌目录",
+            "path": "card",
+            "tags": ["目录"],
+            "contents": {
+                "filename": "card.json",
+                "data": card_content_data
+            }
+        }
+        target_file = sync_dir.parent / f"card.json"
+        with open(target_file, "w", encoding="utf-8") as f:
+            json.dump(card_content_json, f, indent=4, ensure_ascii=False)
+
 
 if __name__ == '__main__':
     ws = WikiSynchronizer()

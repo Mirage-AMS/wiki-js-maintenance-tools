@@ -1,5 +1,5 @@
 {
-  "template": "card_contents_template.html",
+  "template": "general_contents_template.html",
   "children": {
     "accessory": {
       "index": "contents.json",
