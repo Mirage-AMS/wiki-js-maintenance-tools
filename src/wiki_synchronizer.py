@@ -184,9 +184,12 @@ class WikiSynchronizer:
 
         # final update
         saved_info["card"] = card_design_info
-        saved_info["tags"] = list(set(saved_info["tags"]).union(set(card_design_tag)))
+        saved_info["tags"] = card_design_tag + [
+            tag for tag in saved_info["tags"]
+            if tag not in set(card_design_tag)
+        ]
 
-    def sync(self, design_dir: str = "card_json", force_sync: bool = False):
+    def sync_card(self, design_dir: str = "card_json", force_sync: bool = False):
         """
         同步卡牌的设计资料到Wiki资料
         :param design_dir: 设计文件夹
@@ -227,85 +230,85 @@ class WikiSynchronizer:
                 with open(target_path, 'w', encoding='utf-8') as f:
                     json.dump(saved_info, f, indent=4, ensure_ascii=False)
 
-        # sync contents.json
-        self.sync_contents()
+    def _create_contents_json(self, each_dir):
+        """创建并写入contents.json文件，返回数据和bucket"""
+        contents_file_name = each_dir / "contents.json"
+        contents_json = {
+            "template": "card_contents_template.html",
+            "children": {}
+        }
 
-    def sync_contents(self):
+        # 处理目录中的JSON文件
+        bucket = self._process_json_files(each_dir, contents_json)
 
-        sync_dir = self.data_dir / self.locale / "card"
+        # 写入contents.json
+        with open(contents_file_name, 'w', encoding='utf-8') as f:
+            json.dump(contents_json, f, indent=4, ensure_ascii=False)
 
-        card_content_data = []
-        for each_dir in sync_dir.iterdir():
-            if each_dir.is_file():
+        return contents_json, bucket
+
+    @staticmethod
+    def _process_json_files(each_dir, contents_json):
+        """处理目录中的JSON文件，提取数据并填充到contents_json"""
+        bucket = []
+        idx = 0
+
+        for each_file in each_dir.iterdir():
+            # 跳过非JSON文件和contents.json
+            if not each_file.is_file() or each_file.name == "contents.json" or each_file.suffix != ".json":
                 continue
-            contents_file_name = each_dir / f"contents.json"
-            contents_json = {
-                "template": "card_contents_template.html",
-                "children": {}
+
+            # 更新contents_json
+            contents_json["children"][each_file.stem] = {
+                "template": "card_intelligence_template.html",
+                "data": each_file.name,
             }
 
-            idx = 0
-            bucket = []
-            for each_file in each_dir.iterdir():
-                # skip not json file
-                if not each_file.is_file():
-                    continue
-                if each_file.name == "contents.json":
-                    continue
-                if each_file.suffix != ".json":
-                    continue
+            # 读取并处理JSON数据
+            idx += 1
+            with open(each_file, 'r', encoding='utf-8') as f:
+                each_data = json.load(f)
+                bucket.append({
+                    "id": idx,
+                    "url": "/" + each_data["path"],
+                    "name": each_data["card"]["card_name"],
+                    "level": each_data["card"]["card_level"],
+                    "type": each_data["card"]["card_types"],
+                    "attribute": each_data["card"]["card_tags"],
+                    "image": each_data["card"]["card_thumbnail_url"],
+                })
 
-                contents_json["children"][each_file.stem] = {
-                    "template": "card_intelligence_template.html",
-                    "data": each_file.name,
-                }
-                idx += 1
-                with open(each_file, 'r', encoding='utf-8') as f:
-                    each_data = json.load(f)
-                    new_data = {
-                        "id": idx,
-                        "url": "/" + each_data["path"],
-                        "name": each_data["card"]["card_name"],
-                        "level": each_data["card"]["card_level"],
-                        "type": each_data["card"]["card_types"],
-                        "attribute":  each_data["card"]["card_tags"],
-                        "image": each_data["card"]["card_thumbnail_url"],
-                    }
-                    bucket.append(new_data)
+        return bucket
 
-            # 写入 /card/XXX/contents.json
-            with open(contents_file_name, 'w', encoding='utf-8') as f:
-                json.dump(contents_json, f, indent=4, ensure_ascii=False)
+    @staticmethod
+    def _create_card_content_data(each_dir, bucket, sync_dir):
+        """创建卡牌内容数据结构"""
+        content_info = CARD_CONTENTS_REFLECTION[each_dir.name]
+        content_path = f"card/{each_dir.name}"
 
-
-            content_name = CARD_CONTENTS_REFLECTION[each_dir.name]["name"]
-            content_desc = CARD_CONTENTS_REFLECTION[each_dir.name]["description"]
-            content_color = CARD_CONTENTS_REFLECTION[each_dir.name]["color"]
-            content_path = f"card/{each_dir.name}"
-            content_data = {
-                "title": content_name,
-                "path": content_path,
-                "tags": ["目录"],
-                "contents": {
-                    "filename": each_dir.name + ".json",
-                    "data": bucket
-                }
+        content_data = {
+            "title": content_info["name"],
+            "path": content_path,
+            "tags": ["目录"],
+            "contents": {
+                "filename": each_dir.name + ".json",
+                "data": bucket
             }
+        }
 
-            card_content_data.append({
-                "title": content_name,
-                "path": "/" + content_path,
-                "description": content_desc,
-                "color": content_color,
-                "itemCount": len(bucket),
-            })
+        dir_result = {
+            "title": content_info["name"],
+            "path": "/" + content_path,
+            "description": content_info["description"],
+            "color": content_info["color"],
+            "itemCount": len(bucket),
+        }
 
-            # 写入 /card/XXX.json
-            target_bucket_file = sync_dir / f"{each_dir.name}.json"
-            with open(target_bucket_file, 'w', encoding='utf-8') as f:
-                json.dump(content_data, f, indent=4, ensure_ascii=False)
+        return content_data, dir_result
 
-        # 写入 /card/card.json
+    @staticmethod
+    def _write_card_json(sync_dir, card_content_data):
+        """生成并写入最终的card.json文件"""
         card_content_json = {
             "title": "卡牌目录",
             "path": "card",
@@ -315,10 +318,43 @@ class WikiSynchronizer:
                 "data": card_content_data
             }
         }
-        target_file = sync_dir.parent / f"card.json"
+
+        target_file = sync_dir.parent / "card.json"
         with open(target_file, "w", encoding="utf-8") as f:
             json.dump(card_content_json, f, indent=4, ensure_ascii=False)
 
+    def sync_contents(self):
+        """同步卡牌内容的主函数"""
+        sync_dir = self.data_dir / self.locale / "card"
+        card_content_data = []
+
+        # 处理每个卡牌目录
+        for each_dir in sync_dir.iterdir():
+            if each_dir.is_file():
+                continue
+
+            # 创建contents.json数据并写入文件
+            contents_json, bucket = self._create_contents_json(each_dir)
+
+            # 生成卡牌内容数据
+            content_data, dir_result = self._create_card_content_data(each_dir, bucket, sync_dir)
+
+            # 写入XXX.json文件
+            target_bucket_file = sync_dir / f"{each_dir.name}.json"
+            with open(target_bucket_file, 'w', encoding='utf-8') as f:
+                json.dump(content_data, f, indent=4, ensure_ascii=False)
+
+            card_content_data.append(dir_result)
+
+        # 生成最终的card.json文件
+        self._write_card_json(sync_dir, card_content_data)
+
+    def sync(self, design_dir: str = "card_json", force_sync: bool = False):
+        # sync card
+        self.sync_card(design_dir, force_sync)
+
+        # sync contents.json
+        self.sync_contents()
 
 if __name__ == '__main__':
     ws = WikiSynchronizer()
