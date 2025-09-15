@@ -19,10 +19,11 @@ from pathlib import Path
 
 class WikiRenderer(ABC):
     @abstractmethod
-    def render(self, content: Any) -> Any:
+    def render(self, content: Any, suffix: str=".html") -> Any:
         """
         渲染Wiki内容
         :param content:
+        :param suffix:
         :return:
         """
         pass
@@ -55,13 +56,15 @@ class WikiPTLRenderer(WikiRenderer):
 
         return self.ICON_PATTERN.sub(replace_icon, content)
 
-    def _process_string(self, content: str) -> str:
+    def _process_string(self, content: str, suffix: str) -> str:
         """处理字符串类型的内容：先处理HTML，再处理图标"""
-        processed = self._render_html_content(content)
+        processed = content
+        if suffix == ".html":
+            processed = self._render_html_content(content)
         processed = self._render_icon_content(processed)
         return processed
 
-    def _recur_render(self, content: Union[Dict, List, Any]) -> Union[Dict, List, Any]:
+    def _recur_render(self, content: Union[Dict, List, Any], suffix: str) -> Union[Dict, List, Any]:
         """
         递归渲染内容
 
@@ -71,26 +74,27 @@ class WikiPTLRenderer(WikiRenderer):
         其他类型：保持不变
         """
         if isinstance(content, Dict):
-            return {key: self._recur_render(value) for key, value in content.items()}
+            return {key: self._recur_render(value, suffix) for key, value in content.items()}
         elif isinstance(content, List):
-            return [self._recur_render(item) for item in content]
+            return [self._recur_render(item, suffix) for item in content]
         elif isinstance(content, str):
-            return self._process_string(content)
+            return self._process_string(content, suffix)
         else:
             return content
 
-    def render(self, content: Any) -> Any:
+    def render(self, content: Any, suffix: str = ".html") -> Any:
         """
         渲染入口方法，对内容进行预渲染处理
 
         :param content: 需要处理的数据，必须是字典类型
+        :param suffix: 文件后缀名，默认为".html"
         :return: 处理后的内容
         :raises TypeError: 如果输入内容不是字典类型
         """
         if not isinstance(content, Dict):
             raise TypeError("Content must be a dictionary.")
 
-        return self._recur_render(content)
+        return self._recur_render(content, suffix)
 
 if __name__ ==  "__main__":
     renderer = WikiPTLRenderer()

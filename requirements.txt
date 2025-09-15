@@ -1,3 +1,4 @@
+python-frontmatter
 libsass
 beautifulsoup4
 html5lib

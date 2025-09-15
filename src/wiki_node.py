@@ -10,6 +10,7 @@
 
 # import from official
 import json
+import frontmatter
 from typing import Dict, List, Optional, Any
 from pathlib import Path
 # import from third-party
@@ -51,8 +52,11 @@ class WikiNode:
             with open(full_path, 'r', encoding='utf-8') as f:
                 self.data = json.load(f)
         elif full_path.suffix == '.md':
-            with open(full_path, 'r', encoding='utf-8') as f:
-                self.data = {'text': f.read()}
+            post = frontmatter.load(str(full_path))
+            self.data = post.metadata
+            self.data['content'] = post.content
+        else:
+            raise ValueError(f"未知的数据文件格式: {full_path}")
 
     # 提取公共的渲染方法到父类
     def render(self, pre_renderer: Optional[WikiRenderer] = None) -> str:
@@ -65,7 +69,8 @@ class WikiNode:
 
         render_data = self.data or {}
         if pre_renderer and self.data is not None:
-            render_data = pre_renderer.render(self.data)
+            suffix = self.template.template_path.suffix
+            render_data = pre_renderer.render(self.data, suffix)
 
         return self.template.render(render_data)
 
