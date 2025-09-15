@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/role/card_rol01_ac_01",
+    "path": "card/role/card_rol01_ac_01",
+    "tags": [
+        "卡牌",
+        "低级",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +36,22 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": "BANISH_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_accessory_std_03.jpg",
-        "card_attribute": "低级 / 造物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_accessory_std_03.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/potion_holy_water.jpg",
+        "card_basic_info": "低级 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "造物"
+        ],
+        "card_type_info": "造物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "吸收",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
                 "text": "移除该造物，你永久获得${eW01}"

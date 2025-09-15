@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/trading/card_std01_ma_09",
+    "path": "card/trading/card_std01_ma_09",
+    "tags": [
+        "卡牌",
+        "低级",
+        "矿物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,26 +29,36 @@
         "card_element_num_water": null,
         "card_element_num_fire": 1,
         "card_element_num_air": 1,
-        "card_info_effect": "<n02>  \n<b00>启动（背包） / 投石\n<n02>弃置该资源，明置探索区任意2张卡牌，弃置其中1张卡牌",
+        "card_info_effect": "<n02>  \n<b00>启动（背包） / 投石\n<n02>弃置该资源，明置探索区2张卡牌，弃置其中1张卡牌",
         "card_info_description": null,
         "card_picture_path": "olivine.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eE01}${eF01}${eA01}",
-        "card_image_url": "./image/deck_market_std_09.jpg",
-        "card_attribute": "低级 / 矿物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_std_09.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/olivine.jpg",
+        "card_basic_info": "低级 / 矿物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eF01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 1,
+        "card_element_mark_info": "${eE01}${eF01}${eA01}",
+        "card_types": [
+            "矿物"
+        ],
+        "card_type_info": "矿物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "投石",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": "背包",
                 "consumption": null,
-                "text": "弃置该资源，明置探索区任意2张卡牌，弃置其中1张卡牌"
+                "text": "弃置该资源，明置探索区2张卡牌，弃置其中1张卡牌"
             }
         ]
     }

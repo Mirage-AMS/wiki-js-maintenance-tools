@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_05",
+    "path": "card/intelligence/card_dlc01_co_05",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP06}\n<b00>快速 / 驱使\n<n02>你的行动阶段中，每个持有生物只有1次：为1个基础资源（矿物·植物·生物）累积3点采集进度或造成3点伤害，本轮同名效果累积的采集进度-2，造成的伤害-1",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>快速 / 驱使\n<n02>${tAct}，每个持有生物各1次：为1个基础资源（矿物·植物·生物）累积3点采集进度或造成3点伤害，本轮同名效果累积的采集进度-2，造成的伤害-1",
         "card_info_description": null,
         "card_picture_path": "dlc01_animal_taming.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_05.jpg",
-        "card_attribute": "中级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_05.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_animal_taming.jpg",
+        "card_basic_info": "中级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP06}",
         "effects": [
             {
                 "name": "驱使",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": null,
-                "text": "你的行动阶段中，每个持有生物只有1次：为1个基础资源（矿物·植物·生物）累积3点采集进度或造成3点伤害，本轮同名效果累积的采集进度-2，造成的伤害-1"
+                "text": "${tAct}，每个持有生物各1次：为1个基础资源（矿物·植物·生物）累积3点采集进度或造成3点伤害，本轮同名效果累积的采集进度-2，造成的伤害-1"
             }
         ]
     }

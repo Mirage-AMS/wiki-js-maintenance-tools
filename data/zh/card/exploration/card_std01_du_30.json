@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/exploration/card_std01_du_30",
+    "path": "card/exploration/card_std01_du_30",
+    "tags": [
+        "卡牌",
+        "高级",
+        "矿物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +36,25 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eF01}${eA01}",
-        "card_image_url": "./image/deck_dungeon_std_21.jpg",
-        "card_attribute": "高级 / 矿物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_dungeon_std_30.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/liquid_mercury.jpg",
+        "card_basic_info": "高级 / 矿物",
+        "card_element_marks": [
+            "${eF01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 4,
+        "card_element_mark_info": "${eF01}${eA01}",
+        "card_types": [
+            "矿物"
+        ],
+        "card_type_info": "矿物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "剧毒",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": "探索区",
                 "consumption": null,
                 "text": "相邻栏位的植物采集需求-1，生物生命上限-2"

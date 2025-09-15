@@ -1,11 +1,23 @@
 {
-  "template": "rule_template.md",
   "children": {
-    "chap_01": {
-      "data": "chap_01_introduction.md"
+    "rule_overview": {
+      "template": "general_markdown_template.md",
+      "data": "rule_overview.md"
     },
-    "chap_02": {
-      "data": "chap_02_setup.md"
+    "rule_basic": {
+      "template": "general_contents_template.html",
+      "index": "contents.json",
+      "data": "rule_basic.json"
+    },
+    "rule_advanced": {
+      "template": "general_contents_template.html",
+      "index": "contents.json",
+      "data": "rule_advanced.json"
+    },
+    "rule_appendix": {
+      "template": "general_contents_template.html",
+      "index": "contents.json",
+      "data": "rule_appendix.json"
     }
   }
 }

@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/role/card_rol02_ac_03",
+    "path": "card/role/card_rol02_ac_03",
+    "tags": [
+        "卡牌",
+        "中级",
+        "生物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,26 +29,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": 1,
-        "card_info_effect": "<b00>快速（背包） / 掠食\n<n02>${tR01}，你的回合中：选以下1个效果发动，\n<n02>· 选探索区1个低级基础资源获得\n<n02>· 对1个生物造成3点伤害\n<n02> <n02> <n20> ",
+        "card_info_effect": "<b00>快速（背包） / 掠食\n<n02>${tR01}，你的回合中：选以下1个效果发动，\n<n02>· 获得探索区1个低级基础资源\n<n02>· 对1个生物造成3点伤害\n<n02> <n02> <n20> ",
         "card_info_description": "<n04>苍原掠孤影，铁喙银翎破云行，长空王者名 ",
         "card_picture_path": "role/arya_gyrfalcon.png",
         "card_inner_base_path": "base_inner_role_arya.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": "1.0",
-        "card_element_mark": "${eE01}${eA01}",
-        "card_image_url": "./image/deck_accessory_std_05.jpg",
-        "card_attribute": "中级 / 生物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_accessory_std_05.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/arya_gyrfalcon.jpg",
+        "card_basic_info": "中级 / 生物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 2,
+        "card_element_mark_info": "${eE01}${eA01}",
+        "card_types": [
+            "生物"
+        ],
+        "card_type_info": "生物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "掠食",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": "背包",
                 "consumption": null,
-                "text": "${tR01}，你的回合中：选以下1个效果发动，<br>· 选探索区1个低级基础资源获得<br>· 对1个生物造成3点伤害"
+                "text": "${tR01}，你的回合中：选以下1个效果发动，\n· 获得探索区1个低级基础资源\n· 对1个生物造成3点伤害"
             }
         ]
     }

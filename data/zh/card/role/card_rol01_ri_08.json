@@ -1,5 +1,12 @@
 {
-    "path": "zh/card/role/card_rol01_ri_08",
+    "path": "card/role/card_rol01_ri_08",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "专属",
+        "法术"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +38,26 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_role_info01_08.jpg",
-        "card_attribute": "中级 / 情报 / 专属 · 法术",
-        "card_tag": "专属 · 法术",
+        "card_image_url": "/assets/image/deck_role_info01_08.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/life_magic.jpg",
+        "card_basic_info": "中级 / 情报 / 专属 · 法术",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "法术"
+        ],
+        "card_tag_info": "专属 · 法术",
         "unlock": "${eW01}${eW01}${eR02}",
         "effects": [
             {
                 "name": "润物",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": "${eW01}${eR01}",
                 "text": "${tR01}：选1个探索区，直到本轮结束前该探索区所有生物攻击力+1，生命上限+2；你可以额外消耗${eW01}，本回合该探索区所有矿物·植物的采集需求-3"

@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/trading/card_std01_ma_04",
+    "path": "card/trading/card_std01_ma_04",
+    "tags": [
+        "卡牌",
+        "中级",
+        "植物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +36,26 @@
         "card_medal_path": null,
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eW01}${eF01}${eA01}",
-        "card_image_url": "./image/deck_market_std_04.jpg",
-        "card_attribute": "中级 / 植物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_std_04.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/datura_stramonium.jpg",
+        "card_basic_info": "中级 / 植物",
+        "card_element_marks": [
+            "${eW01}",
+            "${eF01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 2,
+        "card_element_mark_info": "${eW01}${eF01}${eA01}",
+        "card_types": [
+            "植物"
+        ],
+        "card_type_info": "植物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "镇静",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": "素材",
                 "consumption": null,
                 "text": "只在该资源作为造物的素材时，采集植物中你的采集点+1"

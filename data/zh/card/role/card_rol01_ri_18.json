@@ -1,5 +1,12 @@
 {
-    "path": "zh/card/role/card_rol01_ri_18",
+    "path": "card/role/card_rol01_ri_18",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "专属",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +31,36 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b01>解锁：${aP06}\n<b01>启动 / 勤奋\n<n03>${tR01}：弃置2张手牌，选以下1个效果发动，\n<n03>· 你的攻击力永久+1，生命上限永久+1\n<n03>· 本回合获得1次额外行动\n<n03> <n16> ",
+        "card_info_effect": "<b01>解锁：${aP06}\n<b01>启动 / 勤奋\n<n03>${tR01}：弃置2张手牌，选以下1个效果发动，\n<n03>· 攻击力永久+1，生命上限永久+1\n<n03>· 本回合获得1次额外行动\n<n03> <n16> ",
         "card_info_description": "<n02>没有谁是天生的强者  ",
         "card_picture_path": "nova_diligence.png",
         "card_inner_base_path": "base_inner_role_nova.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_role_info01_18.jpg",
-        "card_attribute": "中级 / 情报 / 专属 · 技能",
-        "card_tag": "专属 · 技能",
+        "card_image_url": "/assets/image/deck_role_info01_18.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/nova_diligence.jpg",
+        "card_basic_info": "中级 / 情报 / 专属 · 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "技能"
+        ],
+        "card_tag_info": "专属 · 技能",
         "unlock": "${aP06}",
         "effects": [
             {
                 "name": "勤奋",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：弃置2张手牌，选以下1个效果发动，<br>· 你的攻击力永久+1，生命上限永久+1<br>· 本回合获得1次额外行动"
+                "text": "${tR01}：弃置2张手牌，选以下1个效果发动，\n· 攻击力永久+1，生命上限永久+1\n· 本回合获得1次额外行动"
             }
         ]
     }

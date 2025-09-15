@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_std02_co_04",
+    "path": "card/intelligence/card_std02_co_04",
+    "tags": [
+        "卡牌",
+        "高级",
+        "情报",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b01>解锁：中级以上含${eA01}植物+中级以上植物\n<b01>启动 / 幻景\n<n02>${tR01}：选探索区弃牌堆1张中级以下基础资源（矿物·植物·生物）卡牌获得，该卡牌的售价减半（向下取整）\n<n02> <n20> ",
+        "card_info_effect": "<b01>解锁：中级以上含${eA01}植物+中级以上植物\n<b01>启动 / 幻景\n<n02>${tR01}：获得任一探索区弃牌堆1张中级以下基础资源（矿物·植物·生物）卡牌；该卡牌的售价减半（向下取整）\n<n02> <n20> ",
         "card_info_description": "<n02>从过往的诸多碎片中，捕捉一个幻景 ",
         "card_picture_path": "wand_of_time.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_std_34.jpg",
-        "card_attribute": "高级 / 情报 / 造物",
-        "card_tag": "造物",
+        "card_image_url": "/assets/image/deck_conventicle_std_34.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/wand_of_time.jpg",
+        "card_basic_info": "高级 / 情报 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "造物"
+        ],
+        "card_tag_info": "造物",
         "unlock": "中级以上含${eA01}植物+中级以上植物",
         "effects": [
             {
                 "name": "幻景",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：选探索区弃牌堆1张中级以下基础资源（矿物·植物·生物）卡牌获得，该卡牌的售价减半（向下取整）"
+                "text": "${tR01}：获得任一探索区弃牌堆1张中级以下基础资源（矿物·植物·生物）卡牌；该卡牌的售价减半（向下取整）"
             }
         ]
     }

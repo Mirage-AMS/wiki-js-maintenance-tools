@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/trading/card_std01_ma_27",
+    "path": "card/trading/card_std01_ma_27",
+    "tags": [
+        "卡牌",
+        "低级",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,26 +29,32 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>快速 / 剪枝\n<n02>${tR01}，你开始采集植物时：为被采集植物累积2点采集进度",
+        "card_info_effect": "<n02>  \n<b00>启动 / 剪枝\n<n02>${tR01}：为1个植物累积2点采集进度",
         "card_info_description": null,
         "card_picture_path": "shear.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_std_27.jpg",
-        "card_attribute": "低级 / 造物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_std_27.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/shear.jpg",
+        "card_basic_info": "低级 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "造物"
+        ],
+        "card_type_info": "造物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "剪枝",
-                "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
+                "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你开始采集植物时：为被采集植物累积2点采集进度"
+                "text": "${tR01}：为1个植物累积2点采集进度"
             }
         ]
     }

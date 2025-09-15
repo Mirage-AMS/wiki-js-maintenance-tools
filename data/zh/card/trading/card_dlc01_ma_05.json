@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/trading/card_dlc01_ma_05",
+    "path": "card/trading/card_dlc01_ma_05",
+    "tags": [
+        "卡牌",
+        "中级",
+        "矿物",
+        "生物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +37,26 @@
         "card_medal_path": null,
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eE01}${eF01}",
-        "card_image_url": "./image/deck_market_dlc01_05.jpg",
-        "card_attribute": "中级 / 矿物·生物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_dlc01_05.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_pangolin.jpg",
+        "card_basic_info": "中级 / 矿物·生物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eF01}"
+        ],
+        "card_element_mark_num": 2,
+        "card_element_mark_info": "${eE01}${eF01}",
+        "card_types": [
+            "矿物",
+            "生物"
+        ],
+        "card_type_info": "矿物·生物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "穿孔",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": "素材",
                 "consumption": null,
                 "text": "只在该资源作为造物的素材时，你的攻击力+1"

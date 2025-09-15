@@ -1,5 +1,12 @@
 {
-    "path": "zh/card/role/card_rol01_ri_07",
+    "path": "card/role/card_rol01_ri_07",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "专属",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +38,26 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_role_info01_07.jpg",
-        "card_attribute": "低级 / 情报 / 专属 · 造物",
-        "card_tag": "专属 · 造物",
+        "card_image_url": "/assets/image/deck_role_info01_07.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/life_water.jpg",
+        "card_basic_info": "低级 / 情报 / 专属 · 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "造物"
+        ],
+        "card_tag_info": "专属 · 造物",
         "unlock": "含${eE01}植物",
         "effects": [
             {
                 "name": "活力",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": null,
                 "text": "${tR01}，任意玩家采集植物失败时：使被采集植物只在这次不会因采集失败被弃置"

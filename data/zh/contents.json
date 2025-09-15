@@ -1,5 +1,5 @@
 {
-  "template": "main_template.md",
+  "template": "general_contents_template.html",
   "children": {
     "rule": {
       "index": "contents.json",

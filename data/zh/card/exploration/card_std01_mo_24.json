@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/exploration/card_std01_mo_24",
+    "path": "card/exploration/card_std01_mo_24",
+    "tags": [
+        "卡牌",
+        "中级",
+        "植物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,9 +36,21 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eW01}${eF01}${eA01}",
-        "card_image_url": "./image/deck_mountain_std_15.jpg",
-        "card_attribute": "中级 / 植物",
-        "card_tag": ""
+        "card_image_url": "/assets/image/deck_mountain_std_24.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/thorn_flower.jpg",
+        "card_basic_info": "中级 / 植物",
+        "card_element_marks": [
+            "${eW01}",
+            "${eF01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 2,
+        "card_element_mark_info": "${eW01}${eF01}${eA01}",
+        "card_types": [
+            "植物"
+        ],
+        "card_type_info": "植物",
+        "card_tags": [],
+        "card_tag_info": ""
     }
 }

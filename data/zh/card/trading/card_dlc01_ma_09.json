@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/trading/card_dlc01_ma_09",
+    "path": "card/trading/card_dlc01_ma_09",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b02>解锁：${aP06}\n<b02>启动 / 雇佣\n<n04>${tR01}，你的准备阶段中：消耗${aP01}，选以下1个效果直到本轮结束前适用，\n<n04>· 只在你采集矿物·植物中，采集点+2\n<n04>· 只在你狩猎生物中，你的攻击力+2",
+        "card_info_effect": "<n02> \n<b02>解锁：${aP06}\n<b02>启动 / 雇佣\n<n04>${tR01}，${tPrp}：消耗${aP01}，选以下1个效果直到本轮结束前适用，\n<n04>· 采集点+2\n<n04>· 攻击力+2",
         "card_info_description": null,
         "card_picture_path": "dlc01_hired_group.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_dlc01_09.jpg",
-        "card_attribute": "中级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_market_dlc01_09.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_hired_group.jpg",
+        "card_basic_info": "中级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP06}",
         "effects": [
             {
                 "name": "雇佣",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你的准备阶段中：消耗${aP01}，选以下1个效果直到本轮结束前适用，<br>· 只在你采集矿物·植物中，采集点+2<br>· 只在你狩猎生物中，你的攻击力+2"
+                "text": "${tR01}，${tPrp}：消耗${aP01}，选以下1个效果直到本轮结束前适用，\n· 采集点+2\n· 攻击力+2"
             }
         ]
     }

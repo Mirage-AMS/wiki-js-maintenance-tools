@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/trading/card_std01_ma_22",
+    "path": "card/trading/card_std01_ma_22",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>启动 / 更换\n<n02>${tR02}，你的准备阶段中：翻开交易区牌堆顶1张卡牌，那之后选交易区1个栏位清空并填充，或选交易区牌堆洗切",
+        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>启动 / 更换\n<n02>${tR02}，${tPrp}：翻开交易区牌堆顶1张卡牌，那之后刷新交易区1个栏位，或洗切交易区牌堆",
         "card_info_description": null,
         "card_picture_path": "change_product.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_std_22.jpg",
-        "card_attribute": "低级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_market_std_22.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/change_product.jpg",
+        "card_basic_info": "低级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP03}",
         "effects": [
             {
                 "name": "更换",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR02}，你的准备阶段中：翻开交易区牌堆顶1张卡牌，那之后选交易区1个栏位清空并填充，或选交易区牌堆洗切"
+                "text": "${tR02}，${tPrp}：翻开交易区牌堆顶1张卡牌，那之后刷新交易区1个栏位，或洗切交易区牌堆"
             }
         ]
     }

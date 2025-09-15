@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_25",
+    "path": "card/intelligence/card_dlc01_co_25",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "法术"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,20 +37,28 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_25.jpg",
-        "card_attribute": "中级 / 情报 / 法术",
-        "card_tag": "法术",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_25.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_meditation.jpg",
+        "card_basic_info": "中级 / 情报 / 法术",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "法术"
+        ],
+        "card_tag_info": "法术",
         "unlock": "${eR04}",
         "effects": [
             {
                 "name": "奇旅",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": "${eR01}",
-                "text": "${tR01}：选以下1个效果发动，<br>· 移除最多3个本回合累积的伤口<br>· 重置最多3个已消耗的元素<br>· 永久获得1个未持有的基础元素（${eE01}·${eW01}·${eF01}·${eA01}）"
+                "text": "${tR01}：选以下1个效果发动，\n· 移除最多3个本回合累积的伤口\n· 重置最多3个已消耗的元素\n· 永久获得1个未持有的基础元素（${eE01}·${eW01}·${eF01}·${eA01}）"
             }
         ]
     }

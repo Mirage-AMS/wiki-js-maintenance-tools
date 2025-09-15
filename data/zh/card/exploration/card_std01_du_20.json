@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/exploration/card_std01_du_20",
+    "path": "card/exploration/card_std01_du_20",
+    "tags": [
+        "卡牌",
+        "传奇",
+        "生物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +36,26 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eE01}${eW01}${eA01}",
-        "card_image_url": "./image/deck_dungeon_std_11.jpg",
-        "card_attribute": "传奇 / 生物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_dungeon_std_20.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/immortal_oath.jpg",
+        "card_basic_info": "传奇 / 生物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eW01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 8,
+        "card_element_mark_info": "${eE01}${eW01}${eA01}",
+        "card_types": [
+            "生物"
+        ],
+        "card_type_info": "生物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "威压",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": "探索区",
                 "consumption": null,
                 "text": "只在你狩猎该生物中，你的攻击不会暴击"

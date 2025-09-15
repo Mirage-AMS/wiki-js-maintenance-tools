@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/trading/card_std01_ma_20",
+    "path": "card/trading/card_std01_ma_20",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>永久 / 清仓\n<n02>只在你的回合中，交易区中类型重复的商品售价-1",
+        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>永久 / 清仓\n<n02>只在你的回合中，交易区类型重复的商品售价-1",
         "card_info_description": null,
         "card_picture_path": "clearance_sale.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_std_20.jpg",
-        "card_attribute": "低级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_market_std_20.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/clearance_sale.jpg",
+        "card_basic_info": "低级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP03}",
         "effects": [
             {
                 "name": "清仓",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": null,
                 "consumption": null,
-                "text": "只在你的回合中，交易区中类型重复的商品售价-1"
+                "text": "只在你的回合中，交易区类型重复的商品售价-1"
             }
         ]
     }

@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_std01_co_23",
+    "path": "card/intelligence/card_std01_co_23",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：含${eA01}植物\n<b00>启动 / 探知\n<n02>${tR01}：明置探索区任意1张卡牌，你可以将其弃置",
+        "card_info_effect": "<b00>解锁：含${eA01}植物\n<b00>启动 / 探知\n<n02>${tR01}：明置探索区1张卡牌，你可以将其弃置",
         "card_info_description": null,
         "card_picture_path": "divination_staff.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_std_23.jpg",
-        "card_attribute": "低级 / 情报 / 造物",
-        "card_tag": "造物",
+        "card_image_url": "/assets/image/deck_conventicle_std_23.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/divination_staff.jpg",
+        "card_basic_info": "低级 / 情报 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "造物"
+        ],
+        "card_tag_info": "造物",
         "unlock": "含${eA01}植物",
         "effects": [
             {
                 "name": "探知",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：明置探索区任意1张卡牌，你可以将其弃置"
+                "text": "${tR01}：明置探索区1张卡牌，你可以将其弃置"
             }
         ]
     }

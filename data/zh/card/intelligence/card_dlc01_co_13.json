@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_13",
+    "path": "card/intelligence/card_dlc01_co_13",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +37,25 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_13.jpg",
-        "card_attribute": "低级 / 情报 / 造物",
-        "card_tag": "造物",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_13.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_principle_of_arcane_magic.jpg",
+        "card_basic_info": "低级 / 情报 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "造物"
+        ],
+        "card_tag_info": "造物",
         "unlock": "法术情报+任意情报",
         "effects": [
             {
                 "name": "原理",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": null,
                 "consumption": null,
                 "text": "只在你需要消耗元素时，你视为已消耗${eR01}"

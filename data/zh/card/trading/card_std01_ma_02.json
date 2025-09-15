@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/trading/card_std01_ma_02",
+    "path": "card/trading/card_std01_ma_02",
+    "tags": [
+        "卡牌",
+        "低级",
+        "植物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +36,26 @@
         "card_medal_path": null,
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eE01}${eW01}${eF01}",
-        "card_image_url": "./image/deck_market_std_02.jpg",
-        "card_attribute": "低级 / 植物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_std_02.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/belladonna.jpg",
+        "card_basic_info": "低级 / 植物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eW01}",
+            "${eF01}"
+        ],
+        "card_element_mark_num": 1,
+        "card_element_mark_info": "${eE01}${eW01}${eF01}",
+        "card_types": [
+            "植物"
+        ],
+        "card_type_info": "植物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "镇痛",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": "背包",
                 "consumption": null,
                 "text": "你的回合中：弃置该资源，本回合你受到的下次伤害-3"

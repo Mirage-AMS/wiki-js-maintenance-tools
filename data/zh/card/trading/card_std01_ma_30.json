@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/trading/card_std01_ma_30",
+    "path": "card/trading/card_std01_ma_30",
+    "tags": [
+        "卡牌",
+        "高级",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,16 +36,22 @@
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_std_30.jpg",
-        "card_attribute": "高级 / 造物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_std_30.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/hourglass_of_time.jpg",
+        "card_basic_info": "高级 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "造物"
+        ],
+        "card_type_info": "造物",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
                 "name": "过隙",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": null,
                 "consumption": null,
                 "text": "获得1次额外行动；只在那次行动中你的采集点+2，攻击力+2，生命上限+2"

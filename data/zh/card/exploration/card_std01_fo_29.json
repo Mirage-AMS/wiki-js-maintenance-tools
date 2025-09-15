@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/exploration/card_std01_fo_29",
+    "path": "card/exploration/card_std01_fo_29",
+    "tags": [
+        "卡牌",
+        "中级",
+        "生物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,9 +36,21 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "${eE01}${eW01}${eA01}",
-        "card_image_url": "./image/deck_forest_std_20.jpg",
-        "card_attribute": "中级 / 生物",
-        "card_tag": ""
+        "card_image_url": "/assets/image/deck_forest_std_29.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/leopard.jpg",
+        "card_basic_info": "中级 / 生物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eW01}",
+            "${eA01}"
+        ],
+        "card_element_mark_num": 2,
+        "card_element_mark_info": "${eE01}${eW01}${eA01}",
+        "card_types": [
+            "生物"
+        ],
+        "card_type_info": "生物",
+        "card_tags": [],
+        "card_tag_info": ""
     }
 }

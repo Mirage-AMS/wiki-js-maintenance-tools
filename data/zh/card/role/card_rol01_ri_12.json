@@ -1,5 +1,12 @@
 {
-    "path": "zh/card/role/card_rol01_ri_12",
+    "path": "card/role/card_rol01_ri_12",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "专属",
+        "法术"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +31,36 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eA01}${eR01}\n<b00>快速 / ${eA01} / 华舞\n<n02>你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，\n<n02>· 选1个骰子重骰\n<n02>· 选你投掷的任意数目的骰子移除\n<n20> ",
+        "card_info_effect": "<b00>解锁：${eA01}${eR01}\n<b00>快速 / ${eA01} / 华舞\n<n02>你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，\n<n02>· 重骰1个骰子\n<n02>· 移除你投掷的任意数目的骰子\n<n20> ",
         "card_info_description": "<n02>闻风起舞，命绝风息 ",
         "card_picture_path": "huntress_dance_of_wind.png",
         "card_inner_base_path": "base_inner_role_huntress.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_role_info01_12.jpg",
-        "card_attribute": "低级 / 情报 / 专属 · 法术",
-        "card_tag": "专属 · 法术",
+        "card_image_url": "/assets/image/deck_role_info01_12.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/huntress_dance_of_wind.jpg",
+        "card_basic_info": "低级 / 情报 / 专属 · 法术",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "法术"
+        ],
+        "card_tag_info": "专属 · 法术",
         "unlock": "${eA01}${eR01}",
         "effects": [
             {
                 "name": "华舞",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": "${eA01}",
-                "text": "你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，<br>· 选1个骰子重骰<br>· 选你投掷的任意数目的骰子移除"
+                "text": "你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，\n· 重骰1个骰子\n· 移除你投掷的任意数目的骰子"
             }
         ]
     }

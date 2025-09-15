@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_14",
+    "path": "card/intelligence/card_dlc01_co_14",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +37,25 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_14.jpg",
-        "card_attribute": "中级 / 情报 / 造物",
-        "card_tag": "造物",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_14.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_twin_wand.jpg",
+        "card_basic_info": "中级 / 情报 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "造物"
+        ],
+        "card_tag_info": "造物",
         "unlock": "中级以上含${eA01}植物",
         "effects": [
             {
                 "name": "弱化",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": null,
                 "text": "${tR01}，你的回合中：本回合降低1个矿物·植物的采集需求为其当前采集需求的一半（向下取整）"

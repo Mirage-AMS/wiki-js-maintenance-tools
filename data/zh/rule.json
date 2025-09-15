@@ -1,1 +1,40 @@
-{}
+{
+    "title": "规则目录",
+    "path": "rule",
+    "tags": [
+        "目录"
+    ],
+    "contents": {
+        "filename": "rule.json",
+        "data": [
+            {
+                "title": "简介",
+                "path": "/rule/rule_overview",
+                "description": "游戏规则概览",
+                "color": "#2ecc71",
+                "itemCount": 1
+            },
+            {
+                "title": "基础规则",
+                "path": "/rule/rule_basic",
+                "description": "游戏的基础规则和流程",
+                "color": "#3498db",
+                "itemCount": 0
+            },
+            {
+                "title": "规则细则",
+                "path": "/rule/rule_advanced",
+                "description": "复杂情形的规则细则",
+                "color": "#9b59b6",
+                "itemCount": 0
+            },
+            {
+                "title": "附录",
+                "path": "/rule/rule_appendix",
+                "description": "规则术语附录",
+                "color": "#e74c3c",
+                "itemCount": 0
+            }
+        ]
+    }
+}

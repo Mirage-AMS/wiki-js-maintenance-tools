@@ -1,1 +1,47 @@
-{}
+{
+    "title": "卡牌目录",
+    "path": "card",
+    "tags": [
+        "目录"
+    ],
+    "contents": {
+        "filename": "card.json",
+        "data": [
+            {
+                "title": "其他卡牌",
+                "path": "/card/accessory",
+                "description": "其它配件卡牌",
+                "color": "#2ecc71",
+                "itemCount": 2
+            },
+            {
+                "title": "探索区卡牌",
+                "path": "/card/exploration",
+                "description": "探索区的资源卡牌",
+                "color": "#3498db",
+                "itemCount": 63
+            },
+            {
+                "title": "情报区卡牌",
+                "path": "/card/intelligence",
+                "description": "情报区的情报和事件卡牌",
+                "color": "#9b59b6",
+                "itemCount": 90
+            },
+            {
+                "title": "角色专属卡牌",
+                "path": "/card/role",
+                "description": "角色和其专属卡牌",
+                "color": "#e74c3c",
+                "itemCount": 27
+            },
+            {
+                "title": "交易区卡牌",
+                "path": "/card/trading",
+                "description": "交易区的商品卡牌",
+                "color": "#f1c40f",
+                "itemCount": 45
+            }
+        ]
+    }
+}

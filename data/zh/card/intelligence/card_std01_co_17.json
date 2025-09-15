@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_std01_co_17",
+    "path": "card/intelligence/card_std01_co_17",
+    "tags": [
+        "卡牌",
+        "高级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +37,25 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_std_17.jpg",
-        "card_attribute": "高级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_conventicle_std_17.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/hunting_operations.jpg",
+        "card_basic_info": "高级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP12}",
         "effects": [
             {
                 "name": "猎杀",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": null,
                 "consumption": null,
                 "text": "获得1次额外行动；只在那次行动中，若你执行从情报区抽牌，可以额外抽1张卡牌"

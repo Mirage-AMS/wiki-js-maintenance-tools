@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/trading/card_dlc01_ma_14",
+    "path": "card/trading/card_dlc01_ma_14",
+    "tags": [
+        "卡牌",
+        "中级",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +29,33 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b00>精通：采集高级以上矿物·植物成功\n<b00>快速 / 机巧\n<n02>${tR01}，你的行动阶段中：为1个矿物·植物累积3点采集进度；若精通，额外累积1点采集进度",
+        "card_info_effect": "<n02> \n<b00>精通：采集高级以上矿物·植物成功\n<b00>快速 / 机巧\n<n02>${tR01}，${tAct}：为1个矿物·植物累积3点采集进度；若精通，额外累积1点采集进度",
         "card_info_description": null,
         "card_picture_path": "dlc01_collector.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_dlc01_14.jpg",
-        "card_attribute": "中级 / 造物",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_market_dlc01_14.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_collector.jpg",
+        "card_basic_info": "中级 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "造物"
+        ],
+        "card_type_info": "造物",
+        "card_tags": [],
+        "card_tag_info": "",
         "master": "采集高级以上矿物·植物成功",
         "effects": [
             {
                 "name": "机巧",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你的行动阶段中：为1个矿物·植物累积3点采集进度；若精通，额外累积1点采集进度"
+                "text": "${tR01}，${tAct}：为1个矿物·植物累积3点采集进度；若精通，额外累积1点采集进度"
             }
         ]
     }

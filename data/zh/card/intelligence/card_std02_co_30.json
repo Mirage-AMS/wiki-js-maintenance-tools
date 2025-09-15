@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/intelligence/card_std02_co_30",
+    "path": "card/intelligence/card_std02_co_30",
+    "tags": [
+        "卡牌",
+        "低级",
+        "事件"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,26 +29,32 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n02>直到本轮结束前其他玩家不能进入探索区；其他玩家可以在各自回合中选以下1个可适用的效果适用，以终止对其影响\n<n02><行贿> · 立即消耗${aP04}\n<n02><闯关> · 立即受到3点伤害\n<n16> ",
+        "card_info_effect": "<n02> \n<n02>直到本轮结束前其他玩家不能进入探索区；其他玩家可以在其回合中选以下1个可适用的效果适用，以终止对其影响\n<n02><行贿> · 立即消耗${aP04}\n<n02><闯关> · 立即受到3点伤害\n<n16> ",
         "card_info_description": "<n02>“你，不得通过！”",
         "card_picture_path": "gate_guard.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "EVENT_REQ",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_std_60.jpg",
-        "card_attribute": "低级 / 事件",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_conventicle_std_60.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/gate_guard.jpg",
+        "card_basic_info": "低级 / 事件",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "事件"
+        ],
+        "card_type_info": "事件",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
-                "name": "未知",
-                "type": "未知",
-                "type_color": "gray-100",
-                "type_text_color": "gray-700",
+                "name": "事件",
+                "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "<行贿> · 立即消耗${aP04}<br><闯关> · 立即受到3点伤害"
+                "text": "直到本轮结束前其他玩家不能进入探索区；其他玩家可以在其回合中选以下1个可适用的效果适用，以终止对其影响\n<行贿> · 立即消耗${aP04}\n<闯关> · 立即受到3点伤害"
             }
         ]
     }

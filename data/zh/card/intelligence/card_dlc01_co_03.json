@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_03",
+    "path": "card/intelligence/card_dlc01_co_03",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +37,25 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_03.jpg",
-        "card_attribute": "低级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_03.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_wilderness_survival.jpg",
+        "card_basic_info": "低级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP03}",
         "effects": [
             {
                 "name": "求生",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": null,
                 "consumption": null,
                 "text": "你的生命上限+1，只在你采集植物中，被采集植物的采集需求-1"

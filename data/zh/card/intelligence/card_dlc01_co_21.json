@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_21",
+    "path": "card/intelligence/card_dlc01_co_21",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "法术"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eF01}${eR01}\n<b00>启动 / ${eF01} / 阳炎\n<n02>${tR01}：选1个探索区，直到本轮结束前该探索区所有生物的攻击力+1；你可以额外消耗${eR01}，本回合只在你在该探索区采集矿物中，被采集矿物的采集需求-3",
+        "card_info_effect": "<b00>解锁：${eF01}${eR01}\n<b00>启动 / ${eF01} / 阳炎\n<n02>${tR01}：选1个探索区，直到本轮结束前该探索区所有生物的攻击力+1；你可以额外消耗${eR01}，本回合该探索区所有矿物的采集需求-3",
         "card_info_description": null,
         "card_picture_path": "dlc01_fire_region.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_21.jpg",
-        "card_attribute": "低级 / 情报 / 法术",
-        "card_tag": "法术",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_21.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_fire_region.jpg",
+        "card_basic_info": "低级 / 情报 / 法术",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "法术"
+        ],
+        "card_tag_info": "法术",
         "unlock": "${eF01}${eR01}",
         "effects": [
             {
                 "name": "阳炎",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": "${eF01}",
-                "text": "${tR01}：选1个探索区，直到本轮结束前该探索区所有生物的攻击力+1；你可以额外消耗${eR01}，本回合只在你在该探索区采集矿物中，被采集矿物的采集需求-3"
+                "text": "${tR01}：选1个探索区，直到本轮结束前该探索区所有生物的攻击力+1；你可以额外消耗${eR01}，本回合该探索区所有矿物的采集需求-3"
             }
         ]
     }

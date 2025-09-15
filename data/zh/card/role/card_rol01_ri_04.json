@@ -1,5 +1,12 @@
 {
-    "path": "zh/card/role/card_rol01_ri_04",
+    "path": "card/role/card_rol01_ri_04",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "专属",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +31,36 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 蓄势\n<n02>${tR01}，你的行动阶段中：你受到2点伤害，本回合你的下次投掷增加1个指定骰面的骰子\n<n02> <n20> ",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 蓄势\n<n02>${tR01}，${tAct} ：你受到2点伤害，${tAct} 的下次投掷额外增加1个指定骰面的骰子\n<n02> <n02> <n20> ",
         "card_info_description": "<n02>其动迅雷，其势万钧 ",
         "card_picture_path": "warrior_critical_hit.png",
         "card_inner_base_path": "base_inner_role_warrior.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_role_info01_04.jpg",
-        "card_attribute": "中级 / 情报 / 专属 · 技能",
-        "card_tag": "专属 · 技能",
+        "card_image_url": "/assets/image/deck_role_info01_04.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/warrior_critical_hit.jpg",
+        "card_basic_info": "中级 / 情报 / 专属 · 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "技能"
+        ],
+        "card_tag_info": "专属 · 技能",
         "unlock": "${aP06}",
         "effects": [
             {
                 "name": "蓄势",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你的行动阶段中：你受到2点伤害，本回合你的下次投掷增加1个指定骰面的骰子"
+                "text": "${tR01}，${tAct} ：你受到2点伤害，${tAct} 的下次投掷额外增加1个指定骰面的骰子"
             }
         ]
     }

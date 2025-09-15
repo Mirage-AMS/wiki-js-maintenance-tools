@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/trading/card_dlc01_ma_07",
+    "path": "card/trading/card_dlc01_ma_07",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>永久 / 抬价\n<n04>作为该技能解锁的处理，你需要选择1种资源类型：本局交易区中该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1",
+        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>永久 / 抬价\n<n04>解锁该技能时只有1次，你必须选1种卡牌类型并将以下效果永久适用，\n<n04>· 交易区该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1",
         "card_info_description": null,
         "card_picture_path": "dlc01_corner_the_market.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_dlc01_07.jpg",
-        "card_attribute": "低级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_market_dlc01_07.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_corner_the_market.jpg",
+        "card_basic_info": "低级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP03}",
         "effects": [
             {
                 "name": "抬价",
                 "type": "永久",
-                "type_color": "blue-100",
-                "type_text_color": "blue-700",
                 "location": null,
                 "consumption": null,
-                "text": "作为该技能解锁的处理，你需要选择1种资源类型：本局交易区中该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1"
+                "text": "解锁该技能时只有1次，你必须选1种卡牌类型并将以下效果永久适用，\n· 交易区该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1"
             }
         ]
     }

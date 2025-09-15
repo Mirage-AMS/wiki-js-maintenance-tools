@@ -1,5 +1,10 @@
 {
-    "path": "zh/card/intelligence/card_dlc01_co_28",
+    "path": "card/intelligence/card_dlc01_co_28",
+    "tags": [
+        "卡牌",
+        "低级",
+        "事件"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,26 +29,32 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n02>选以下1个效果对交易区适用或发动，\n<n02><更换> · 选任意数目的栏位清空并填充\n<n02><赠品> · 选最多2个低级情报获得\n<n02><折扣> · 选1个低级基础资源（矿物·植物·生物）本回合售价减半（向下取整）\n<n16> ",
+        "card_info_effect": "<n02> \n<n02>选以下1个效果对交易区适用或发动，\n<n02><更换> · 刷新任意数目的栏位\n<n02><赠品> · 获得最多2个低级情报商品\n<n02><折扣> · 选1个低级基础资源（矿物·植物·生物）商品本回合售价减半（向下取整）\n<n16> ",
         "card_info_description": "<n02>“新开的小店，一个满脸堆笑的老板” ",
         "card_picture_path": "dlc01_new_store.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "EVENT_REQ",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_dlc01_28.jpg",
-        "card_attribute": "低级 / 事件",
-        "card_tag": "",
+        "card_image_url": "/assets/image/deck_conventicle_dlc01_28.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_new_store.jpg",
+        "card_basic_info": "低级 / 事件",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "事件"
+        ],
+        "card_type_info": "事件",
+        "card_tags": [],
+        "card_tag_info": "",
         "effects": [
             {
-                "name": "未知",
-                "type": "未知",
-                "type_color": "gray-100",
-                "type_text_color": "gray-700",
+                "name": "事件",
+                "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "<更换> · 选任意数目的栏位清空并填充<br><赠品> · 选最多2个低级情报获得<br><折扣> · 选1个低级基础资源（矿物·植物·生物）本回合售价减半（向下取整）"
+                "text": "选以下1个效果对交易区适用或发动，\n<更换> · 刷新任意数目的栏位\n<赠品> · 获得最多2个低级情报商品\n<折扣> · 选1个低级基础资源（矿物·植物·生物）商品本回合售价减半（向下取整）"
             }
         ]
     }

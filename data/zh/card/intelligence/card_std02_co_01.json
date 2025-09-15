@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_std02_co_01",
+    "path": "card/intelligence/card_std02_co_01",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "造物"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：中级以上含${eW01}生物\n<b00>启动 / 泉涌\n<n02>移除该造物，临时获得${eC01}${eC01}${eC01}，那之后你的每个开始阶段时，临时获得${eC01}${eC01}${eC01}",
+        "card_info_effect": "<b00>解锁：中级以上含${eW01}生物\n<b00>启动 / 泉涌\n<n02>移除该造物，你临时获得${eC01}${eC01}${eC01}，那之后每个${tBgn}只有1次，你临时获得${eC01}${eC01}${eC01}",
         "card_info_description": null,
         "card_picture_path": "potion_spring.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_std_31.jpg",
-        "card_attribute": "中级 / 情报 / 造物",
-        "card_tag": "造物",
+        "card_image_url": "/assets/image/deck_conventicle_std_31.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/potion_spring.jpg",
+        "card_basic_info": "中级 / 情报 / 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "造物"
+        ],
+        "card_tag_info": "造物",
         "unlock": "中级以上含${eW01}生物",
         "effects": [
             {
                 "name": "泉涌",
                 "type": "启动",
-                "type_color": "yellow-100",
-                "type_text_color": "yellow-700",
                 "location": null,
                 "consumption": null,
-                "text": "移除该造物，临时获得${eC01}${eC01}${eC01}，那之后你的每个开始阶段时，临时获得${eC01}${eC01}${eC01}"
+                "text": "移除该造物，你临时获得${eC01}${eC01}${eC01}，那之后每个${tBgn}只有1次，你临时获得${eC01}${eC01}${eC01}"
             }
         ]
     }

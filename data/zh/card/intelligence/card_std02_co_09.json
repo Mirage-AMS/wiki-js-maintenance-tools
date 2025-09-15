@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/intelligence/card_std02_co_09",
+    "path": "card/intelligence/card_std02_co_09",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "法术"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -31,17 +37,25 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_conventicle_std_39.jpg",
-        "card_attribute": "低级 / 情报 / 法术",
-        "card_tag": "法术",
+        "card_image_url": "/assets/image/deck_conventicle_std_39.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/water_wash.jpg",
+        "card_basic_info": "低级 / 情报 / 法术",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "法术"
+        ],
+        "card_tag_info": "法术",
         "unlock": "${eW01}${eR01}",
         "effects": [
             {
                 "name": "奔流",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": "${eW01}",
                 "text": "${tR01}，你的回合中：本回合降低1个矿物3点采集需求"

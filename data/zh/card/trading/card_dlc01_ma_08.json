@@ -1,5 +1,11 @@
 {
-    "path": "zh/card/trading/card_dlc01_ma_08",
+    "path": "card/trading/card_dlc01_ma_08",
+    "tags": [
+        "卡牌",
+        "低级",
+        "情报",
+        "技能"
+    ],
     "stat": {
         "win-rate": null,
         "unlock-rate": null,
@@ -24,27 +30,35 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>快速 / 抢拍\n<n04>${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：你可以将其视为交易区商品立即购买",
+        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>快速 / 抢拍\n<n04>${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：将其视为交易区商品购买",
         "card_info_description": null,
         "card_picture_path": "dlc01_business_intuition.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_element_mark": "",
-        "card_image_url": "./image/deck_market_dlc01_08.jpg",
-        "card_attribute": "低级 / 情报 / 技能",
-        "card_tag": "技能",
+        "card_image_url": "/assets/image/deck_market_dlc01_08.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/dlc01_business_intuition.jpg",
+        "card_basic_info": "低级 / 情报 / 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "技能"
+        ],
+        "card_tag_info": "技能",
         "unlock": "${aP03}",
         "effects": [
             {
                 "name": "抢拍",
                 "type": "快速",
-                "type_color": "red-100",
-                "type_text_color": "red-700",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：你可以将其视为交易区商品立即购买"
+                "text": "${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：将其视为交易区商品购买"
             }
         ]
     }
