@@ -8,7 +8,7 @@
         "filename": "rule.json",
         "data": [
             {
-                "title": "简介",
+                "title": "概览",
                 "path": "/rule/rule_overview",
                 "description": "游戏规则概览",
                 "color": "#2ecc71",
@@ -19,7 +19,7 @@
                 "path": "/rule/rule_basic",
                 "description": "游戏的基础规则和流程",
                 "color": "#3498db",
-                "itemCount": 0
+                "itemCount": 7
             },
             {
                 "title": "规则细则",

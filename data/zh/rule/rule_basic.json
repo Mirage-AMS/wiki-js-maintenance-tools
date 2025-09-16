@@ -6,6 +6,56 @@
   ],
   "contents": {
     "filename": "rule_basic.json",
-    "data": []
+    "data": [
+      {
+        "title": "简介",
+        "path": "/rule/rule_basic/rule_basic_intro",
+        "description": "基础规则简介",
+        "color": "#4CAF50",
+        "itemCount": 1
+      },
+      {
+        "title": "探索",
+        "path": "/rule/rule_basic/rule_exploration",
+        "description": "探索区相关的规则",
+        "color": "#03A9F4",
+        "itemCount": 1
+      },
+      {
+        "title": "交易",
+        "path": "/rule/rule_basic/rule_trading",
+        "description": "交易区相关的规则",
+        "color": "#3F51B5",
+        "itemCount": 1
+      },
+      {
+        "title": "情报与事件",
+        "path": "/rule/rule_basic/rule_intelligence",
+        "description": "情报区相关的规则",
+        "color": "#9C27B0",
+        "itemCount": 1
+      },
+      {
+        "title": "元素",
+        "path": "/rule/rule_basic/rule_element",
+        "description": "元素池相关的规则",
+        "color": "#00BCD4",
+        "itemCount": 1
+      },
+      {
+        "title": "能力与晋升",
+        "path": "/rule/rule_basic/rule_ability",
+        "description": "晋升区相关的规则",
+        "color": "#FF9800",
+        "itemCount": 1
+      },
+      {
+        "title": "效果",
+        "path": "/rule/rule_basic/rule_effect",
+        "description": "效果相关的规则",
+        "color": "#E64A19",
+        "itemCount": 1
+      }
+    ]
   }
 }

@@ -1,4 +1,33 @@
 {
     "template": "general_contents_template.html",
-    "children": {}
+    "children": {
+        "rule_basic_intro": {
+            "template": "general_markdown_template.md",
+            "data": "rule_basic_intro.md"
+        },
+        "rule_exploration": {
+            "template": "general_markdown_template.md",
+            "data": "rule_exploration.md"
+        },
+        "rule_trading": {
+            "template": "general_markdown_template.md",
+            "data": "rule_trading.md"
+        },
+        "rule_intelligence": {
+            "template": "general_markdown_template.md",
+            "data": "rule_intelligence.md"
+        },
+        "rule_element": {
+            "template": "general_markdown_template.md",
+            "data": "rule_element.md"
+        },
+        "rule_ability": {
+            "template": "general_markdown_template.md",
+            "data": "rule_ability.md"
+        },
+        "rule_effect": {
+            "template": "general_markdown_template.md",
+            "data": "rule_effect.md"
+        }
+    }
 }
