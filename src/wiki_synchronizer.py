@@ -207,6 +207,7 @@ class WikiSynchronizer:
                 raise FileNotFoundError(f"{card_design_path} not found")
             with open(card_design_path, 'r', encoding='utf-8') as f:
                 card_design_infos = json.load(f)
+            card_design_infos = [each for each in card_design_infos if each.get("card_num") > 0]
             if len(card_design_infos) != len(card_infos):
                 raise ValueError(f"{card_design_path} has {len(card_design_infos)} cards, but {len(card_infos)} cards in register file")
 

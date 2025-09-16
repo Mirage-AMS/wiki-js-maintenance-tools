@@ -1,0 +1,67 @@
+{
+    "path": "card/role/card_rol02_ri_11",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "专属",
+        "技能"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "独具匠心",
+        "card_level": "中级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": "技能",
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>永久 / 匠心\n<n02>只在你解锁造物时，也可以将已解锁的该技能视为1个中级的需求素材堆叠\n<n02> <n02> <n20> ",
+        "card_info_description": "<n02>整个世界仿佛只剩下她与这份蓝图 ",
+        "card_picture_path": "eugenie_invention.png",
+        "card_inner_base_path": "base_inner_role_eugenie.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_image_url": "/assets/image/deck_role_info02_11.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/eugenie_invention.jpg",
+        "card_basic_info": "中级 / 情报 / 专属 · 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "技能"
+        ],
+        "card_tag_info": "专属 · 技能",
+        "unlock": "${aP06}",
+        "effects": [
+            {
+                "name": "匠心",
+                "type": "永久",
+                "location": null,
+                "consumption": null,
+                "text": "只在你解锁造物时，也可以将已解锁的该技能视为1个中级的需求素材堆叠"
+            }
+        ]
+    }
+}

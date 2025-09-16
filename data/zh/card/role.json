@@ -375,6 +375,327 @@
                 ],
                 "attribute": [],
                 "image": "/assets/thumbnail/arya_gyrfalcon.jpg"
+            },
+            {
+                "id": 28,
+                "url": "/card/role/card_rol02_ri_01",
+                "name": "魔咒闪回",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "法术"
+                ],
+                "image": "/assets/thumbnail/sourcer_flashback.jpg"
+            },
+            {
+                "id": 29,
+                "url": "/card/role/card_rol02_ri_02",
+                "name": "瞬灭",
+                "level": "高级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "法术"
+                ],
+                "image": "/assets/thumbnail/sourcer_distinguish.jpg"
+            },
+            {
+                "id": 30,
+                "url": "/card/role/card_rol02_ri_03",
+                "name": "试剑真知",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/blade_test.jpg"
+            },
+            {
+                "id": 31,
+                "url": "/card/role/card_rol02_ri_04",
+                "name": "剑心·浪游",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/blade_roger.jpg"
+            },
+            {
+                "id": 32,
+                "url": "/card/role/card_rol02_ri_05",
+                "name": "剑心·勇武",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/blade_bravery.jpg"
+            },
+            {
+                "id": 33,
+                "url": "/card/role/card_rol02_ri_06",
+                "name": "剑心·统领",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/blade_leadership.jpg"
+            },
+            {
+                "id": 34,
+                "url": "/card/role/card_rol02_ri_07",
+                "name": "执政手腕",
+                "level": "低级",
+                "type": [
+                    "事件"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/archon_skill.jpg"
+            },
+            {
+                "id": 35,
+                "url": "/card/role/card_rol02_ri_08",
+                "name": "令行禁止",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/archon_order.jpg"
+            },
+            {
+                "id": 36,
+                "url": "/card/role/card_rol02_ri_09",
+                "name": "丰饶祈愿",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "法术"
+                ],
+                "image": "/assets/thumbnail/pray_for_abundant.jpg"
+            },
+            {
+                "id": 37,
+                "url": "/card/role/card_rol02_ri_10",
+                "name": "虔敬花冠",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/flower_crown.jpg"
+            },
+            {
+                "id": 38,
+                "url": "/card/role/card_rol02_ri_11",
+                "name": "独具匠心",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/eugenie_invention.jpg"
+            },
+            {
+                "id": 39,
+                "url": "/card/role/card_rol02_ri_12",
+                "name": "勒菲弗巧械铺",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/eugenie_workshop.jpg"
+            },
+            {
+                "id": 40,
+                "url": "/card/role/card_rol02_ri_13",
+                "name": "林地作业",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/flint_lumbering.jpg"
+            },
+            {
+                "id": 41,
+                "url": "/card/role/card_rol02_ri_14",
+                "name": "林中小屋",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/flint_cabin.jpg"
+            },
+            {
+                "id": 42,
+                "url": "/card/role/card_rol02_ri_15",
+                "name": "鹰舍邂逅",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/arya_gift.jpg"
+            },
+            {
+                "id": 43,
+                "url": "/card/role/card_rol02_ri_16",
+                "name": "万咒法典",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/carlos_spell_book.jpg"
+            },
+            {
+                "id": 44,
+                "url": "/card/role/card_rol02_ri_17",
+                "name": "法术研习",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/carlos_learning.jpg"
+            },
+            {
+                "id": 45,
+                "url": "/card/role/card_rol02_ri_18",
+                "name": "老千惯犯",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/kay_cheat.jpg"
+            },
+            {
+                "id": 46,
+                "url": "/card/role/card_rol02_ri_19",
+                "name": "连战连胜",
+                "level": "高级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/kay_win_again.jpg"
+            },
+            {
+                "id": 47,
+                "url": "/card/role/card_rol02_ri_20",
+                "name": "碎岩击",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/colin_punch.jpg"
+            },
+            {
+                "id": 48,
+                "url": "/card/role/card_rol02_ri_21",
+                "name": "石锢千劫",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "法术"
+                ],
+                "image": "/assets/thumbnail/colin_spell.jpg"
+            },
+            {
+                "id": 49,
+                "url": "/card/role/card_rol02_ri_22",
+                "name": "以物易物",
+                "level": "低级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "技能"
+                ],
+                "image": "/assets/thumbnail/fereshteh_trade.jpg"
+            },
+            {
+                "id": 50,
+                "url": "/card/role/card_rol02_ri_23",
+                "name": "异域神灯",
+                "level": "中级",
+                "type": [
+                    "情报"
+                ],
+                "attribute": [
+                    "专属",
+                    "造物"
+                ],
+                "image": "/assets/thumbnail/fereshteh_magic_lamp.jpg"
             }
         ]
     }
