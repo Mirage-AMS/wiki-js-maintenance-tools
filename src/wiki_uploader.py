@@ -206,6 +206,10 @@ class WikiUploader:
 
 
 if __name__ == '__main__':
+    import shutil
+    tmpDir = pathUtil.getTmpDir()
+    shutil.rmtree(tmpDir, ignore_errors=True)
+
     def template_filter(doc: DocumentNode):
         if doc.name not in ("accessory", "intelligence", "exploration", "trading", "role"):
             return False
@@ -215,8 +219,19 @@ if __name__ == '__main__':
             return False
         return True
 
+    def card_filter(doc: DocumentNode):
+        print(doc.path)
+        if doc.name != "card":
+            return False
+        return True
+
+    def rule_filter(doc:DocumentNode):
+        if "rule" not in doc.path.as_posix():
+            return False
+        return True
+
     uploader = WikiUploader(renderer=WikiPTLRenderer())
     uploader.upload(
         is_upload=True,
-        filter_func=template_filter
+        filter_func=rule_filter
     )
