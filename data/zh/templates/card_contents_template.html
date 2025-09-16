@@ -288,30 +288,53 @@ document.addEventListener('DOMContentLoaded', function() {
             const cardElement = document.createElement('div');
             cardElement.className = 'card';
 
-            // 处理多类型展示（保持不变）
-            const typesHtml = Array.isArray(card.type)
-                ? card.type.map(type => `<span class="card-type">${type}</span>`).join('')
-                : `<span class="card-type">${card.type}</span>`;
+            const levelText = card.level || '';
 
-            // 处理多属性展示（保持不变，但后续会放入 badges 容器）
-            const attributesHtml = Array.isArray(card.attribute) && card.attribute.length > 0
-                ? card.attribute.map(attr => `
-                    <div class="card-attribute attribute-${attr.toLowerCase()}"></div>
-                  `).join('')
+            let levelClass = '';
+            switch(levelText) {
+              case '低级':
+                levelClass = 'level-low';
+                break;
+              case '中级':
+                levelClass = 'level-mid';
+                break;
+              case '高级':
+                levelClass = 'level-high';
+                break;
+              case '传奇':
+                levelClass = 'level-legendary';
+                break;
+              default:
+                levelClass = 'level-low'; // 默认样式
+            }
+
+            // 处理类型拼接（数组转·分隔的字符串）
+            const typeText = Array.isArray(card.type)
+                ? card.type.join('·')
+                : card.type || '';
+
+            // 处理属性拼接（数组转·分隔的字符串）
+            const attributeText = Array.isArray(card.attribute) && card.attribute.length > 0
+                ? card.attribute.join('·')
                 : '';
 
-            // 核心修改：将属性图标放入 .card-badges 容器，与等级分工定位
+            // 构建完整的类型信息字符串
+            let typesHtml = levelText;
+            if (typeText) {
+                typesHtml += ` / ${typeText}`;
+            }
+            if (attributeText) {
+                typesHtml += ` / ${attributeText}`;
+            }
+            typesHtml = `<span class="card-type ${levelClass}">` + typesHtml + `</span>`
+
+            // 卡片结构
             cardElement.innerHTML = `
                 <div class="card-image">
                     <img src="${card.image}" alt="${card.name}">
-                    <!-- 等级：右上角（原逻辑保留） -->
-                    <div class="card-level level-${card.level.toLowerCase()}">${card.level}</div>
-                    <!-- 属性图标：左上角（用 .card-badges 统一包裹，方便横向排列） -->
-                    <div class="card-badges">${attributesHtml}</div>
                 </div>
                 <div class="card-info">
                     <h3 class="card-name">${card.name}</h3>
-                    <!-- 原代码中是 .card-types，此处匹配 CSS 中的 .card-meta（避免样式失效） -->
                     <div class="card-meta">${typesHtml}</div>
                 </div>
             `;
@@ -576,52 +599,8 @@ document.addEventListener('DOMContentLoaded', function() {
       transform: scale(1.05); /* 仅保留缩放，取消原 translate 偏移 */
     }
 
-    .card-badges {
-      position: absolute; /* 浮在图片上 */
-      top: 10px; /* 与等级的 top 一致，保持视觉统一 */
-      left: 10px; /* 左上角（与等级的 right 区分位置） */
-      display: flex;
-      gap: 5px; /* 多个属性图标之间的间距 */
-      z-index: 1; /* 确保在图片上方（避免被图片遮挡） */
-    }
-
-    .card-attribute {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 0.8rem;
-      color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,.2);
-      /* 新增：若属性需要显示文字（如“造”“法”），可加内容（可选） */
-      content: attr(class); /* 或直接写死，如 content: "造"; 需根据需求调整 */
-    }
-
-    .card-level {
-      position: absolute; /* 浮在图片上 */
-      top: 10px; /* 与属性容器的 top 一致 */
-      right: 10px; /* 右上角（与属性的 left 分工，避免重叠） */
-      background-color: rgba(0,0,0,.7);
-      z-index: 1; /* 与属性容器同层级，确保都在图片上方 */
-    }
-
-    /* 属性颜色标识 */
-    .attribute-造物 { background-color: #2ecc71; }
-    .attribute-法术 { background-color: #9b59b6; }
-    .attribute-技能 { background-color: #f39c12; }
-    .attribute-事件 { background-color: #34495e; }
-
-    /* 等级颜色标识 */
-    .level-低级 { border: 2px solid #e74c3c; }
-    .level-中级 { border: 2px solid #3498db; }
-    .level-高级 { border: 2px solid #f1c40f; }
-    .level-传奇 { border: 2px solid #8e44ad; }
-
     .card-info {
-      padding: 15px;
+      padding: 0 12px 12px;
       flex: 1;
       box-sizing: border-box;
       background-color: white;
@@ -641,10 +620,39 @@ document.addEventListener('DOMContentLoaded', function() {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: 6px;
+    }
+
+    .card-type.level-low {
+      /* 低级-灰色系*/
+      color: #7f8c8d;
+      background-color: #f1f1f1;
+    }
+
+    .card-type.level-mid {
+      /* 中级-蓝色系 */
+      color: #2980b9;
+      background-color: #ebf5fb;
+      border: 1px solid #d6eaf8;
+    }
+
+    .card-type.level-high {
+      /* 高级-金色系 */
+      color: #e67e22; /* 调整为稍浅的橙色 */
+      background-color: #fff4e5; /* 加深背景色 */
+      border: 1px solid #ffe0b2;
+      box-shadow: 0 1px 3px rgba(243, 156, 18, 0.1); /* 增加轻微阴影增强质感 */
+    }
+
+    .card-type.level-legendary {
+      /* 传奇-梦幻粉系 */
+      color: #c2185b; /* 调整为更偏向粉色的深色调 */
+      background-color: #fce4ec; /* 更柔和的粉色背景 */
+      border: 1px solid #f8bbd0;
+      box-shadow: 0 2px 8px rgba(233, 30, 99, 0.15); /* 增强阴影营造梦幻感 */
     }
 
     .card-type {
-      color: #7f8c8d;
       font-size: 0.9rem;
       background-color: #f1f1f1;
       display: inline-block;
