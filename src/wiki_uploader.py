@@ -41,7 +41,7 @@ class WikiUploader:
         self.wiki_indexer = WikiIndexer(locale).build_index()
         self.wiki_client = WikiJSGraphQLClient(wiki_url, wiki_api_token)
 
-    def _save(self, doc: DocumentNode, content: str) -> None:
+    def _save(self, doc: DocumentNode, content: str) -> bool:
         """
         保存文档到本地
         :param doc:
@@ -59,8 +59,9 @@ class WikiUploader:
             f.write(content)
 
         print(f"已保存文件: {target_file}")
+        return True
 
-    def _upload(self, doc: DocumentNode, content: str) -> None:
+    def _upload(self, doc: DocumentNode, content: str) -> bool:
         """
         上传文档到Wiki.js
         :param doc:
@@ -132,21 +133,21 @@ class WikiUploader:
         prev_title = g_resp.get("title")
 
         # 计算需要比较的值
-        formatted_prev_css = format_css(prev_scriptCss) if prev_scriptCss else ""
-        curr_css = format_css(scriptCss) if scriptCss else ""
+        formatted_prev_css = format_css(prev_scriptCss, output_mode="expanded") if prev_scriptCss else ""
+        curr_css = format_css(scriptCss, output_mode="expanded") if scriptCss else ""
         prev_tag_list = [tag.get("tag") for tag in prev_tags] if prev_tags else []
         has_update = (
                 prev_title != wikijs_title or
                 prev_editor != wikijs_editor or
                 prev_content != content or
                 prev_scriptJs != scriptJs or
-                formatted_prev_css != curr_css or   # 这个比较是不准确的, 因为网页端会把CSS转码部分，导致结果不一致
+                formatted_prev_css != curr_css or   # 这个比较已经被优化过1次, 优化后可以直接比较
                 set(prev_tag_list) != set(wikijs_tags)
         )
 
         if not has_update:
             print(f"无需更新页面: {name}")
-            return
+            return False
 
         u_resp = self.wiki_client.update_page(
             page_id=g_resp.get("id"),
@@ -161,6 +162,7 @@ class WikiUploader:
             raise Exception(f"Failed to update page: {name}")
         if u_resp.get("responseResult").get("succeeded", False):
             print(f"已更新页面: {name}")
+            return True
         else:
             raise Exception(f"Failed to update page: {name}, error: {u_resp.get('responseResult').get('message')}")
 
@@ -182,6 +184,7 @@ class WikiUploader:
         count_total = len(documents)
         count_process = 0
         count_upload = 0
+        count_skip = 0
         count_save = 0
 
         for doc in documents:
@@ -197,11 +200,16 @@ class WikiUploader:
                 count_save += 1
 
             if is_upload:
-                self._upload(doc, content)
-                count_upload += 1
-                print(f"已上传文件: {doc.name}")
+                if self._upload(doc, content):
+                    count_upload += 1
+                    print(f"已上传文件: {doc.name}")
+                else:
+                    count_skip += 1
+                    print(f"已跳过文件: {doc.name}")
 
-        print(f"处理完成，共处理 {count_total} 中的 {count_process} 条文档，其中 {count_upload} 条成功上传，{count_save} 条保存至本地")
+        print(f"处理完成，共处理 {count_total} 中的 {count_process} 条文档\n"
+              f"其中 {count_upload} 条成功上传，{count_skip}条无更改跳过\n"
+              f"{count_save} 条保存至本地")
         return count_process
 
 
@@ -210,18 +218,18 @@ if __name__ == '__main__':
     tmpDir = pathUtil.getTmpDir()
     shutil.rmtree(tmpDir, ignore_errors=True)
 
-    def template_filter(doc: DocumentNode):
-        if doc.name not in ("accessory", "intelligence", "exploration", "trading", "role"):
-            return False
-        if doc.path and "card" not in str(doc.path):
-            return False
-        if doc.name == "card":
+    def test_single_card_filter(doc:DocumentNode):
+        if "card_dlc01_co_01" not in doc.name:
+            return True
+        return False
+
+    def card_filter(doc: DocumentNode):
+        if "card_" not in doc.name:
             return False
         return True
 
-    def card_filter(doc: DocumentNode):
-        print(doc.path)
-        if doc.name != "card":
+    def card_content_filter(doc: DocumentNode):
+        if doc.name not in ("card", "accessory", "intelligence", "trading", "role", "exploration"):
             return False
         return True
 
@@ -233,5 +241,5 @@ if __name__ == '__main__':
     uploader = WikiUploader(renderer=WikiPTLRenderer())
     uploader.upload(
         is_upload=True,
-        filter_func=rule_filter
+        filter_func=lambda x: True
     )
