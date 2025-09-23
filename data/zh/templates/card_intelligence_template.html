@@ -1,48 +1,48 @@
-<div class="card-container" style="width: 900px; margin: 20px auto; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); overflow: hidden; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-    <!-- 卡牌标题栏 -->
-    <div class="card-header" style="background: #2c3e50; color: #ffffff; padding: 15px 20px;">
-        <h2 style="margin: 0; font-size: 24px; font-weight: 700; color: #ffffff;">{{ card.card_name }}</h2>
-        <div style="font-size: 14px; opacity: 0.9; margin-top: 5px; color: #e0e0e0;">{{ card.card_basic_info }}</div>
+<div class="card-container">
+    <!-- 卡牌标题标题栏 -->
+    <div class="card-header">
+        <h2>{{ card.card_name }}</h2>
+        <div>{{ card.card_basic_info }}</div>
     </div>
 
     <!-- 上半部分：图片和效果说明 -->
-    <div class="card-upper" style="display: flex; padding: 20px; gap: 25px; background: #f8f9fa;">
+    <div class="card-upper">
         <!-- 左侧：仅展示卡牌图片 -->
-        <div class="card-image-container" style="flex: 2;">
-            <div class="card-image" style="border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-                <img src="{{ card.card_image_url }}" alt="{{ card.card_name }}卡牌图片" style="width: 100%; display: block;">
+        <div class="card-image-container">
+            <div class="card-image">
+                <img src="{{ card.card_image_url }}" alt="{{ card.card_name }}卡牌图片">
             </div>
         </div>
 
         <!-- 右侧：卡牌效果说明和基本信息 -->
-        <div class="card-description" style="flex: 3;">
-            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; font-size: 18px;">基本信息</h3>
-                <div style="margin-top: 10px;">
+        <div class="card-description">
+            <div class="basic-info-box">
+                <h3>基本信息</h3>
+                <div class="basic-info-content">
                     <!-- 价值区域，左侧添加两个空栏位使其与下方对齐 -->
-                    <div style="display: flex; gap: 10px; margin-bottom: 10px;">
+                    <div class="value-row">
                         <!-- 左侧第一个空栏位 -->
-                        <div style="flex: 1; padding: 8px; background: transparent; border-radius: 4px;"></div>
+                        <div class="empty-slot"></div>
                         <!-- 左侧第二个空栏位 -->
-                        <div style="flex: 1; padding: 8px; background: transparent; border-radius: 4px;"></div>
+                        <div class="empty-slot"></div>
                         <!-- 价值内容 -->
-                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-                            <span  style="font-weight: 600;">价值</span>
+                        <div class="info-item">
+                            <span class="info-label">价值</span>
                             <span>{{ card.card_price or "无" }}</span>
                         </div>
                     </div>
                     <!-- 等级、类型、属性在下方一行显示 -->
-                    <div style="display: flex; gap: 10px;">
-                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-                            <span  style="font-weight: 600;">等级</span>
+                    <div class="info-row">
+                        <div class="info-item">
+                            <span class="info-label">等级</span>
                             <span>{{ card.card_level or "无" }}</span>
                         </div>
-                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-                            <span  style="font-weight: 600;">类型</span>
+                        <div class="info-item">
+                            <span class="info-label">类型</span>
                             <span>{{ card.card_type_info or "无" }}</span>
                         </div>
-                        <div style="flex: 1; display: flex; justify-content: space-between; padding: 8px; background: #f0f4f8; border-radius: 4px;">
-                            <span  style="font-weight: 600;">属性</span>
+                        <div class="info-item">
+                            <span class="info-label">属性</span>
                             <span>{{ card.card_tag_info or "无" }}</span>
                         </div>
                     </div>
@@ -52,9 +52,9 @@
 
             <!-- 解锁条件 -->
             {% if card.unlock and card.unlock.strip() %}
-            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                <h3 style="display: inline-block; margin-top: 0; margin-bottom: 0; color: #2c3e50; font-size: 18px; font-weight: bold; margin-right: 10px;">解锁：</h3>
-                <div style="display: inline-block; font-size: 16px; color: #555; line-height: 1.5;">
+            <div class="condition-box">
+                <h3>解锁：</h3>
+                <div class="condition-content">
                     {{ card.unlock }}
                 </div>
             </div>
@@ -62,18 +62,18 @@
 
             <!-- 精通条件 -->
             {% if card.master and card.master.strip() %}
-            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                <h3 style="display: inline-block; margin-top: 0; margin-bottom: 0; color: #2c3e50; font-size: 18px; font-weight: bold; margin-right: 10px;">精通：</h3>
-                <div style="display: inline-block; font-size: 16px; color: #555; line-height: 1.5;">
+            <div class="condition-box">
+                <h3>精通：</h3>
+                <div class="condition-content">
                     {{ card.master }}
                 </div>
             </div>
             {% endif %}
 
             <!-- 卡牌效果 -->
-            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; font-size: 18px;">卡牌效果</h3>
-                <div style="line-height: 1.6; color: #34495e; font-size: 15px;">
+            <div class="effect-box">
+                <h3>卡牌效果</h3>
+                <div class="effect-content">
                     {% for effect in card.effects %}
                         {% set effect_type_bg_color, effect_type_text_color =
                             ('dbeafe', '1e40af') if effect.type == '永久' else
@@ -81,51 +81,51 @@
                             ('fee2e2', 'dc2626') if effect.type == '快速' else
                             ('f3f4f6', '6b7280') if effect.type == '未知' else
                             ('ff0000', 'ffffff') %}
-                    <div style="margin: 15px 0; padding-left: 10px; border-left: 3px solid #{{ effect_type_bg_color }};">
-                        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-weight: 600; margin-bottom: 5px;">
+                    <div class="effect-item">
+                        <div class="effect-header">
                             <!-- 类型标签块 -->
-                            <span style="background-color: #{{ effect_type_bg_color }}; color: #{{ effect_type_text_color }}; padding: 3px 8px; border-radius: 4px; font-size: 13px;">
+                            <span class="effect-type-tag" style="background-color: #{{ effect_type_bg_color }}; color: #{{ effect_type_text_color }};">
                                 {{ effect.type }}{% if effect.location %} ({{ effect.location }}){% endif %}
                             </span>
 
                             <!-- 效果名称 -->
-                            <span>{{ effect.name }}</span>
+                            <span class="effect-name">{{ effect.name }}</span>
 
                             <!-- 消耗信息（如存在） -->
                             {% if effect.consumption %}
-                            <span style="font-size: 14px; color: #7f8c8d;">
+                            <span class="effect-consumption">
                                 （消耗：{{ effect.consumption }}）
                             </span>
                             {% endif %}
                         </div>
 
                         <!-- 效果描述文本 -->
-                        <div style="margin: 5px 0;">{{ effect.text }}</div>
+                        <div class="effect-text">{{ effect.text }}</div>
                     </div>
                     {% endfor %}
 
                     {% if card.card_info_description %}
-                    <p style="margin: 10px 0; color: #7f8c8d; font-style: italic;">{{ card.card_info_description }}</p>
+                    <p class="effect-note">{{ card.card_info_description }}</p>
                     {% endif %}
                 </div>
             </div>
 
             <!-- 统计信息（胜率等整合为一行） -->
-            <div style="background: white; border-radius: 8px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-                <h3 style="margin-top: 0; color: #2c3e50; border-bottom: 1px solid #e1e4e8; padding-bottom: 10px; font-size: 18px;">卡牌数据</h3>
-                <div style="display: flex; justify-content: space-between; padding: 10px; background: #f0f4f8; border-radius: 4px; margin-top: 10px;">
-                    <div style="display: flex; gap: 20px; width: 100%; justify-content: space-around;">
-                        <div style="text-align: center;">
-                            <span style="display: block; font-size: 14px; color: #6c757d;">胜率</span>
-                            <span style="font-weight: 600; font-size: 15px;">{{ "%.1f%%"|format(stat['win-rate'] * 100) if stat['win-rate'] else 'N/A' }}</span>
+            <div class="stats-box">
+                <h3>卡牌数据</h3>
+                <div class="stats-content">
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-label">胜率</span>
+                            <span class="stat-value">{{ "%.1f%%"|format(stat['win-rate'] * 100) if stat['win-rate'] else 'N/A' }}</span>
                         </div>
-                        <div style="text-align: center;">
-                            <span style="display: block; font-size: 14px; color: #6c757d;">解锁率</span>
-                            <span style="font-weight: 600; font-size: 15px;">{{ "%.1f%%"|format(stat['unlock-rate'] * 100) if stat['unlock-rate'] else 'N/A' }}</span>
+                        <div class="stat-item">
+                            <span class="stat-label">解锁率</span>
+                            <span class="stat-value">{{ "%.1f%%"|format(stat['unlock-rate'] * 100) if stat['unlock-rate'] else 'N/A' }}</span>
                         </div>
-                        <div style="text-align: center;">
-                            <span style="display: block; font-size: 14px; color: #6c757d;">保留率</span>
-                            <span style="font-weight: 600; font-size: 15px;">{{ "%.1f%%"|format(stat['keep-rate'] * 100) if stat['keep-rate'] else 'N/A' }}</span>
+                        <div class="stat-item">
+                            <span class="stat-label">保留率</span>
+                            <span class="stat-value">{{ "%.1f%%"|format(stat['keep-rate'] * 100) if stat['keep-rate'] else 'N/A' }}</span>
                         </div>
                     </div>
                 </div>
@@ -134,20 +134,20 @@
     </div>
 
     <!-- 底栏：双栏布局（左侧调整历史，右侧FAQ） -->
-    <div class="card-footer" style="background: white; padding: 20px; border-top: 1px solid #e1e4e8; display: flex; gap: 20px;">
+    <div class="card-footer">
         <!-- 左侧：版本调整历史 -->
-        <div class="card-revise" style="flex: 1;">
-            <h3 style="margin-top: 0; color: #2c3e50; font-size: 18px;">版本调整历史</h3>
-            <div style="margin-top: 15px;">
+        <div class="card-revise">
+            <h3>版本调整历史</h3>
+            <div class="revise-content">
                 {% for revision in revise %}
                     {% if revision.date and revision.content %}
-                    <div style="padding: 12px; border-left: 3px solid #3498db; background: #f8f9fa; margin-bottom: 12px; border-radius: 0 4px 4px 0;">
-                        <div style="font-weight: 600; color: #2980b9;">{{ revision.date }}</div>
-                        <div style="margin-top: 5px; color: #34495e; font-size: 14px;">{{ revision.content }}</div>
+                    <div class="revision-item">
+                        <div class="revision-date">{{ revision.date }}</div>
+                        <div class="revision-content">{{ revision.content }}</div>
                     </div>
                     {% endif %}
                 {% else %}
-                <div style="padding: 12px; background: #f8f9fa; margin-bottom: 12px; border-radius: 4px; text-align: center; color: #7f8c8d;">
+                <div class="no-revision">
                     暂无调整记录
                 </div>
                 {% endfor %}
@@ -155,18 +155,18 @@
         </div>
 
         <!-- 右侧：FAQ信息 -->
-        <div class="card-faq" style="flex: 1;">
-            <h3 style="margin-top: 0; color: #2c3e50; font-size: 18px;">常见问题（FAQ）</h3>
-            <div style="margin-top: 15px;">
+        <div class="card-faq">
+            <h3>常见问题（FAQ）</h3>
+            <div class="faq-content">
                 {% for item in faq %}
                     {% if item.question and item.answer %}
-                    <div style="padding: 12px; border-left: 3px solid #2ecc71; background: #f8f9fa; margin-bottom: 12px; border-radius: 0 4px 4px 0;">
-                        <div style="font-weight: 600; color: #27ae60;">Q：{{ item.question }}</div>
-                        <div style="margin-top: 5px; color: #34495e; font-size: 14px;">A：{{ item.answer }}</div>
+                    <div class="faq-item">
+                        <div class="faq-question">Q：{{ item.question }}</div>
+                        <div class="faq-answer">A：{{ item.answer }}</div>
                     </div>
                     {% endif %}
                 {% else %}
-                <div style="padding: 12px; background: #f8f9fa; margin-bottom: 12px; border-radius: 4px; text-align: center; color: #7f8c8d;">
+                <div class="no-faq">
                     暂无常见问题记录
                 </div>
                 {% endfor %}
@@ -174,3 +174,342 @@
         </div>
     </div>
 </div>
+<style>
+.card-container {
+    width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    overflow: hidden;
+    font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+/* 卡牌标题栏样式 */
+.card-header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.card-header h2 {
+    margin: 0 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+}
+
+.card-header div {
+    font-size: 14px;
+    opacity: .9;
+    margin-top: 5px;
+    color: #e0e0e0;
+}
+
+/* 上半部分样式 */
+.card-upper {
+    display: flex;
+    padding: 20px;
+    gap: 25px;
+    background: #f8f9fa;
+}
+
+/* 图片容器样式 */
+.card-image-container {
+    flex: 2;
+}
+
+.card-image {
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+}
+
+/* 描述区域样式 */
+.card-description {
+    flex: 3;
+}
+
+/* 基本信息样式 */
+.basic-info-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
+
+.basic-info-box h3 {
+    margin-top: 0 !important;
+    color: #2c3e50 !important;
+    border-bottom: 1px solid #e1e4e8 !important;
+    padding-bottom: 10px !important;
+    font-size: 18px !important;
+}
+
+.basic-info-content {
+    margin-top: 10px;
+}
+
+.value-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.empty-slot {
+    flex: 1;
+    padding: 8px;
+    background: 0 0;
+    border-radius: 4px;
+}
+
+.info-row {
+    display: flex;
+    gap: 10px;
+}
+
+.info-item {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background: #f0f4f8;
+    border-radius: 4px;
+}
+
+.info-label {
+    font-weight: 600;
+}
+
+/* 条件样式（解锁/精通） */
+.condition-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
+
+.condition-box h3 {
+    display: inline-block !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    color: #2c3e50 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-right: 10px !important;
+}
+
+.condition-content {
+    display: inline-block;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* 效果区域样式 */
+.effect-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    margin-bottom: 20px;
+}
+
+.effect-box h3 {
+    margin-top: 0 !important;
+    color: #2c3e50 !important;
+    border-bottom: 1px solid #e1e4e8 !important;
+    padding-bottom: 10px !important;
+    font-size: 18px !important;
+}
+
+.effect-content {
+    line-height: 1.6;
+    color: #34495e;
+    font-size: 15px;
+}
+
+.effect-item {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: 3px solid #f3f4f6;
+}
+
+.effect-header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.effect-type-tag {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.effect-consumption {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.effect-text {
+    margin: 5px 0;
+}
+
+.effect-note {
+    margin: 10px 0;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* 统计信息样式 */
+.stats-box {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+.stats-box h3 {
+    margin-top: 0 !important;
+    color: #2c3e50 !important;
+    border-bottom: 1px solid #e1e4e8 !important;
+    padding-bottom: 10px !important;
+    font-size: 18px !important;
+}
+
+.stats-content {
+    padding: 10px;
+    background: #f0f4f8;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    display: block;
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.stat-value {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* 底栏样式 */
+.card-footer {
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #e1e4e8;
+    display: flex;
+    gap: 20px;
+}
+
+/* 版本调整历史样式 */
+.card-revise {
+    flex: 1;
+}
+
+.card-revise h3 {
+    margin-top: 0 !important;
+    color: #2c3e50 !important;
+    font-size: 18px !important;
+}
+
+.revise-content {
+    margin-top: 15px;
+}
+
+.revision-item {
+    padding: 12px;
+    border-left: 3px solid #3498db;
+    background: #f8f9fa;
+    margin-bottom: 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.revision-date {
+    font-weight: 600;
+    color: #2980b9;
+}
+
+.revision-content {
+    margin-top: 5px;
+    color: #34495e;
+    font-size: 14px;
+}
+
+.no-revision {
+    padding: 12px;
+    background: #f8f9fa;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    text-align: center;
+    color: #7f8c8d;
+}
+
+/* FAQ样式 */
+.card-faq {
+    flex: 1;
+}
+
+.card-faq h3 {
+    margin-top: 0 !important;
+    color: #2c3e50 !important;
+    font-size: 18px !important;
+}
+
+.faq-content {
+    margin-top: 15px;
+}
+
+.faq-item {
+    padding: 12px;
+    border-left: 3px solid #2ecc71;
+    background: #f8f9fa;
+    margin-bottom: 12px;
+    border-radius: 0 4px 4px 0;
+}
+
+.faq-question {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+.faq-answer {
+    margin-top: 5px;
+    color: #34495e;
+    font-size: 14px;
+}
+
+.no-faq {
+    padding: 12px;
+    background: #f8f9fa;
+    margin-bottom: 12px;
+    border-radius: 4px;
+    text-align: center;
+    color: #7f8c8d;
+}
+</style>
