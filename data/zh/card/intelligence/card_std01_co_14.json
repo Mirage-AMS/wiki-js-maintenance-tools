@@ -58,7 +58,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "将以下效果适用，\n· ${tDrw} 可以执行的次数+1\n· ${tPrp} 可以额外1次刷新探索区·交易区1个栏位"
+                "text": "将以下效果适用，<br>· ${tDrw} 可以执行的次数+1<br>· ${tPrp} 可以额外1次刷新探索区·交易区1个栏位"
             }
         ]
     }

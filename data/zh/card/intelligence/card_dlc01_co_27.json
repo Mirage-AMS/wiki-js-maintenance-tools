@@ -60,6 +60,15 @@
                 "consumption": "${eE01}${eA01}${eR01}",
                 "text": "${tR01}：弃置探索区1个基础资源（矿物·植物·生物），你获得1个【足金】（中级/矿物，价值${aP04}，含×2 ${eE01}${eF01}${eA01}，快速/ ${tR01}，${tBgn}：你获得${aP01}）"
             }
-        ]
+        ],
+       "related_cards": [
+            {
+                "card_name": "足金",
+                "path": "/card/accessory/card_dlc01_ac_01",
+                "card_thumbnail_url": "/assets/thumbnail/gold.jpg",
+                "relation_description": "",
+                "brief_description": "中级 / 矿物"
+            }
+       ]
     }
 }
