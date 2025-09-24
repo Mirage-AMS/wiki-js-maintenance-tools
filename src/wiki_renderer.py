@@ -11,11 +11,10 @@
 # import from official
 import re
 from abc import ABC, abstractmethod
-from typing import Any, Dict, List, Union
-from pathlib import Path
+from typing import Any, Match
 # import from third-party
 # import from self-defined
-
+from src.keyword_replacer import KeywordReplacer
 
 class WikiRenderer(ABC):
     @abstractmethod
@@ -30,85 +29,92 @@ class WikiRenderer(ABC):
 
 
 class WikiPTLRenderer(WikiRenderer):
-    """
-    在模板渲染前对原始数据进行预渲染处理的类，主要处理HTML转义和图标替换
-    """
+    # 其他常量
+    IMAGE_EXTENSION = ".png"
+    SUFFIX_MD = ".md"
+    SUFFIX_HTML = ".html"
+    ICON_PATTERN = re.compile(r"\$\{([a-z][A-Z][a-zA-Z0-9]{2})\}")
+    # 路径常量
     IMAGE_STORAGE_PATH = "/assets/icon"
-    # 优化正则表达式，只匹配符合命名规范的图标（字母、数字、下划线、连字符）
-    ICON_PATTERN = re.compile(r"\$\{([a-zA-Z0-9_-]+)\}")
 
-    def _render_html_content(self, content: str) -> str:
-        """将文本中的换行符转换为HTML的<br>标签"""
-        return content.replace("\n", "<br>")
+    IMAGE_DICT = {
+        "eE01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "地之元素"),
+        "eW01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "水之元素"),
+        "eF01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "火之元素"),
+        "eA01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "风之元素"),
+        "eC01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "万用元素"),
+        "eR01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
+        "eR02": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
+        "eR03": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
+        "eR04": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
+    }
 
-    def _render_icon_content(self, content: str) -> str:
+    # 关键词替换字典
+    URL_DICT = {
+        "解锁": {
+            "解锁率": None,
+            "": ("/zh/rule/rule_basic/rule_ability", "#h-2-常规解锁", "常规解锁")
+        },
+        "永久": {
+            "永久获得以下效果": None,
+            "永久获得": None,
+            "": ("/rule/rule_basic/rule_effect", "#h-11-永久类效果", "永久类效果"),
+        },
+        "启动": {
+            "": ("/rule/rule_basic/rule_effect", "#h-12-启动类效果", "启动类效果")
+        },
+        "快速": {
+            "": ("/rule/rule_basic/rule_effect", "#h-13-快速类效果", "快速类效果")
+        },
+        "骰子": {
+            "": ("/rule/rule_basic/rule_exploration", "#h-7-投掷标准骰子", "投掷标准骰子")
+        },
+    }
+
+    def __init__(self):
+        self.keyword_replacer = KeywordReplacer(self.URL_DICT)
+
+    @classmethod
+    def html_link_formatter(cls, match_text: str, replacement_data: tuple) -> str:
+        url, chap, tooltip = replacement_data
+        return f'<a href="{url}{chap}" title="{tooltip}" target="_blank">{match_text}</a>'
+
+    def _render_keyword_content(self, content: str, suffix: str) -> str:
+        keyword_replacer = self.keyword_replacer
+        # 目前只替换html页面中的关键词
+        if suffix == self.SUFFIX_HTML:
+            content = keyword_replacer.replace(content, self.html_link_formatter)
+
+        return content
+
+    def _render_icon_content(self, content: str, suffix: str) -> str:
         """
         替换内容中的图标占位符为HTML img标签
-
         占位符格式: ${icon_name}
         替换后: <img src="path/to/icon_name.png" alt="icon_name">
         """
+        # 闭包外预计算公共部分
+        base_image_path = self.IMAGE_STORAGE_PATH
+        image_ext = self.IMAGE_EXTENSION
+        image_dict = self.IMAGE_DICT
 
-        def replace_icon(match: re.Match) -> str:
+        def replace_icon(match: Match[str]) -> str:
             image_name = match.group(1)
-            image_path = f"{self.IMAGE_STORAGE_PATH}/{image_name}.png"
-            return f'<img src="{image_path}" alt="{image_name}" style="height: 1.2em; vertical-align: -0.20em;">'
+            image_path = f"{base_image_path}/{image_name}{image_ext}"
+            _url, _chap, _tooltip = image_dict.get(image_name, ("/", "#", ""))
+            if suffix == self.SUFFIX_MD or suffix == self.SUFFIX_HTML:
+                return (f'<a href="{_url}{_chap}" title="{_tooltip}" target="_blank">'
+                        f'<img src="{image_path}" alt="{image_name}" style="height: 1.2em; vertical-align: -0.20em; cursor: pointer;">'
+                        f'</a>')
+            else:
+                raise ValueError(f"Unsupported file type: {suffix}")
 
         return self.ICON_PATTERN.sub(replace_icon, content)
 
-    def _process_string(self, content: str, suffix: str) -> str:
-        """处理字符串类型的内容：先处理HTML，再处理图标"""
-        processed = content
-        if suffix == ".html":
-            processed = self._render_html_content(content)
-        processed = self._render_icon_content(processed)
-        return processed
-
-    def _recur_render(self, content: Union[Dict, List, Any], suffix: str) -> Union[Dict, List, Any]:
-        """
-        递归渲染内容
-
-        对于字典：递归处理每个值
-        对于列表：递归处理每个元素
-        对于字符串：处理HTML和图标
-        其他类型：保持不变
-        """
-        if isinstance(content, Dict):
-            return {key: self._recur_render(value, suffix) for key, value in content.items()}
-        elif isinstance(content, List):
-            return [self._recur_render(item, suffix) for item in content]
-        elif isinstance(content, str):
-            return self._process_string(content, suffix)
-        else:
-            return content
-
     def render(self, content: Any, suffix: str = ".html") -> Any:
-        """
-        渲染入口方法，对内容进行预渲染处理
-
-        :param content: 需要处理的数据，必须是字典类型
-        :param suffix: 文件后缀名，默认为".html"
-        :return: 处理后的内容
-        :raises TypeError: 如果输入内容不是字典类型
-        """
-        if not isinstance(content, Dict):
-            raise TypeError("Content must be a dictionary.")
-
-        return self._recur_render(content, suffix)
-
-if __name__ ==  "__main__":
-    renderer = WikiPTLRenderer()
-    data = {
-        "title": "Hello World",
-        "body": "This is my first post.\nIt contains some text and an icon: ${aP01}${eE01}.",
-        "data": {
-            "text": "Some additional information.",
-            "list": ["Item 1", "Item 2\nwith line break"]
-        },
-        "footer": [
-            "Copyright © 2023 My Blog",
-            "Powered by ${iPTL}"
-        ]
-    }
-    rendered_data = renderer.render(data)
-    print(rendered_data)
+        processed = content
+        # 先替换关键词
+        processed = self._render_keyword_content(processed, suffix)
+        # 再替换图标(图标是变量占位符代表的, 不可能二次替换出现问题)
+        processed = self._render_icon_content(processed, suffix)
+        return processed

@@ -192,7 +192,7 @@ class WikiUploader:
             if not filter_func(doc):
                 continue
             # 渲染文档内容
-            content = doc.render(pre_renderer=self.renderer)
+            content = doc.render(renderer=self.renderer)
             count_process += 1
 
             if is_save:
@@ -208,7 +208,7 @@ class WikiUploader:
                     print(f"已跳过文件: {doc.name}")
 
         print(f"处理完成，共处理 {count_total} 中的 {count_process} 条文档\n"
-              f"其中 {count_upload} 条成功上传，{count_skip}条无更改跳过\n"
+              f"其中 {count_upload} 条成功上传，{count_skip} 条无更改跳过\n"
               f"{count_save} 条保存至本地")
         return count_process
 

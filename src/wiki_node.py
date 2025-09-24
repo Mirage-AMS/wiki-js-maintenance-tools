@@ -59,7 +59,7 @@ class WikiNode:
             raise ValueError(f"未知的数据文件格式: {full_path}")
 
     # 提取公共的渲染方法到父类
-    def render(self, pre_renderer: Optional[WikiRenderer] = None) -> str:
+    def render(self, renderer: Optional[WikiRenderer]) -> str:
         """渲染内容（目录节点和文档节点通用）"""
         if not self.data and self.data_file:
             self.load_data()
@@ -67,12 +67,15 @@ class WikiNode:
         if not self.template:
             raise ValueError(f"节点 {self.name} 没有设置模板")
 
-        render_data = self.data or {}
-        if pre_renderer and self.data is not None:
-            suffix = self.template.template_path.suffix
-            render_data = pre_renderer.render(self.data, suffix)
+        # 模板渲染
+        render_data = self.template.render(self.data or {})
 
-        return self.template.render(render_data)
+        # 后渲染
+        if renderer and render_data:
+            suffix = self.template.template_path.suffix
+            render_data = renderer.render(render_data, suffix)
+
+        return render_data
 
     def set_template(self, template: Template) -> None:
         """设置模板（目录节点和文档节点通用）"""
