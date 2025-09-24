@@ -49,7 +49,6 @@
                 </div>
             </div>
 
-
             <!-- 解锁条件 -->
             {% if card.unlock and card.unlock.strip() %}
             <div class="condition-box">
@@ -132,6 +131,32 @@
             </div>
         </div>
     </div>
+
+    <!-- 新增：相关卡牌区域（双列布局） -->
+    {% if card.related_cards and card.related_cards|length > 0 %}
+    <div class="card-related-section">
+        <div class="section-title">
+            <h3>相关卡牌</h3>
+        </div>
+
+        <div class="related-cards-grid">
+            {% for related in card.related_cards %}
+            <div class="related-card-item">
+                <div class="related-card-thumbnail">
+                    <img src="{{ related.card_thumbnail_url }}" alt="{{ related.card_name }}缩略图">
+                </div>
+                <div class="related-card-info">
+                    <div class="related-card-name">
+                        <a href="{{ related.path }}">{{ related.card_name }}</a>
+                    </div>
+                    <div class="related-card-relation">{{ related.relation_description }}</div>
+                    <div class="related-card-brief">{{ related.brief_description }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 
     <!-- 底栏：双栏布局（左侧调整历史，右侧FAQ） -->
     <div class="card-footer">
@@ -427,6 +452,99 @@
 .stat-value {
     font-weight: 600;
     font-size: 15px;
+}
+
+/* 相关卡牌区域整体样式 */
+.card-related-section {
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    overflow: hidden;
+}
+
+/* 修改：统一标题样式，调整与列表的距离 */
+.section-title {
+    padding: 0 20px;
+    margin-top: 15px;
+    margin-bottom: 15px; /* 新增：减少标题底部间距 */
+}
+
+.section-title h3 {
+    margin: 0 !important;
+    color: #2c3e50 !important;
+    font-size: 18px !important;
+}
+
+/* 双列网格布局 - 减少上间距 */
+.related-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px 20px; /* 修改：去除顶部内边距 */
+    margin-top: 5px; /* 调整：减少与标题的距离 */
+}
+
+/* 相关卡牌项样式 */
+.related-card-item {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    align-items: center;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.related-card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,.1);
+}
+
+.related-card-thumbnail {
+    height: 100px;
+    aspect-ratio: 32/17;
+    flex-shrink: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #e1e4e8;
+}
+
+.related-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-card-info {
+    flex: 1;
+}
+
+.related-card-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.related-card-name a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.related-card-name a:hover {
+    text-decoration: underline;
+}
+
+.related-card-relation {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-bottom: 4px;
+}
+
+.related-card-brief {
+    font-size: 14px;
+    color: #34495e;
+    line-height: 1.4;
 }
 
 /* 底栏样式 */
