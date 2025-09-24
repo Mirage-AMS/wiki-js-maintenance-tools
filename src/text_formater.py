@@ -55,7 +55,7 @@ class EffectFormatter:
 
         # 先处理公共的文本内容（根据不同情况调整lines的切片）
         text_lines = lines[1:] if len(parts) in (2, 3) else lines
-        self.text = '\n'.join(text_lines).strip()
+        self.text = '<br>'.join(text_lines).strip()
 
         # 初始化默认值
         self.type = EnumEffectType.EFFECT_TYPE_UNKNOWN
@@ -171,7 +171,7 @@ if __name__ == "__main__":
     <n02>· 若目标已被标记，额外造成2点伤害
     """
 
-    test_text = "<n02> \n<n00>弃置1张手牌，选情报区弃牌堆1张情报卡牌获得\n<n00> \n<n00> <n00> <n24> "
+    # test_text = "<n02> \n<n00>弃置1张手牌，选情报区弃牌堆1张情报卡牌获得\n<n00> \n<n00> <n00> <n24> "
 
     # 先分割为块
     f = TextFormatter().parse_from_text(test_text)
