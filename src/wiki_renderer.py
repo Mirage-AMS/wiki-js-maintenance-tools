@@ -42,11 +42,20 @@ class WikiPTLRenderer(WikiRenderer):
         "eW01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "水之元素"),
         "eF01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "火之元素"),
         "eA01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "风之元素"),
+        "eE05": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "地之元素"),
+        "eW05": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "水之元素"),
+        "eF05": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "火之元素"),
+        "eA05": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "风之元素"),
         "eC01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "万用元素"),
         "eR01": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
         "eR02": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
         "eR03": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
         "eR04": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
+        "tBgn": ("/rule/rule_basic/rule_basic_intro", "#h-124-开始阶段", "开始阶段"),
+        "tDrw": ("/rule/rule_basic/rule_basic_intro", "#h-125-抽牌阶段", "抽牌阶段"),
+        "tPrp": ("/rule/rule_basic/rule_basic_intro", "#h-126-准备阶段", "准备阶段"),
+        "tAct": ("/rule/rule_basic/rule_basic_intro", "#h-127-行动阶段", "行动阶段"),
+        "tEnd": ("/rule/rule_basic/rule_basic_intro", "#h-128-结束阶段", "结束阶段"),
     }
 
     # 关键词替换字典
