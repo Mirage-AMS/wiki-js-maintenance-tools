@@ -86,7 +86,7 @@ class WikiPTLRenderer(WikiRenderer):
     @classmethod
     def html_link_formatter(cls, match_text: str, replacement_data: tuple) -> str:
         url, chap, tooltip = replacement_data
-        return f'<a href="{url}{chap}" title="{tooltip}" target="_blank">{match_text}</a>'
+        return f'<a href="{url}{chap}" title="{tooltip}">{match_text}</a>'
 
     def _render_keyword_content(self, content: str, suffix: str) -> str:
         keyword_replacer = self.keyword_replacer
@@ -112,7 +112,7 @@ class WikiPTLRenderer(WikiRenderer):
             image_path = f"{base_image_path}/{image_name}{image_ext}"
             _url, _chap, _tooltip = image_dict.get(image_name, ("/", "#", ""))
             if suffix == self.SUFFIX_MD or suffix == self.SUFFIX_HTML:
-                return (f'<a href="{_url}{_chap}" title="{_tooltip}" target="_blank">'
+                return (f'<a href="{_url}{_chap}" title="{_tooltip}">'
                         f'<img src="{image_path}" alt="{image_name}" style="height: 1.2em; vertical-align: -0.20em; cursor: pointer;">'
                         f'</a>')
             else:
