@@ -1,0 +1,33 @@
+{
+    "title": "关于",
+    "path": "about",
+    "tags": [
+        "关于"
+    ],
+    "contents": {
+        "filename": "about.json",
+        "data": [
+            {
+                "title": "关于传奇之路",
+                "path": "/about/about_ptl",
+                "description": "介绍项目的整体运营情况",
+                "color": "#2ecc71",
+                "itemCount": 1
+            },
+            {
+                "title": "关于TTS模组",
+                "path": "/about/about_tts",
+                "description": "介绍TTS模组的运营情况",
+                "color": "#3498db",
+                "itemCount": 1
+            },
+            {
+                "title": "关于Wiki",
+                "path": "/about/about_wiki",
+                "description": "介绍Wiki的运营情况",
+                "color": "#9b59b6",
+                "itemCount": 1
+            }
+        ]
+    }
+}

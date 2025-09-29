@@ -1,0 +1,16 @@
+{
+  "children": {
+    "about_ptl": {
+      "template": "general_markdown_template.md",
+      "data": "about_ptl.md"
+    },
+    "about_tts": {
+      "template": "general_markdown_template.md",
+      "data": "about_tts.md"
+    },
+    "about_wiki": {
+      "template": "general_markdown_template.md",
+      "data": "about_wiki.md"
+    }
+  }
+}

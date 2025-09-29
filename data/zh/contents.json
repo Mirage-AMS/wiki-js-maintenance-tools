@@ -1,6 +1,11 @@
 {
   "template": "general_contents_template.html",
   "children": {
+    "about": {
+      "index": "contents.json",
+      "data": "about.json",
+      "template": "general_contents_template.html"
+    },
     "rule": {
       "index": "contents.json",
       "data": "rule.json",
