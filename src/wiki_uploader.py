@@ -238,8 +238,13 @@ if __name__ == '__main__':
             return False
         return True
 
+    def about_filter(doc:DocumentNode):
+        if "about" not in doc.path.as_posix():
+            return False
+        return True
+
     uploader = WikiUploader(renderer=WikiPTLRenderer())
     uploader.upload(
         is_upload=True,
-        filter_func=lambda x: True
+        filter_func=rule_filter
     )
