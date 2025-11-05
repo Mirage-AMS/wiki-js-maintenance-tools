@@ -44,11 +44,11 @@ _秘密集会寻情报，勇闯地牢斩怪形。_
   </tr>
   <tr>
     <td style="width: 18%; padding: 10px; border: 1px solid #ddd;">游玩时长</td>
-    <td style="width: 42%; padding: 10px; border: 1px solid #ddd;">30分钟/玩家（标准局）</td>
+    <td style="width: 42%; padding: 10px; border: 1px solid #ddd;">30分钟/玩家</td>
   </tr>
   <tr>
     <td style="width: 18%; padding: 10px; border: 1px solid #ddd;">游玩人数</td>
-    <td style="width: 42%; padding: 10px; border: 1px solid #ddd;">3-4人</td>
+    <td style="width: 42%; padding: 10px; border: 1px solid #ddd;">1-4人</td>
   </tr>
   <tr>
     <td style="width: 18%; padding: 10px; border: 1px solid #ddd;">推荐年龄</td>
@@ -96,7 +96,9 @@ _秘密集会寻情报，勇闯地牢斩怪形。_
 
 每个回合包含5个[阶段](/rule/rule_basic/rule_basic_intro#h-123-阶段)：${tBgn}、${tDrw}、${tPrp}、${tAct} 和 ${tEnd}
 
-任意玩家达成[胜利条件](/rule/rule_basic/rule_basic_intro#h-131-胜利条件)后，游戏进入[公平轮](/rule/rule_basic/rule_basic_intro#h-132-公平轮和共同胜利)，公平轮结束时，所有曾达成胜利条件的玩家均获得胜利。
+任意玩家达成[胜利条件](/rule/rule_basic/rule_basic_intro#h-131-胜利条件)后，游戏进入[公平轮](/rule/rule_basic/rule_basic_intro#h-133-公平轮和共同胜利)，公平轮结束时，所有曾达成胜利条件的玩家均获得胜利。
+
+_另设有[单人模式](/rule/rule_basic/rule_basic_intro#h-111-选择模式)，部分规则略有不同。_
 
 # 7. 扩展包
 
