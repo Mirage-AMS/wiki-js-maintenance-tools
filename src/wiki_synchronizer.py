@@ -159,6 +159,11 @@ class WikiSynchronizer:
             for effect in effects:
                 effect["name"] = "事件"
                 effect["type"] = "启动"
+        elif "规则" in card_types:
+            effects = disposed_card_info_effect.get("effects", [])
+            for effect in effects:
+                effect["name"] = "规则"
+                effect["type"] = "规则"
 
         # ---------------------------------------------------------------------------
         # 统一更新

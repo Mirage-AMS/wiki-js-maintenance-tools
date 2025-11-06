@@ -67,6 +67,7 @@ class WikiPTLRenderer(WikiRenderer):
         "永久": {
             "永久获得以下效果": None,
             "永久获得": None,
+            "永久启用": None,
             "": ("/rule/rule_basic/rule_effect", "#h-11-永久类效果", "永久类效果"),
         },
         "启动": {
