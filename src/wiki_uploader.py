@@ -10,8 +10,8 @@
 
 # import from official
 import os
+import enum
 from typing import Callable, Optional, Dict
-from pathlib import Path
 from dotenv import load_dotenv
 # import from third-party
 # import from self-defined
@@ -22,12 +22,22 @@ from src.wiki_indexer import WikiIndexer
 from src.wiki_renderer import WikiRenderer, WikiPTLRenderer
 from src.html_extractor import extract_html_parts, format_css
 
+@enum.unique
+class EnumUploadEnv(enum.Enum):
+    TEST = "test"
+    PROD = "prod"
 
 class WikiUploader:
-    def __init__(self, locale: str = "zh", renderer: Optional[WikiRenderer] = None):
+    def __init__(
+            self,
+            locale: str = "zh",
+            env: Optional[EnumUploadEnv] = EnumUploadEnv.TEST,
+            renderer: Optional[WikiRenderer] = None
+    ):
         """
-        :param locale:
-        :param renderer:
+        :param locale: 语言
+        :param env: 上传环境 (预定义)
+        :param renderer: 渲染器
         :return:
         """
         self.locale = locale
@@ -35,8 +45,16 @@ class WikiUploader:
 
         # 读取环境变量
         load_dotenv(pathUtil.getEnvFile())
-        wiki_url = os.getenv("WIKI_URL")
-        wiki_api_token = os.getenv("WIKI_API_TOKEN")
+
+        # 读取上传环境
+        if env == EnumUploadEnv.TEST:
+            wiki_url = os.getenv("WIKI_URL")
+            wiki_api_token = os.getenv("WIKI_API_TOKEN")
+        elif env == EnumUploadEnv.PROD:
+            wiki_url = os.getenv("OFF_WIKI_URL")
+            wiki_api_token = os.getenv("OFF_WIKI_API_TOKEN")
+        else:
+            raise ValueError("Invalid upload environment")
 
         self.wiki_indexer = WikiIndexer(locale).build_index()
         self.wiki_client = WikiJSGraphQLClient(wiki_url, wiki_api_token)
@@ -219,7 +237,7 @@ if __name__ == '__main__':
     shutil.rmtree(tmpDir, ignore_errors=True)
 
     def test_single_card_filter(doc:DocumentNode):
-        if "card_dlc01_co_01" not in doc.name:
+        if "card_dlc01_co_27" in doc.name:
             return True
         return False
 
@@ -243,8 +261,17 @@ if __name__ == '__main__':
             return False
         return True
 
-    uploader = WikiUploader(renderer=WikiPTLRenderer())
+    def all_filter(doc:DocumentNode):
+        return True
+
+    # 上传只修改这里 ==============================================
+
+    uploader = WikiUploader(
+        env=EnumUploadEnv.TEST,
+        renderer=WikiPTLRenderer()
+    )
+
     uploader.upload(
         is_upload=True,
-        filter_func=rule_filter
+        filter_func=card_filter,
     )
