@@ -74,9 +74,8 @@ TTS 玩家QQ群：452813853
 <br>
 
 ## 2.2 开发者
-Mirage: 业余桌游设计师
-- Email > 294424260@qq.com 
-- Github > https://github.com/Mirage-AMS
+Mirage: 程序员, 业余桌游设计师
+- [邮箱](mailto:294424260@qq.com?subject=咨询合作) | [Github](https://github.com/Mirage-AMS) | [B站](https://space.bilibili.com/3546748878326057)
 
 <br>
 
