@@ -218,6 +218,35 @@
     {"dir": "intelligence", "file": "card_dlc01_co_29.json"},
     {"dir": "intelligence", "file": "card_dlc01_co_30.json"}
   ],
+  "deck_role_intro01.json": [
+    {"dir": "role", "file": "card_rol01_ro_01.json"},
+    {"dir": "role", "file": "card_rol01_ro_02.json"},
+    {"dir": "role", "file": "card_rol01_ro_03.json"},
+    {"dir": "role", "file": "card_rol01_ro_04.json"},
+    {"dir": "role", "file": "card_rol01_ro_05.json"},
+    {"dir": "role", "file": "card_rol01_ro_06.json"},
+    {"dir": "role", "file": "card_rol01_ro_07.json"},
+    {"dir": "role", "file": "card_rol01_ro_08.json"},
+    {"dir": "role", "file": "card_rol01_ro_09.json"},
+    {"dir": "role", "file": "card_rol01_ro_10.json"},
+    {"dir": "role", "file": "card_rol01_ro_11.json"},
+    {"dir": "role", "file": "card_rol01_ro_12.json"}
+  ],
+  "deck_role_intro02.json": [
+    {"dir": "role", "file": "card_rol02_ro_01.json"},
+    {"dir": "role", "file": "card_rol02_ro_02.json"},
+    {"dir": "role", "file": "card_rol02_ro_03.json"},
+    {"dir": "role", "file": "card_rol02_ro_04.json"},
+    {"dir": "role", "file": "card_rol02_ro_05.json"},
+    {"dir": "role", "file": "card_rol02_ro_06.json"},
+    {"dir": "role", "file": "card_rol02_ro_07.json"},
+    {"dir": "role", "file": "card_rol02_ro_08.json"},
+    {"dir": "role", "file": "card_rol02_ro_09.json"},
+    {"dir": "role", "file": "card_rol02_ro_10.json"},
+    {"dir": "role", "file": "card_rol02_ro_11.json"},
+    {"dir": "role", "file": "card_rol02_ro_12.json"},
+    {"dir": "role", "file": "card_rol02_ro_13.json"}
+  ],
   "deck_role_info01.json": [
     {"dir": "role", "file": "card_rol01_ri_01.json"},
     {"dir": "role", "file": "card_rol01_ri_02.json"},

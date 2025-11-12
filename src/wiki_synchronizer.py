@@ -35,8 +35,8 @@ CARD_CONTENTS_REFLECTION = {
         "color": "#f1c40f",  # 金色/黄色 - 代表财富、交易和价值
     },
     "role": {
-        "name": "角色专属卡牌",
-        "description": "角色和其专属卡牌",
+        "name": "角色专属",
+        "description": "角色和角色专属卡牌",
         "color": "#e74c3c",  # 红色 - 代表个性、活力和独特身份
     },
     "accessory": {
@@ -107,6 +107,8 @@ class WikiSynchronizer:
 
         # # 等级值
         card_level = card_design_info.get("card_level", None)
+        if isinstance(card_level, str) and card_level.startswith("_"):      # 修正规则/角色的场景
+            card_level = None
 
         # # 类型列表
         card_type_info = card_design_info.get("card_resource_type", None)
@@ -151,6 +153,8 @@ class WikiSynchronizer:
 
         # 处理卡牌效果并更新
         undisposed_card_info_effect = card_design_info.get("card_info_effect") or ""
+        if "角色" in card_types:  # 角色卡牌特殊处理
+            undisposed_card_info_effect = undisposed_card_info_effect.replace("特色：", "特色/")
         disposed_card_info_effect = TextFormatter().parse_from_text(undisposed_card_info_effect).to_dict()
 
         # 事件卡牌特殊处理
@@ -177,6 +181,8 @@ class WikiSynchronizer:
             "card_element_marks": card_element_marks,
             "card_element_mark_num": card_element_num,
             "card_element_mark_info": card_element_mark_info,
+            # 卡牌等级 (处理过的)
+            "card_level_info": card_level,
             # 卡牌类型
             "card_types": card_types,
             "card_type_info": card_type_info,
@@ -278,7 +284,7 @@ class WikiSynchronizer:
                     "id": idx,
                     "url": "/" + each_data["path"],
                     "name": each_data["card"]["card_name"],
-                    "level": each_data["card"]["card_level"],
+                    "level": each_data["card"]["card_level_info"],
                     "type": each_data["card"]["card_types"],
                     "attribute": each_data["card"]["card_tags"],
                     "image": each_data["card"]["card_thumbnail_url"],
@@ -344,6 +350,13 @@ class WikiSynchronizer:
 
             # 生成卡牌内容数据
             content_data, dir_result = self._create_card_content_data(each_dir, bucket, sync_dir)
+
+            # 特殊处理角色目录下的卡牌, 在预览目录只上传角色主目录, 不上传角色相关卡
+            if each_dir.name == "role":
+                content_data["contents"]["data"] = [
+                    item for item in content_data["contents"]["data"]
+                    if "_ro_" in item["url"]
+                ]
 
             # 写入XXX.json文件
             target_bucket_file = sync_dir / f"{each_dir.name}.json"

@@ -35,7 +35,7 @@
                     <div class="info-row">
                         <div class="info-item">
                             <span class="info-label">等级</span>
-                            <span>{{ card.card_level or "无" }}</span>
+                            <span>{{ card.card_level_info or "无" }}</span>
                         </div>
                         <div class="info-item">
                             <span class="info-label">类型</span>
@@ -78,6 +78,8 @@
                             ('dbeafe', '1e40af') if effect.type == '永久' else
                             ('dcfce7', '16a34a') if effect.type == '启动' else
                             ('fee2e2', 'dc2626') if effect.type == '快速' else
+                            ('f1f1f1', '333333') if effect.type == '规则' else
+                            ('fffbeb', '92400e') if effect.type == '特色' else
                             ('f3f4f6', '6b7280') if effect.type == '未知' else
                             ('ff0000', 'ffffff') %}
                     <div class="effect-item">

@@ -113,8 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 提取所有筛选选项值（支持数组类型）
     function extractFilterValues() {
         cardData.forEach(card => {
-            // 处理等级（字符串）
-            allFilterValues.levels.add(card.level);
+            // 处理等级（字符串）并排除 null、undefined 和空字符串
+            if (card.level != null && card.level !== '') {
+                allFilterValues.levels.add(card.level);
+            }
 
             // 处理类型（数组）
             if (Array.isArray(card.type)) {
@@ -318,15 +320,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 ? card.attribute.join('·')
                 : '';
 
-            // 构建完整的类型信息字符串
-            let typesHtml = levelText;
-            if (typeText) {
-                typesHtml += ` / ${typeText}`;
-            }
-            if (attributeText) {
-                typesHtml += ` / ${attributeText}`;
-            }
-            typesHtml = `<span class="card-type ${levelClass}">` + typesHtml + `</span>`
+            // 关键优化：收集所有非空的元数据部分，再用 / 连接，避免多余分隔符
+            const metaParts = [];
+            if (levelText) metaParts.push(levelText);
+            if (typeText) metaParts.push(typeText);
+            if (attributeText) metaParts.push(attributeText);
+            const typesContent = metaParts.join(' / ') || ''; // 没有内容时显示空
+
+            // 构建类型信息HTML
+            const typesHtml = typesContent
+                ? `<span class="card-type ${levelClass}">${typesContent}</span>`
+                : ''; // 完全为空时不渲染span
 
             // 卡片结构
             cardElement.innerHTML = `
