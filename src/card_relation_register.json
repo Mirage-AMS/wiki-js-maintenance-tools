@@ -1,0 +1,426 @@
+{
+    "nodes": {
+        "card_rol01_ri_01.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_02.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_03.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_04.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_05.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_06.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_07.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_08.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_09.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_10.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_11.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ri_12.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_01.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_02.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_03.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_04.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_05.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_06.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_07.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_08.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_09.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_10.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_11.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_12.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ri_13.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_01.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_02.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_03.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_04.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_05.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_06.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_07.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_08.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_09.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_10.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_11.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_12.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_13.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_14.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_15.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_16.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_17.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_18.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_19.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_20.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_21.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_22.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_23.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ro_24.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_01.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_02.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_03.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_04.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_05.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_06.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_07.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_08.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_09.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_10.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_11.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_12.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_13.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_14.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_15.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_16.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_17.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_18.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_19.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_20.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_21.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_22.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_23.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_24.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_25.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol02_ro_26.json": {
+            "type": "card",
+            "dir": "/card/role"
+        }
+    },
+    "relations": [
+        {
+            "from": "card_rol01_ri_01.json",
+            "to": "card_rol01_ro_01.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_01.json",
+            "to": "card_rol01_ro_02.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_02.json",
+            "to": "card_rol01_ro_03.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_02.json",
+            "to": "card_rol01_ro_04.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_03.json",
+            "to": "card_rol01_ro_05.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_03.json",
+            "to": "card_rol01_ro_06.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_04.json",
+            "to": "card_rol01_ro_07.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_04.json",
+            "to": "card_rol01_ro_08.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_05.json",
+            "to": "card_rol01_ro_09.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_05.json",
+            "to": "card_rol01_ro_10.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_06.json",
+            "to": "card_rol01_ro_11.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_06.json",
+            "to": "card_rol01_ro_12.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_07.json",
+            "to": "card_rol01_ro_13.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_07.json",
+            "to": "card_rol01_ro_14.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_08.json",
+            "to": "card_rol01_ro_15.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_08.json",
+            "to": "card_rol01_ro_16.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_09.json",
+            "to": "card_rol01_ro_17.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_09.json",
+            "to": "card_rol01_ro_18.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_10.json",
+            "to": "card_rol01_ro_19.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_10.json",
+            "to": "card_rol01_ro_20.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_11.json",
+            "to": "card_rol01_ro_21.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_11.json",
+            "to": "card_rol01_ro_22.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_12.json",
+            "to": "card_rol01_ro_23.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol01_ri_12.json",
+            "to": "card_rol01_ro_24.json",
+            "type": "bidirectional"
+        }
+    ]
+}

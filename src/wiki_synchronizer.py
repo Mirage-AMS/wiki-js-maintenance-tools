@@ -355,7 +355,7 @@ class WikiSynchronizer:
             if each_dir.name == "role":
                 content_data["contents"]["data"] = [
                     item for item in content_data["contents"]["data"]
-                    if "_ro_" in item["url"]
+                    if "_ri_" in item["url"]
                 ]
 
             # 写入XXX.json文件
@@ -377,4 +377,4 @@ class WikiSynchronizer:
 
 if __name__ == '__main__':
     ws = WikiSynchronizer()
-    ws.sync(force_sync=True)
+    ws.sync(force_sync=False)
