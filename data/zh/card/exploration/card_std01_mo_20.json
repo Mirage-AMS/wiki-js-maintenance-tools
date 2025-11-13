@@ -29,7 +29,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": 1,
         "card_element_num_air": 1,
-        "card_info_effect": "<b00>永久（探索区） / 凝滞\n<n02>只在你采集该矿物中，你的采集点-1\n<n02> <n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>永久（探索区） / 凝滞\n<n02>只在该矿物的采集中，采集者的采集点-1\n<n02> <n02> <n02> <n02> <n20> ",
         "card_info_description": "<n06>时如液体流淌，时如磐岩凝结，光怪陆离          ",
         "card_picture_path": "drop_of_goddess.png",
         "card_inner_base_path": null,
@@ -46,6 +46,7 @@
         ],
         "card_element_mark_num": 8,
         "card_element_mark_info": "${eW01}${eF01}${eA01}",
+        "card_level_info": "传奇",
         "card_types": [
             "矿物"
         ],
@@ -58,7 +59,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "只在你采集该矿物中，你的采集点-1"
+                "text": "只在该矿物的采集中，采集者的采集点-1"
             }
         ]
     }

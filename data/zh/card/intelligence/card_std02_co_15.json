@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b03>解锁：${eE01}${eE01}${eR02}\n<b03>启动 / ${eE01}${eR01} / 孕育\n<n06>${tR01}，${tPrp}：选以下1个效果发动，\n<n06>· 临时获得${eC01}${eC01}${eC01}\n<n06>· 弃置你持有的1个中级以下基础资源（矿物·植物·生物），获得任一探索区弃牌堆1张相同等级和类型的卡牌",
+        "card_info_effect": "<b03>解锁：${eE01}${eE01}${eR02}\n<b03>启动 / ${eE01}${eR01} / 孕育\n<n06>${tR01}，${tPrp}：选以下1个效果启用，\n<n06>· 临时获得${eC01}${eC01}${eC01}\n<n06>· 弃置你持有的1个中级以下基础资源（矿物·植物·生物），获得任一探索区弃牌堆1张相同等级和类型的卡牌",
         "card_info_description": null,
         "card_picture_path": "natural_power.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "中级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": "${eE01}${eR01}",
-                "text": "${tR01}，${tPrp}：选以下1个效果发动，<br>· 临时获得${eC01}${eC01}${eC01}<br>· 弃置你持有的1个中级以下基础资源（矿物·植物·生物），获得任一探索区弃牌堆1张相同等级和类型的卡牌"
+                "text": "${tR01}，${tPrp}：选以下1个效果启用，<br>· 临时获得${eC01}${eC01}${eC01}<br>· 弃置你持有的1个中级以下基础资源（矿物·植物·生物），获得任一探索区弃牌堆1张相同等级和类型的卡牌"
             }
         ]
     }

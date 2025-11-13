@@ -29,7 +29,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>永久（探索区） / 先攻\n<n02>狩猎开始后，该生物先行动\n<n02> <n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>永久（探索区） / 先攻\n<n02>该生物在狩猎中先攻击\n<n02> <n02> <n02> <n02> <n20> ",
         "card_info_description": "<n02>它的猎物总在睡梦中毙命 ",
         "card_picture_path": "nightmare.png",
         "card_inner_base_path": null,
@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 4,
         "card_element_mark_info": "${eE01}${eW01}",
+        "card_level_info": "高级",
         "card_types": [
             "生物"
         ],
@@ -57,7 +58,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "狩猎开始后，该生物先行动"
+                "text": "该生物在狩猎中先攻击"
             }
         ]
     }

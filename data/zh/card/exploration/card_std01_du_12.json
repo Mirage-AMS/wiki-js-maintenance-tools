@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": 1,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>永久（探索区） / 先攻\n<n02>狩猎开始后，该生物先行动\n<n02> <n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>永久（探索区） / 先攻\n<n02>该生物在狩猎中先攻击\n<n02> <n02> <n02> <n02> <n20> ",
         "card_info_description": "<n02>它将唤醒你的原初恐惧 ",
         "card_picture_path": "horror_wolf.png",
         "card_inner_base_path": null,
@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 2,
         "card_element_mark_info": "${eE01}${eF01}",
+        "card_level_info": "中级",
         "card_types": [
             "生物"
         ],
@@ -57,7 +58,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "狩猎开始后，该生物先行动"
+                "text": "该生物在狩猎中先攻击"
             }
         ]
     }

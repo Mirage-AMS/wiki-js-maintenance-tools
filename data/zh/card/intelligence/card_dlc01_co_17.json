@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b04>解锁：废除1个晋升区栏位\n<b04>永久 / 契约\n<n06>每个 ${tPrp} 只有1次，你必须废除你的1个晋升区栏位，选以下1个效果适用或发动，\n<n06><财富> · 获得${aP07}\n<n06><知识> · 抽5张卡牌\n<n06><体魄> · 攻击力永久+2，生命上限永久+2\n<n06><权力> · 获得情报区弃牌堆最多2张卡牌",
+        "card_info_effect": "<b03>解锁：废除1个晋升区栏位\n<b03>永久 / 契约\n<n05>${tPrp}，你必须废除你的1个晋升区栏位，选以下1个效果启用，\n<n05><财富> · 获得${aP07}\n<n05><知识> · 抽5张卡牌\n<n05><体魄> · 攻击力永久+2，生命上限永久+2\n<n05><权力> · 获得情报区弃牌堆最多2张卡牌",
         "card_info_description": null,
         "card_picture_path": "dlc01_devils_covenant.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "高级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "每个 ${tPrp} 只有1次，你必须废除你的1个晋升区栏位，选以下1个效果适用或发动，<br><财富> · 获得${aP07}<br><知识> · 抽5张卡牌<br><体魄> · 攻击力永久+2，生命上限永久+2<br><权力> · 获得情报区弃牌堆最多2张卡牌"
+                "text": "${tPrp}，你必须废除你的1个晋升区栏位，选以下1个效果启用，<br><财富> · 获得${aP07}<br><知识> · 抽5张卡牌<br><体魄> · 攻击力永久+2，生命上限永久+2<br><权力> · 获得情报区弃牌堆最多2张卡牌"
             }
         ]
     }

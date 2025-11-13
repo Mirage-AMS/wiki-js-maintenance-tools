@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP03}\n<b00>精通：通过[中介]获得高级情报\n<b00>快速 / 中介\n<n02>${tR01}，其他玩家在非其 ${tDrw} 获得情报区卡牌时：你抽1张卡牌，弃置1张手牌；若精通，你不需要弃置手牌",
+        "card_info_effect": "<b00>解锁：${aP03}\n<b00>精通：通过[中介]获得高级情报\n<b00>快速 / 中介\n<n02>${tR01}，其他玩家在其 ${tPrp} 将卡牌加入手牌时：你抽1张卡牌，弃置1张手牌；若精通，你不需要弃置手牌",
         "card_info_description": null,
         "card_picture_path": "dlc01_intelligence_intermediary.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "情报"
         ],
@@ -59,7 +60,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，其他玩家在非其 ${tDrw} 获得情报区卡牌时：你抽1张卡牌，弃置1张手牌；若精通，你不需要弃置手牌"
+                "text": "${tR01}，其他玩家在其 ${tPrp} 将卡牌加入手牌时：你抽1张卡牌，弃置1张手牌；若精通，你不需要弃置手牌"
             }
         ]
     }

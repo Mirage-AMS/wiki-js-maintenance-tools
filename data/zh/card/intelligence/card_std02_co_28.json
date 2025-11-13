@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n00>选以下1个效果发动，\n<n00><探索> · 明置探索区2张卡牌\n<n00><情报> · 抽1张卡牌\n<n00> <n00> <n24> ",
+        "card_info_effect": "<n02> \n<n00>选以下1个效果启用，\n<n00><探索> · 明置探索区2张卡牌\n<n00><情报> · 抽1张卡牌\n<n00> <n00> <n24> ",
         "card_info_description": "<n02>“那些令你生疑的消息，最终竟被证实” ",
         "card_picture_path": "knowledge_seller.png",
         "card_inner_base_path": null,
@@ -42,6 +42,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "事件"
         ],
@@ -54,7 +55,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "选以下1个效果发动，<br><探索> · 明置探索区2张卡牌<br><情报> · 抽1张卡牌"
+                "text": "选以下1个效果启用，<br><探索> · 明置探索区2张卡牌<br><情报> · 抽1张卡牌"
             }
         ]
     }

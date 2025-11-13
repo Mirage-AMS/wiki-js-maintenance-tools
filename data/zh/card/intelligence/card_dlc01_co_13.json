@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：法术情报+任意情报\n<b00>永久 / 原理\n<n02>只在你需要消耗元素时，你视为已消耗${eR01}",
+        "card_info_effect": "<b00>解锁：法术情报+任意情报\n<b00>永久 / 原理\n<n02>你需要消耗的元素可以降低${eR01}",
         "card_info_description": null,
         "card_picture_path": "dlc01_principle_of_arcane_magic.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "只在你需要消耗元素时，你视为已消耗${eR01}"
+                "text": "你需要消耗的元素可以降低${eR01}"
             }
         ]
     }

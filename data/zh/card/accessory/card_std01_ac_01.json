@@ -29,7 +29,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>永久（背包） / 枯竭\n<n02>只在你将该资源转换元素时，必须消耗${aP01}\n<n02> <n02> <n02> <n02> <n02><n20> ",
+        "card_info_effect": "<b00>永久（背包） / 枯竭\n<n02>将该资源转换元素需要额外消耗${aP01}\n<n02> <n02> <n02> <n02> <n02><n20> ",
         "card_info_description": "<n02>“该死，我认不出它原本是什么了” ",
         "card_picture_path": "rotten_grass.png",
         "card_inner_base_path": "base_inner_others.png",
@@ -44,6 +44,7 @@
         ],
         "card_element_mark_num": 1,
         "card_element_mark_info": "${eW01}",
+        "card_level_info": "低级",
         "card_types": [
             "植物"
         ],
@@ -56,7 +57,7 @@
                 "type": "永久",
                 "location": "背包",
                 "consumption": null,
-                "text": "只在你将该资源转换元素时，必须消耗${aP01}"
+                "text": "将该资源转换元素需要额外消耗${aP01}"
             }
         ]
     }

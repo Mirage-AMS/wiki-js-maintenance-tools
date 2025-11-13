@@ -29,7 +29,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": 1,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>永久（探索区） / 闪耀\n<n02>只在你明置该资源时，额外明置相邻栏位的1张卡牌\n<n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>永久（探索区） / 闪耀\n<n02>只在该矿物被明置时，明置相邻栏位1张卡牌\n<n02> <n02> <n02> <n20> ",
         "card_info_description": "<n02>掩映绿叶丛中，日光所及，熠熠生辉          ",
         "card_picture_path": "emerald.png",
         "card_inner_base_path": null,
@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 4,
         "card_element_mark_info": "${eW01}${eF01}",
+        "card_level_info": "高级",
         "card_types": [
             "矿物"
         ],
@@ -57,7 +58,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "只在你明置该资源时，额外明置相邻栏位的1张卡牌"
+                "text": "只在该矿物被明置时，明置相邻栏位1张卡牌"
             }
         ]
     }

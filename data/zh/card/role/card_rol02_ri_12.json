@@ -2,10 +2,8 @@
     "path": "card/role/card_rol02_ri_12",
     "tags": [
         "卡牌",
-        "中级",
-        "情报",
-        "专属",
-        "造物"
+        "角色",
+        "专属"
     ],
     "stat": {
         "win-rate": null,
@@ -17,11 +15,11 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "勒菲弗巧械铺",
-        "card_level": "中级",
-        "card_resource_type": "情报",
+        "card_name": "卡西姆，祸福一念",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
         "card_resource_tag_1": "专属",
-        "card_resource_tag_2": "造物",
+        "card_resource_tag_2": null,
         "card_resource_tag_3": null,
         "card_price": null,
         "card_hp": null,
@@ -31,37 +29,50 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：中级以上含${eE01}矿物\n<b02>启动 / 拆解\n<n04>${tR01}，${tPrp}：弃置你已解锁造物的最多2个素材，根据弃置素材的数目将对应效果发动，\n<n04>· 1个：抽2张卡牌\n<n04>· 2个：弃置任一玩家已解锁造物的1个素材\n<n08> ",
-        "card_info_description": "<n02>他人的奇思总能催发欧也妮的灵感 ",
-        "card_picture_path": "eugenie_workshop.png",
-        "card_inner_base_path": "base_inner_role_eugenie.png",
+        "card_info_effect": "<b00>特色：打开秘藏\n<n02>卡西姆悄悄跟上那伙盗贼，他们在山脚下停下马匹，为首的黑衣男人轻声念诵——磐石挪开一道缝隙，一条通往财富的道路就此打开",
+        "card_info_description": null,
+        "card_picture_path": "role_intro_kasim.png",
+        "card_inner_base_path": "base_inner_role_kasim.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_image_url": "/assets/image/deck_role_info02_12.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/eugenie_workshop.jpg",
-        "card_basic_info": "中级 / 情报 / 专属 · 造物",
+        "card_image_url": "/assets/image/deck_role_intro02_12.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/role_intro_kasim.jpg",
+        "card_basic_info": "角色 / 专属",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": null,
         "card_types": [
-            "情报"
+            "角色"
         ],
-        "card_type_info": "情报",
+        "card_type_info": "角色",
         "card_tags": [
-            "专属",
-            "造物"
+            "专属"
         ],
-        "card_tag_info": "专属 · 造物",
-        "unlock": "中级以上含${eE01}矿物",
+        "card_tag_info": "专属",
         "effects": [
             {
-                "name": "拆解",
-                "type": "启动",
+                "name": "打开秘藏",
+                "type": "特色",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：弃置你已解锁造物的最多2个素材，根据弃置素材的数目将对应效果发动，<br>· 1个：抽2张卡牌<br>· 2个：弃置任一玩家已解锁造物的1个素材"
+                "text": "卡西姆悄悄跟上那伙盗贼，他们在山脚下停下马匹，为首的黑衣男人轻声念诵——磐石挪开一道缝隙，一条通往财富的道路就此打开"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol02_ro_24",
+            "card_name": "芝麻开门",
+            "brief_description": "低级 / 情报 / 专属 · 法术",
+            "card_thumbnail_url": "/assets/thumbnail/kasim_open_sesame.jpg"
+        },
+        {
+            "path": "/card/role/card_rol02_ro_25",
+            "card_name": "铤而走险",
+            "brief_description": "中级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/kasim_take_risk.jpg"
+        }
+    ]
 }

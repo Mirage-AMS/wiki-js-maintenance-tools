@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 1,
         "card_element_mark_info": "${eW01}${eA01}",
+        "card_level_info": "低级",
         "card_types": [
             "植物"
         ],

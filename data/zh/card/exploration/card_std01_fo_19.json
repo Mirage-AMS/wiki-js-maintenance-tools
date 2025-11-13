@@ -29,7 +29,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": null,
         "card_element_num_air": 1,
-        "card_info_effect": "<b00>永久（探索区） / 娇嫩\n<n02>只在你采集该植物中，你的采集点-1\n<n02> <n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>永久（探索区） / 娇嫩\n<n02>只在该植物的采集中，采集者的采集点-1\n<n02> <n02> <n02> <n02> <n20> ",
         "card_info_description": "<n02>古老的存在正孕育出新的生机            ",
         "card_picture_path": "ancient_tree.png",
         "card_inner_base_path": null,
@@ -46,6 +46,7 @@
         ],
         "card_element_mark_num": 8,
         "card_element_mark_info": "${eE01}${eW01}${eA01}",
+        "card_level_info": "传奇",
         "card_types": [
             "植物"
         ],
@@ -58,7 +59,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "只在你采集该植物中，你的采集点-1"
+                "text": "只在该植物的采集中，采集者的采集点-1"
             }
         ]
     }

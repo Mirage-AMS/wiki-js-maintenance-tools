@@ -42,6 +42,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "造物"
         ],
@@ -57,5 +58,13 @@
                 "text": "移除该造物，你永久获得${eW01}"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol01_ro_23",
+            "card_name": "圣泉赐福",
+            "brief_description": "低级 / 情报 / 专属 · 法术",
+            "card_thumbnail_url": "/assets/thumbnail/phyllis_spring.jpg"
+        }
+    ]
 }

@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": 1,
-        "card_info_effect": "<b00>永久（探索区） / 鹰袭\n<n02>只在你狩猎该生物开始时，该生物对你造成2点伤害\n<n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>永久（探索区） / 鹰袭\n<n02>只在该生物的狩猎开始时，狩猎者受到2点伤害\n<n02> <n02> <n02> <n20> ",
         "card_info_description": "<n08>纵无法与巨龙拼翼展，仍无愧高山之王 ",
         "card_picture_path": "goshawk.png",
         "card_inner_base_path": null,
@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 4,
         "card_element_mark_info": "${eE01}${eA01}",
+        "card_level_info": "高级",
         "card_types": [
             "生物"
         ],
@@ -57,7 +58,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "只在你狩猎该生物开始时，该生物对你造成2点伤害"
+                "text": "只在该生物的狩猎开始时，狩猎者受到2点伤害"
             }
         ]
     }

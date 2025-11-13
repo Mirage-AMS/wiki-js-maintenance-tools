@@ -53,53 +53,101 @@
             "template": "card_intelligence_template.html",
             "data": "card_rol01_ri_12.json"
         },
-        "card_rol01_ri_13": {
+        "card_rol01_ro_01": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_13.json"
+            "data": "card_rol01_ro_01.json"
         },
-        "card_rol01_ri_14": {
+        "card_rol01_ro_02": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_14.json"
+            "data": "card_rol01_ro_02.json"
         },
-        "card_rol01_ri_15": {
+        "card_rol01_ro_03": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_15.json"
+            "data": "card_rol01_ro_03.json"
         },
-        "card_rol01_ri_16": {
+        "card_rol01_ro_04": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_16.json"
+            "data": "card_rol01_ro_04.json"
         },
-        "card_rol01_ri_17": {
+        "card_rol01_ro_05": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_17.json"
+            "data": "card_rol01_ro_05.json"
         },
-        "card_rol01_ri_18": {
+        "card_rol01_ro_06": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_18.json"
+            "data": "card_rol01_ro_06.json"
         },
-        "card_rol01_ri_19": {
+        "card_rol01_ro_07": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_19.json"
+            "data": "card_rol01_ro_07.json"
         },
-        "card_rol01_ri_20": {
+        "card_rol01_ro_08": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_20.json"
+            "data": "card_rol01_ro_08.json"
         },
-        "card_rol01_ri_21": {
+        "card_rol01_ro_09": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_21.json"
+            "data": "card_rol01_ro_09.json"
         },
-        "card_rol01_ri_22": {
+        "card_rol01_ro_10": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_22.json"
+            "data": "card_rol01_ro_10.json"
         },
-        "card_rol01_ri_23": {
+        "card_rol01_ro_11": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_23.json"
+            "data": "card_rol01_ro_11.json"
         },
-        "card_rol01_ri_24": {
+        "card_rol01_ro_12": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol01_ri_24.json"
+            "data": "card_rol01_ro_12.json"
+        },
+        "card_rol01_ro_13": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_13.json"
+        },
+        "card_rol01_ro_14": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_14.json"
+        },
+        "card_rol01_ro_15": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_15.json"
+        },
+        "card_rol01_ro_16": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_16.json"
+        },
+        "card_rol01_ro_17": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_17.json"
+        },
+        "card_rol01_ro_18": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_18.json"
+        },
+        "card_rol01_ro_19": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_19.json"
+        },
+        "card_rol01_ro_20": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_20.json"
+        },
+        "card_rol01_ro_21": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_21.json"
+        },
+        "card_rol01_ro_22": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_22.json"
+        },
+        "card_rol01_ro_23": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_23.json"
+        },
+        "card_rol01_ro_24": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol01_ro_24.json"
         },
         "card_rol02_ac_02": {
             "template": "card_intelligence_template.html",
@@ -161,45 +209,109 @@
             "template": "card_intelligence_template.html",
             "data": "card_rol02_ri_13.json"
         },
-        "card_rol02_ri_14": {
+        "card_rol02_ro_01": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_14.json"
+            "data": "card_rol02_ro_01.json"
         },
-        "card_rol02_ri_15": {
+        "card_rol02_ro_02": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_15.json"
+            "data": "card_rol02_ro_02.json"
         },
-        "card_rol02_ri_16": {
+        "card_rol02_ro_03": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_16.json"
+            "data": "card_rol02_ro_03.json"
         },
-        "card_rol02_ri_17": {
+        "card_rol02_ro_04": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_17.json"
+            "data": "card_rol02_ro_04.json"
         },
-        "card_rol02_ri_18": {
+        "card_rol02_ro_05": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_18.json"
+            "data": "card_rol02_ro_05.json"
         },
-        "card_rol02_ri_19": {
+        "card_rol02_ro_06": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_19.json"
+            "data": "card_rol02_ro_06.json"
         },
-        "card_rol02_ri_20": {
+        "card_rol02_ro_07": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_20.json"
+            "data": "card_rol02_ro_07.json"
         },
-        "card_rol02_ri_21": {
+        "card_rol02_ro_08": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_21.json"
+            "data": "card_rol02_ro_08.json"
         },
-        "card_rol02_ri_22": {
+        "card_rol02_ro_09": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_22.json"
+            "data": "card_rol02_ro_09.json"
         },
-        "card_rol02_ri_23": {
+        "card_rol02_ro_10": {
             "template": "card_intelligence_template.html",
-            "data": "card_rol02_ri_23.json"
+            "data": "card_rol02_ro_10.json"
+        },
+        "card_rol02_ro_11": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_11.json"
+        },
+        "card_rol02_ro_12": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_12.json"
+        },
+        "card_rol02_ro_13": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_13.json"
+        },
+        "card_rol02_ro_14": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_14.json"
+        },
+        "card_rol02_ro_15": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_15.json"
+        },
+        "card_rol02_ro_16": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_16.json"
+        },
+        "card_rol02_ro_17": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_17.json"
+        },
+        "card_rol02_ro_18": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_18.json"
+        },
+        "card_rol02_ro_19": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_19.json"
+        },
+        "card_rol02_ro_20": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_20.json"
+        },
+        "card_rol02_ro_21": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_21.json"
+        },
+        "card_rol02_ro_22": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_22.json"
+        },
+        "card_rol02_ro_23": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_23.json"
+        },
+        "card_rol02_ro_24": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_24.json"
+        },
+        "card_rol02_ro_25": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_25.json"
+        },
+        "card_rol02_ro_26": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_26.json"
         }
     }
 }

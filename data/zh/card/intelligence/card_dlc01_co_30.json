@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n02>直到本轮结束前其他玩家需要消耗的元素翻倍；其他玩家可以在其回合中选以下1个可适用的效果适用，以终止对其影响\n<n02><探究> · 本回合不能进入探索区\n<n02><破立> · 立即受到3点伤害\n<n16> ",
+        "card_info_effect": "<n02> \n<n02>直到本轮结束前其他玩家需要消耗的元素翻倍；只在其他玩家的回合中，其可以选以下1个效果启用，终止该事件对其影响\n<n02><探究> · 本回合不能进入探索区\n<n02><破立> · 受到3点伤害\n<n16> ",
         "card_info_description": "<n02>“仿佛一只无形之手扼住咽喉” ",
         "card_picture_path": "dlc01_element_stillness.png",
         "card_inner_base_path": null,
@@ -42,6 +42,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "事件"
         ],
@@ -54,7 +55,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "直到本轮结束前其他玩家需要消耗的元素翻倍；其他玩家可以在其回合中选以下1个可适用的效果适用，以终止对其影响<br><探究> · 本回合不能进入探索区<br><破立> · 立即受到3点伤害"
+                "text": "直到本轮结束前其他玩家需要消耗的元素翻倍；只在其他玩家的回合中，其可以选以下1个效果启用，终止该事件对其影响<br><探究> · 本回合不能进入探索区<br><破立> · 受到3点伤害"
             }
         ]
     }

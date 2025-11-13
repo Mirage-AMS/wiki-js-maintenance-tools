@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：造物情报+任意情报\n<b02>启动 / 授权\n<n04>${tR01}，${tPrp}：根据你已解锁能力中造物的数目，将1个对应效果发动，\n<n04>· 2个：获得${aP01}\n<n04>· 3个以上：抽1张卡牌",
+        "card_info_effect": "<b02>解锁：造物情报+任意情报\n<b02>启动 / 授权\n<n04>${tR01}，${tPrp}：根据你已解锁造物的数目，将以下1个对应效果启用，\n<n04>· 2个：获得${aP01}\n<n04>· 3个以上：抽1张卡牌",
         "card_info_description": null,
         "card_picture_path": "dlc01_patent.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：根据你已解锁能力中造物的数目，将1个对应效果发动，<br>· 2个：获得${aP01}<br>· 3个以上：抽1张卡牌"
+                "text": "${tR01}，${tPrp}：根据你已解锁造物的数目，将以下1个对应效果启用，<br>· 2个：获得${aP01}<br>· 3个以上：抽1张卡牌"
             }
         ]
     }

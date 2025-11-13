@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b01>解锁：中级以上含${eA01}矿物+中级以上矿物\n<b01>永久 / 喷薄\n<n02>你的攻击力+2，生命上限+2，采集点+2；每个 ${tBgn} 只有1次，你临时获得${eC01}${eC01}\n<n02> <n02> <n20> ",
+        "card_info_effect": "<b01>解锁：中级以上含${eA01}矿物+中级以上矿物\n<b01>永久 / 喷薄\n<n02>你的攻击力+2，生命上限+2，采集点+2；${tBgn}，你临时获得${eC01}${eC01}\n<n02> <n02> <n20> ",
         "card_info_description": "<n02>骇人的力量从其中喷薄而出 ",
         "card_picture_path": "starter.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "高级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "你的攻击力+2，生命上限+2，采集点+2；每个 ${tBgn} 只有1次，你临时获得${eC01}${eC01}"
+                "text": "你的攻击力+2，生命上限+2，采集点+2；${tBgn}，你临时获得${eC01}${eC01}"
             }
         ]
     }

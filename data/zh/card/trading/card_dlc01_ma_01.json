@@ -30,7 +30,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": 1,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>启动（背包） / 纯化\n<n02>弃置该资源和你持有的1个基础资源（矿物·植物·生物），本回合获得1次额外行动",
+        "card_info_effect": "<n02>  \n<b00>启动（背包） / 纯化\n<n02>弃置该资源和你持有的1个基础资源（矿物·植物·生物），本回合额外获得1次行动",
         "card_info_description": null,
         "card_picture_path": "dlc01_stone_grass.png",
         "card_inner_base_path": null,
@@ -46,6 +46,7 @@
         ],
         "card_element_mark_num": 1,
         "card_element_mark_info": "${eW01}${eF01}",
+        "card_level_info": "低级",
         "card_types": [
             "矿物",
             "植物"
@@ -59,7 +60,7 @@
                 "type": "启动",
                 "location": "背包",
                 "consumption": null,
-                "text": "弃置该资源和你持有的1个基础资源（矿物·植物·生物），本回合获得1次额外行动"
+                "text": "弃置该资源和你持有的1个基础资源（矿物·植物·生物），本回合额外获得1次行动"
             }
         ]
     }

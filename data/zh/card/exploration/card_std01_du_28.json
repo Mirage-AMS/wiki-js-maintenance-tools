@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": 1,
         "card_element_num_air": 1,
-        "card_info_effect": "<b00>永久（探索区） / 夜明\n<n02>只在你明置该资源时，额外明置相邻栏位的1张卡牌 ",
+        "card_info_effect": "<b00>永久（探索区） / 夜明\n<n02>只在该矿物被明置时，明置相邻栏位1张卡牌 ",
         "card_info_description": null,
         "card_picture_path": "lunar_stone.png",
         "card_inner_base_path": null,
@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 1,
         "card_element_mark_info": "${eF01}${eA01}",
+        "card_level_info": "低级",
         "card_types": [
             "矿物"
         ],
@@ -57,7 +58,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "只在你明置该资源时，额外明置相邻栏位的1张卡牌"
+                "text": "只在该矿物被明置时，明置相邻栏位1张卡牌"
             }
         ]
     }

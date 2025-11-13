@@ -46,6 +46,7 @@
         ],
         "card_element_mark_num": 2,
         "card_element_mark_info": "${eE01}${eF01}${eA01}",
+        "card_level_info": "中级",
         "card_types": [
             "矿物"
         ],
@@ -61,5 +62,13 @@
                 "text": "${tR01}，${tBgn}：你获得${aP01}"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/intelligence/card_dlc01_co_27",
+            "card_name": "点石成金",
+            "brief_description": "高级 / 情报 / 法术",
+            "card_thumbnail_url": "/assets/thumbnail/dlc01_alchemy.jpg"
+        }
+    ]
 }

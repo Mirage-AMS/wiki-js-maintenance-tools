@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eE01}${eE01}${eF01}${eF01}${eR02}\n<b00>启动 / ${eE01}${eF01} / 重塑\n<n03>${tR01}：选以下1个效果适用或发动，\n<n03>· 采集点永久+1\n<n03>· 攻击力永久+1，生命上限永久+2\n<n03>· 获得探索区1个中级以下矿物\n<n18> ",
+        "card_info_effect": "<b00>解锁：${eE01}${eE01}${eF01}${eF01}${eR02}\n<b00>启动 / ${eE01}${eF01} / 重塑\n<n03>${tR01}：选以下1个效果启用，\n<n03>· 采集点永久+1\n<n03>· 攻击力永久+1，生命上限永久+2\n<n03>· 获得探索区1个中级以下矿物\n<n18> ",
         "card_info_description": "<n03>当土与火烧结，侏儒变为了一个巨人 ",
         "card_picture_path": "lava_spell.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "高级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": "${eE01}${eF01}",
-                "text": "${tR01}：选以下1个效果适用或发动，<br>· 采集点永久+1<br>· 攻击力永久+1，生命上限永久+2<br>· 获得探索区1个中级以下矿物"
+                "text": "${tR01}：选以下1个效果启用，<br>· 采集点永久+1<br>· 攻击力永久+1，生命上限永久+2<br>· 获得探索区1个中级以下矿物"
             }
         ]
     }

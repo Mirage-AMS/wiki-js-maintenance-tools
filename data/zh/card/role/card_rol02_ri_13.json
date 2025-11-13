@@ -2,10 +2,8 @@
     "path": "card/role/card_rol02_ri_13",
     "tags": [
         "卡牌",
-        "低级",
-        "情报",
-        "专属",
-        "技能"
+        "角色",
+        "专属"
     ],
     "stat": {
         "win-rate": null,
@@ -17,11 +15,11 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "林地作业",
-        "card_level": "低级",
-        "card_resource_type": "情报",
+        "card_name": "“庸王”路易",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
         "card_resource_tag_1": "专属",
-        "card_resource_tag_2": "技能",
+        "card_resource_tag_2": null,
         "card_resource_tag_3": null,
         "card_price": null,
         "card_hp": null,
@@ -31,37 +29,44 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：${aP03}\n<b02>永久 / 伐木\n<n04>每个 ${tAct} 只有1次，可以将1次行动改为执行以下，\n<n04>· 弃置1个探索区最多3张卡牌，每弃置1张植物卡牌，你获得1个【烂草】<n08> ",
-        "card_info_description": "<n02>林倾木倒，鸟飞兽散 ",
-        "card_picture_path": "flint_lumbering.png",
-        "card_inner_base_path": "base_inner_role_flint.png",
+        "card_info_effect": "<b00>特色：平庸之王\n<n02>御前会议上群臣争吵不休，路易·德·马尔科姆疲惫地扶着额角。先父过世已逾十载，他却连一星半点的治国方略都未能摸索出，心底的厌倦正像藤蔓般悄悄疯长",
+        "card_info_description": null,
+        "card_picture_path": "role_intro_louis.png",
+        "card_inner_base_path": "base_inner_role_archon.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_image_url": "/assets/image/deck_role_info02_13.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/flint_lumbering.jpg",
-        "card_basic_info": "低级 / 情报 / 专属 · 技能",
+        "card_image_url": "/assets/image/deck_role_intro02_13.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/role_intro_louis.jpg",
+        "card_basic_info": "角色 / 专属",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": null,
         "card_types": [
-            "情报"
+            "角色"
         ],
-        "card_type_info": "情报",
+        "card_type_info": "角色",
         "card_tags": [
-            "专属",
-            "技能"
+            "专属"
         ],
-        "card_tag_info": "专属 · 技能",
-        "unlock": "${aP03}",
+        "card_tag_info": "专属",
         "effects": [
             {
-                "name": "伐木",
-                "type": "永久",
+                "name": "平庸之王",
+                "type": "特色",
                 "location": null,
                 "consumption": null,
-                "text": "每个 ${tAct} 只有1次，可以将1次行动改为执行以下，<br>· 弃置1个探索区最多3张卡牌，每弃置1张植物卡牌，你获得1个【烂草】"
+                "text": "御前会议上群臣争吵不休，路易·德·马尔科姆疲惫地扶着额角。先父过世已逾十载，他却连一星半点的治国方略都未能摸索出，心底的厌倦正像藤蔓般悄悄疯长"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol02_ro_26",
+            "card_name": "庸王自扰",
+            "brief_description": "规则 / 专属",
+            "card_thumbnail_url": "/assets/thumbnail/louis_worry.jpg"
+        }
+    ]
 }

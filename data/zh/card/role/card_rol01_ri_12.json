@@ -2,10 +2,8 @@
     "path": "card/role/card_rol01_ri_12",
     "tags": [
         "卡牌",
-        "低级",
-        "情报",
-        "专属",
-        "法术"
+        "角色",
+        "专属"
     ],
     "stat": {
         "win-rate": null,
@@ -17,11 +15,11 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "风之华舞",
-        "card_level": "低级",
-        "card_resource_type": "情报",
+        "card_name": "菲莉斯，圣女垂怜",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
         "card_resource_tag_1": "专属",
-        "card_resource_tag_2": "法术",
+        "card_resource_tag_2": null,
         "card_resource_tag_3": null,
         "card_price": null,
         "card_hp": null,
@@ -31,37 +29,50 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eA01}${eR01}\n<b00>快速 / ${eA01} / 华舞\n<n02>你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，\n<n02>· 重骰1个骰子\n<n02>· 移除你投掷的任意数目的骰子\n<n20> ",
-        "card_info_description": "<n02>闻风起舞，命绝风息 ",
-        "card_picture_path": "huntress_dance_of_wind.png",
-        "card_inner_base_path": "base_inner_role_huntress.png",
+        "card_info_effect": "<b00>特色：身份蜕变\n<n02>菲莉斯曾是贫民窟中挣扎求存的女孩，因机缘巧合蒙主恩召而成为圣女，她希望用自己得到的力量为更多人带去救济",
+        "card_info_description": null,
+        "card_picture_path": "role_intro_phyllis.png",
+        "card_inner_base_path": "base_inner_role_phyllis.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_image_url": "/assets/image/deck_role_info01_12.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/huntress_dance_of_wind.jpg",
-        "card_basic_info": "低级 / 情报 / 专属 · 法术",
+        "card_image_url": "/assets/image/deck_role_intro01_12.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/role_intro_phyllis.jpg",
+        "card_basic_info": "角色 / 专属",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": null,
         "card_types": [
-            "情报"
+            "角色"
         ],
-        "card_type_info": "情报",
+        "card_type_info": "角色",
         "card_tags": [
-            "专属",
-            "法术"
+            "专属"
         ],
-        "card_tag_info": "专属 · 法术",
-        "unlock": "${eA01}${eR01}",
+        "card_tag_info": "专属",
         "effects": [
             {
-                "name": "华舞",
-                "type": "快速",
+                "name": "身份蜕变",
+                "type": "特色",
                 "location": null,
-                "consumption": "${eA01}",
-                "text": "你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，<br>· 重骰1个骰子<br>· 移除你投掷的任意数目的骰子"
+                "consumption": null,
+                "text": "菲莉斯曾是贫民窟中挣扎求存的女孩，因机缘巧合蒙主恩召而成为圣女，她希望用自己得到的力量为更多人带去救济"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol01_ro_23",
+            "card_name": "圣泉赐福",
+            "brief_description": "低级 / 情报 / 专属 · 法术",
+            "card_thumbnail_url": "/assets/thumbnail/phyllis_spring.jpg"
+        },
+        {
+            "path": "/card/role/card_rol01_ro_24",
+            "card_name": "圣女祝祷",
+            "brief_description": "中级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/phyllis_pray.jpg"
+        }
+    ]
 }

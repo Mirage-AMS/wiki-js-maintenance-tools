@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：中级以上含${eA01}生物\n<b00>永久 / 梦巡\n<n02>获得1次额外行动；只在那次行动中，你不能将启动·快速类效果发动",
+        "card_info_effect": "<b00>解锁：中级以上含${eA01}生物\n<b00>永久 / 梦巡\n<n02>额外获得1次行动；只在那次行动中，你不能将启动·快速类效果发动",
         "card_info_description": null,
         "card_picture_path": "dlc01_cocoon_of_time.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "中级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "获得1次额外行动；只在那次行动中，你不能将启动·快速类效果发动"
+                "text": "额外获得1次行动；只在那次行动中，你不能将启动·快速类效果发动"
             }
         ]
     }

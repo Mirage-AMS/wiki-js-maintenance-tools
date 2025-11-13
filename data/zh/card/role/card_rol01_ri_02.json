@@ -2,10 +2,8 @@
     "path": "card/role/card_rol01_ri_02",
     "tags": [
         "卡牌",
-        "中级",
-        "情报",
-        "专属",
-        "造物"
+        "角色",
+        "专属"
     ],
     "stat": {
         "win-rate": null,
@@ -17,11 +15,11 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "达维安的巨人杀手",
-        "card_level": "中级",
-        "card_resource_type": "情报",
+        "card_name": "盖尔曼，历战勇士",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
         "card_resource_tag_1": "专属",
-        "card_resource_tag_2": "造物",
+        "card_resource_tag_2": null,
         "card_resource_tag_3": null,
         "card_price": null,
         "card_hp": null,
@@ -31,37 +29,50 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：中级以上含${eF01}生物\n<b00>永久 / 砍倒\n<n02>只在你狩猎当前生命超过你的生物中，你攻击造成的伤害+4\n<n02> <n02> <n20> ",
-        "card_info_description": "<n02>敌虽巨，亦不惧尔 ",
-        "card_picture_path": "davians_giant_slayer.png",
-        "card_inner_base_path": "base_inner_role_davian.png",
+        "card_info_effect": "<b00>特色：决胜一击\n<n02>为准备那决胜一击，盖尔曼·亨特自觉受些小伤实在无关痛痒",
+        "card_info_description": null,
+        "card_picture_path": "role_intro_gelman.png",
+        "card_inner_base_path": "base_inner_role_warrior.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_image_url": "/assets/image/deck_role_info01_02.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/davians_giant_slayer.jpg",
-        "card_basic_info": "中级 / 情报 / 专属 · 造物",
+        "card_image_url": "/assets/image/deck_role_intro01_02.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/role_intro_gelman.jpg",
+        "card_basic_info": "角色 / 专属",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": null,
         "card_types": [
-            "情报"
+            "角色"
         ],
-        "card_type_info": "情报",
+        "card_type_info": "角色",
         "card_tags": [
-            "专属",
-            "造物"
+            "专属"
         ],
-        "card_tag_info": "专属 · 造物",
-        "unlock": "中级以上含${eF01}生物",
+        "card_tag_info": "专属",
         "effects": [
             {
-                "name": "砍倒",
-                "type": "永久",
+                "name": "决胜一击",
+                "type": "特色",
                 "location": null,
                 "consumption": null,
-                "text": "只在你狩猎当前生命超过你的生物中，你攻击造成的伤害+4"
+                "text": "为准备那决胜一击，盖尔曼·亨特自觉受些小伤实在无关痛痒"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol01_ro_03",
+            "card_name": "卓越战技：诱敌深入",
+            "brief_description": "低级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/warrior_dodge.jpg"
+        },
+        {
+            "path": "/card/role/card_rol01_ro_04",
+            "card_name": "卓越战技：决胜一击",
+            "brief_description": "中级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/warrior_critical_hit.jpg"
+        }
+    ]
 }

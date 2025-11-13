@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 4,
         "card_element_mark_info": "${eW01}${eF01}",
+        "card_level_info": "高级",
         "card_types": [
             "植物"
         ],

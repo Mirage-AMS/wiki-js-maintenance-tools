@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n02>选以下1个效果对交易区适用或发动，\n<n02><更换> · 刷新任意数目的栏位\n<n02><赠品> · 获得最多2个低级情报商品\n<n02><折扣> · 选1个低级基础资源（矿物·植物·生物）商品本回合售价减半（向下取整）\n<n16> ",
+        "card_info_effect": "<n02> \n<n02>选以下1个效果对交易区启用，\n<n02><更换> · 刷新任意数目的栏位\n<n02><赠品> · 获得最多2个低级情报商品\n<n02><折扣> · 选1个低级基础资源（矿物·植物·生物）商品本回合售价减半（向下取整）\n<n16> ",
         "card_info_description": "<n02>“新开的小店，一个满脸堆笑的老板” ",
         "card_picture_path": "dlc01_new_store.png",
         "card_inner_base_path": null,
@@ -42,6 +42,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "低级",
         "card_types": [
             "事件"
         ],
@@ -54,7 +55,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "选以下1个效果对交易区适用或发动，<br><更换> · 刷新任意数目的栏位<br><赠品> · 获得最多2个低级情报商品<br><折扣> · 选1个低级基础资源（矿物·植物·生物）商品本回合售价减半（向下取整）"
+                "text": "选以下1个效果对交易区启用，<br><更换> · 刷新任意数目的栏位<br><赠品> · 获得最多2个低级情报商品<br><折扣> · 选1个低级基础资源（矿物·植物·生物）商品本回合售价减半（向下取整）"
             }
         ]
     }

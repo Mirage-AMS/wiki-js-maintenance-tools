@@ -29,11 +29,11 @@
                 "itemCount": 90
             },
             {
-                "title": "角色专属卡牌",
+                "title": "角色专属",
                 "path": "/card/role",
-                "description": "角色和其专属卡牌",
+                "description": "角色和角色专属卡牌",
                 "color": "#e74c3c",
-                "itemCount": 50
+                "itemCount": 78
             },
             {
                 "title": "交易区卡牌",

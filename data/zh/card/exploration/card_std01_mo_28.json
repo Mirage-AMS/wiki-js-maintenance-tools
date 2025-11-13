@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": 1,
-        "card_info_effect": "<b00>永久（探索区） / 顶撞\n<n02>只在该生物对你造成伤害时，使你进入1个相邻栏位",
+        "card_info_effect": "<b00>永久（探索区） / 顶撞\n<n02>只在该生物造成伤害时，使狩猎者进入1个相邻栏位",
         "card_info_description": null,
         "card_picture_path": "goat.png",
         "card_inner_base_path": null,
@@ -45,6 +45,7 @@
         ],
         "card_element_mark_num": 1,
         "card_element_mark_info": "${eE01}${eA01}",
+        "card_level_info": "低级",
         "card_types": [
             "生物"
         ],
@@ -57,7 +58,7 @@
                 "type": "永久",
                 "location": "探索区",
                 "consumption": null,
-                "text": "只在该生物对你造成伤害时，使你进入1个相邻栏位"
+                "text": "只在该生物造成伤害时，使狩猎者进入1个相邻栏位"
             }
         ]
     }

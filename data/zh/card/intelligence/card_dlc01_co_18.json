@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b04>解锁：高级以上基础资源\n<b04>启动 / 恩召\n<n06>${tR01}，${tPrp}：选以下1个效果发动，那之后根据其弃置卡牌的数目选探索区的卡牌明置\n<n06>· 刷新探索区最多2个栏位\n<n06>· 弃置任一玩家持有的1个低级基础资源（矿物·植物·生物）\n<n24> ",
+        "card_info_effect": "<b03>解锁：高级以上基础资源\n<b03>启动 / 恩召\n<n05>${tR01}，${tPrp}：选以下1个效果启用，那之后根据其弃置卡牌的数目选探索区卡牌明置\n<n05>· 刷新探索区最多2个栏位\n<n05>· 弃置任一玩家持有的1个低级基础资源（矿物·植物·生物）\n<n32> ",
         "card_info_description": "<n02> 愿他的旨意行在地上如同行在天上",
         "card_picture_path": "dlc01_devine_secret_edict_02.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "高级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：选以下1个效果发动，那之后根据其弃置卡牌的数目选探索区的卡牌明置<br>· 刷新探索区最多2个栏位<br>· 弃置任一玩家持有的1个低级基础资源（矿物·植物·生物）"
+                "text": "${tR01}，${tPrp}：选以下1个效果启用，那之后根据其弃置卡牌的数目选探索区卡牌明置<br>· 刷新探索区最多2个栏位<br>· 弃置任一玩家持有的1个低级基础资源（矿物·植物·生物）"
             }
         ]
     }

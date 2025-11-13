@@ -44,6 +44,7 @@
         ],
         "card_element_mark_num": 1,
         "card_element_mark_info": "${eE01}",
+        "card_level_info": "低级",
         "card_types": [
             "生物"
         ],
@@ -59,5 +60,19 @@
                 "text": "只在该资源累积3个以上成长标记时，将其转变为【矛隼】"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol02_ro_15",
+            "card_name": "鹰舍邂逅",
+            "brief_description": "低级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/arya_gift.jpg"
+        },
+        {
+            "path": "/card/role/card_rol02_ac_03",
+            "card_name": "矛隼",
+            "brief_description": "中级 / 生物",
+            "card_thumbnail_url": "/assets/thumbnail/arya_gyrfalcon.jpg"
+        }
+    ]
 }

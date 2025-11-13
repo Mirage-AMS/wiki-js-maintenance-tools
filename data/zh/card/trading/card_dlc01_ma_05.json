@@ -46,6 +46,7 @@
         ],
         "card_element_mark_num": 2,
         "card_element_mark_info": "${eE01}${eF01}",
+        "card_level_info": "中级",
         "card_types": [
             "矿物",
             "生物"

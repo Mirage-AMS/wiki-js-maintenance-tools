@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：${aP12}\n<b02>快速 / 出千 \n<n04>你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，\n<n04>· 指定1个骰子的骰面\n<n04>· 重骰1个骰子\n<n04>· 额外增加并投掷1个骰子\n<n34> ",
+        "card_info_effect": "<b02>解锁：${aP12}\n<b02>快速 / 出千 \n<n04>你的回合中，骰子点数结算前：选以下1个本回合未启用过的效果启用，\n<n04>· 指定1个骰子的骰面\n<n04>· 重骰1个骰子\n<n04>· 额外增加并投掷1个骰子\n<n34> ",
         "card_info_description": "<n06>难点非在欺骗命运，而在说服命运莫要计较 ",
         "card_picture_path": "fate_cheater.png",
         "card_inner_base_path": null,
@@ -43,6 +43,7 @@
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
+        "card_level_info": "高级",
         "card_types": [
             "情报"
         ],
@@ -58,7 +59,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "你的回合中，骰子点数结算前：选以下1个本回合未发动过的效果发动，<br>· 指定1个骰子的骰面<br>· 重骰1个骰子<br>· 额外增加并投掷1个骰子"
+                "text": "你的回合中，骰子点数结算前：选以下1个本回合未启用过的效果启用，<br>· 指定1个骰子的骰面<br>· 重骰1个骰子<br>· 额外增加并投掷1个骰子"
             }
         ]
     }
