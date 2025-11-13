@@ -261,6 +261,11 @@ if __name__ == '__main__':
             return False
         return True
 
+    def home_filter(doc:DocumentNode):
+        if doc.name not in ("home", ):
+            return False
+        return True
+
     def all_filter(doc:DocumentNode):
         return True
 

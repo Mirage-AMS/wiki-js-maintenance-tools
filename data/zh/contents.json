@@ -1,6 +1,10 @@
 {
   "template": "general_contents_template.html",
   "children": {
+    "home": {
+      "data": "home.json",
+      "template": "home_template.html"
+    },
     "about": {
       "index": "contents.json",
       "data": "about.json",

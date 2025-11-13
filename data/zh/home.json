@@ -1,0 +1,52 @@
+{
+    "title": "《传奇之路》Wiki",
+    "path": "home",
+    "tags": [
+    ],
+    "contents": {
+        "filename": "home.json",
+        "data": [
+            {
+                "title": "规则",
+                "path": "/rule",
+                "description": "规则页面",
+                "color": "#2ecc71",
+                "itemCount": 8
+            },
+            {
+                "title": "卡牌",
+                "path": "/card",
+                "description": "卡牌查询",
+                "color": "#3498db",
+                "itemCount": 253
+            },
+            {
+                "title": "关于",
+                "path": "/about",
+                "description": "项目相关",
+                "color": "#9b59b6",
+                "itemCount": 3
+            }
+        ],
+        "externalLinks": [
+            {
+              "title": "TTS模组",
+              "thumbnail": "/assets/thumbnail/steam.ico",
+              "description": "桌游模拟器模组",
+              "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3348043331"
+            },
+            {
+              "title": "Bilibili",
+              "thumbnail": "/assets/thumbnail/bilibili.ico",
+              "description": "Bilibili宣传频道",
+              "url": "https://space.bilibili.com/3546748878326057"
+            },
+            {
+              "title": "众筹",
+              "thumbnail": "/assets/thumbnail/crowdfunding.ico",
+              "description": "敬请期待",
+              "url": null
+            }
+        ]
+    }
+}
