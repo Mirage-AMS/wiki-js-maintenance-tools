@@ -42,17 +42,23 @@ class RelationInitializer():
             self.node_dict[card] = node
 
     def add_relation(self):
-        dlcIdx = "01"
-        for idx in range(12):
-            roleIdx = str(idx + 1).zfill(2)
-            for idj in range(2):
-                cardIdx = str(idx * 2 + idj + 1).zfill(2)
-                relation = {
-                    "from": f"card_rol{dlcIdx}_ri_{roleIdx}.json",
-                    "to": f"card_rol{dlcIdx}_ro_{cardIdx}.json",
-                    "type": "bidirectional"
-                }
-                self.relation_list.append(relation)
+        relation = {
+            "01": [2 for _ in range(12)],
+            "02": [2, 4, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1,]
+        }
+        for dlcIdx, dlcRecord in relation.items():
+            idj = 0
+            for idx, num in enumerate(dlcRecord):
+                roleIdx = str(idx + 1).zfill(2)
+                for _ in range(num):
+                    idj += 1
+                    cardIdx = str(idj).zfill(2)
+                    relation = {
+                        "from": f"card_rol{dlcIdx}_ri_{roleIdx}.json",
+                        "to": f"card_rol{dlcIdx}_ro_{cardIdx}.json",
+                        "type": "bidirectional"
+                    }
+                    self.relation_list.append(relation)
 
     def run(self):
         self.add_node()
@@ -132,4 +138,5 @@ class RelationConnector():
 
 
 if __name__ == "__main__":
+    # RelationInitializer().run()
     RelationConnector().run()
