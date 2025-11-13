@@ -489,6 +489,21 @@
             "type": "bidirectional"
         },
         {
+            "from": "card_rol02_ro_04.json",
+            "to": "card_rol02_ro_05.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol02_ro_04.json",
+            "to": "card_rol02_ro_06.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol02_ro_05.json",
+            "to": "card_rol02_ro_06.json",
+            "type": "bidirectional"
+        },
+        {
             "from": "card_rol02_ri_02.json",
             "to": "card_rol02_ro_05.json",
             "type": "bidirectional"
