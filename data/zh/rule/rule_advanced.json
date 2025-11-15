@@ -6,6 +6,14 @@
   ],
   "contents": {
     "filename": "rule_advanced.json",
-    "data": []
+    "data": [
+      {
+        "title": "常见效果归类",
+        "path": "/rule/rule_advanced/rule_classified_effects",
+        "description": "对一些常见效果的归类和解释",
+        "color": "#E64A19",
+        "itemCount": 1
+      }
+    ]
   }
 }
