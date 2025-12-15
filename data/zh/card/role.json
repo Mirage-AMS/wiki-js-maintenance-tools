@@ -331,6 +331,19 @@
                     "专属"
                 ],
                 "image": "/assets/thumbnail/role_intro_louis.jpg"
+            },
+            {
+                "id": 53,
+                "url": "/card/role/card_rol02_ri_14",
+                "name": "“无面人”",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/role_intro_faceless.jpg"
             }
         ]
     }
