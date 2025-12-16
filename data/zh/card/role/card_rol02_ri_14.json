@@ -11,7 +11,9 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {"date": "2025-11-30", "content": "“无面人”上线"}
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,

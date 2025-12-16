@@ -10,8 +10,15 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "专属规则要放到专属区吗？",
+            "answer": "不需要。专属规则卡牌只是为了方便展示对应效果，其不能被获得。"
+        }
+    ],
+    "revise": [
+        {"date": "2025-11-03", "content": "“庸王”路易上线"}
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
