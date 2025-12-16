@@ -36,6 +36,7 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": "BANISH_FORBIDDEN",
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
         "card_image_url": "/assets/image/deck_accessory_std_03.jpg",
         "card_thumbnail_url": "/assets/thumbnail/potion_holy_water.jpg",
         "card_basic_info": "低级 / 造物",

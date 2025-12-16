@@ -209,6 +209,10 @@
             "template": "card_intelligence_template.html",
             "data": "card_rol02_ri_13.json"
         },
+        "card_rol02_ri_14": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ri_14.json"
+        },
         "card_rol02_ro_01": {
             "template": "card_intelligence_template.html",
             "data": "card_rol02_ro_01.json"
@@ -312,6 +316,14 @@
         "card_rol02_ro_26": {
             "template": "card_intelligence_template.html",
             "data": "card_rol02_ro_26.json"
+        },
+        "card_rol02_ro_27": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_27.json"
+        },
+        "card_rol02_ro_28": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol02_ro_28.json"
         }
     }
 }

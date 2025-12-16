@@ -13,7 +13,9 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {"date": "2025-12-15", "content": "【鹰舍邂逅】现在只能在${tPrp}发动，且选择效果时不再检查你是否持有【雏鹰】"}
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,13 +33,14 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：${aP03}\n<b02>启动 / 邂逅\n<n04>${tR01}：根据你是否持有【雏鹰】，将以下1个对应效果启用，\n<n04>· 是：消耗${aP01}，为【雏鹰】累积1个成长标记\n<n04>· 否：本回合 ${tAct}，仅1次可以将行动改为获得1个【雏鹰】",
+        "card_info_effect": "<b02>解锁：${aP03}\n<b02>启动 / 邂逅\n<n04>${tR01}，${tPrp}：选以下1个效果启用，\n<n04>· 本回合 ${tAct}，仅1次可以将行动改为获得1个【雏鹰】\n<n04>· 消耗${aP01}，为你持有的1个【雏鹰】累积1个成长标记\n",
         "card_info_description": null,
         "card_picture_path": "arya_gift.png",
         "card_inner_base_path": "base_inner_role_arya.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
         "card_image_url": "/assets/image/deck_role_info02_15.jpg",
         "card_thumbnail_url": "/assets/thumbnail/arya_gift.jpg",
         "card_basic_info": "低级 / 情报 / 专属 · 技能",
@@ -61,7 +64,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：根据你是否持有【雏鹰】，将以下1个对应效果启用，<br>· 是：消耗${aP01}，为【雏鹰】累积1个成长标记<br>· 否：本回合 ${tAct}，仅1次可以将行动改为获得1个【雏鹰】"
+                "text": "${tR01}，${tPrp}：选以下1个效果启用，<br>· 本回合 ${tAct}，仅1次可以将行动改为获得1个【雏鹰】<br>· 消耗${aP01}，为你持有的1个【雏鹰】累积1个成长标记"
             }
         ]
     },

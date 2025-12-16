@@ -1,5 +1,5 @@
 {
-    "path": "card/role/card_rol02_ro_26",
+    "path": "card/role/card_rol02_ro_27",
     "tags": [
         "卡牌",
         "规则",
@@ -15,7 +15,7 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "庸王自扰",
+        "card_name": "千人千面",
         "card_level": "_低级",
         "card_resource_type": "规则",
         "card_resource_tag_1": "专属",
@@ -29,16 +29,16 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n00>玩家将以下效果永久启用，\n<n00>· 不能解锁高级能力\n<n00>· 执行手牌调度后，抽5张卡牌\n<n00>· ${tDrw} 可以执行的次数+1",
+        "card_info_effect": "<n02>玩家将以下效果永久启用，\n<n02>· 将最多16张未选择的角色卡牌构成千面牌堆（无牌序，自由查看，弃牌堆为自身）\n<n02>· 只在解锁【剥皮刀】时，随机选千面牌堆3张卡牌作为其素材堆叠",
         "card_info_description": null,
-        "card_picture_path": "louis_worry.png",
-        "card_inner_base_path": "base_inner_role_archon.png",
+        "card_picture_path": "faceless_human_variety.png",
+        "card_inner_base_path": "base_inner_role_faceless.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
-        "card_image_url": "/assets/image/deck_role_info02_26.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/louis_worry.jpg",
+        "card_image_url": "/assets/image/deck_role_info02_27.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/faceless_human_variety.jpg",
         "card_basic_info": "规则 / 专属",
         "card_element_marks": [],
         "card_element_mark_num": 0,
@@ -58,16 +58,16 @@
                 "type": "规则",
                 "location": null,
                 "consumption": null,
-                "text": "玩家将以下效果永久启用，<br>· 不能解锁高级能力<br>· 执行手牌调度后，抽5张卡牌<br>· ${tDrw} 可以执行的次数+1"
+                "text": "玩家将以下效果永久启用，<br>· 将最多16张未选择的角色卡牌构成千面牌堆（无牌序，自由查看，弃牌堆为自身）<br>· 只在解锁【剥皮刀】时，随机选千面牌堆3张卡牌作为其素材堆叠"
             }
         ]
     },
     "related_cards": [
         {
-            "path": "/card/role/card_rol02_ri_13",
-            "card_name": "“庸王”路易",
+            "path": "/card/role/card_rol02_ri_14",
+            "card_name": "“无面人”",
             "brief_description": "角色 / 专属",
-            "card_thumbnail_url": "/assets/thumbnail/role_intro_louis.jpg"
+            "card_thumbnail_url": "/assets/thumbnail/role_intro_faceless.jpg"
         }
     ]
 }

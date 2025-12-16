@@ -38,6 +38,7 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
         "card_image_url": "/assets/image/deck_role_info02_18.jpg",
         "card_thumbnail_url": "/assets/thumbnail/kay_cheat.jpg",
         "card_basic_info": "低级 / 情报 / 专属 · 技能",

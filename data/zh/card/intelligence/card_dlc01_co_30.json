@@ -10,8 +10,15 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "【魔力凝滞】与【奥术原理】共同作用时，是先减少再翻倍，还是先翻倍再减少？",
+            "answer": "由相关卡牌解锁/影响的顺序决定。详见【奥术原理】的相关调整。"
+        }
+    ],
+    "revise": [
+        {"date": "2025-12-15", "content": "新增单人模式的循环标记"}
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -36,6 +43,7 @@
         "card_medal_path": null,
         "card_info_product_tag": "EVENT_REQ",
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": "是",
         "card_image_url": "/assets/image/deck_conventicle_dlc01_30.jpg",
         "card_thumbnail_url": "/assets/thumbnail/dlc01_element_stillness.jpg",
         "card_basic_info": "低级 / 事件",

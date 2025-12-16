@@ -36,6 +36,7 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
         "card_image_url": "/assets/image/deck_accessory_std_01.jpg",
         "card_thumbnail_url": "/assets/thumbnail/rotten_grass.jpg",
         "card_basic_info": "低级 / 植物",

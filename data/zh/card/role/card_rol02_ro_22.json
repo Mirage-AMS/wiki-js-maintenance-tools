@@ -13,7 +13,9 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {"date": "2025-12-15", "content": "新增单人模式的循环标记"}
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -38,6 +40,7 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": "是",
         "card_image_url": "/assets/image/deck_role_info02_22.jpg",
         "card_thumbnail_url": "/assets/thumbnail/fereshteh_trade.jpg",
         "card_basic_info": "低级 / 情报 / 专属 · 技能",

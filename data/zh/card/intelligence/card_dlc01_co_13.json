@@ -11,7 +11,16 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "【奥术原理】能否降低特定类型元素的消耗？",
+            "answer": "不能。【奥术原理】只能降低无色元素的消耗，不能降低已明确类型的元素的消耗。"
+        },
+        {
+            "question": "【奥术原理】与【魔力凝滞】共同作用时，是先减少再翻倍，还是先翻倍再减少？",
+            "answer": "由相关卡牌解锁/影响的顺序决定。这两张卡赋予的效果都是持续生效的，若先解锁【奥术原理】、后受到【魔力凝滞】影响，则先减少再翻倍；反之则先翻倍再减少。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,
@@ -37,6 +46,7 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
         "card_image_url": "/assets/image/deck_conventicle_dlc01_13.jpg",
         "card_thumbnail_url": "/assets/thumbnail/dlc01_principle_of_arcane_magic.jpg",
         "card_basic_info": "低级 / 情报 / 造物",

@@ -1,8 +1,8 @@
 {
-    "path": "card/role/card_rol02_ro_08",
+    "path": "card/role/card_rol02_ro_28",
     "tags": [
         "卡牌",
-        "中级",
+        "低级",
         "情报",
         "专属",
         "造物"
@@ -17,8 +17,8 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "令行禁止",
-        "card_level": "中级",
+        "card_name": "剥皮刀",
+        "card_level": "低级",
         "card_resource_type": "情报",
         "card_resource_tag_1": "专属",
         "card_resource_tag_2": "造物",
@@ -31,21 +31,21 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：任意事件×3\n<b00>启动 / 令行\n<n02>${tR01}，${tPrp}：选以下1个效果启用，\n<n02>· 弃置1个事件素材，视为你将其发动\n<n02>· 选情报区弃牌堆最多3张事件卡牌作为素材堆叠\n<n20> ",
-        "card_info_description": "<n02>政令一下，局势便随之转变 ",
-        "card_picture_path": "archon_order.png",
-        "card_inner_base_path": "base_inner_role_archon.png",
+        "card_info_effect": "<b02>解锁：任意矿物\n<b02>启动 / 剥皮\n<n04>${tR01}，弃置1个素材，选以下1个效果启用，\n<n04>· 选其对应1张专属情报·事件卡牌永久加入你的专属区\n<n04>· 随机展示千面牌堆3张角色卡牌，选其中1张作为素材堆叠",
+        "card_info_description": null,
+        "card_picture_path": "faceless_peeling_knife.png",
+        "card_inner_base_path": "base_inner_role_faceless.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
-        "card_image_url": "/assets/image/deck_role_info02_08.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/archon_order.jpg",
-        "card_basic_info": "中级 / 情报 / 专属 · 造物",
+        "card_image_url": "/assets/image/deck_role_info02_28.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/faceless_peeling_knife.jpg",
+        "card_basic_info": "低级 / 情报 / 专属 · 造物",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
-        "card_level_info": "中级",
+        "card_level_info": "低级",
         "card_types": [
             "情报"
         ],
@@ -55,23 +55,23 @@
             "造物"
         ],
         "card_tag_info": "专属 · 造物",
-        "unlock": "任意事件×3",
+        "unlock": "任意矿物",
         "effects": [
             {
-                "name": "令行",
+                "name": "剥皮",
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：选以下1个效果启用，<br>· 弃置1个事件素材，视为你将其发动<br>· 选情报区弃牌堆最多3张事件卡牌作为素材堆叠"
+                "text": "${tR01}，弃置1个素材，选以下1个效果启用，<br>· 选其对应1张专属情报·事件卡牌永久加入你的专属区<br>· 随机展示千面牌堆3张角色卡牌，选其中1张作为素材堆叠"
             }
         ]
     },
     "related_cards": [
         {
-            "path": "/card/role/card_rol02_ri_03",
-            "card_name": "艾尔弗里德，大展宏图",
+            "path": "/card/role/card_rol02_ri_14",
+            "card_name": "“无面人”",
             "brief_description": "角色 / 专属",
-            "card_thumbnail_url": "/assets/thumbnail/role_intro_archon.jpg"
+            "card_thumbnail_url": "/assets/thumbnail/role_intro_faceless.jpg"
         }
     ]
 }
