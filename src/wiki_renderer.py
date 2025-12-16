@@ -62,12 +62,16 @@ class WikiPTLRenderer(WikiRenderer):
     URL_DICT = {
         "解锁": {
             "解锁率": None,
+            "解锁代价": None,
             "": ("/zh/rule/rule_basic/rule_ability", "#h-2-常规解锁", "常规解锁")
         },
         "永久": {
+            "永久+": None,
+            "永久-": None,
             "永久获得以下效果": None,
             "永久获得": None,
             "永久启用": None,
+            "永久加入": None,
             "": ("/rule/rule_basic/rule_effect", "#h-11-永久类效果", "永久类效果"),
         },
         "启动": {
@@ -79,6 +83,9 @@ class WikiPTLRenderer(WikiRenderer):
         "骰子": {
             "": ("/rule/rule_basic/rule_exploration", "#h-7-投掷标准骰子", "投掷标准骰子")
         },
+        "[复制效果]": {
+            "": ("/rule/rule_advanced/rule_classified_effects", "#h-23-复制效果", "复制效果")
+        }
     }
 
     def __init__(self):
