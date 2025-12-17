@@ -19,8 +19,27 @@
         </div>
     </div>
 
+    <!-- 近期更新区域 -->
+    <div id="recent-updates-section">
+        <!-- 新增：自定义标题栏 -->
+        <div class="section-header">
+            <div class="section-icon update-icon"></div>
+            <div class="section-title">更新</div>
+            <div class="section-divider"></div>
+        </div>
+        <div class="recent-updates" id="recent-updates-container">
+            <!-- 近期更新条目将通过JavaScript动态生成 -->
+        </div>
+    </div>
+
     <!-- 分类目录区域 -->
     <div id="category-catalog">
+        <!-- 新增：自定义标题栏 -->
+        <div class="section-header">
+            <div class="section-icon category-icon"></div>
+            <div class="section-title">内容</div>
+            <div class="section-divider"></div>
+        </div>
         <div class="category-grid" id="category-container">
             <!-- 分类条目将通过JavaScript动态生成 -->
         </div>
@@ -28,6 +47,12 @@
 
     <!-- 外链跳转区域 -->
     <div id="external-links-section">
+        <!-- 新增：自定义标题栏 -->
+        <div class="section-header">
+            <div class="section-icon link-icon"></div>
+            <div class="section-title">导航</div>
+            <div class="section-divider"></div>
+        </div>
         <div class="external-links" id="external-links-container">
             <!-- 外链内容卡将通过JavaScript动态生成 -->
         </div>
@@ -40,10 +65,12 @@
         // 全局变量
         let categoryData = [];
         let externalLinksData = [];
+        let recentUpdatesData = []; // 新增：近期更新数据
 
         // DOM 元素
         let categoryContainer = null;
         let externalLinksContainer = null;
+        let recentUpdatesContainer = null; // 新增：近期更新容器
 
         // 统计数据元素
         let totalCategoriesEl = null;
@@ -54,13 +81,14 @@
             // 获取DOM元素
             categoryContainer = document.getElementById('category-container');
             externalLinksContainer = document.getElementById('external-links-container');
+            recentUpdatesContainer = document.getElementById('recent-updates-container'); // 新增：获取更新容器
 
             // 统计元素
             totalCategoriesEl = document.getElementById('total-categories');
             totalItemsEl = document.getElementById('total-items');
 
             // 检查必要元素是否已加载
-            if (categoryContainer) {
+            if (categoryContainer && recentUpdatesContainer) { // 新增：检查更新容器
                 loadCategoryData();
             } else {
                 // 元素未加载完成，继续轮询
@@ -72,6 +100,7 @@
         function loadCategoryData() {
             // 显示加载状态
             categoryContainer.innerHTML = '<p class="loading">加载分类数据中...</p>';
+            recentUpdatesContainer.innerHTML = '<p class="loading">加载更新数据中...</p>'; // 新增：更新加载状态
 
             // 加载分类数据
             fetch('/assets/json/{{ contents.filename }}')
@@ -82,13 +111,16 @@
                 .then(data => {
                     categoryData = data.contents.data;
                     externalLinksData = data.contents.externalLinks || [];
+                    recentUpdatesData = data.contents.recentUpdates || []; // 新增：读取更新数据
                     renderCategories();
                     renderExternalLinks();
+                    renderRecentUpdates(); // 新增：渲染更新内容
                     updateStats();
                 })
                 .catch(error => {
                     console.error('加载数据时出错:', error);
                     categoryContainer.innerHTML = '<p class="error">加载分类数据失败，请稍后重试</p>';
+                    recentUpdatesContainer.innerHTML = '<p class="error">加载更新数据失败，请稍后重试</p>'; // 新增：更新错误状态
                 });
         }
 
@@ -174,6 +206,62 @@
                 }
 
                 externalLinksContainer.appendChild(linkElement);
+            });
+        }
+
+        // 新增：渲染近期更新条目
+        function renderRecentUpdates() {
+            recentUpdatesContainer.innerHTML = '';
+
+            if (recentUpdatesData.length === 0) {
+                recentUpdatesContainer.innerHTML = '<p class="no-updates">暂无近期更新记录</p>';
+                return;
+            }
+
+            // 按日期倒序排序（最新的在前），并只取前3条
+            const sortedUpdates = [...recentUpdatesData]
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 3); // 关键修改：只显示最近3个更新
+
+            // 预设3种固定颜色
+            const presetColors = ['#e74c3c', '#e67e22', '#f1c40f'];
+            sortedUpdates.forEach((update, index) => {
+                const updateElement = document.createElement('div');
+                const updateColor = presetColors[index];
+                updateElement.className = update.link ? 'update-item has-link' : 'update-item';
+                updateElement.style.borderLeftColor = updateColor;
+
+                // 格式化日期为友好显示
+                const formattedDate = new Date(update.date).toLocaleDateString('zh-CN', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                // 构建更新条目内容
+                updateElement.innerHTML = `
+                    <div class="update-header">
+                        <div class="update-date" style="color: ${hexToRgba(updateColor, 0.8)}">
+                            ${formattedDate}
+                        </div>
+                        <h3 class="update-title">${update.title}</h3>
+                    </div>
+                    <div class="update-description">${update.description || '无更新描述'}</div>
+                    ${update.category ? `
+                        <div class="update-category" style="background-color: ${hexToRgba(updateColor, 0.1)}; color: ${updateColor}">
+                            ${update.category}
+                        </div>
+                    ` : ''}
+                `;
+
+                // 有链接则添加跳转事件
+                if (update.link) {
+                    updateElement.addEventListener('click', () => {
+                        window.location.href = update.link;
+                    });
+                }
+
+                recentUpdatesContainer.appendChild(updateElement);
             });
         }
 
@@ -295,12 +383,148 @@
         color: #7f8c8d;
     }
 
+    /* 新增：区域标题样式 */
+    .section-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        position: relative;
+    }
+
+    .section-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        border-radius: 6px;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+    }
+
+    .update-icon {
+        background-color: rgba(231, 76, 60, 0.1);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23e74c3c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");
+    }
+
+    .category-icon {
+        background-color: rgba(52, 152, 219, 0.1);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%233498db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='8' y1='6' x2='21' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cline x1='8' y1='18' x2='21' y2='18'%3E%3C/line%3E%3Cline x1='3' y1='6' x2='3.01' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='12' x2='3.01' y2='12'%3E%3C/line%3E%3Cline x1='3' y1='18' x2='3.01' y2='18'%3E%3C/line%3E%3C/svg%3E");
+    }
+
+    .link-icon {
+        background-color: rgba(46, 204, 113, 0.1);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232ecc71' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'%3E%3C/path%3E%3Cpolyline points='15 3 21 3 21 9'%3E%3C/polyline%3E%3Cline x1='10' y1='14' x2='21' y2='3'%3E%3C/line%3E%3C/svg%3E");
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin: 0;
+    }
+
+    .section-divider {
+        flex-grow: 1;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(44,62,80,0.1) 0%, rgba(44,62,80,0.3) 100%);
+        margin-left: 15px;
+    }
+
+    /* 近期更新区域样式 */
+    #recent-updates-section {
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    .recent-updates {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 20px;
+    }
+
+    .update-item {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 3px 6px rgba(0,0,0,.1);
+        transition: all .3s ease;
+        border-left: 3px solid #2ecc71; /* 默认更新绿色 */
+        display: flex; /* 关键修改：flex布局实现固定间距 */
+        flex-direction: column; /* 垂直排列 */
+        min-height: 180px; /* 可选：设置最小高度，保证卡片一致性 */
+    }
+
+    .update-item:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0,0,0,.1);
+    }
+
+    .update-item.has-link {
+        cursor: pointer;
+    }
+
+    .update-header {
+        margin-bottom: 12px;
+    }
+
+    .update-date {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .update-date::before {
+        content: '';
+        width: 2px; /* 竖线宽度 */
+        height: 12px; /* 竖线高度 */
+        background-color: currentColor;
+        border-radius: 1px;
+    }
+
+    .update-title {
+        font-size: 1.15rem;
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .update-description {
+        color: #7f8c8d;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        flex-grow: 1; /* 关键修改：占据剩余空间，让category固定在底部 */
+        margin-bottom: 16px; /* 关键修改：固定description和category的间距 */
+        overflow: hidden; /* 防止内容溢出 */
+    }
+
+    .update-category {
+        display: inline-block;
+        font-size: 0.8rem;
+        padding: 3px 8px;
+        border-radius: 10px;
+        align-self: flex-start; /* 保持category左对齐 */
+    }
+
+    .no-updates {
+        grid-column: 1/-1;
+        text-align: center;
+        padding: 60px 20px;
+        color: #7f8c8d;
+        font-size: 1.1rem;
+    }
+
     /* 分类目录样式 */
     #category-catalog {
         background-color: #f9f9f9;
         border-radius: 8px;
         padding: 30px 20px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .category-grid {
@@ -381,22 +605,7 @@
         background-color: #f9f9f9;
         border-radius: 8px;
         padding: 30px 20px;
-        margin-bottom: 40px;
-    }
-
-    .section-header {
-        margin-bottom: 25px;
-    }
-
-    .section-header h2 {
-        color: #2c3e50;
-        font-size: 1.8rem;
-        margin-bottom: 8px;
-    }
-
-    .section-header p {
-        color: #7f8c8d;
-        font-size: 1rem;
+        margin-bottom: 20px;
     }
 
     .external-links {
@@ -535,17 +744,18 @@
         font-size: 1.1rem;
     }
 
-
-
     /* 响应式调整 */
     @media (max-width: 1200px) {
         .category-grid {
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         }
+        .recent-updates {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
     }
 
     @media (max-width: 768px) {
-        .category-grid {
+        .category-grid, .recent-updates, .external-links {
             grid-template-columns: 1fr;
         }
 
@@ -570,6 +780,46 @@
         .stats-overview {
             grid-template-columns: 1fr 1fr;
         }
+
+        .external-link-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .link-thumbnail {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+        }
+
+        .link-info {
+            margin-bottom: 15px;
+        }
+
+        .link-title {
+            white-space: normal;
+        }
+
+        .update-item {
+            padding: 18px;
+            min-height: 160px;
+        }
+
+        .update-title {
+            font-size: 1.1rem;
+        }
+
+        /* 响应式标题调整 */
+        .section-title {
+            font-size: 1.3rem;
+        }
+
+        .section-icon {
+            width: 28px;
+            height: 28px;
+            background-size: 18px;
+        }
     }
 
     @media (max-width: 480px) {
@@ -592,33 +842,22 @@
         .category-name {
             font-size: 1.2rem;
         }
-    }
 
-    /* 响应式调整 */
-    @media (max-width: 768px) {
-        .external-links {
-            grid-template-columns: 1fr;
+        #recent-updates-section {
+            padding: 25px 15px;
         }
 
-        .external-link-card {
-            flex-direction: column;
-            text-align: center;
-            padding: 20px;
+        .update-description {
+            font-size: 0.9rem;
         }
 
-        .link-thumbnail {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 15px;
+        /* 响应式标题调整 */
+        .section-header {
+            flex-wrap: wrap;
         }
 
-        .link-info {
-            margin-bottom: 15px;
-        }
-
-        .link-title {
-            white-space: normal;
+        .section-divider {
+            display: none;
         }
     }
-
 </style>

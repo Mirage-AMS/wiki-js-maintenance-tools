@@ -11,14 +11,14 @@
                 "path": "/rule",
                 "description": "规则页面",
                 "color": "#2ecc71",
-                "itemCount": 8
+                "itemCount": 9
             },
             {
                 "title": "卡牌",
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 253
+                "itemCount": 281
             },
             {
                 "title": "关于",
@@ -46,6 +46,28 @@
               "thumbnail": "/assets/thumbnail/crowdfunding.ico",
               "description": "敬请期待",
               "url": null
+            }
+        ],
+        "recentUpdates": [
+            {
+                "date": "2025-12-15",
+                "title": "25-12-15：常规平衡性更新",
+                "description": "为部分单人局无法使用的卡牌增加了循环标记，加强弱势角色驯鹰人等",
+                "category": "平衡性调整"
+            },
+            {
+                "date": "2025-12-03",
+                "title": "对决模式上线",
+                "description": "新增对决模式规则，支持玩家进行1V1对抗。",
+                "category": "规则更新",
+                "link": "/rule/rule_basic/rule_basic_intro"
+            },
+            {
+                "date": "2025-11-30",
+                "title": "“无面人”上线",
+                "description": "全新角色：“无面人”，一个能使用其他角色专属能力的神秘人物，现已上线",
+                "category": "角色更新",
+                "link": "/card/role/card_rol02_ri_14"
             }
         ]
     }
