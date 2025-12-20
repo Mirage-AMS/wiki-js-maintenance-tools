@@ -63,17 +63,17 @@
         ]
     },
     "related_cards": [
-      {
-          "path": "/card/role/card_rol02_ro_15",
-          "card_name": "鹰舍邂逅",
-          "brief_description": "低级 / 情报 / 专属 · 技能",
-          "card_thumbnail_url": "/assets/thumbnail/arya_gift.jpg"
-      },
-      {
-          "path": "/card/role/card_rol02_ac_02",
-          "card_name": "矛隼",
-          "brief_description": "中级 / 生物",
-          "card_thumbnail_url": "/assets/thumbnail/arya_gyrfalcon.jpg"
-      }
-  ]
+        {
+            "path": "/card/role/card_rol02_ro_15",
+            "card_name": "鹰舍邂逅",
+            "brief_description": "低级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/arya_gift.jpg"
+        },
+        {
+            "path": "/card/role/card_rol02_ac_02",
+            "card_name": "矛隼",
+            "brief_description": "中级 / 生物",
+            "card_thumbnail_url": "/assets/thumbnail/arya_gyrfalcon.jpg"
+        }
+    ]
 }

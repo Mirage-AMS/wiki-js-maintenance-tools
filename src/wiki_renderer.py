@@ -83,9 +83,12 @@ class WikiPTLRenderer(WikiRenderer):
         "骰子": {
             "": ("/rule/rule_basic/rule_exploration", "#h-7-投掷标准骰子", "投掷标准骰子")
         },
+        "[位移效果]": {
+            "": ("/rule/rule_advanced/rule_classified_effects", "#h-11-位移效果", "位移效果")
+        },
         "[复制效果]": {
             "": ("/rule/rule_advanced/rule_classified_effects", "#h-23-复制效果", "复制效果")
-        }
+        },
     }
 
     def __init__(self):
