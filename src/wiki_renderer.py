@@ -86,6 +86,9 @@ class WikiPTLRenderer(WikiRenderer):
         "[位移效果]": {
             "": ("/rule/rule_advanced/rule_classified_effects", "#h-11-位移效果", "位移效果")
         },
+        "[移除效果]": {
+            "": ("/rule/rule_advanced/rule_classified_effects", "#h-22-移除效果", "移除效果")
+        },
         "[复制效果]": {
             "": ("/rule/rule_advanced/rule_classified_effects", "#h-23-复制效果", "复制效果")
         },
