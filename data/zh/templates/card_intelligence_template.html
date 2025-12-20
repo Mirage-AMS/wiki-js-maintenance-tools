@@ -183,15 +183,20 @@
             </div>
         </div>
 
-        <!-- 右侧：FAQ信息 -->
+        <!-- 右侧：FAQ信息（新增折叠功能） -->
         <div class="card-faq">
             <h3>常见问题（FAQ）</h3>
             <div class="faq-content">
                 {% for item in faq %}
                     {% if item.question and item.answer %}
                     <div class="faq-item">
-                        <div class="faq-question">Q：{{ item.question }}</div>
-                        <div class="faq-answer">A：{{ item.answer }}</div>
+                        <!-- 新增折叠指示器 + 点击区域 -->
+                        <div class="faq-question">
+                            <span class="faq-toggle-icon">+</span>
+                            Q：{{ item.question }}
+                        </div>
+                        <!-- 默认隐藏答案 -->
+                        <div class="faq-answer faq-answer-hidden">A：{{ item.answer }}</div>
                     </div>
                     {% endif %}
                 {% else %}
@@ -393,9 +398,9 @@
 }
 
 .effect-type-tag a {
-  color: inherit !important; /* 继承父元素的文字颜色 */
-  text-decoration: none;  /* 可选：去除下划线 */
-  display: inline-block;
+    color: inherit !important; /* 继承父元素的文字颜色 */
+    text-decoration: none;  /* 可选：去除下划线 */
+    display: inline-block;
 }
 
 .effect-consumption {
@@ -614,7 +619,7 @@
     color: #7f8c8d;
 }
 
-/* FAQ样式 */
+/* FAQ样式（新增折叠功能相关样式） */
 .card-faq {
     flex: 1;
 }
@@ -629,24 +634,76 @@
     margin-top: 15px;
 }
 
+/* 修改：边框颜色改为中性灰，适配黑色主题 */
 .faq-item {
     padding: 12px;
-    border-left: 3px solid #2ecc71;
+    border-left: 3px solid #ccc; /* 从绿色改为中性灰色 */
     background: #f8f9fa;
     margin-bottom: 12px;
     border-radius: 0 4px 4px 0;
 }
 
+/* FAQ问题样式 - 默认黑色，展开后加粗 */
 .faq-question {
-    font-weight: 600;
-    color: #27ae60;
+    font-weight: 400; /* 默认不加粗 */
+    color: #333; /* 默认黑色（深灰更柔和） */
     font-size: 14px;
+    cursor: pointer; /* 手型光标 */
+    position: relative; /* 为指示器定位 */
+    padding-right: 25px; /* 给指示器预留空间 */
+    transition: color .2s ease;
 }
 
+/* 问题hover效果 */
+.faq-question:hover {
+    color: #000; /* hover时纯黑，增强反馈 */
+}
+
+/* 展开状态：问题加粗 */
+.faq-question.active {
+    font-weight: 700; /* 展开后加粗 */
+    color: #000; /* 展开后纯黑，更醒目 */
+}
+
+/* 折叠/展开指示器 - 中性色调整 */
+.faq-toggle-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee; /* 中性灰色背景 */
+    border-radius: 50%;
+    font-size: 12px;
+    color: #666; /* 中性灰色文字 */
+    transition: all .2s ease;
+}
+
+/* 展开状态的指示器样式 - 深色调整 */
+.faq-question.active .faq-toggle-icon {
+    transform: translateY(-50%) rotate(45deg); /* + 旋转成 x 效果 */
+    background: #ddd; /* 深一点的灰色 */
+    color: #333; /* 深色文字 */
+}
+
+/* 答案默认隐藏 */
+.faq-answer-hidden {
+    display: none;
+}
+
+/* 答案样式 - 默认黑色，不加粗 */
 .faq-answer {
     margin-top: 5px;
-    color: #34495e;
+    color: #333; /* 默认黑色（深灰更柔和） */
     font-size: 14px;
+    line-height: 1.6;
+    padding-top: 8px;
+    border-top: 1px dashed #ddd; /* 中性灰色虚线 */
+    font-weight: 400 !important; /* 强制不加粗，确保不会继承父元素样式 */
 }
 
 .no-faq {
@@ -655,6 +712,33 @@
     margin-bottom: 12px;
     border-radius: 4px;
     text-align: center;
-    color: #7f8c8d;
+    color: #666; /* 中性灰色，与整体风格协调 */
 }
 </style>
+
+<!-- FAQ折叠展开功能脚本 -->
+<script>
+document.addEventListener('click', function(e) {
+    // 只监听点击在.faq-question上的事件（事件委托核心）
+    const faqQuestion = e.target.closest('.faq-question');
+    if (!faqQuestion) return; // 不是点击FAQ问题，直接返回
+
+    // 获取所有FAQ问题元素
+    const allFaqQuestions = document.querySelectorAll('.faq-question');
+
+<!--    // 收起所有其他问题的答案-->
+<!--    allFaqQuestions.forEach(otherQuestion => {-->
+<!--        if (otherQuestion !== faqQuestion) {-->
+<!--            otherQuestion.classList.remove('active');-->
+<!--            const otherAnswer = otherQuestion.nextElementSibling;-->
+<!--            otherAnswer.classList.add('faq-answer-hidden');-->
+<!--        }-->
+<!--    });-->
+
+    // 切换当前问题的激活状态
+    const isActive = faqQuestion.classList.toggle('active');
+    const currentAnswer = faqQuestion.nextElementSibling;
+    currentAnswer.classList.toggle('faq-answer-hidden', !isActive);
+    const toggleIcon = faqQuestion.querySelector('.faq-toggle-icon');
+});
+</script>
