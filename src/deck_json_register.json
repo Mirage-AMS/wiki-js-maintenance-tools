@@ -3,8 +3,8 @@
     {"dir": "accessory", "file": "card_std01_ac_01.json"},
     {"dir": "accessory", "file": "card_dlc01_ac_01.json"},
     {"dir": "role",      "file": "card_rol01_ac_01.json"},
-    {"dir": "role",      "file": "card_rol02_ac_02.json"},
-    {"dir": "role",      "file": "card_rol02_ac_03.json"}
+    {"dir": "role",      "file": "card_rol02_ac_01.json"},
+    {"dir": "role",      "file": "card_rol02_ac_02.json"}
   ],
   "deck_mountain_std.json": [
     {"dir": "exploration", "file": "card_std01_mo_01.json"},

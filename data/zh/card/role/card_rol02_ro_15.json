@@ -14,7 +14,10 @@
     },
     "faq": [],
     "revise": [
-        {"date": "2025-12-15", "content": "【鹰舍邂逅】现在只能在${tPrp}发动，且选择效果时不再检查你是否持有【雏鹰】"}
+        {
+            "date": "2025-12-15",
+            "content": "【鹰舍邂逅】现在只能在${tPrp}发动，且选择效果时不再检查你是否持有【雏鹰】"
+        }
     ],
     "card": {
         "card_id": null,
@@ -76,7 +79,7 @@
             "card_thumbnail_url": "/assets/thumbnail/role_intro_arya.jpg"
         },
         {
-            "path": "/card/role/card_rol02_ac_02",
+            "path": "/card/role/card_rol02_ac_01",
             "card_name": "雏鹰",
             "brief_description": "低级 / 生物",
             "card_thumbnail_url": "/assets/thumbnail/arya_eaglet.jpg"
