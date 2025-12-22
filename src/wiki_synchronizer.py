@@ -265,11 +265,29 @@ class WikiSynchronizer:
         bucket = []
         idx = 0
 
+        # 核心修改：筛选+自定义排序JSON文件
+        json_files = []
         for each_file in each_dir.iterdir():
-            # 跳过非JSON文件和contents.json
-            if not each_file.is_file() or each_file.name == "contents.json" or each_file.suffix != ".json":
-                continue
+            if (each_file.is_file()
+                    and each_file.name != "contents.json"
+                    and each_file.suffix == ".json"):
+                json_files.append(each_file)
 
+        # 自定义排序规则：std优先于dlc
+        def sort_key(file_path):
+            file_name = file_path.stem.lower()  # 转小写避免大小写干扰
+            if "_std" in file_name:
+                return 0, file_name
+            elif "_dlc" in file_name:
+                return 1, file_name
+            else:
+                return 2, file_name
+
+        # 按自定义规则排序文件列表
+        json_files.sort(key=sort_key)
+
+        # 遍历排序后的JSON文件
+        for each_file in json_files:
             # 更新contents_json
             contents_json["children"][each_file.stem] = {
                 "template": "card_intelligence_template.html",
