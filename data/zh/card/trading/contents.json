@@ -1,66 +1,6 @@
 {
     "template": "card_contents_template.html",
     "children": {
-        "card_dlc01_ma_01": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_01.json"
-        },
-        "card_dlc01_ma_02": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_02.json"
-        },
-        "card_dlc01_ma_03": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_03.json"
-        },
-        "card_dlc01_ma_04": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_04.json"
-        },
-        "card_dlc01_ma_05": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_05.json"
-        },
-        "card_dlc01_ma_06": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_06.json"
-        },
-        "card_dlc01_ma_07": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_07.json"
-        },
-        "card_dlc01_ma_08": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_08.json"
-        },
-        "card_dlc01_ma_09": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_09.json"
-        },
-        "card_dlc01_ma_10": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_10.json"
-        },
-        "card_dlc01_ma_11": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_11.json"
-        },
-        "card_dlc01_ma_12": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_12.json"
-        },
-        "card_dlc01_ma_13": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_13.json"
-        },
-        "card_dlc01_ma_14": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_14.json"
-        },
-        "card_dlc01_ma_15": {
-            "template": "card_intelligence_template.html",
-            "data": "card_dlc01_ma_15.json"
-        },
         "card_std01_ma_01": {
             "template": "card_intelligence_template.html",
             "data": "card_std01_ma_01.json"
@@ -180,6 +120,66 @@
         "card_std01_ma_30": {
             "template": "card_intelligence_template.html",
             "data": "card_std01_ma_30.json"
+        },
+        "card_dlc01_ma_01": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_01.json"
+        },
+        "card_dlc01_ma_02": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_02.json"
+        },
+        "card_dlc01_ma_03": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_03.json"
+        },
+        "card_dlc01_ma_04": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_04.json"
+        },
+        "card_dlc01_ma_05": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_05.json"
+        },
+        "card_dlc01_ma_06": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_06.json"
+        },
+        "card_dlc01_ma_07": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_07.json"
+        },
+        "card_dlc01_ma_08": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_08.json"
+        },
+        "card_dlc01_ma_09": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_09.json"
+        },
+        "card_dlc01_ma_10": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_10.json"
+        },
+        "card_dlc01_ma_11": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_11.json"
+        },
+        "card_dlc01_ma_12": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_12.json"
+        },
+        "card_dlc01_ma_13": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_13.json"
+        },
+        "card_dlc01_ma_14": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_14.json"
+        },
+        "card_dlc01_ma_15": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc01_ma_15.json"
         }
     }
 }

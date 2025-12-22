@@ -9,17 +9,6 @@
         "data": [
             {
                 "id": 1,
-                "url": "/card/accessory/card_dlc01_ac_01",
-                "name": "足金",
-                "level": "中级",
-                "type": [
-                    "矿物"
-                ],
-                "attribute": [],
-                "image": "/assets/thumbnail/gold.jpg"
-            },
-            {
-                "id": 2,
                 "url": "/card/accessory/card_std01_ac_01",
                 "name": "烂草",
                 "level": "低级",
@@ -28,6 +17,17 @@
                 ],
                 "attribute": [],
                 "image": "/assets/thumbnail/rotten_grass.jpg"
+            },
+            {
+                "id": 2,
+                "url": "/card/accessory/card_dlc01_ac_01",
+                "name": "足金",
+                "level": "中级",
+                "type": [
+                    "矿物"
+                ],
+                "attribute": [],
+                "image": "/assets/thumbnail/gold.jpg"
             }
         ]
     }
