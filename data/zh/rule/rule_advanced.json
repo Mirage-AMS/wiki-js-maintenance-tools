@@ -8,10 +8,17 @@
     "filename": "rule_advanced.json",
     "data": [
       {
+        "title": "常见时点拆分",
+        "path": "/rule/rule_advanced/rule_classified_timing",
+        "description": "对一些常见时点的详细拆分",
+        "color": "#4CAF50",
+        "itemCount": 1
+      },
+      {
         "title": "常见效果归类",
         "path": "/rule/rule_advanced/rule_classified_effects",
         "description": "对一些常见效果的归类和解释",
-        "color": "#E64A19",
+        "color": "#03A9F4",
         "itemCount": 1
       }
     ]

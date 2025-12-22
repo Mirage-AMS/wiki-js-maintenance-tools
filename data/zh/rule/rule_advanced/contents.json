@@ -1,6 +1,10 @@
 {
     "template": "general_contents_template.html",
     "children": {
+        "rule_classified_timing" : {
+            "template": "general_markdown_template.md",
+            "data": "rule_classified_timing.md"
+        },
         "rule_classified_effects": {
             "template": "general_markdown_template.md",
             "data": "rule_classified_effects.md"
