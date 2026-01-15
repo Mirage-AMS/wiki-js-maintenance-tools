@@ -60,6 +60,21 @@ class WikiPTLRenderer(WikiRenderer):
 
     # 关键词替换字典
     URL_DICT = {
+        "基础包": {
+            "": ("/rule/rule_overview", "#h-5-基础包内容物", "基础包")
+        },
+        "卡牌扩展包01": {
+            "": ("/rule/rule_overview", "#h-71-卡牌扩展包-01", "卡牌扩展包01")
+        },
+        "角色扩展包01": {
+            "": ("/rule/rule_overview", "#h-72-角色扩展包-01", "角色扩展包01")
+        },
+        "角色扩展包02": {
+            "": ("/rule/rule_overview", "#h-73-角色扩展包-02", "角色扩展包02")
+        },
+        "卡牌扩展包02": {
+            "": ("/rule/rule_overview", "#h-74-卡牌扩展包-02", "卡牌扩展包02")
+        },
         "解锁": {
             "解锁率": None,
             "解锁代价": None,
