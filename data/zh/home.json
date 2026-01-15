@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 281
+                "itemCount": 327
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-01-16",
+                "title": "DLC02上线",
+                "description": "一个全新的扩展包上线，包含全新的45张卡牌和1个新机制！",
+                "category": "卡牌更新",
+                "link": "/rule/rule_overview/#h-74-卡牌扩展包-02"
+            },
             {
                 "date": "2025-12-15",
                 "title": "25-12-15：常规平衡性更新",
