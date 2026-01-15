@@ -69,6 +69,16 @@
             </div>
             {% endif %}
 
+            <!-- 超限条件 -->
+            {% if card.transcend and card.transcend.strip() %}
+            <div class="condition-box">
+                <h3>超限：</h3>
+                <div class="condition-content">
+                    {{ card.transcend }}
+                </div>
+            </div>
+            {% endif %}
+
             <!-- 卡牌效果 -->
             <div class="effect-box">
                 <h3>卡牌效果</h3>

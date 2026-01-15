@@ -20,6 +20,7 @@ class EnumEffectLocation(str, Enum):
 class EnumIntelKeyword(str, Enum):
     KEYWORD_INTEL_UNLOCK = "解锁"
     KEYWORD_INTEL_MASTER = "精通"
+    KEYWORD_INTEL_TRANSCEND = "超限"
 
 class EffectFormatter:
     def __init__(self):
@@ -92,7 +93,8 @@ class KeywordFormatter:
         colon_pattern = re.compile(r'[:：]')
         keyword_reflection = {
             EnumIntelKeyword.KEYWORD_INTEL_UNLOCK: "unlock",
-            EnumIntelKeyword.KEYWORD_INTEL_MASTER: "master"
+            EnumIntelKeyword.KEYWORD_INTEL_MASTER: "master",
+            EnumIntelKeyword.KEYWORD_INTEL_TRANSCEND: "transcend"
         }
         # 检查是否包含任何类型的冒号
         if colon_pattern.search(lines[0]):
