@@ -2,7 +2,7 @@
     "path": "card/intelligence/card_std01_co_07",
     "tags": [
         "卡牌",
-        "低级",
+        "中级",
         "情报",
         "技能"
     ],
@@ -16,8 +16,8 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "林野见闻",
-        "card_level": "低级",
+        "card_name": "通晓万物",
+        "card_level": "中级",
         "card_resource_type": "情报",
         "card_resource_tag_1": "技能",
         "card_resource_tag_2": null,
@@ -30,21 +30,23 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP03}\n<b00>快速 / 见闻\n<n02>${tR01}，你的1次行动结束时，若本次行动进入过探索区且未获得基础资源（矿物·植物·生物）：抽1张卡牌",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>永久 / 通晓\n<n02>将以下效果启用，\n<n02>· ${tDrw} 可以执行的次数+1\n<n02>· ${tPrp} 可以执行刷新栏位的次数+1",
         "card_info_description": null,
-        "card_picture_path": "field_story.png",
+        "card_picture_path": "philosopher.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
-        "card_image_url": "/assets/image/deck_conventicle_std_07.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/field_story.jpg",
-        "card_basic_info": "低级 / 情报 / 技能",
+        "card_package_info": "基础包",
+        "card_match_info": "A",
+        "card_image_url": "/assets/image/deck_conventicle_std01_07.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/philosopher.jpg",
+        "card_basic_info": "中级 / 情报 / 技能",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
-        "card_level_info": "低级",
+        "card_level_info": "中级",
         "card_types": [
             "情报"
         ],
@@ -53,14 +55,14 @@
             "技能"
         ],
         "card_tag_info": "技能",
-        "unlock": "${aP03}",
+        "unlock": "${aP06}",
         "effects": [
             {
-                "name": "见闻",
-                "type": "快速",
+                "name": "通晓",
+                "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你的1次行动结束时，若本次行动进入过探索区且未获得基础资源（矿物·植物·生物）：抽1张卡牌"
+                "text": "将以下效果启用，<br>· ${tDrw} 可以执行的次数+1<br>· ${tPrp} 可以执行刷新栏位的次数+1"
             }
         ]
     }

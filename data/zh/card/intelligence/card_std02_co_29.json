@@ -11,16 +11,11 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [
-        {
-            "date": "2025-12-15",
-            "content": "新增单人模式的循环标记"
-        }
-    ],
+    "revise": [],
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "全城搜捕",
+        "card_name": "独家秘闻",
         "card_level": "低级",
         "card_resource_type": "事件",
         "card_resource_tag_1": null,
@@ -34,16 +29,18 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n02>直到本轮结束前其他玩家不能将卡牌加入手牌；只在其他玩家的回合中，其可以选以下1个效果启用，终止该事件对其影响\n<n02><潜行> · 消耗${eR03}\n<n02><招供> · 弃置2张手牌\n<n16> ",
-        "card_info_description": "<n02>“那是个门扉被叩响的清晨，说来话长” ",
-        "card_picture_path": "arrest.png",
+        "card_info_effect": "<n02> \n<n00>选以下1个效果启用，\n<n00><探索> · 明置探索区2张卡牌\n<n00><情报> · 抽1张卡牌\n<n00> <n00> <n24> ",
+        "card_info_description": "<n02>“那些令你生疑的消息，最终竟被证实” ",
+        "card_picture_path": "knowledge_seller.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "EVENT_REQ",
         "card_info_element_tooltip": null,
-        "card_info_solo_mulligan": "是",
-        "card_image_url": "/assets/image/deck_conventicle_std_59.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/arrest.jpg",
+        "card_info_solo_mulligan": null,
+        "card_package_info": "基础包",
+        "card_match_info": "B",
+        "card_image_url": "/assets/image/deck_conventicle_std02_29.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/knowledge_seller.jpg",
         "card_basic_info": "低级 / 事件",
         "card_element_marks": [],
         "card_element_mark_num": 0,
@@ -61,7 +58,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "直到本轮结束前其他玩家不能将卡牌加入手牌；只在其他玩家的回合中，其可以选以下1个效果启用，终止该事件对其影响<br><潜行> · 消耗${eR03}<br><招供> · 弃置2张手牌"
+                "text": "选以下1个效果启用，<br><探索> · 明置探索区2张卡牌<br><情报> · 抽1张卡牌"
             }
         ]
     }

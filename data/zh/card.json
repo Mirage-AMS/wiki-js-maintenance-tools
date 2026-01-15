@@ -12,7 +12,7 @@
                 "path": "/card/accessory",
                 "description": "其它配件卡牌",
                 "color": "#2ecc71",
-                "itemCount": 2
+                "itemCount": 3
             },
             {
                 "title": "探索区卡牌",
@@ -26,7 +26,7 @@
                 "path": "/card/intelligence",
                 "description": "情报区的情报和事件卡牌",
                 "color": "#9b59b6",
-                "itemCount": 90
+                "itemCount": 120
             },
             {
                 "title": "角色专属",
@@ -40,7 +40,7 @@
                 "path": "/card/trading",
                 "description": "交易区的商品卡牌",
                 "color": "#f1c40f",
-                "itemCount": 45
+                "itemCount": 60
             }
         ]
     }

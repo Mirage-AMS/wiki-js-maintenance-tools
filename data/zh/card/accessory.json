@@ -9,7 +9,8 @@
         "data": [
             {
                 "id": 1,
-                "url": "/card/accessory/card_std01_ac_01",
+                "url": "/card/accessory/card_std_ac_01",
+                "match": "∞",
                 "name": "烂草",
                 "level": "低级",
                 "type": [
@@ -21,6 +22,7 @@
             {
                 "id": 2,
                 "url": "/card/accessory/card_dlc01_ac_01",
+                "match": "C",
                 "name": "足金",
                 "level": "中级",
                 "type": [
@@ -28,6 +30,18 @@
                 ],
                 "attribute": [],
                 "image": "/assets/thumbnail/gold.jpg"
+            },
+            {
+                "id": 3,
+                "url": "/card/accessory/card_dlc02_ac_01",
+                "match": "D",
+                "name": "魔偶",
+                "level": "低级",
+                "type": [
+                    "造物"
+                ],
+                "attribute": [],
+                "image": "/assets/thumbnail/card_dlc02_co_26.jpg"
             }
         ]
     }

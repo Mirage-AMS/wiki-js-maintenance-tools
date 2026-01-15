@@ -38,6 +38,8 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_package_info": "角色扩展包01",
+        "card_match_info": "∞",
         "card_image_url": "/assets/image/deck_role_info01_07.jpg",
         "card_thumbnail_url": "/assets/thumbnail/life_water.jpg",
         "card_basic_info": "低级 / 情报 / 专属 · 造物",

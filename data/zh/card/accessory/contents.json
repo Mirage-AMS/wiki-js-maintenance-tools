@@ -1,13 +1,17 @@
 {
     "template": "card_contents_template.html",
     "children": {
-        "card_std01_ac_01": {
+        "card_std_ac_01": {
             "template": "card_intelligence_template.html",
-            "data": "card_std01_ac_01.json"
+            "data": "card_std_ac_01.json"
         },
         "card_dlc01_ac_01": {
             "template": "card_intelligence_template.html",
             "data": "card_dlc01_ac_01.json"
+        },
+        "card_dlc02_ac_01": {
+            "template": "card_intelligence_template.html",
+            "data": "card_dlc02_ac_01.json"
         }
     }
 }

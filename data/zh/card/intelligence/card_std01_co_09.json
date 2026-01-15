@@ -2,7 +2,7 @@
     "path": "card/intelligence/card_std01_co_09",
     "tags": [
         "卡牌",
-        "中级",
+        "高级",
         "情报",
         "技能"
     ],
@@ -16,13 +16,13 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "金融投资",
-        "card_level": "中级",
+        "card_name": "猎杀行动",
+        "card_level": "高级",
         "card_resource_type": "情报",
         "card_resource_tag_1": "技能",
         "card_resource_tag_2": null,
         "card_resource_tag_3": null,
-        "card_price": 1,
+        "card_price": 2,
         "card_hp": null,
         "card_atk": null,
         "card_shield": null,
@@ -30,21 +30,23 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 投资\n<n02>${tR01}，${tPrp}：消耗${aP01}，投掷3个骰子，根据其点数在 ${tEnd} 获得金币（最多${aP10}）",
-        "card_info_description": null,
-        "card_picture_path": "investment.png",
+        "card_info_effect": "<b00>解锁：${aP12}\n<b00>永久 / 猎杀\n<n02>额外获得1次行动；只在那次行动中，若你执行抽情报区卡牌，可以额外抽1张卡牌\n<n02> <n20> ",
+        "card_info_description": "<n02>恐惧与偏见蒙蔽双眼，无辜者背负罪名 ",
+        "card_picture_path": "hunting_operations.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
-        "card_image_url": "/assets/image/deck_conventicle_std_09.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/investment.jpg",
-        "card_basic_info": "中级 / 情报 / 技能",
+        "card_package_info": "基础包",
+        "card_match_info": "A",
+        "card_image_url": "/assets/image/deck_conventicle_std01_09.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/hunting_operations.jpg",
+        "card_basic_info": "高级 / 情报 / 技能",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
-        "card_level_info": "中级",
+        "card_level_info": "高级",
         "card_types": [
             "情报"
         ],
@@ -53,14 +55,14 @@
             "技能"
         ],
         "card_tag_info": "技能",
-        "unlock": "${aP06}",
+        "unlock": "${aP12}",
         "effects": [
             {
-                "name": "投资",
-                "type": "启动",
+                "name": "猎杀",
+                "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：消耗${aP01}，投掷3个骰子，根据其点数在 ${tEnd} 获得金币（最多${aP10}）"
+                "text": "额外获得1次行动；只在那次行动中，若你执行抽情报区卡牌，可以额外抽1张卡牌"
             }
         ]
     }

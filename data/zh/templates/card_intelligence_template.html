@@ -7,10 +7,20 @@
 
     <!-- 上半部分：图片和效果说明 -->
     <div class="card-upper">
-        <!-- 左侧：仅展示卡牌图片 -->
+        <!-- 左侧：展示卡牌图片 -->
         <div class="card-image-container">
             <div class="card-image">
                 <img src="{{ card.card_image_url }}" alt="{{ card.card_name }}卡牌图片">
+            </div>
+            <div class="card-meta-tags">
+                <div class="meta-tag meta-tag-package">
+                    <span class="meta-label">卡包</span>
+                    <span class="meta-value">{{ card.card_package_info or "未知" }}</span>
+                </div>
+                <div class="meta-tag meta-tag-environment">
+                    <span class="meta-label">环境编号</span>
+                    <span class="meta-value">{{ card.card_match_info or "未知" }}</span>
+                </div>
             </div>
         </div>
 
@@ -219,6 +229,78 @@
     </div>
 </div>
 <style>
+.card-image-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-image {
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+}
+
+.card-meta-tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+/* 通用标签样式 */
+.meta-tag {
+    padding: 12px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    transition: all .3s ease;
+    border: 1px solid transparent;
+    gap: 10px;
+}
+
+/* 标签hover交互效果，与相关卡牌组件风格统一 */
+.meta-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    border-color: rgba(0,0,0,.05);
+}
+
+/* 标签内部分区样式（优化） */
+.meta-label {
+    font-weight: 700; /* 加重字体，增强标签名辨识度 */
+    color: inherit; /* 继承父元素颜色，保持配色统一 */
+    padding: 4px 8px; /* 增加内边距，打造标签内的小标签效果 */
+    background-color: rgba(255,255,255,.5); /* 增加半透明白色背景，区分标签名与值 */
+    border-radius: 4px; /* 小标签圆角，更精致 */
+    white-space: nowrap; /* 防止标签名换行 */
+}
+
+.meta-value {
+    flex: 1; /* 自动填充剩余空间，文字过长时不会挤压标签名 */
+    word-break: break-all; /* 处理超长文本，防止溢出 */
+}
+
+.meta-tag-package {
+    background-color: #f0f4f8;
+    color: #006400;
+}
+
+.meta-tag-environment {
+    background-color: #f0f4f8;
+    color: #8b0000;
+}
+
 .card-container {
     width: 900px;
     margin: 20px auto;
@@ -258,21 +340,9 @@
     background: #f8f9fa;
 }
 
-/* 图片容器样式 */
+/* 图片容器样式（已合并冗余定义） */
 .card-image-container {
     flex: 2;
-}
-
-.card-image {
-    border: 1px solid #e1e4e8;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
-}
-
-.card-image img {
-    width: 100%;
-    display: block;
 }
 
 /* 描述区域样式 */

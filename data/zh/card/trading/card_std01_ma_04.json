@@ -3,7 +3,7 @@
     "tags": [
         "卡牌",
         "中级",
-        "植物"
+        "矿物"
     ],
     "stat": {
         "win-rate": null,
@@ -15,9 +15,9 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "曼陀罗",
+        "card_name": "黄金",
         "card_level": "中级",
-        "card_resource_type": "植物",
+        "card_resource_type": "矿物",
         "card_resource_tag_1": null,
         "card_resource_tag_2": null,
         "card_resource_tag_3": null,
@@ -25,41 +25,44 @@
         "card_hp": null,
         "card_atk": null,
         "card_shield": null,
-        "card_element_num_earth": null,
-        "card_element_num_water": 1,
+        "card_element_num_earth": 1,
+        "card_element_num_water": null,
         "card_element_num_fire": 1,
         "card_element_num_air": 1,
-        "card_info_effect": "<n02>  \n<b00>永久（素材） / 镇静\n<n02>只在该资源作为造物的素材时，采集植物中你的采集点+1",
+        "card_info_effect": "<n02>  \n<b00>快速（背包） / 吸金\n<n02>${tR01}，${tBgn}：你获得${aP01}",
         "card_info_description": null,
-        "card_picture_path": "datura_stramonium.png",
+        "card_picture_path": "gold.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
-        "card_image_url": "/assets/image/deck_market_std_04.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/datura_stramonium.jpg",
-        "card_basic_info": "中级 / 植物",
+        "card_info_solo_mulligan": null,
+        "card_package_info": "基础包",
+        "card_match_info": "A",
+        "card_image_url": "/assets/image/deck_market_std01_04.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/gold.jpg",
+        "card_basic_info": "中级 / 矿物",
         "card_element_marks": [
-            "${eW01}",
+            "${eE01}",
             "${eF01}",
             "${eA01}"
         ],
         "card_element_mark_num": 2,
-        "card_element_mark_info": "${eW01}${eF01}${eA01}",
+        "card_element_mark_info": "${eE01}${eF01}${eA01}",
         "card_level_info": "中级",
         "card_types": [
-            "植物"
+            "矿物"
         ],
-        "card_type_info": "植物",
+        "card_type_info": "矿物",
         "card_tags": [],
         "card_tag_info": "",
         "effects": [
             {
-                "name": "镇静",
-                "type": "永久",
-                "location": "素材",
+                "name": "吸金",
+                "type": "快速",
+                "location": "背包",
                 "consumption": null,
-                "text": "只在该资源作为造物的素材时，采集植物中你的采集点+1"
+                "text": "${tR01}，${tBgn}：你获得${aP01}"
             }
         ]
     }

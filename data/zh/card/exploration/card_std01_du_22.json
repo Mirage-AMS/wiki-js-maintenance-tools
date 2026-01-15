@@ -36,6 +36,8 @@
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_package_info": "基础包",
+        "card_match_info": "∞",
         "card_image_url": "/assets/image/deck_dungeon_std_22.jpg",
         "card_thumbnail_url": "/assets/thumbnail/konjac.jpg",
         "card_basic_info": "低级 / 植物",

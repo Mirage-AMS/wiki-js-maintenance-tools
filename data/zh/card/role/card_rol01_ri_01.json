@@ -36,6 +36,8 @@
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_package_info": "角色扩展包01",
+        "card_match_info": "∞",
         "card_image_url": "/assets/image/deck_role_intro01_01.jpg",
         "card_thumbnail_url": "/assets/thumbnail/role_intro_davian.jpg",
         "card_basic_info": "角色 / 专属",

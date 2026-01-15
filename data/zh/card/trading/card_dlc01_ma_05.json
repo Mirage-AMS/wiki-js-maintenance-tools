@@ -38,6 +38,8 @@
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
+        "card_package_info": "卡牌扩展包01",
+        "card_match_info": "C",
         "card_image_url": "/assets/image/deck_market_dlc01_05.jpg",
         "card_thumbnail_url": "/assets/thumbnail/dlc01_pangolin.jpg",
         "card_basic_info": "中级 / 矿物·生物",

@@ -33,12 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let filterOptions = {
         levels: new Set(),
         types: new Set(),
-        attributes: new Set()
+        attributes: new Set(),
+        matches: new Set()
     };
     let allFilterValues = {
         levels: new Set(),
         types: new Set(),
-        attributes: new Set()
+        attributes: new Set(),
+        matches: new Set()
     };
 
     // DOM 元素 - 初始化为null，稍后获取
@@ -118,6 +120,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 allFilterValues.levels.add(card.level);
             }
 
+            // 处理match（字符串类型，和level逻辑完全一致）
+            if (card.match != null && card.match !== '') {
+                allFilterValues.matches.add(card.match);
+            }
+
             // 处理类型（数组）
             if (Array.isArray(card.type)) {
                 card.type.forEach(type => allFilterValues.types.add(type));
@@ -173,15 +180,29 @@ document.addEventListener('DOMContentLoaded', function() {
     // 渲染筛选选项
     function renderFilterOptions() {
         filterGroups.innerHTML = '';
+        // match筛选组
+        const matchGroup = createFilterGroup(
+            '环境编号',
+            'matches',
+            Array.from(allFilterValues.matches).sort((a, b) => {
+                const order = { '∞': 0, 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 6, 'G': 7};
+                const priorityA = order[a] ?? 100;
+                const priorityB = order[b] ?? 100;
+                return priorityA - priorityB;
+            }),
+            (value) => value
+        );
+        filterGroups.appendChild(matchGroup);
 
         // 等级筛选（排序）
         const levelGroup = createFilterGroup(
             '卡牌等级',
             'levels',
             Array.from(allFilterValues.levels).sort((a, b) => {
-                // 按低级、中级、高级、传奇排序
                 const order = { '低级': 1, '中级': 2, '高级': 3, '传奇': 4};
-                return order[a] - order[b];
+                const priorityA = order[a] ?? 100;
+                const priorityB = order[b] ?? 100;
+                return priorityA - priorityB;
             }),
             (value) => value
         );
@@ -221,6 +242,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // 应用筛选条件（支持多类型/属性匹配）
     function applyFilters() {
         filteredCards = cardData.filter(card => {
+            // 环境匹配
+            const matchMatch = filterOptions.matches.size === 0 ||
+                              filterOptions.matches.has(card.match);
+
             // 等级匹配
             const levelMatch = filterOptions.levels.size === 0 ||
                               filterOptions.levels.has(card.level);
@@ -236,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                   (Array.isArray(card.attribute) &&
                                    card.attribute.some(a => filterOptions.attributes.has(a)));
 
-            return levelMatch && typeMatch && attributeMatch;
+            return matchMatch && levelMatch && typeMatch && attributeMatch;
         });
 
         currentPage = 1;
@@ -249,7 +274,8 @@ document.addEventListener('DOMContentLoaded', function() {
         filterOptions = {
             levels: new Set(),
             types: new Set(),
-            attributes: new Set()
+            attributes: new Set(),
+            matches: new Set()
         };
 
         document.querySelectorAll('.filter-option input:checked').forEach(checkbox => {
@@ -264,7 +290,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateFilterCount() {
         const totalFilters = filterOptions.levels.size +
                             filterOptions.types.size +
-                            filterOptions.attributes.size;
+                            filterOptions.attributes.size +
+                            filterOptions.matches.size;
         filterCount.textContent = `(${totalFilters})`;
     }
 

@@ -10,7 +10,7 @@
 
 # import from official
 import json
-from typing import Dict, Optional
+from typing import Dict, Optional, List
 from pathlib import Path
 # import from third-party
 
@@ -45,6 +45,56 @@ CARD_CONTENTS_REFLECTION = {
         "color": "#2ecc71",  # 绿色 - 代表补充、辅助和多样性
     },
 }
+
+
+def parse_package_info(path: str) -> str:
+    """
+    解析卡牌包信息
+    :param path:
+    :return:
+    """
+    reflect_dict = {
+        "std": "基础包",
+        "dlc01": "卡牌扩展包01",
+        "dlc02": "卡牌扩展包02",
+        "rol01": "角色扩展包01",
+        "rol02": "角色扩展包02",
+    }
+    for k, v in reflect_dict.items():
+        if k in path:
+            return v
+    raise ValueError(f"未识别的卡包：{path}")
+
+
+def parse_match_info(path: str) -> str:
+    """
+    解析竞技环境信息
+    :param path:
+    :return:
+    """
+    reflect_dict = {
+        # A
+        "std01_ac": "A",
+        "std01_co": "A",
+        "std01_ma": "A",
+        # B
+        "std02_ac": "B",
+        "std02_co": "B",
+        "std02_ma": "B",
+        # C
+        "dlc01_ac": "C",
+        "dlc01_co": "C",
+        "dlc01_ma": "C",
+        # D
+        "dlc02_ac": "D",
+        "dlc02_co": "D",
+        "dlc02_ma": "D",
+    }
+    env = "∞"
+    for k, v in reflect_dict.items():
+        if k in path:
+            return v
+    return env
 
 
 class WikiSynchronizer:
@@ -172,6 +222,9 @@ class WikiSynchronizer:
         # ---------------------------------------------------------------------------
         # 统一更新
         info = {
+            # 卡包信息
+            "card_package_info": parse_package_info(saved_info["path"]),
+            "card_match_info": parse_match_info(saved_info["path"]),
             # 图片链接
             "card_image_url": card_image_url,
             "card_thumbnail_url": card_thumbnail_url,
@@ -301,6 +354,7 @@ class WikiSynchronizer:
                 bucket.append({
                     "id": idx,
                     "url": "/" + each_data["path"],
+                    "match": each_data["card"]["card_match_info"],
                     "name": each_data["card"]["card_name"],
                     "level": each_data["card"]["card_level_info"],
                     "type": each_data["card"]["card_types"],

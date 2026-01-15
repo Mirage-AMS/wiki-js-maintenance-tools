@@ -10,6 +10,7 @@
             {
                 "id": 2,
                 "url": "/card/role/card_rol01_ri_01",
+                "match": "∞",
                 "name": "达维安，巨人杀手",
                 "level": null,
                 "type": [
@@ -23,6 +24,7 @@
             {
                 "id": 3,
                 "url": "/card/role/card_rol01_ri_02",
+                "match": "∞",
                 "name": "盖尔曼，历战勇士",
                 "level": null,
                 "type": [
@@ -36,6 +38,7 @@
             {
                 "id": 4,
                 "url": "/card/role/card_rol01_ri_03",
+                "match": "∞",
                 "name": "埃尔，铁与火",
                 "level": null,
                 "type": [
@@ -49,6 +52,7 @@
             {
                 "id": 5,
                 "url": "/card/role/card_rol01_ri_04",
+                "match": "∞",
                 "name": "泽丽尔，树屋精灵",
                 "level": null,
                 "type": [
@@ -62,6 +66,7 @@
             {
                 "id": 6,
                 "url": "/card/role/card_rol01_ri_05",
+                "match": "∞",
                 "name": "保罗与波娜，那对兄妹",
                 "level": null,
                 "type": [
@@ -75,6 +80,7 @@
             {
                 "id": 7,
                 "url": "/card/role/card_rol01_ri_06",
+                "match": "∞",
                 "name": "凯瑟琳，完美主义",
                 "level": null,
                 "type": [
@@ -88,6 +94,7 @@
             {
                 "id": 8,
                 "url": "/card/role/card_rol01_ri_07",
+                "match": "∞",
                 "name": "希玛，狩魔不息",
                 "level": null,
                 "type": [
@@ -101,6 +108,7 @@
             {
                 "id": 9,
                 "url": "/card/role/card_rol01_ri_08",
+                "match": "∞",
                 "name": "塔尔凡，漫游吟者",
                 "level": null,
                 "type": [
@@ -114,6 +122,7 @@
             {
                 "id": 10,
                 "url": "/card/role/card_rol01_ri_09",
+                "match": "∞",
                 "name": "诺维，初生牛犊",
                 "level": null,
                 "type": [
@@ -127,6 +136,7 @@
             {
                 "id": 11,
                 "url": "/card/role/card_rol01_ri_10",
+                "match": "∞",
                 "name": "夏洛克，独断专营",
                 "level": null,
                 "type": [
@@ -140,6 +150,7 @@
             {
                 "id": 12,
                 "url": "/card/role/card_rol01_ri_11",
+                "match": "∞",
                 "name": "索兰，高山行者",
                 "level": null,
                 "type": [
@@ -153,6 +164,7 @@
             {
                 "id": 13,
                 "url": "/card/role/card_rol01_ri_12",
+                "match": "∞",
                 "name": "菲莉斯，圣女垂怜",
                 "level": null,
                 "type": [
@@ -166,6 +178,7 @@
             {
                 "id": 40,
                 "url": "/card/role/card_rol02_ri_01",
+                "match": "∞",
                 "name": "法师，王朝余烬",
                 "level": null,
                 "type": [
@@ -179,6 +192,7 @@
             {
                 "id": 41,
                 "url": "/card/role/card_rol02_ri_02",
+                "match": "∞",
                 "name": "莱奥，命运之剑",
                 "level": null,
                 "type": [
@@ -192,6 +206,7 @@
             {
                 "id": 42,
                 "url": "/card/role/card_rol02_ri_03",
+                "match": "∞",
                 "name": "艾尔弗里德，大展宏图",
                 "level": null,
                 "type": [
@@ -205,6 +220,7 @@
             {
                 "id": 43,
                 "url": "/card/role/card_rol02_ri_04",
+                "match": "∞",
                 "name": "莱拉娜，丰饶祭祀",
                 "level": null,
                 "type": [
@@ -218,6 +234,7 @@
             {
                 "id": 44,
                 "url": "/card/role/card_rol02_ri_05",
+                "match": "∞",
                 "name": "欧也妮，匠心独运",
                 "level": null,
                 "type": [
@@ -231,6 +248,7 @@
             {
                 "id": 45,
                 "url": "/card/role/card_rol02_ri_06",
+                "match": "∞",
                 "name": "弗林特，栖身林原",
                 "level": null,
                 "type": [
@@ -244,6 +262,7 @@
             {
                 "id": 46,
                 "url": "/card/role/card_rol02_ri_07",
+                "match": "∞",
                 "name": "艾丽娅，驯鹰人",
                 "level": null,
                 "type": [
@@ -257,6 +276,7 @@
             {
                 "id": 47,
                 "url": "/card/role/card_rol02_ri_08",
+                "match": "∞",
                 "name": "卡洛斯，万咒环身",
                 "level": null,
                 "type": [
@@ -270,6 +290,7 @@
             {
                 "id": 48,
                 "url": "/card/role/card_rol02_ri_09",
+                "match": "∞",
                 "name": "凯，嗜赌成性",
                 "level": null,
                 "type": [
@@ -283,6 +304,7 @@
             {
                 "id": 49,
                 "url": "/card/role/card_rol02_ri_10",
+                "match": "∞",
                 "name": "科林，石拳",
                 "level": null,
                 "type": [
@@ -296,6 +318,7 @@
             {
                 "id": 50,
                 "url": "/card/role/card_rol02_ri_11",
+                "match": "∞",
                 "name": "芙蕾什塔，丝路行商",
                 "level": null,
                 "type": [
@@ -309,6 +332,7 @@
             {
                 "id": 51,
                 "url": "/card/role/card_rol02_ri_12",
+                "match": "∞",
                 "name": "卡西姆，祸福一念",
                 "level": null,
                 "type": [
@@ -322,6 +346,7 @@
             {
                 "id": 52,
                 "url": "/card/role/card_rol02_ri_13",
+                "match": "∞",
                 "name": "“庸王”路易",
                 "level": null,
                 "type": [
@@ -335,6 +360,7 @@
             {
                 "id": 53,
                 "url": "/card/role/card_rol02_ri_14",
+                "match": "∞",
                 "name": "“无面人”",
                 "level": null,
                 "type": [

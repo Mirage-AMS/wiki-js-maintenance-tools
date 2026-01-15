@@ -38,6 +38,8 @@
         "card_info_product_tag": "EVENT_REQ",
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包02",
+        "card_match_info": "∞",
         "card_image_url": "/assets/image/deck_role_info02_07.jpg",
         "card_thumbnail_url": "/assets/thumbnail/archon_skill.jpg",
         "card_basic_info": "低级 / 事件 / 专属",
@@ -71,19 +73,19 @@
             "card_thumbnail_url": "/assets/thumbnail/role_intro_archon.jpg"
         },
         {
-            "path": "/card/intelligence/card_std02_co_25",
-            "card_name": "彼端奇闻",
-            "brief_description": "低级 / 事件",
-            "card_thumbnail_url": "/assets/thumbnail/strange_news.jpg"
-        },
-        {
-            "path": "/card/intelligence/card_std02_co_27",
+            "path": "/card/intelligence/card_std01_co_29",
             "card_name": "赞助游说",
             "brief_description": "低级 / 事件",
             "card_thumbnail_url": "/assets/thumbnail/speech.jpg"
         },
         {
             "path": "/card/intelligence/card_std02_co_28",
+            "card_name": "彼端奇闻",
+            "brief_description": "低级 / 事件",
+            "card_thumbnail_url": "/assets/thumbnail/strange_news.jpg"
+        },
+        {
+            "path": "/card/intelligence/card_std02_co_29",
             "card_name": "独家秘闻",
             "brief_description": "低级 / 事件",
             "card_thumbnail_url": "/assets/thumbnail/knowledge_seller.jpg"

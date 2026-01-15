@@ -2,7 +2,7 @@
     "path": "card/intelligence/card_std01_co_05",
     "tags": [
         "卡牌",
-        "低级",
+        "中级",
         "情报",
         "技能"
     ],
@@ -16,8 +16,8 @@
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "酒桌谈资",
-        "card_level": "低级",
+        "card_name": "紧急行动",
+        "card_level": "中级",
         "card_resource_type": "情报",
         "card_resource_tag_1": "技能",
         "card_resource_tag_2": null,
@@ -30,21 +30,23 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP03}\n<b00>快速 / 谈资\n<n02>${tR01}，你采集低级矿物·植物或狩猎低级生物成功时：你获得${aP01}",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 紧急\n<n02>${tR01}，${tPrp}，若上1轮你未将同名效果发动：消耗${aP01}，本回合额外获得1次行动",
         "card_info_description": null,
-        "card_picture_path": "bistro_bet.png",
+        "card_picture_path": "emergency.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
-        "card_image_url": "/assets/image/deck_conventicle_std_05.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/bistro_bet.jpg",
-        "card_basic_info": "低级 / 情报 / 技能",
+        "card_package_info": "基础包",
+        "card_match_info": "A",
+        "card_image_url": "/assets/image/deck_conventicle_std01_05.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/emergency.jpg",
+        "card_basic_info": "中级 / 情报 / 技能",
         "card_element_marks": [],
         "card_element_mark_num": 0,
         "card_element_mark_info": "",
-        "card_level_info": "低级",
+        "card_level_info": "中级",
         "card_types": [
             "情报"
         ],
@@ -53,14 +55,14 @@
             "技能"
         ],
         "card_tag_info": "技能",
-        "unlock": "${aP03}",
+        "unlock": "${aP06}",
         "effects": [
             {
-                "name": "谈资",
-                "type": "快速",
+                "name": "紧急",
+                "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你采集低级矿物·植物或狩猎低级生物成功时：你获得${aP01}"
+                "text": "${tR01}，${tPrp}，若上1轮你未将同名效果发动：消耗${aP01}，本回合额外获得1次行动"
             }
         ]
     }

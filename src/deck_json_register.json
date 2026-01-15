@@ -1,8 +1,9 @@
 {
   "deck_accessory_std.json": [
-    {"dir": "accessory", "file": "card_std01_ac_01.json"},
+    {"dir": "accessory", "file": "card_std_ac_01.json"},
     {"dir": "accessory", "file": "card_dlc01_ac_01.json"},
     {"dir": "role",      "file": "card_rol01_ac_01.json"},
+    {"dir": "accessory", "file": "card_dlc02_ac_01.json"},
     {"dir": "role",      "file": "card_rol02_ac_01.json"},
     {"dir": "role",      "file": "card_rol02_ac_02.json"}
   ],
@@ -75,7 +76,7 @@
     {"dir": "exploration", "file": "card_std01_du_29.json"},
     {"dir": "exploration", "file": "card_std01_du_30.json"}
   ],
-  "deck_market_std.json": [
+  "deck_market_std01.json": [
     {"dir": "trading", "file": "card_std01_ma_01.json"},
     {"dir": "trading", "file": "card_std01_ma_02.json"},
     {"dir": "trading", "file": "card_std01_ma_03.json"},
@@ -90,24 +91,26 @@
     {"dir": "trading", "file": "card_std01_ma_12.json"},
     {"dir": "trading", "file": "card_std01_ma_13.json"},
     {"dir": "trading", "file": "card_std01_ma_14.json"},
-    {"dir": "trading", "file": "card_std01_ma_15.json"},
-    {"dir": "trading", "file": "card_std01_ma_16.json"},
-    {"dir": "trading", "file": "card_std01_ma_17.json"},
-    {"dir": "trading", "file": "card_std01_ma_18.json"},
-    {"dir": "trading", "file": "card_std01_ma_19.json"},
-    {"dir": "trading", "file": "card_std01_ma_20.json"},
-    {"dir": "trading", "file": "card_std01_ma_21.json"},
-    {"dir": "trading", "file": "card_std01_ma_22.json"},
-    {"dir": "trading", "file": "card_std01_ma_23.json"},
-    {"dir": "trading", "file": "card_std01_ma_24.json"},
-    {"dir": "trading", "file": "card_std01_ma_25.json"},
-    {"dir": "trading", "file": "card_std01_ma_26.json"},
-    {"dir": "trading", "file": "card_std01_ma_27.json"},
-    {"dir": "trading", "file": "card_std01_ma_28.json"},
-    {"dir": "trading", "file": "card_std01_ma_29.json"},
-    {"dir": "trading", "file": "card_std01_ma_30.json"}
+    {"dir": "trading", "file": "card_std01_ma_15.json"}
   ],
-  "deck_conventicle_std.json": [
+  "deck_market_std02.json": [
+    {"dir": "trading", "file": "card_std02_ma_01.json"},
+    {"dir": "trading", "file": "card_std02_ma_02.json"},
+    {"dir": "trading", "file": "card_std02_ma_03.json"},
+    {"dir": "trading", "file": "card_std02_ma_04.json"},
+    {"dir": "trading", "file": "card_std02_ma_05.json"},
+    {"dir": "trading", "file": "card_std02_ma_06.json"},
+    {"dir": "trading", "file": "card_std02_ma_07.json"},
+    {"dir": "trading", "file": "card_std02_ma_08.json"},
+    {"dir": "trading", "file": "card_std02_ma_09.json"},
+    {"dir": "trading", "file": "card_std02_ma_10.json"},
+    {"dir": "trading", "file": "card_std02_ma_11.json"},
+    {"dir": "trading", "file": "card_std02_ma_12.json"},
+    {"dir": "trading", "file": "card_std02_ma_13.json"},
+    {"dir": "trading", "file": "card_std02_ma_14.json"},
+    {"dir": "trading", "file": "card_std02_ma_15.json"}
+  ],
+  "deck_conventicle_std01.json": [
     {"dir": "intelligence", "file": "card_std01_co_01.json"},
     {"dir": "intelligence", "file": "card_std01_co_02.json"},
     {"dir": "intelligence", "file": "card_std01_co_03.json"},
@@ -137,7 +140,9 @@
     {"dir": "intelligence", "file": "card_std01_co_27.json"},
     {"dir": "intelligence", "file": "card_std01_co_28.json"},
     {"dir": "intelligence", "file": "card_std01_co_29.json"},
-    {"dir": "intelligence", "file": "card_std01_co_30.json"},
+    {"dir": "intelligence", "file": "card_std01_co_30.json"}
+  ],
+  "deck_conventicle_std02.json": [
     {"dir": "intelligence", "file": "card_std02_co_01.json"},
     {"dir": "intelligence", "file": "card_std02_co_02.json"},
     {"dir": "intelligence", "file": "card_std02_co_03.json"},
@@ -186,6 +191,23 @@
     {"dir": "trading", "file": "card_dlc01_ma_14.json"},
     {"dir": "trading", "file": "card_dlc01_ma_15.json"}
   ],
+  "deck_market_dlc02.json": [
+    {"dir": "trading", "file": "card_dlc02_ma_01.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_02.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_03.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_04.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_05.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_06.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_07.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_08.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_09.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_10.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_11.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_12.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_13.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_14.json"},
+    {"dir": "trading", "file": "card_dlc02_ma_15.json"}
+  ],
   "deck_conventicle_dlc01.json": [
     {"dir": "intelligence", "file": "card_dlc01_co_01.json"},
     {"dir": "intelligence", "file": "card_dlc01_co_02.json"},
@@ -217,6 +239,38 @@
     {"dir": "intelligence", "file": "card_dlc01_co_28.json"},
     {"dir": "intelligence", "file": "card_dlc01_co_29.json"},
     {"dir": "intelligence", "file": "card_dlc01_co_30.json"}
+  ],
+  "deck_conventicle_dlc02.json": [
+    {"dir": "intelligence", "file": "card_dlc02_co_01.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_02.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_03.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_04.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_05.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_06.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_07.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_08.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_09.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_10.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_11.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_12.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_13.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_14.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_15.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_16.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_17.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_18.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_19.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_20.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_21.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_22.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_23.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_24.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_25.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_26.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_27.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_28.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_29.json"},
+    {"dir": "intelligence", "file": "card_dlc02_co_30.json"}
   ],
   "deck_role_intro01.json": [
     {"dir": "role", "file": "card_rol01_ri_01.json"},

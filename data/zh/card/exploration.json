@@ -10,6 +10,7 @@
             {
                 "id": 1,
                 "url": "/card/exploration/card_std01_du_01",
+                "match": "∞",
                 "name": "史莱姆",
                 "level": "低级",
                 "type": [
@@ -21,6 +22,7 @@
             {
                 "id": 2,
                 "url": "/card/exploration/card_std01_du_04",
+                "match": "∞",
                 "name": "暗影猫",
                 "level": "低级",
                 "type": [
@@ -32,6 +34,7 @@
             {
                 "id": 3,
                 "url": "/card/exploration/card_std01_du_07",
+                "match": "∞",
                 "name": "盲蛇",
                 "level": "低级",
                 "type": [
@@ -43,6 +46,7 @@
             {
                 "id": 4,
                 "url": "/card/exploration/card_std01_du_10",
+                "match": "∞",
                 "name": "元素精灵",
                 "level": "中级",
                 "type": [
@@ -54,6 +58,7 @@
             {
                 "id": 5,
                 "url": "/card/exploration/card_std01_du_12",
+                "match": "∞",
                 "name": "恐狼",
                 "level": "中级",
                 "type": [
@@ -65,6 +70,7 @@
             {
                 "id": 6,
                 "url": "/card/exploration/card_std01_du_14",
+                "match": "∞",
                 "name": "巨蜥",
                 "level": "中级",
                 "type": [
@@ -76,6 +82,7 @@
             {
                 "id": 7,
                 "url": "/card/exploration/card_std01_du_16",
+                "match": "∞",
                 "name": "梦魇",
                 "level": "高级",
                 "type": [
@@ -87,6 +94,7 @@
             {
                 "id": 8,
                 "url": "/card/exploration/card_std01_du_17",
+                "match": "∞",
                 "name": "奇美拉",
                 "level": "高级",
                 "type": [
@@ -98,6 +106,7 @@
             {
                 "id": 9,
                 "url": "/card/exploration/card_std01_du_18",
+                "match": "∞",
                 "name": "狮鹫",
                 "level": "高级",
                 "type": [
@@ -109,6 +118,7 @@
             {
                 "id": 10,
                 "url": "/card/exploration/card_std01_du_19",
+                "match": "∞",
                 "name": "炎龙",
                 "level": "传奇",
                 "type": [
@@ -120,6 +130,7 @@
             {
                 "id": 11,
                 "url": "/card/exploration/card_std01_du_20",
+                "match": "∞",
                 "name": "不朽之誓·哈米尔",
                 "level": "传奇",
                 "type": [
@@ -131,6 +142,7 @@
             {
                 "id": 12,
                 "url": "/card/exploration/card_std01_du_21",
+                "match": "∞",
                 "name": "曼德拉草",
                 "level": "低级",
                 "type": [
@@ -142,6 +154,7 @@
             {
                 "id": 13,
                 "url": "/card/exploration/card_std01_du_22",
+                "match": "∞",
                 "name": "魔芋",
                 "level": "低级",
                 "type": [
@@ -153,6 +166,7 @@
             {
                 "id": 14,
                 "url": "/card/exploration/card_std01_du_23",
+                "match": "∞",
                 "name": "幽毒菇",
                 "level": "低级",
                 "type": [
@@ -164,6 +178,7 @@
             {
                 "id": 15,
                 "url": "/card/exploration/card_std01_du_24",
+                "match": "∞",
                 "name": "食人花",
                 "level": "中级",
                 "type": [
@@ -175,6 +190,7 @@
             {
                 "id": 16,
                 "url": "/card/exploration/card_std01_du_25",
+                "match": "∞",
                 "name": "水月镜花",
                 "level": "高级",
                 "type": [
@@ -186,6 +202,7 @@
             {
                 "id": 17,
                 "url": "/card/exploration/card_std01_du_26",
+                "match": "∞",
                 "name": "锈铁",
                 "level": "低级",
                 "type": [
@@ -197,6 +214,7 @@
             {
                 "id": 18,
                 "url": "/card/exploration/card_std01_du_27",
+                "match": "∞",
                 "name": "绿松石",
                 "level": "低级",
                 "type": [
@@ -208,6 +226,7 @@
             {
                 "id": 19,
                 "url": "/card/exploration/card_std01_du_28",
+                "match": "∞",
                 "name": "夜明石",
                 "level": "低级",
                 "type": [
@@ -219,6 +238,7 @@
             {
                 "id": 20,
                 "url": "/card/exploration/card_std01_du_29",
+                "match": "∞",
                 "name": "刚玉",
                 "level": "中级",
                 "type": [
@@ -230,6 +250,7 @@
             {
                 "id": 21,
                 "url": "/card/exploration/card_std01_du_30",
+                "match": "∞",
                 "name": "水银",
                 "level": "高级",
                 "type": [
@@ -241,6 +262,7 @@
             {
                 "id": 22,
                 "url": "/card/exploration/card_std01_fo_01",
+                "match": "∞",
                 "name": "草木百合",
                 "level": "低级",
                 "type": [
@@ -252,6 +274,7 @@
             {
                 "id": 23,
                 "url": "/card/exploration/card_std01_fo_04",
+                "match": "∞",
                 "name": "红伞菇",
                 "level": "低级",
                 "type": [
@@ -263,6 +286,7 @@
             {
                 "id": 24,
                 "url": "/card/exploration/card_std01_fo_07",
+                "match": "∞",
                 "name": "槲寄生",
                 "level": "低级",
                 "type": [
@@ -274,6 +298,7 @@
             {
                 "id": 25,
                 "url": "/card/exploration/card_std01_fo_10",
+                "match": "∞",
                 "name": "沐光葵",
                 "level": "中级",
                 "type": [
@@ -285,6 +310,7 @@
             {
                 "id": 26,
                 "url": "/card/exploration/card_std01_fo_12",
+                "match": "∞",
                 "name": "箭毒木",
                 "level": "中级",
                 "type": [
@@ -296,6 +322,7 @@
             {
                 "id": 27,
                 "url": "/card/exploration/card_std01_fo_14",
+                "match": "∞",
                 "name": "狭影荚",
                 "level": "中级",
                 "type": [
@@ -307,6 +334,7 @@
             {
                 "id": 28,
                 "url": "/card/exploration/card_std01_fo_16",
+                "match": "∞",
                 "name": "含笑花",
                 "level": "高级",
                 "type": [
@@ -318,6 +346,7 @@
             {
                 "id": 29,
                 "url": "/card/exploration/card_std01_fo_17",
+                "match": "∞",
                 "name": "尸生草",
                 "level": "高级",
                 "type": [
@@ -329,6 +358,7 @@
             {
                 "id": 30,
                 "url": "/card/exploration/card_std01_fo_18",
+                "match": "∞",
                 "name": "接骨木",
                 "level": "高级",
                 "type": [
@@ -340,6 +370,7 @@
             {
                 "id": 31,
                 "url": "/card/exploration/card_std01_fo_19",
+                "match": "∞",
                 "name": "古树新芽",
                 "level": "传奇",
                 "type": [
@@ -351,6 +382,7 @@
             {
                 "id": 32,
                 "url": "/card/exploration/card_std01_fo_20",
+                "match": "∞",
                 "name": "幻影花",
                 "level": "传奇",
                 "type": [
@@ -362,6 +394,7 @@
             {
                 "id": 33,
                 "url": "/card/exploration/card_std01_fo_21",
+                "match": "∞",
                 "name": "闪锌矿",
                 "level": "低级",
                 "type": [
@@ -373,6 +406,7 @@
             {
                 "id": 34,
                 "url": "/card/exploration/card_std01_fo_22",
+                "match": "∞",
                 "name": "黄玉",
                 "level": "低级",
                 "type": [
@@ -384,6 +418,7 @@
             {
                 "id": 35,
                 "url": "/card/exploration/card_std01_fo_23",
+                "match": "∞",
                 "name": "石膏",
                 "level": "低级",
                 "type": [
@@ -395,6 +430,7 @@
             {
                 "id": 36,
                 "url": "/card/exploration/card_std01_fo_24",
+                "match": "∞",
                 "name": "陨铁",
                 "level": "中级",
                 "type": [
@@ -406,6 +442,7 @@
             {
                 "id": 37,
                 "url": "/card/exploration/card_std01_fo_25",
+                "match": "∞",
                 "name": "翡翠",
                 "level": "高级",
                 "type": [
@@ -417,6 +454,7 @@
             {
                 "id": 38,
                 "url": "/card/exploration/card_std01_fo_26",
+                "match": "∞",
                 "name": "蜂巢",
                 "level": "低级",
                 "type": [
@@ -428,6 +466,7 @@
             {
                 "id": 39,
                 "url": "/card/exploration/card_std01_fo_27",
+                "match": "∞",
                 "name": "狐狸",
                 "level": "低级",
                 "type": [
@@ -439,6 +478,7 @@
             {
                 "id": 40,
                 "url": "/card/exploration/card_std01_fo_28",
+                "match": "∞",
                 "name": "黄鹿",
                 "level": "低级",
                 "type": [
@@ -450,6 +490,7 @@
             {
                 "id": 41,
                 "url": "/card/exploration/card_std01_fo_29",
+                "match": "∞",
                 "name": "云豹",
                 "level": "中级",
                 "type": [
@@ -461,6 +502,7 @@
             {
                 "id": 42,
                 "url": "/card/exploration/card_std01_fo_30",
+                "match": "∞",
                 "name": "凶虎",
                 "level": "高级",
                 "type": [
@@ -472,6 +514,7 @@
             {
                 "id": 43,
                 "url": "/card/exploration/card_std01_mo_01",
+                "match": "∞",
                 "name": "黄铁",
                 "level": "低级",
                 "type": [
@@ -483,6 +526,7 @@
             {
                 "id": 44,
                 "url": "/card/exploration/card_std01_mo_04",
+                "match": "∞",
                 "name": "水晶",
                 "level": "低级",
                 "type": [
@@ -494,6 +538,7 @@
             {
                 "id": 45,
                 "url": "/card/exploration/card_std01_mo_07",
+                "match": "∞",
                 "name": "硫磺",
                 "level": "低级",
                 "type": [
@@ -505,6 +550,7 @@
             {
                 "id": 46,
                 "url": "/card/exploration/card_std01_mo_10",
+                "match": "∞",
                 "name": "黄铜",
                 "level": "中级",
                 "type": [
@@ -516,6 +562,7 @@
             {
                 "id": 47,
                 "url": "/card/exploration/card_std01_mo_12",
+                "match": "∞",
                 "name": "石榴石",
                 "level": "中级",
                 "type": [
@@ -527,6 +574,7 @@
             {
                 "id": 48,
                 "url": "/card/exploration/card_std01_mo_14",
+                "match": "∞",
                 "name": "朱砂",
                 "level": "中级",
                 "type": [
@@ -538,6 +586,7 @@
             {
                 "id": 49,
                 "url": "/card/exploration/card_std01_mo_16",
+                "match": "∞",
                 "name": "矽卡岩",
                 "level": "高级",
                 "type": [
@@ -549,6 +598,7 @@
             {
                 "id": 50,
                 "url": "/card/exploration/card_std01_mo_17",
+                "match": "∞",
                 "name": "黑玛瑙",
                 "level": "高级",
                 "type": [
@@ -560,6 +610,7 @@
             {
                 "id": 51,
                 "url": "/card/exploration/card_std01_mo_18",
+                "match": "∞",
                 "name": "黑曜石",
                 "level": "高级",
                 "type": [
@@ -571,6 +622,7 @@
             {
                 "id": 52,
                 "url": "/card/exploration/card_std01_mo_19",
+                "match": "∞",
                 "name": "欧米伽",
                 "level": "传奇",
                 "type": [
@@ -582,6 +634,7 @@
             {
                 "id": 53,
                 "url": "/card/exploration/card_std01_mo_20",
+                "match": "∞",
                 "name": "女神之泪",
                 "level": "传奇",
                 "type": [
@@ -593,6 +646,7 @@
             {
                 "id": 54,
                 "url": "/card/exploration/card_std01_mo_21",
+                "match": "∞",
                 "name": "荧光藓",
                 "level": "低级",
                 "type": [
@@ -604,6 +658,7 @@
             {
                 "id": 55,
                 "url": "/card/exploration/card_std01_mo_22",
+                "match": "∞",
                 "name": "野蓝莓",
                 "level": "低级",
                 "type": [
@@ -615,6 +670,7 @@
             {
                 "id": 56,
                 "url": "/card/exploration/card_std01_mo_23",
+                "match": "∞",
                 "name": "高山杜鹃",
                 "level": "低级",
                 "type": [
@@ -626,6 +682,7 @@
             {
                 "id": 57,
                 "url": "/card/exploration/card_std01_mo_24",
+                "match": "∞",
                 "name": "剑棘花",
                 "level": "中级",
                 "type": [
@@ -637,6 +694,7 @@
             {
                 "id": 58,
                 "url": "/card/exploration/card_std01_mo_25",
+                "match": "∞",
                 "name": "熔炉之芯",
                 "level": "高级",
                 "type": [
@@ -648,6 +706,7 @@
             {
                 "id": 59,
                 "url": "/card/exploration/card_std01_mo_26",
+                "match": "∞",
                 "name": "熔岩蛞蝓",
                 "level": "低级",
                 "type": [
@@ -659,6 +718,7 @@
             {
                 "id": 60,
                 "url": "/card/exploration/card_std01_mo_27",
+                "match": "∞",
                 "name": "岩鼠",
                 "level": "低级",
                 "type": [
@@ -670,6 +730,7 @@
             {
                 "id": 61,
                 "url": "/card/exploration/card_std01_mo_28",
+                "match": "∞",
                 "name": "山羊",
                 "level": "低级",
                 "type": [
@@ -681,6 +742,7 @@
             {
                 "id": 62,
                 "url": "/card/exploration/card_std01_mo_29",
+                "match": "∞",
                 "name": "豺",
                 "level": "中级",
                 "type": [
@@ -692,6 +754,7 @@
             {
                 "id": 63,
                 "url": "/card/exploration/card_std01_mo_30",
+                "match": "∞",
                 "name": "苍鹰",
                 "level": "高级",
                 "type": [
