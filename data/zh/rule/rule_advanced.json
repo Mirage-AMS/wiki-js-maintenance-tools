@@ -15,10 +15,17 @@
         "itemCount": 1
       },
       {
+        "title": "常见机制归类",
+        "path": "/rule/rule_advanced/rule_classified_mechanisms",
+        "description": "对各卡包引入机制的归类和解释",
+        "color": "#03A9F4",
+        "itemCount": 1
+      },
+      {
         "title": "常见效果归类",
         "path": "/rule/rule_advanced/rule_classified_effects",
         "description": "对一些常见效果的归类和解释",
-        "color": "#03A9F4",
+        "color": "#3F51B5",
         "itemCount": 1
       }
     ]
