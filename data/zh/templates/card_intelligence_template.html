@@ -59,7 +59,6 @@
                 </div>
             </div>
 
-            <!-- 解锁条件 -->
             {% if card.unlock and card.unlock.strip() %}
             <div class="condition-box">
                 <h3>解锁：</h3>
@@ -69,7 +68,6 @@
             </div>
             {% endif %}
 
-            <!-- 精通条件 -->
             {% if card.master and card.master.strip() %}
             <div class="condition-box">
                 <h3>精通：</h3>
@@ -79,7 +77,6 @@
             </div>
             {% endif %}
 
-            <!-- 超限条件 -->
             {% if card.transcend and card.transcend.strip() %}
             <div class="condition-box">
                 <h3>超限：</h3>
@@ -254,6 +251,11 @@
     gap: 10px;
     padding: 0;
     flex-wrap: wrap;
+}
+
+.card-meta-tags a {
+  text-decoration: none;
+  color: inherit !important;
 }
 
 /* 通用标签样式 */

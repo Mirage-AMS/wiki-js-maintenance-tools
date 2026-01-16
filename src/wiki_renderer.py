@@ -75,10 +75,19 @@ class WikiPTLRenderer(WikiRenderer):
         "卡牌扩展包02": {
             "": ("/rule/rule_overview", "#h-74-卡牌扩展包-02", "卡牌扩展包02")
         },
+        "环境编号": {
+            "": ("/rule/rule_advanced/rule_classified_mechanisms", "#h-31-环境编号和轮替", "环境编号和轮替")
+        },
         "解锁": {
             "解锁率": None,
             "解锁代价": None,
             "": ("/zh/rule/rule_basic/rule_ability", "#h-2-常规解锁", "常规解锁")
+        },
+        "精通": {
+            "": ("/rule/rule_advanced/rule_classified_mechanisms", "#h-21-精通", "精通")
+        },
+        "超限": {
+            "": ("/rule/rule_advanced/rule_classified_mechanisms", "#h-32-超限", "超限")
         },
         "永久": {
             "永久+": None,
