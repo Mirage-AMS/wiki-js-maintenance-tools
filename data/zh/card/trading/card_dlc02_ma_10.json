@@ -30,14 +30,14 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>永久 / 奇货\n<n02>交易区中级以上的商品在你的回合中售价-1，在其他玩家回合中售价+1",
+        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>永久 / 奇货\n<n02>交易区中级以上的商品在你的回合中售价-1，在其他玩家回合中售价+2",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_ma_10.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": "SALE_FORBIDDEN",
         "card_info_element_tooltip": null,
-        "card_info_solo_mulligan": null,
+        "card_info_solo_mulligan": "是",
         "card_package_info": "卡牌扩展包02",
         "card_match_info": "D",
         "card_image_url": "/assets/image/deck_market_dlc02_10.jpg",
@@ -62,7 +62,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "交易区中级以上的商品在你的回合中售价-1，在其他玩家回合中售价+1"
+                "text": "交易区中级以上的商品在你的回合中售价-1，在其他玩家回合中售价+2"
             }
         ]
     }

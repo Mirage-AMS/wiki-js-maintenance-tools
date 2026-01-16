@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eE01}${eR01}\n<b00>超限：${eR03}\n<b00>快速 / ${eE01}\n<n02>${tR01}，你采集矿物·植物成功或狩猎生物成功时：抽1张卡牌；若超限，额外抽1张卡牌",
+        "card_info_effect": "<b00>解锁：${eE01}${eR01}\n<b00>超限：${eR03}\n<b00>快速 / ${eE01} / 残响\n<n02>${tR01}，你采集矿物·植物成功或狩猎生物成功时：抽1张卡牌；若超限，额外抽1张卡牌",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_19.png",
         "card_inner_base_path": null,
@@ -59,10 +59,10 @@
         "transcend": "${eR03}",
         "effects": [
             {
-                "name": "${eE01}",
+                "name": "残响",
                 "type": "快速",
                 "location": null,
-                "consumption": null,
+                "consumption": "${eE01}",
                 "text": "${tR01}，你采集矿物·植物成功或狩猎生物成功时：抽1张卡牌；若超限，额外抽1张卡牌"
             }
         ]

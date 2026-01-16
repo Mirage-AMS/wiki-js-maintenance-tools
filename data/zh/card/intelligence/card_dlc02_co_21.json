@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eF01}${eR01}\n<b00>超限：${eR03}\n<b00>启动 / ${eF01}\n<n02>${tR01}：明置探索区1张卡牌；若超限，额外明置1张卡牌",
+        "card_info_effect": "<b00>解锁：${eF01}${eR01}\n<b00>超限：${eR03}\n<b00>启动 / ${eF01} / 感应\n<n02>${tR01}：明置探索区1张卡牌；若超限，额外明置1张卡牌",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_21.png",
         "card_inner_base_path": null,
@@ -59,10 +59,10 @@
         "transcend": "${eR03}",
         "effects": [
             {
-                "name": "${eF01}",
+                "name": "感应",
                 "type": "启动",
                 "location": null,
-                "consumption": null,
+                "consumption": "${eF01}",
                 "text": "${tR01}：明置探索区1张卡牌；若超限，额外明置1张卡牌"
             }
         ]

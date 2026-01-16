@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eW01}${eR01}\n<b00>超限：${eR02}\n<b00>启动 / ${eW01}\n<n02>${tR01}，${tPrp}：临时获得${eC01}；若超限，额外临时获得${eC01}",
+        "card_info_effect": "<b00>解锁：${eW01}${eR01}\n<b00>超限：${eR02}\n<b00>启动 / ${eW01} / 润物\n<n02>${tR01}，${tPrp}：临时获得${eC01}；若超限，额外临时获得${eC01}",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_20.png",
         "card_inner_base_path": null,
@@ -59,10 +59,10 @@
         "transcend": "${eR02}",
         "effects": [
             {
-                "name": "${eW01}",
+                "name": "润物",
                 "type": "启动",
                 "location": null,
-                "consumption": null,
+                "consumption": "${eW01}",
                 "text": "${tR01}，${tPrp}：临时获得${eC01}；若超限，额外临时获得${eC01}"
             }
         ]

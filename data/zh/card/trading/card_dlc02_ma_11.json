@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>快速 / 复得\n<n02>${tR01}，你通过效果弃置资源或移除能力时：获得${aP02}",
+        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>快速 / 复得\n<n02>${tR01}，你的回合中，通过效果弃置资源或移除能力时：获得${aP02}",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_ma_11.png",
         "card_inner_base_path": null,
@@ -62,7 +62,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你通过效果弃置资源或移除能力时：获得${aP02}"
+                "text": "${tR01}，你的回合中，通过效果弃置资源或移除能力时：获得${aP02}"
             }
         ]
     }

@@ -36,7 +36,7 @@
         "card_medal_path": null,
         "card_info_product_tag": "SALE_HALF_PRICE",
         "card_info_element_tooltip": null,
-        "card_info_solo_mulligan": null,
+        "card_info_solo_mulligan": "是",
         "card_package_info": "卡牌扩展包02",
         "card_match_info": "D",
         "card_image_url": "/assets/image/deck_market_dlc02_07.jpg",

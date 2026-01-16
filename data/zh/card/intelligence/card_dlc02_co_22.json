@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eA01}${eR01}\n<b00>超限：${eR03}\n<b00>快速 / ${eA01}\n<n02>${tR01}，你狩猎生物中：对1个被狩猎生物造成3点伤害；若超限，改为进行1次攻击",
+        "card_info_effect": "<b00>解锁：${eA01}${eR01}\n<b00>超限：${eR03}\n<b00>快速 / ${eA01} / 穿心\n<n02>${tR01}，你狩猎生物中：对1个被狩猎生物造成3点伤害；若超限，改为进行1次攻击",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_22.png",
         "card_inner_base_path": null,
@@ -59,10 +59,10 @@
         "transcend": "${eR03}",
         "effects": [
             {
-                "name": "${eA01}",
+                "name": "穿心",
                 "type": "快速",
                 "location": null,
-                "consumption": null,
+                "consumption": "${eA01}",
                 "text": "${tR01}，你狩猎生物中：对1个被狩猎生物造成3点伤害；若超限，改为进行1次攻击"
             }
         ]
