@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b00>解锁：${eR06}\n<b00>超限：${eR02}\n<b00>启动 / ${eR02} / 支配 \n<n02>${tR01}：获得交易区1个低级商品或1个中级以下基础资源；若超限，改为获得探索区1个中级以下生物",
+        "card_info_effect": "<n02> \n<b00>解锁：${eR06}\n<b00>超限：${eR02}\n<b00>启动 / ${eR02} / 支配 \n<n02>${tR01}：获得交易区1个低级商品；若超限，你也可以获得交易区中级以下基础资源",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_ma_12.png",
         "card_inner_base_path": null,
@@ -63,7 +63,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": "${eR02}",
-                "text": "${tR01}：获得交易区1个低级商品或1个中级以下基础资源；若超限，改为获得探索区1个中级以下生物"
+                "text": "${tR01}：获得交易区1个低级商品；若超限，你也可以获得交易区中级以下基础资源"
             }
         ]
     }

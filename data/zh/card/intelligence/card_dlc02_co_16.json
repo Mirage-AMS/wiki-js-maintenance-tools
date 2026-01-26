@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：中级以上含${eW01}生物\n<b00>启动 / 蜜酒\n<n02>${tR01}：移除该造物，本局你采集矿物·植物累积的采集进度+3",
+        "card_info_effect": "<b00>解锁：中级以上含${eW01}生物\n<b00>启动 / 蜜酒\n<n02>${tR01}：移除该造物，将以下效果永久启用，\n<n02>· 你采集累积的采集进度额外+3",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_16.png",
         "card_inner_base_path": null,
@@ -62,7 +62,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：移除该造物，本局你采集矿物·植物累积的采集进度+3"
+                "text": "${tR01}：移除该造物，将以下效果永久启用，<br>· 你采集累积的采集进度额外+3"
             }
         ]
     }

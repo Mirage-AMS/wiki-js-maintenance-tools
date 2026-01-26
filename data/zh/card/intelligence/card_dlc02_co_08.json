@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 复利\n<n02>${tR01}，${tPrp}：获得3个金币；每持有7个金币，你额外获得1个金币",
+        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 复利\n<n02>${tR01}，${tPrp}：获得${aP02}，那之后你每持有${aP10}，额外获得${aP01}",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_08.png",
         "card_inner_base_path": null,
@@ -62,7 +62,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：获得3个金币；每持有7个金币，你额外获得1个金币"
+                "text": "${tR01}，${tPrp}：获得${aP02}，那之后你每持有${aP10}，额外获得${aP01}"
             }
         ]
     }
