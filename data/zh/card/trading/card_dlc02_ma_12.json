@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2025-01-26",
+            "content": "【心灵支配】在未超限状态下不再能对中级基础资源生效，超限后不再能对探索区中级以下生物生效。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,

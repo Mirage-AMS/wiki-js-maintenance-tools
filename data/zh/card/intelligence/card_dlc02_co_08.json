@@ -11,8 +11,18 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "如果我有8个金币，发动【利滚利】的效果获得多少金币？",
+            "answer": "获得3个金币；结算时，先获得2个金币，此时你有10个金币，因此你额外获得1个金币。"
+        }
+    ],
+    "revise": [
+        {
+            "date": "2025-01-26",
+            "content": "【利滚利】的收益从//7+3降低到2+//10"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
