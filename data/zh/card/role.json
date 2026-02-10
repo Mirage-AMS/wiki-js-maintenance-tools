@@ -370,6 +370,34 @@
                     "专属"
                 ],
                 "image": "/assets/thumbnail/role_intro_faceless.jpg"
+            },
+            {
+                "id": 82,
+                "url": "/card/role/card_rol03_ri_01",
+                "match": "∞",
+                "name": "爱德温，猩红梦魇",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/card_rol03_ri_01.jpg"
+            },
+            {
+                "id": 83,
+                "url": "/card/role/card_rol03_ri_02",
+                "match": "∞",
+                "name": "荷莉，名门遗孤",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/card_rol03_ri_02.jpg"
             }
         ]
     }

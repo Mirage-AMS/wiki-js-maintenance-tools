@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b06>解锁：中级以上含${eF01}植物\n<b06>永久 / 大锅\n<n08>只在解锁该造物时，将情报区牌堆顶5张卡牌作为素材堆叠\n<b06>启动 / 饮祝\n<n08>${tR01}：弃置1个素材，根据其类型将1个对应效果直到本轮结束前启用，\n<n08>· 基础资源：你的攻击力+2，生命上限+2\n<n08>· 情报·事件：该造物获得其记述的所有效果",
+        "card_info_effect": "<b06>解锁：中级以上含${eF01}植物\n<b06>永久 / 荟萃\n<n08>只在解锁该造物时，将情报区牌堆顶5张卡牌作为素材堆叠\n<b06>启动 / 饮祝\n<n08>${tR01}：弃置1个素材，根据其类型将1个对应效果直到本轮结束前启用，\n<n08>· 基础资源：你的攻击力+2，生命上限+2\n<n08>· 情报·事件：该造物获得其记述的所有效果",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_15.png",
         "card_inner_base_path": null,
@@ -58,7 +58,7 @@
         "unlock": "中级以上含${eF01}植物",
         "effects": [
             {
-                "name": "大锅",
+                "name": "荟萃",
                 "type": "永久",
                 "location": null,
                 "consumption": null,

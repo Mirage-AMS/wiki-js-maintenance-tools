@@ -1,0 +1,92 @@
+{
+    "path": "card/role/card_rol03_ri_02",
+    "tags": [
+        "卡牌",
+        "角色",
+        "专属"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [
+        {
+            "date": "2025-02-09",
+            "content": "【荷莉，名门遗孤】上线"
+        }
+    ],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "荷莉，名门遗孤",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>特色：古老圣器\n<n02>侥幸躲过一劫的荷莉把斯图尔特的绿眼睛藏在魔法斗篷下，时刻计划着用那只绝不温顺的魔杖向邪祟发起挑战，只要她还手握能唤来双亲残灵的黑石，家族的火种就从未真正熄灭",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ri_02.png",
+        "card_inner_base_path": "base_inner_role_holly.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包03",
+        "card_match_info": "∞",
+        "card_image_url": "/assets/image/deck_role_intro03_02.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_02.jpg",
+        "card_basic_info": "角色 / 专属",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_level_info": null,
+        "card_types": [
+            "角色"
+        ],
+        "card_type_info": "角色",
+        "card_tags": [
+            "专属"
+        ],
+        "card_tag_info": "专属",
+        "effects": [
+            {
+                "name": "古老圣器",
+                "type": "特色",
+                "location": null,
+                "consumption": null,
+                "text": "侥幸躲过一劫的荷莉把斯图尔特的绿眼睛藏在魔法斗篷下，时刻计划着用那只绝不温顺的魔杖向邪祟发起挑战，只要她还手握能唤来双亲残灵的黑石，家族的火种就从未真正熄灭"
+            }
+        ]
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ro_03",
+            "card_name": "隐身斗篷",
+            "brief_description": "低级 / 情报 / 专属 · 造物",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_03.jpg"
+        },
+        {
+            "path": "/card/role/card_rol03_ro_04",
+            "card_name": "唤灵魔石",
+            "brief_description": "低级 / 情报 / 专属 · 造物",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_04.jpg"
+        },
+        {
+            "path": "/card/role/card_rol03_ro_05",
+            "card_name": "古老魔杖",
+            "brief_description": "低级 / 情报 / 专属 · 造物",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_05.jpg"
+        }
+    ]
+}

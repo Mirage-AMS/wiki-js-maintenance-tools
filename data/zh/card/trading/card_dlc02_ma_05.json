@@ -11,7 +11,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2025-02-09",
+            "content": "【鳕鱼】效果修改为本回合的所有投掷增加2个骰子"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -29,7 +34,7 @@
         "card_element_num_water": 1,
         "card_element_num_fire": 1,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>启动（背包） / 明目\n<n02>弃置该资源，本回合你的所有能力均视为精通和超限",
+        "card_info_effect": "<n02>  \n<b00>启动（背包） / 明目\n<n02>弃置该资源，本回合你的所有投掷额外增加2个骰子",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_ma_05.png",
         "card_inner_base_path": null,
@@ -62,7 +67,7 @@
                 "type": "启动",
                 "location": "背包",
                 "consumption": null,
-                "text": "弃置该资源，本回合你的所有能力均视为精通和超限"
+                "text": "弃置该资源，本回合你的所有投掷额外增加2个骰子"
             }
         ]
     }

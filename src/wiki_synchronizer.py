@@ -59,6 +59,7 @@ def parse_package_info(path: str) -> str:
         "dlc02": "卡牌扩展包02",
         "rol01": "角色扩展包01",
         "rol02": "角色扩展包02",
+        "rol03": "角色扩展包03",
     }
     for k, v in reflect_dict.items():
         if k in path:
