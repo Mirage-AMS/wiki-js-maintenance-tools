@@ -12,7 +12,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "使用【嗜血猎手】的[血刃]造成伤害后，是否可以启用[渴血]的效果，重置元素？",
+            "answer": "不可以。只有攻击（投掷骰子并根据点数造成伤害）造成的伤害可以启用[渴血]。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

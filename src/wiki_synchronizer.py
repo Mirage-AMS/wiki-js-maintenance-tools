@@ -206,6 +206,7 @@ class WikiSynchronizer:
         undisposed_card_info_effect = card_design_info.get("card_info_effect") or ""
         if "角色" in card_types:  # 角色卡牌特殊处理
             undisposed_card_info_effect = undisposed_card_info_effect.replace("特色：", "特色/")
+            undisposed_card_info_effect = undisposed_card_info_effect.replace("机制：", "机制/")
         disposed_card_info_effect = TextFormatter().parse_from_text(undisposed_card_info_effect).to_dict()
 
         # 事件卡牌特殊处理

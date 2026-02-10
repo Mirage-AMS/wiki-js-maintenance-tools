@@ -12,7 +12,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "我可以在濒死状态下发动【唤灵魔石】的效果吗？",
+            "answer": "严格意义上说，可以，但你不能抽牌。在濒死状态下，玩家结算受到伤害类效果会结算失败，后续效果则不继续结算。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

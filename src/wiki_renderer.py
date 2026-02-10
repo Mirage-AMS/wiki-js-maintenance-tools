@@ -51,6 +51,7 @@ class WikiPTLRenderer(WikiRenderer):
         "eR02": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
         "eR03": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
         "eR04": ("/rule/rule_basic/rule_element", "#h-2-元素种类", "无色元素"),
+        "eB01": ("//card/role/card_rol03_ri_01", '', "血之元素"),
         "tBgn": ("/rule/rule_basic/rule_basic_intro", "#h-124-开始阶段", "开始阶段"),
         "tDrw": ("/rule/rule_basic/rule_basic_intro", "#h-125-抽牌阶段", "抽牌阶段"),
         "tPrp": ("/rule/rule_basic/rule_basic_intro", "#h-126-准备阶段", "准备阶段"),
@@ -74,6 +75,9 @@ class WikiPTLRenderer(WikiRenderer):
         },
         "卡牌扩展包02": {
             "": ("/rule/rule_overview", "#h-74-卡牌扩展包-02", "卡牌扩展包02")
+        },
+        "角色扩展包03": {
+            "": ("/rule/rule_overview", "#h-75-角色扩展包-03", "角色扩展包03")
         },
         "环境编号": {
             "": ("/rule/rule_advanced/rule_classified_mechanisms", "#h-31-环境编号和轮替", "环境编号和轮替")

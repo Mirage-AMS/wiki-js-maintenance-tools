@@ -12,7 +12,16 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "我可以在还未进入狩猎时，就发动【古老魔杖】的[蓄力]效果吗？",
+            "answer": "不可以。该效果必须在宣言狩猎后才能发动。"
+        },
+        {
+            "question": "【古老魔杖】是启动效果，要如何在狩猎进行中使用？",
+            "answer": "参考<a href='/rule/rule_basic/rule_exploration#h-625-其他动作'>基础规则-探索-狩猎生物-其他动作</a>，所有启动类效果都可以作为战场动作。<br>在你的战斗轮中，你可以不攻击，而是发动这个启动效果（这也是为什么这个效果叫做蓄力）"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,
