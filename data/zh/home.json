@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 327
+                "itemCount": 334
             },
             {
                 "title": "关于",
@@ -50,8 +50,15 @@
         ],
         "recentUpdates": [
             {
+                "date": "2026-02-09",
+                "title": "角色扩展包03 开启更新",
+                "description": "全新角色【<a href='/card/role/card_rol03_ri_01'>爱德温，猩红梦魇</a>】和【<a href='/card/role/card_rol03_ri_02'>荷莉，名门遗孤</a>】已经上线！",
+                "category": "角色更新",
+                "link": "/rule/rule_overview/#h-75-角色扩展包-03"
+            },
+            {
                 "date": "2026-01-16",
-                "title": "DLC02上线",
+                "title": "卡牌扩展包02 上线",
                 "description": "一个全新的扩展包上线，包含全新的45张卡牌和1个新机制！",
                 "category": "卡牌更新",
                 "link": "/rule/rule_overview/#h-74-卡牌扩展包-02"
