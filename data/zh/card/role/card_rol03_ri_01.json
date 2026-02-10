@@ -61,11 +61,11 @@
         "card_tag_info": "专属",
         "effects": [
             {
-                "name": "未知",
-                "type": "未知",
+                "name": "血之元素",
+                "type": "机制",
                 "location": null,
                 "consumption": null,
-                "text": "机制：血之元素<br>你可以消耗 ${eB01} 来代替累积伤口"
+                "text": "你可以消耗 ${eB01} 来代替累积伤口"
             },
             {
                 "name": "嗜血猎手",
