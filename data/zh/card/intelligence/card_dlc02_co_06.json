@@ -71,5 +71,13 @@
                 "text": "${tEnd}，你获得2个【烂草】；若超限，改为抽2张卡牌"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/accessory/card_std_ac_01",
+            "card_name": "烂草",
+            "brief_description": "低级 / 植物",
+            "card_thumbnail_url": "/assets/thumbnail/rotten_grass.jpg"
+        }
+    ]
 }

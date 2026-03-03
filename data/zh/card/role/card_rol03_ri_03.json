@@ -68,5 +68,19 @@
                 "text": "枯瘦的黑马踏碎荒村的寂静，比瘟疫更暴戾的审判已至。摩根·克劳利不必用利剑伤人，那张写满密语的羊皮纸已是最致命的绞索。在这场以净化为名的狂欢中，哀嚎遍野，赏金遍地"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ro_06",
+            "card_name": "恶魔名单",
+            "brief_description": "低级 / 情报 / 专属 · 造物",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_06.jpg"
+        },
+        {
+            "path": "/card/role/card_rol03_ro_07",
+            "card_name": "狩猎开幕",
+            "brief_description": "中级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_07.jpg"
+        }
+    ]
 }

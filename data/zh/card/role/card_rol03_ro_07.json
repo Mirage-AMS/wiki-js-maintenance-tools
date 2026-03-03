@@ -67,5 +67,13 @@
                 "text": "将以下效果启用，<br>· ${tBgn}，对其他玩家各造成1点伤害<br>· 只在其他玩家濒死时，你获得${aP02}"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ri_03",
+            "card_name": "摩根，猎巫将军",
+            "brief_description": "角色 / 专属",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_03.jpg"
+        }
+    ]
 }

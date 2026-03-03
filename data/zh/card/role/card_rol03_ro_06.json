@@ -67,5 +67,13 @@
                 "text": "${tR01}：根据是否有玩家累积恶魔标记，将对应效果启用，<br>· 是：移除任一玩家累积的1个恶魔标记，对其进行1次攻击<br>· 否：为其他玩家各累积1个恶魔标记"
             }
         ]
-    }
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ri_03",
+            "card_name": "摩根，猎巫将军",
+            "brief_description": "角色 / 专属",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_03.jpg"
+        }
+    ]
 }
