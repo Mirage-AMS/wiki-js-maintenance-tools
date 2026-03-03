@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-03-02",
+            "content": "【火力全开】调整为1轮只能使用1次。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -30,7 +35,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eF01}${eF01}${eR02}\n<b00>启动 / ${eF01} / 蓄势\n<n02>本轮你的下次投掷额外增加1个骰子；这个效果可以叠加",
+        "card_info_effect": "<b00>解锁：${eF01}${eF01}${eR02}\n<b00>启动 / ${eF0X} / 蓄势\n<n02>${tR01}：本轮你的下次投掷额外增加X个骰子",
         "card_info_description": null,
         "card_picture_path": "infinite_inflame.png",
         "card_inner_base_path": null,
@@ -61,8 +66,8 @@
                 "name": "蓄势",
                 "type": "启动",
                 "location": null,
-                "consumption": "${eF01}",
-                "text": "本轮你的下次投掷额外增加1个骰子；这个效果可以叠加"
+                "consumption": "${eF0X}",
+                "text": "${tR01}：本轮你的下次投掷额外增加X个骰子"
             }
         ]
     }

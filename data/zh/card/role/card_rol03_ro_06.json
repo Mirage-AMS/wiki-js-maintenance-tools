@@ -1,5 +1,5 @@
 {
-    "path": "card/role/card_rol03_ro_03",
+    "path": "card/role/card_rol03_ro_06",
     "tags": [
         "卡牌",
         "低级",
@@ -13,16 +13,11 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [
-        {
-            "date": "2026-03-02",
-            "content": "【隐形斗篷】移除超限效果，从永久效果变为快速效果，追加发动次数限制。"
-        }
-    ],
+    "revise": [],
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "隐身斗篷",
+        "card_name": "恶魔名单",
         "card_level": "低级",
         "card_resource_type": "情报",
         "card_resource_tag_1": "专属",
@@ -36,18 +31,18 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：任意生物\n<b00>快速 / 隐身\n<n02>${tR02}，你的回合中，若你未造成过伤害：本回合你受到的下次伤害降低为0",
+        "card_info_effect": "<b00>解锁：技能情报+任意情报\n<b00>启动 / 名单\n<n02>${tR01}：根据是否有玩家累积恶魔标记，将对应效果启用，\n<n02>· 是：移除任一玩家累积的1个恶魔标记，对其进行1次攻击\n<n02>· 否：为其他玩家各累积1个恶魔标记",
         "card_info_description": null,
-        "card_picture_path": "tmp/card_rol03_ro_03.png",
-        "card_inner_base_path": "base_inner_role_holly.png",
+        "card_picture_path": "tmp/card_rol03_ro_06.png",
+        "card_inner_base_path": "base_inner_role_morgan.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
-        "card_info_solo_mulligan": null,
+        "card_info_solo_mulligan": "是",
         "card_package_info": "角色扩展包03",
         "card_match_info": "∞",
-        "card_image_url": "/assets/image/deck_role_info03_03.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_03.jpg",
+        "card_image_url": "/assets/image/deck_role_info03_06.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_06.jpg",
         "card_basic_info": "低级 / 情报 / 专属 · 造物",
         "card_element_marks": [],
         "card_element_mark_num": 0,
@@ -62,23 +57,15 @@
             "造物"
         ],
         "card_tag_info": "专属 · 造物",
-        "unlock": "任意生物",
+        "unlock": "技能情报+任意情报",
         "effects": [
             {
-                "name": "隐身",
-                "type": "快速",
+                "name": "名单",
+                "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR02}，你的回合中，若你未造成过伤害：本回合你受到的下次伤害降低为0"
+                "text": "${tR01}：根据是否有玩家累积恶魔标记，将对应效果启用，<br>· 是：移除任一玩家累积的1个恶魔标记，对其进行1次攻击<br>· 否：为其他玩家各累积1个恶魔标记"
             }
         ]
-    },
-    "related_cards": [
-        {
-            "path": "/card/role/card_rol03_ri_02",
-            "card_name": "荷莉，名门遗孤",
-            "brief_description": "角色 / 专属",
-            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_02.jpg"
-        }
-    ]
+    }
 }

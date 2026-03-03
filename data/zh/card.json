@@ -33,7 +33,7 @@
                 "path": "/card/role",
                 "description": "角色和角色专属卡牌",
                 "color": "#e74c3c",
-                "itemCount": 88
+                "itemCount": 91
             },
             {
                 "title": "交易区卡牌",

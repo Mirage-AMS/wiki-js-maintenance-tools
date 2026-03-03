@@ -18,7 +18,12 @@
             "answer": "严格意义上说，可以，但你不能抽牌。在濒死状态下，玩家结算受到伤害类效果会结算失败，后续效果则不继续结算。"
         }
     ],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-03-02",
+            "content": "【唤灵魔石】移除超限效果。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -36,7 +41,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：含${eA01}矿物\n<b00>超限：弃置1个素材\n<b00>启动 / 唤灵\n<n02>${tR01}，若超限，${tR02}：你受到3点伤害，抽1张卡牌",
+        "card_info_effect": "<b00>解锁：含${eA01}矿物\n<b00>启动 / 唤灵\n<n02>${tR01}：你受到3点伤害，抽1张卡牌",
         "card_info_description": null,
         "card_picture_path": "tmp/card_rol03_ro_04.png",
         "card_inner_base_path": "base_inner_role_holly.png",
@@ -63,14 +68,13 @@
         ],
         "card_tag_info": "专属 · 造物",
         "unlock": "含${eA01}矿物",
-        "transcend": "弃置1个素材",
         "effects": [
             {
                 "name": "唤灵",
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，若超限，${tR02}：你受到3点伤害，抽1张卡牌"
+                "text": "${tR01}：你受到3点伤害，抽1张卡牌"
             }
         ]
     },

@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 334
+                "itemCount": 337
             },
             {
                 "title": "关于",
@@ -50,6 +50,13 @@
         ],
         "recentUpdates": [
             {
+                "date": "2026-03-02",
+                "title": "【摩根，猎巫将军】上线",
+                "description": "摩根·克劳利不必用利剑伤人，那张写满密语的羊皮纸已是最致命的绞索。",
+                "category": "角色更新",
+                "link": "/card/role/card_rol03_ri_03"
+            },
+            {
                 "date": "2026-02-09",
                 "title": "角色扩展包03 开启更新",
                 "description": "全新角色【<a href='/card/role/card_rol03_ri_01'>爱德温，猩红梦魇</a>】和【<a href='/card/role/card_rol03_ri_02'>荷莉，名门遗孤</a>】已经上线！",
@@ -78,7 +85,7 @@
             },
             {
                 "date": "2025-11-30",
-                "title": "“无面人”上线",
+                "title": "【“无面人”】上线",
                 "description": "全新角色：“无面人”，一个能使用其他角色专属能力的神秘人物，现已上线",
                 "category": "角色更新",
                 "link": "/card/role/card_rol02_ri_14"

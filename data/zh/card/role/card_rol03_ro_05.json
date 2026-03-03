@@ -22,7 +22,12 @@
             "answer": "参考<a href='/rule/rule_basic/rule_exploration#h-625-其他动作'>基础规则-探索-狩猎生物-其他动作</a>，所有启动类效果都可以作为战场动作。<br>在你的战斗轮中，你可以不攻击，而是发动这个启动效果（这也是为什么这个效果叫做蓄力）"
         }
     ],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-03-02",
+            "content": "【古老魔杖】移除超限效果，伤害附加效果从+5降低为+4。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -40,7 +45,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：含${eA01}植物\n<b00>超限：弃置1个素材\n<b00>启动 / 蓄力\n<n02>你狩猎生物中：本回合你的下次攻击造成的伤害+5；若超限，你受到2点伤害，造成的伤害额外+2",
+        "card_info_effect": "<b00>解锁：含${eA01}植物\n<b00>启动 / 蓄力\n<n02>你狩猎生物中：本回合你的下次攻击造成的伤害+4",
         "card_info_description": null,
         "card_picture_path": "tmp/card_rol03_ro_05.png",
         "card_inner_base_path": "base_inner_role_holly.png",
@@ -67,14 +72,13 @@
         ],
         "card_tag_info": "专属 · 造物",
         "unlock": "含${eA01}植物",
-        "transcend": "弃置1个素材",
         "effects": [
             {
                 "name": "蓄力",
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "你狩猎生物中：本回合你的下次攻击造成的伤害+5；若超限，你受到2点伤害，造成的伤害额外+2"
+                "text": "你狩猎生物中：本回合你的下次攻击造成的伤害+4"
             }
         ]
     },

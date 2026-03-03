@@ -18,10 +18,15 @@
         },
         {
             "question": "【奥术原理】与【魔力凝滞】共同作用时，是先减少再翻倍，还是先翻倍再减少？",
-            "answer": "由相关卡牌解锁/影响的顺序决定。这两张卡赋予的效果都是持续生效的，若先解锁【奥术原理】、后受到【魔力凝滞】影响，则先减少再翻倍；反之则先翻倍再减少。"
+            "answer": "由相关效果影响玩家的顺序决定，通常是先翻倍再减少。这是因为【魔力凝滞】一般在其他玩家的回合中先生效，而【奥术原理】需要在玩家的回合才能发动。"
         }
     ],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-03-02",
+            "content": "【奥术原理】从永久效果变更为快速效果，追加发动次数限制。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -39,7 +44,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：法术情报+任意情报\n<b00>永久 / 原理\n<n02>你需要消耗的元素可以降低${eR01}",
+        "card_info_effect": "<b00>解锁：法术情报+任意情报\n<b00>快速 / 原理\n<n02>${tR02}，你的回合中：本回合你的下次元素消耗降低${eR01}，这个效果不能叠加",
         "card_info_description": null,
         "card_picture_path": "dlc01_principle_of_arcane_magic.png",
         "card_inner_base_path": null,
@@ -68,10 +73,10 @@
         "effects": [
             {
                 "name": "原理",
-                "type": "永久",
+                "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "你需要消耗的元素可以降低${eR01}"
+                "text": "${tR02}，你的回合中：本回合你的下次元素消耗降低${eR01}，这个效果不能叠加"
             }
         ]
     }
