@@ -412,6 +412,20 @@
                     "专属"
                 ],
                 "image": "/assets/thumbnail/card_rol03_ri_03.jpg"
+            },
+            {
+                "id": 85,
+                "url": "/card/role/card_rol03_ri_04",
+                "match": "∞",
+                "name": "伊尔嘉，极境织晶",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/card_rol03_ri_04.jpg"
             }
         ]
     }

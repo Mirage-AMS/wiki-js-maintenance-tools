@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 337
+                "itemCount": 340
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-03-31",
+                "title": "【伊尔嘉，极境织晶】上线",
+                "description": "尽管预言已随岁月亡佚，伊尔嘉·斯托内瓦仍愿成为圣殿最后的守护者。",
+                "category": "角色更新",
+                "link": "/card/role/card_rol03_ri_04"
+            },
             {
                 "date": "2026-03-02",
                 "title": "【摩根，猎巫将军】上线",

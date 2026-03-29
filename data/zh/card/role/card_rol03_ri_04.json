@@ -1,5 +1,5 @@
 {
-    "path": "card/role/card_rol03_ri_03",
+    "path": "card/role/card_rol03_ri_04",
     "tags": [
         "卡牌",
         "角色",
@@ -13,14 +13,14 @@
     "faq": [],
     "revise": [
         {
-            "date": "2026-03-02",
-            "content": "【摩根，猎巫将军】上线"
+            "date": "2026-03-31",
+            "content": "【伊尔嘉，极境织晶】上线"
         }
     ],
     "card": {
         "card_id": null,
         "card_num": 1,
-        "card_name": "摩根，猎巫将军",
+        "card_name": "伊尔嘉，极境织晶",
         "card_level": "_高级",
         "card_resource_type": "角色",
         "card_resource_tag_1": "专属",
@@ -34,18 +34,18 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>特色：巫师狩猎\n<n02>枯瘦的黑马踏碎荒村的寂静，比瘟疫更暴戾的审判已至。摩根·克劳利不必用利剑伤人，那张写满密语的羊皮纸已是最致命的绞索。在这场以净化为名的狂欢中，哀嚎遍野，赏金遍地",
+        "card_info_effect": "<b00>特色：晶脉守护\n<n02>尽管预言已随岁月亡佚，伊尔嘉·斯托内瓦仍愿成为圣殿最后的守护者。地底深处不安的震颤时刻牵动她古老的血脉，面对未知的侵袭，她只能选择相信自己的本能",
         "card_info_description": null,
-        "card_picture_path": "tmp/card_rol03_ri_03.png",
-        "card_inner_base_path": "base_inner_role_morgan.png",
+        "card_picture_path": "tmp/card_rol03_ri_04.png",
+        "card_inner_base_path": "base_inner_role_irja.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": "是",
         "card_package_info": "角色扩展包03",
         "card_match_info": "∞",
-        "card_image_url": "/assets/image/deck_role_intro03_03.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_03.jpg",
+        "card_image_url": "/assets/image/deck_role_intro03_04.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_04.jpg",
         "card_basic_info": "角色 / 专属",
         "card_element_marks": [],
         "card_element_mark_num": 0,
@@ -61,26 +61,26 @@
         "card_tag_info": "专属",
         "effects": [
             {
-                "name": "巫师狩猎",
+                "name": "晶脉守护",
                 "type": "特色",
                 "location": null,
                 "consumption": null,
-                "text": "枯瘦的黑马踏碎荒村的寂静，比瘟疫更暴戾的审判已至。摩根·克劳利不必用利剑伤人，那张写满密语的羊皮纸已是最致命的绞索。在这场以净化为名的狂欢中，哀嚎遍野，赏金遍地"
+                "text": "尽管预言已随岁月亡佚，伊尔嘉·斯托内瓦仍愿成为圣殿最后的守护者。地底深处不安的震颤时刻牵动她古老的血脉，面对未知的侵袭，她只能选择相信自己的本能"
             }
         ]
     },
     "related_cards": [
         {
-            "path": "/card/role/card_rol03_ro_06",
-            "card_name": "恶魔名单",
-            "brief_description": "低级 / 情报 / 专属 · 造物",
-            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_06.jpg"
+            "path": "/card/role/card_rol03_ro_08",
+            "card_name": "晶脉共振",
+            "brief_description": "低级 / 情报 / 专属 · 法术",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_08.jpg"
         },
         {
-            "path": "/card/role/card_rol03_ro_07",
-            "card_name": "狩猎开幕",
+            "path": "/card/role/card_rol03_ro_09",
+            "card_name": "石芯之缚",
             "brief_description": "中级 / 情报 / 专属 · 技能",
-            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_07.jpg"
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_09.jpg"
         }
     ]
 }

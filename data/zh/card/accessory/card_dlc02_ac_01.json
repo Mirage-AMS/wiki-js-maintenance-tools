@@ -29,7 +29,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>永久 / 本源\n<n04>持有素材的该造物可以被视为1个中级造物\n<b02>启动 / 号令\n<n04>${tR01}：选以下1个效果启用\n<n04>· 明置探索区1张卡牌\n<n04>· 为1个基础资源累积3点采集进度或造成3点伤害",
+        "card_info_effect": "<b02>永久 / 本源\n<n04>持有素材的该造物可以被视为1个中级造物\n<b02>启动 / 号令\n<n04>${tR01}：选以下1个效果启用，\n<n04>· 明置探索区1张卡牌\n<n04>· 为1个基础资源累积3点采集进度或造成3点伤害",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_26.png",
         "card_inner_base_path": "base_inner_others.png",
@@ -65,7 +65,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：选以下1个效果启用<br>· 明置探索区1张卡牌<br>· 为1个基础资源累积3点采集进度或造成3点伤害"
+                "text": "${tR01}：选以下1个效果启用，<br>· 明置探索区1张卡牌<br>· 为1个基础资源累积3点采集进度或造成3点伤害"
             }
         ]
     },
