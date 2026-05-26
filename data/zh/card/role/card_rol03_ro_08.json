@@ -31,7 +31,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eR02}\n<b00>快速 / ${eR01} / 共振\n<n02>你开始采集矿物，或任意玩家采集矿物失败时：为被采集矿物累积1点采集进度",
+        "card_info_effect": "<b00>解锁：${eR02}\n<b00>快速 / ${eR01} / 共振\n<n02>你开始采集矿物或任意玩家采集矿物失败时：为被采集矿物累积1点采集进度",
         "card_info_description": null,
         "card_picture_path": "tmp/card_rol03_ro_08.png",
         "card_inner_base_path": "base_inner_role_irja.png",
@@ -64,7 +64,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": "${eR01}",
-                "text": "你开始采集矿物，或任意玩家采集矿物失败时：为被采集矿物累积1点采集进度"
+                "text": "你开始采集矿物或任意玩家采集矿物失败时：为被采集矿物累积1点采集进度"
             }
         ]
     },

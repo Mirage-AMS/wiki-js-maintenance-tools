@@ -36,7 +36,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eB01}${eB01}${eR02}\n<b00>快速 / ${eB01} / 血刃\n<n02>${tR01}，${tAct}：对1个生物造成3点伤害\n<n32> \n<b00>永久 / 渴血\n<n02>只在你的攻击造成伤害时，重置最多相当于伤害数目的已消耗的${eB01}\n",
+        "card_info_effect": "<b00>解锁：${eB01}${eB01}${eR02}\n<b00>快速 / ${eB01} / 血刃\n<n02>${tR01}，${tAct}：对1个生物造成3点伤害\n<n32> \n<b00>永久 / 渴血\n<n02>只在你的攻击造成伤害时，重置最多相当于伤害数目的已消耗的${eB01}",
         "card_info_description": null,
         "card_picture_path": "tmp/card_rol03_ro_02.png",
         "card_inner_base_path": "base_inner_role_edwin.png",

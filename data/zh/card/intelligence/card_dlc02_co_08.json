@@ -13,8 +13,8 @@
     },
     "faq": [
         {
-            "question": "如果我有20个金币，发动【利滚利】后选择第2项效果获得多少金币？",
-            "answer": "获得4个金币；结算时，先获得1个金币，此时你有21个金币，因此你额外获得3个金币。"
+            "question": "如果我有17个金币，发动【利滚利】后获得多少金币？",
+            "answer": "获得5个金币；结算时，先获得3个金币，此时你有20个金币，因此你额外获得2个金币。"
         }
     ],
     "revise": [
@@ -25,6 +25,10 @@
         {
             "date": "2026-03-02",
             "content": "【利滚利】的收益从2+//10调整为MAX(3, 1+//7)。"
+        },
+        {
+            "date": "2026-05-25",
+            "content": "【利滚利】的收益从MAX(3, 1+//7)调整为3+//10。"
         }
     ],
     "card": {
@@ -44,7 +48,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 复利\n<n02>${tR01}，${tPrp}：选以下1个效果启用，\n<n02>· 获得${aP03}\n<n02>· 获得${aP01}，那之后每持有${aP07}，额外获得${aP01}",
+        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 复利\n<n02>${tR01}，${tPrp}：获得${aP03}，那之后每持有${aP10}，额外获得${aP01}",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_08.png",
         "card_inner_base_path": null,
@@ -76,7 +80,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：选以下1个效果启用，<br>· 获得${aP03}<br>· 获得${aP01}，那之后每持有${aP07}，额外获得${aP01}"
+                "text": "${tR01}，${tPrp}：获得${aP03}，那之后每持有${aP10}，额外获得${aP01}"
             }
         ]
     }
