@@ -426,6 +426,20 @@
                     "专属"
                 ],
                 "image": "/assets/thumbnail/card_rol03_ri_04.jpg"
+            },
+            {
+                "id": 86,
+                "url": "/card/role/card_rol03_ri_05",
+                "match": "∞",
+                "name": "卡萨尔，盲眼修士",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/card_rol03_ri_05.jpg"
             }
         ]
     }
