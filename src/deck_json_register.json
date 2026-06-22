@@ -307,7 +307,8 @@
     {"dir": "role", "file": "card_rol03_ri_02.json"},
     {"dir": "role", "file": "card_rol03_ri_03.json"},
     {"dir": "role", "file": "card_rol03_ri_04.json"},
-    {"dir": "role", "file": "card_rol03_ri_05.json"}
+    {"dir": "role", "file": "card_rol03_ri_05.json"},
+    {"dir": "role", "file": "card_rol03_ri_06.json"}
   ],
   "deck_role_info01.json": [
     {"dir": "role", "file": "card_rol01_ro_01.json"},
@@ -375,6 +376,8 @@
     {"dir": "role", "file": "card_rol03_ro_07.json"},
     {"dir": "role", "file": "card_rol03_ro_08.json"},
     {"dir": "role", "file": "card_rol03_ro_09.json"},
-    {"dir": "role", "file": "card_rol03_ro_10.json"}
+    {"dir": "role", "file": "card_rol03_ro_10.json"},
+    {"dir": "role", "file": "card_rol03_ro_11.json"},
+    {"dir": "role", "file": "card_rol03_ro_12.json"}
   ]
 }

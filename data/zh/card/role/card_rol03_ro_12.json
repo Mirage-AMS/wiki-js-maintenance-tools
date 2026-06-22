@@ -1,0 +1,91 @@
+{
+    "path": "card/role/card_rol03_ro_12",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "专属",
+        "技能"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [
+        {
+            "question": "通过【行会救济】在结束阶段获得2个【烂草】时，累积1个观花标记还是2个？",
+            "answer": "累积1个。按照获得植物的次数而不是获得植物的数量累积。"
+        }
+    ],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "走马观花",
+        "card_level": "中级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": "技能",
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b02>解锁：${aP06}\n<b02>永久 / 观花\n<n04>只在你解锁该技能或获得植物时，为该技能累积1个观花标记\n<n32> \n<b02>启动 / 走马\n<n04>${tR01}：移除3个观花标记，本回合额外获得1次行动；只在那次行动中，你不能狩猎生物",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ro_12.png",
+        "card_inner_base_path": "base_inner_role_orope.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包03",
+        "card_match_info": "∞",
+        "card_image_url": "/assets/image/deck_role_info03_12.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_12.jpg",
+        "card_basic_info": "中级 / 情报 / 专属 · 技能",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_level_info": "中级",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "技能"
+        ],
+        "card_tag_info": "专属 · 技能",
+        "unlock": "${aP06}",
+        "effects": [
+            {
+                "name": "观花",
+                "type": "永久",
+                "location": null,
+                "consumption": null,
+                "text": "只在你解锁该技能或获得植物时，为该技能累积1个观花标记"
+            },
+            {
+                "name": "走马",
+                "type": "启动",
+                "location": null,
+                "consumption": null,
+                "text": "${tR01}：移除3个观花标记，本回合额外获得1次行动；只在那次行动中，你不能狩猎生物"
+            }
+        ]
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ri_06",
+            "card_name": "欧洛佩，绿野芳踪",
+            "brief_description": "角色 / 专属",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_06.jpg"
+        }
+    ]
+}

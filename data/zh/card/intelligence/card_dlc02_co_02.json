@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP03}\n<b00>超限：${aP02}\n<b00>快速 / 矿工\n<n02>${tR01}，你的回合中：消耗${aP01}，为1个矿物累计3点采集进度；若超限，额外累积1点采集进度",
+        "card_info_effect": "<b00>解锁：${aP03}\n<b00>超限：${aP02}\n<b00>快速 / 矿工\n<n02>${tR01}，你的回合中：消耗${aP01}，为1个矿物累积3点采集进度；若超限，额外累积1点采集进度",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_02.png",
         "card_inner_base_path": null,
@@ -63,7 +63,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你的回合中：消耗${aP01}，为1个矿物累计3点采集进度；若超限，额外累积1点采集进度"
+                "text": "${tR01}，你的回合中：消耗${aP01}，为1个矿物累积3点采集进度；若超限，额外累积1点采集进度"
             }
         ]
     }

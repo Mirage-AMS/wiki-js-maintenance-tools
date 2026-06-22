@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 342
+                "itemCount": 345
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-06-22",
+                "title": "【欧洛佩，绿野芳踪】上线",
+                "description": "昨晚那个没药晕染的梦境中，欧洛佩小姐窥见领地深处生出一株娇贵非常的花朵……",
+                "category": "角色更新",
+                "link": "/card/role/card_rol03_ri_06"
+            },
             {
                 "date": "2026-05-25",
                 "title": "【卡萨尔，盲眼修士】上线",

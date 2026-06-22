@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-06-22",
+            "content": "【认知革新】加强，现在可以移除其他高级能力"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -30,7 +35,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 革新\n<n02>${tR01}，${tPrp}：移除1个你已解锁的中级以下能力，获得情报区弃牌堆1张相同等级的情报卡牌，你可以不支付解锁代价地将其解锁，其不能被效果移除",
+        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 革新\n<n02>${tR01}，${tPrp}：移除1个你已解锁的其他能力，获得情报区弃牌堆1张相同等级的情报卡牌，你可以不支付解锁代价地将其解锁，其不能被效果移除",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_09.png",
         "card_inner_base_path": null,
@@ -62,7 +67,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：移除1个你已解锁的中级以下能力，获得情报区弃牌堆1张相同等级的情报卡牌，你可以不支付解锁代价地将其解锁，其不能被效果移除"
+                "text": "${tR01}，${tPrp}：移除1个你已解锁的其他能力，获得情报区弃牌堆1张相同等级的情报卡牌，你可以不支付解锁代价地将其解锁，其不能被效果移除"
             }
         ]
     }
