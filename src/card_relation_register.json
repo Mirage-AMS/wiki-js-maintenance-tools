@@ -488,12 +488,12 @@
         },
         {
             "from": "card_rol01_ri_06.json",
-            "to": "card_rol01_ro_11.json",
+            "to": "card_rol01_ro_12.json",
             "type": "bidirectional"
         },
         {
             "from": "card_rol01_ri_06.json",
-            "to": "card_rol01_ro_12.json",
+            "to": "card_rol01_ro_11.json",
             "type": "bidirectional"
         },
         {

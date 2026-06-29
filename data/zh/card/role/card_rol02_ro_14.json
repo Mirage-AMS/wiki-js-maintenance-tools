@@ -12,7 +12,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "【林中小屋】有8个以上素材时，两个额外效果能同时获得吗？",
+            "answer": "可以同时获得。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

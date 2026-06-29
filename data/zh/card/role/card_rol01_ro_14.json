@@ -12,7 +12,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "启用【奥术原理】后，可以不消耗元素发动【万象法咒】，此时是不是可以任选效果发动？",
+            "answer": "不是。如果没有消耗任何元素，则结算时无法根据消耗元素类型选择效果，结算失败。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

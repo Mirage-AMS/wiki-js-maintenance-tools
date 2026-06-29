@@ -12,7 +12,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "【万咒法典】获得的法术，发动时需要消耗元素吗？",
+            "answer": "需要，详见[复制效果]。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

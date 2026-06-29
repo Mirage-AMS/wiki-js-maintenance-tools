@@ -65,16 +65,16 @@
     },
     "related_cards": [
         {
-            "path": "/card/role/card_rol01_ro_11",
-            "card_name": "优雅之舞",
-            "brief_description": "中级 / 情报 / 专属 · 技能",
-            "card_thumbnail_url": "/assets/thumbnail/huntress_dance_of_perfect.jpg"
-        },
-        {
             "path": "/card/role/card_rol01_ro_12",
             "card_name": "风之华舞",
             "brief_description": "低级 / 情报 / 专属 · 法术",
             "card_thumbnail_url": "/assets/thumbnail/huntress_dance_of_wind.jpg"
+        },
+        {
+            "path": "/card/role/card_rol01_ro_11",
+            "card_name": "优雅之舞",
+            "brief_description": "中级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/huntress_dance_of_perfect.jpg"
         }
     ]
 }
