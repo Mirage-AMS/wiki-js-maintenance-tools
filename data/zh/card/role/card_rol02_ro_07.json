@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-07-06",
+            "content": "【执政手腕】追加可选事件：【沧海遗珠】。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -30,7 +35,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<n00>消耗${aP01}，选以下1个事件发动，\n<n00><博闻> · 【彼端奇闻】 \n<n00><筹措> · 【赞助游说】\n<n00><探听> · 【独家秘闻】\n<n00>  <n26> ",
+        "card_info_effect": "<n02> \n<n00>消耗${aP01}，选以下1个事件发动，\n<n00><循旧> · 【沧海遗珠】\n<n00><筹措> · 【赞助游说】\n<n00><博闻> · 【彼端奇闻】 \n<n00><探听> · 【独家秘闻】\n<n26> ",
         "card_info_description": "<n02>在权谋的棋局上，艾尔弗里德运筹帷幄 ",
         "card_picture_path": "archon_skill.png",
         "card_inner_base_path": "base_inner_role_archon.png",
@@ -61,7 +66,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "消耗${aP01}，选以下1个事件发动，<br><博闻> · 【彼端奇闻】<br><筹措> · 【赞助游说】<br><探听> · 【独家秘闻】"
+                "text": "消耗${aP01}，选以下1个事件发动，<br><循旧> · 【沧海遗珠】<br><筹措> · 【赞助游说】<br><博闻> · 【彼端奇闻】<br><探听> · 【独家秘闻】"
             }
         ]
     },
@@ -71,6 +76,12 @@
             "card_name": "艾尔弗里德，大展宏图",
             "brief_description": "角色 / 专属",
             "card_thumbnail_url": "/assets/thumbnail/role_intro_archon.jpg"
+        },
+        {
+            "path": "/card/intelligence/card_std01_co_28",
+            "card_name": "沧海遗珠",
+            "brief_description": "低级 / 事件",
+            "card_thumbnail_url": "/assets/thumbnail/pearl_finder.jpg"
         },
         {
             "path": "/card/intelligence/card_std01_co_29",

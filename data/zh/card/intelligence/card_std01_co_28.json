@@ -10,7 +10,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "【沧海遗珠】是否能获取情报区弃牌堆的事件卡牌？",
+            "answer": "不能，事件卡牌不是情报卡牌。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

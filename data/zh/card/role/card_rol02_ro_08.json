@@ -13,7 +13,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-07-06",
+            "content": "【令行禁止】的解锁条件从任意事件×3调整为任意事件×2+任意情报×2。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +36,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：任意事件×3\n<b00>启动 / 令行\n<n02>${tR01}，${tPrp}：选以下1个效果启用，\n<n02>· 弃置1个事件素材，视为你将其发动\n<n02>· 选情报区弃牌堆最多3张事件卡牌作为素材堆叠\n<n20> ",
+        "card_info_effect": "<b00>解锁：任意事件×2+任意情报×2\n<b00>启动 / 令行\n<n02>${tR01}，${tPrp}：选以下1个效果启用，\n<n02>· 弃置1个事件素材，视为你将其发动\n<n02>· 选情报区弃牌堆最多3张事件卡牌作为素材堆叠\n<n20> ",
         "card_info_description": "<n02>政令一下，局势便随之转变 ",
         "card_picture_path": "archon_order.png",
         "card_inner_base_path": "base_inner_role_archon.png",
@@ -57,7 +62,7 @@
             "造物"
         ],
         "card_tag_info": "专属 · 造物",
-        "unlock": "任意事件×3",
+        "unlock": "任意事件×2+任意情报×2",
         "effects": [
             {
                 "name": "令行",

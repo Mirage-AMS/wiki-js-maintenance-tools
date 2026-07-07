@@ -11,7 +11,12 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
+    "faq": [
+        {
+            "question": "【情报筛选】翻开到事件卡牌时，能否将其获得？",
+            "answer": "不能，事件卡牌不是情报卡牌。"
+        }
+    ],
     "revise": [],
     "card": {
         "card_id": null,

@@ -11,7 +11,16 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-03-02",
+            "content": "【魔偶】的[号令]效果从泛用打2提升至泛用打3。"
+        },
+        {
+            "date": "2026-07-06",
+            "content": "【魔偶】不再在持有素材时被视为中级；[号令]效果不再表述为泛用打。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -29,7 +38,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>永久 / 本源\n<n04>持有素材的该造物可以被视为1个中级造物\n<b02>启动 / 号令\n<n04>${tR01}：选以下1个效果启用，\n<n04>· 明置探索区1张卡牌\n<n04>· 为1个基础资源累积3点采集进度或造成3点伤害",
+        "card_info_effect": "<b00>启动 / 号令\n<n02>${tR01}：选以下1个效果启用，\n<n02>· 明置探索区1张卡牌\n<n02>· 本回合降低1个矿物3点采集需求\n<n02>· 为1个植物累积2点采集进度\n<n02>· 对1个生物造成3点伤害",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_co_26.png",
         "card_inner_base_path": "base_inner_others.png",
@@ -54,18 +63,11 @@
         "card_tag_info": "",
         "effects": [
             {
-                "name": "本源",
-                "type": "永久",
-                "location": null,
-                "consumption": null,
-                "text": "持有素材的该造物可以被视为1个中级造物"
-            },
-            {
                 "name": "号令",
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：选以下1个效果启用，<br>· 明置探索区1张卡牌<br>· 为1个基础资源累积3点采集进度或造成3点伤害"
+                "text": "${tR01}：选以下1个效果启用，<br>· 明置探索区1张卡牌<br>· 本回合降低1个矿物3点采集需求<br>· 为1个植物累积2点采集进度<br>· 对1个生物造成3点伤害"
             }
         ]
     },

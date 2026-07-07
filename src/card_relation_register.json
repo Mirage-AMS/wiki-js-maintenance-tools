@@ -20,6 +20,10 @@
             "type": "card",
             "dir": "/card/role"
         },
+        "card_std01_co_28.json": {
+            "type": "card",
+            "dir": "/card/intelligence"
+        },
         "card_std01_co_29.json": {
             "type": "card",
             "dir": "/card/intelligence"
@@ -610,6 +614,11 @@
             "from": "card_rol02_ri_03.json",
             "to": "card_rol02_ro_07.json",
             "type": "bidirectional"
+        },
+        {
+            "from": "card_rol02_ro_07.json",
+            "to": "card_std01_co_28.json",
+            "type": "unidirectional"
         },
         {
             "from": "card_rol02_ro_07.json",

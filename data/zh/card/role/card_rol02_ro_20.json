@@ -14,11 +14,16 @@
     },
     "faq": [
         {
-            "question": "使用【碎岩击】时，第一步翻开的卡牌在第二步结算时必须将其弃置吗？如果是，翻开它的意义是什么？",
-            "answer": "是的，必须弃置。翻开的目的是为了配合【石锢千劫】，如果不翻开而是直接弃置，则确认类型时其已经在弃牌堆，不能被强制视为矿物。"
+            "question": "使用【碎岩击】时，翻开的卡牌必须被弃置吗？如果是，翻开它的意义是什么？",
+            "answer": "是的，必须弃置。翻开的目的是为了在探索区中确认其类型，若直接弃置，则确认类型时其在弃牌堆，不能被【石锢千劫】转变为矿物。"
         }
     ],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-07-06",
+            "content": "【碎岩击】表述微调，降低理解难度。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -36,7 +41,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b01>解锁：${aP03}\n<b01>启动 / 碎岩\n<n03>${tR01}：明置探索区1张卡牌，将以下效果启用，\n<n03>· 若其为矿物，为该探索区1个矿物累积2点采集进度\n<n03>· 将其弃置",
+        "card_info_effect": "<b00>解锁：${aP03}\n<b00>启动 / 碎岩\n<n02>${tR01}：明置探索区1张卡牌，将以下效果启用，那之后将其弃置\n<n02>· 若其为矿物，为该探索区1个其他矿物累积2点采集进度",
         "card_info_description": null,
         "card_picture_path": "colin_punch.png",
         "card_inner_base_path": "base_inner_role_colin.png",
@@ -69,7 +74,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：明置探索区1张卡牌，将以下效果启用，<br>· 若其为矿物，为该探索区1个矿物累积2点采集进度<br>· 将其弃置"
+                "text": "${tR01}：明置探索区1张卡牌，将以下效果启用，那之后将其弃置<br>· 若其为矿物，为该探索区1个其他矿物累积2点采集进度"
             }
         ]
     },
