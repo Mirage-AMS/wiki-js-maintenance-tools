@@ -26,6 +26,10 @@
         {
             "date": "2026-03-02",
             "content": "【古老魔杖】移除超限效果，伤害附加效果从+5降低为+4。"
+        },
+        {
+            "date": "2026-07-21",
+            "content": "修复【古老魔杖】的表述漏洞，现在1行动只能发动1次。"
         }
     ],
     "card": {
@@ -45,7 +49,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：含${eA01}植物\n<b00>启动 / 蓄力\n<n02>你狩猎生物中：本回合你的下次攻击造成的伤害+4",
+        "card_info_effect": "<b00>解锁：含${eA01}植物\n<b00>启动 / 蓄力\n<n02>1行动1次，你狩猎生物中：本回合你的下次攻击造成的伤害+4",
         "card_info_description": null,
         "card_picture_path": "tmp/card_rol03_ro_05.png",
         "card_inner_base_path": "base_inner_role_holly.png",
@@ -78,7 +82,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "你狩猎生物中：本回合你的下次攻击造成的伤害+4"
+                "text": "1行动1次，你狩猎生物中：本回合你的下次攻击造成的伤害+4"
             }
         ]
     },

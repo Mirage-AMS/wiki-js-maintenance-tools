@@ -18,7 +18,12 @@
             "answer": "需要，详见[复制效果]。"
         }
     ],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-07-21",
+            "content": "【万咒法典】加强，现在持有3个素材以上时也可以选择获得中级法术情报素材的效果。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -36,8 +41,8 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：法术情报+非法术情报\n<b00>永久 / 万咒\n<n02>该造物获得其所有低级法术情报素材记述的所有效果\n<n02> <n02> <n20> ",
-        "card_info_description": "<n02>六重星芒下的低语 ",
+        "card_info_effect": "<b02>解锁：法术情报+非法术情报\n<b02>启动 / 万咒\n<n04>${tR01}：根据持有素材的数目，选以下1个效果直到本轮结束前启用，\n<n04>· 1个以上：该造物获得其所有低级法术情报素材的所有效果\n<n04>· 3个以上：该造物获得其1个中级法术情报素材的所有效果",
+        "card_info_description": null,
         "card_picture_path": "carlos_spell_book.png",
         "card_inner_base_path": "base_inner_role_carlos.png",
         "card_medal_path": "medal_role_common.png",
@@ -66,10 +71,10 @@
         "effects": [
             {
                 "name": "万咒",
-                "type": "永久",
+                "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "该造物获得其所有低级法术情报素材记述的所有效果"
+                "text": "${tR01}：根据持有素材的数目，选以下1个效果直到本轮结束前启用，<br>· 1个以上：该造物获得其所有低级法术情报素材的所有效果<br>· 3个以上：该造物获得其1个中级法术情报素材的所有效果"
             }
         ]
     },

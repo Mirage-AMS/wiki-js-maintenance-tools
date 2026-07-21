@@ -12,8 +12,22 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "如果通过其他能力的效果，移除【垄断经营】并在之后再次解锁，能否发动本局此前已经发动过的[尾货]效果？",
+            "answer": "可以。被移除的【垄断经营】和再度解锁的【垄断经营】不视为同1能力，移除后次数限制清空。"
+        },
+        {
+            "question": "如果通过其他能力的效果，复制【垄断经营】的效果并发动[尾货]，该能力在下一个周期再度如此操作，是否能发动[尾货]？",
+            "answer": "可以。复制效果临时复制获得的[尾货]，在复制效果失效后次数限制清空。"
+        }
+    ],
+    "revise": [
+        {
+            "date": "2026-07-21",
+            "content": "【垄断经营】加强，额外增加1个购买交易区弃牌堆的效果。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,13 +45,14 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP06}\n<b00>快速 / 专营\n<n02>任意玩家购买商品时：你获得${aP01}\n<n02> <n02> <n02> <n20> ",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>快速 / 专营\n<n02>任意玩家购买商品时：你获得${aP01}\n<n32> \n<b00>启动 / 尾货\n<n02>1局1次，${tPrp}：将交易区弃牌堆1张卡牌视为交易区商品购买\n<n25> ",
         "card_info_description": "<n02>每花一分，夏洛克便得之一厘 ",
         "card_picture_path": "shylock_gold_master.png",
         "card_inner_base_path": "base_inner_role_shylock.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
         "card_package_info": "角色扩展包01",
         "card_match_info": "∞",
         "card_image_url": "/assets/image/deck_role_info01_20.jpg",
@@ -64,6 +79,13 @@
                 "location": null,
                 "consumption": null,
                 "text": "任意玩家购买商品时：你获得${aP01}"
+            },
+            {
+                "name": "尾货",
+                "type": "启动",
+                "location": null,
+                "consumption": null,
+                "text": "1局1次，${tPrp}：将交易区弃牌堆1张卡牌视为交易区商品购买"
             }
         ]
     },

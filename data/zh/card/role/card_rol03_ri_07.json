@@ -1,0 +1,86 @@
+{
+    "path": "card/role/card_rol03_ri_07",
+    "tags": [
+        "卡牌",
+        "角色",
+        "专属"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [
+        {
+            "date": "2026-07-21",
+            "content": "【博里，疫境独行】上线"
+        }
+    ],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "博里，疫境独行",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>特色：孢子瘟疫\n<n02>深入地穴的先遣军带回了绝世珍宝，却也染上了绝命怪疾。博里·林奈从那些奄奄一息的病人身上挑出一缕缕白色菌丝，黄铜镜下的孢子囊像心脏般剧烈搏动——那是深渊播下的疫种，也是林奈必应的战书",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ri_07.png",
+        "card_inner_base_path": "base_inner_role_cole.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包03",
+        "card_match_info": "∞",
+        "card_image_url": "/assets/image/deck_role_intro03_07.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_07.jpg",
+        "card_basic_info": "角色 / 专属",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_level_info": null,
+        "card_types": [
+            "角色"
+        ],
+        "card_type_info": "角色",
+        "card_tags": [
+            "专属"
+        ],
+        "card_tag_info": "专属",
+        "effects": [
+            {
+                "name": "孢子瘟疫",
+                "type": "特色",
+                "location": null,
+                "consumption": null,
+                "text": "深入地穴的先遣军带回了绝世珍宝，却也染上了绝命怪疾。博里·林奈从那些奄奄一息的病人身上挑出一缕缕白色菌丝，黄铜镜下的孢子囊像心脏般剧烈搏动——那是深渊播下的疫种，也是林奈必应的战书"
+            }
+        ]
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ro_13",
+            "card_name": "孢子瘟疫",
+            "brief_description": "低级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_13.jpg"
+        },
+        {
+            "path": "/card/role/card_rol03_ro_14",
+            "card_name": "林奈药剂",
+            "brief_description": "中级 / 情报 / 专属 · 造物",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_14.jpg"
+        }
+    ]
+}

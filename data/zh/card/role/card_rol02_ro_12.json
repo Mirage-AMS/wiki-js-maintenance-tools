@@ -12,8 +12,18 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "【勒菲弗巧械铺】发动时，可以分别弃置1张手牌和1个已解锁造物的素材吗？",
+            "answer": "可以，只需合计2张，不要求2张来源相同。"
+        }
+    ],
+    "revise": [
+        {
+            "date": "2026-07-21",
+            "content": "【勒菲弗巧械铺】削弱，现在发动任一效果都需要弃置手牌或素材合计2张。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +41,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：中级以上含${eE01}矿物\n<b02>启动 / 拆解\n<n04>${tR01}，${tPrp}：弃置你已解锁造物的最多2个素材，根据弃置素材的数目将对应效果启用，\n<n04>· 1个：抽2张卡牌\n<n04>· 2个：弃置任一玩家已解锁造物的1个素材\n<n08> ",
+        "card_info_effect": "<b00>解锁：中级以上含${eE01}矿物\n<b00>启动 / 拆解\n<n02>${tR01}，${tPrp}：弃置手牌或已解锁造物的素材合计2张，选以下1个效果启用，\n<n02>· 抽2张卡牌\n<n02>· 弃置任一玩家已解锁造物的1个素材\n<n20> ",
         "card_info_description": "<n02>他人的奇思总能催发欧也妮的灵感 ",
         "card_picture_path": "eugenie_workshop.png",
         "card_inner_base_path": "base_inner_role_eugenie.png",
@@ -64,7 +74,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：弃置你已解锁造物的最多2个素材，根据弃置素材的数目将对应效果启用，<br>· 1个：抽2张卡牌<br>· 2个：弃置任一玩家已解锁造物的1个素材"
+                "text": "${tR01}，${tPrp}：弃置手牌或已解锁造物的素材合计2张，选以下1个效果启用，<br>· 抽2张卡牌<br>· 弃置任一玩家已解锁造物的1个素材"
             }
         ]
     },

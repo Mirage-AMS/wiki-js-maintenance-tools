@@ -13,7 +13,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-07-21",
+            "content": "【法术研习】微调表述，效果维持不变。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +36,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：${aP06}\n<b02>启动 / 研习\n<n05>${tR01}，${tPrp}：选情报区弃牌堆1张法术情报卡牌，选以下1个效果启用，\n<n05>· 消耗${aP01}，将其作为你已解锁造物的素材堆叠\n<n05>· 消耗${aP02}，将其获得\n<n06>  ",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 研习\n<n02>${tR01}，${tPrp}：消耗${aP01}，选情报区弃牌堆1张法术情报卡牌，将其作为你已解锁造物的素材堆叠；你可以额外消耗${aP01}，改为将其获得\n<n20> ",
         "card_info_description": "<n02>致那些逝去的光阴 ",
         "card_picture_path": "carlos_learning.png",
         "card_inner_base_path": "base_inner_role_carlos.png",
@@ -64,7 +69,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：选情报区弃牌堆1张法术情报卡牌，选以下1个效果启用，<br>· 消耗${aP01}，将其作为你已解锁造物的素材堆叠<br>· 消耗${aP02}，将其获得"
+                "text": "${tR01}，${tPrp}：消耗${aP01}，选情报区弃牌堆1张法术情报卡牌，将其作为你已解锁造物的素材堆叠；你可以额外消耗${aP01}，改为将其获得"
             }
         ]
     },
