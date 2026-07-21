@@ -52,7 +52,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eE01}${eE01}${eR02}\n<b00>启动 / ${eE01}${eE01} / 石锢 \n<n02>${tR01}：选1个探索区，本回合该探索区所有植物·生物转变为矿物（生物的生命上限转变为采集需求，伤口转变为采集进度）\n<n02> <n20> ",
+        "card_info_effect": "<b00>解锁：${eE01}${eE01}${eR02}\n<b00>启动 / ${eE01}${eE01} / 石锢 \n<n02>${tR01}：选1个探索区，本回合其中植物·生物转变为矿物（生物的生命上限转变为采集需求，伤口转变为采集进度）\n<n02> <n20> ",
         "card_info_description": "<n02>在那野兽身上，科林似乎看到自己的未来 ",
         "card_picture_path": "colin_spell.png",
         "card_inner_base_path": "base_inner_role_colin.png",
@@ -85,7 +85,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": "${eE01}${eE01}",
-                "text": "${tR01}：选1个探索区，本回合该探索区所有植物·生物转变为矿物（生物的生命上限转变为采集需求，伤口转变为采集进度）"
+                "text": "${tR01}：选1个探索区，本回合其中植物·生物转变为矿物（生物的生命上限转变为采集需求，伤口转变为采集进度）"
             }
         ]
     },

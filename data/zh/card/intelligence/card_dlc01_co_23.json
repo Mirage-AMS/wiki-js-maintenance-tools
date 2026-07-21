@@ -11,8 +11,18 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "狩猎生物中，若我受到伤害并进入濒死状态，能否立即发动【生命汲取】的效果，移除伤口并继续狩猎？",
+            "answer": "可以。在生物的攻击结束时，你可以发动快速效果，详细机制和时点请参考[濒死状态]、[狩猎生物时点]。"
+        }
+    ],
+    "revise": [
+        {
+            "date": "2026-07-28",
+            "content": "【生命汲取】累积植物采集进度从4降低为3。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -30,7 +40,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：${eE01}${eE01}${eR02}\n<b02>快速 / ${eE01}${eR01} / 汲取\n<n04>${tR01}，你的回合中：选以下1个效果启用，那之后你可以移除最多3个本回合累积的伤口\n<n04>· 为1个植物累积4点采集进度\n<n04>· 对1个生物造成3点伤害",
+        "card_info_effect": "<b02>解锁：${eE01}${eE01}${eR02}\n<b02>快速 / ${eE01}${eR01} / 汲取\n<n04>${tR01}，你的回合中：选以下1个效果启用，那之后你可以移除最多3个本回合累积的伤口\n<n04>· 为1个植物累积3点采集进度\n<n04>· 对1个生物造成3点伤害",
         "card_info_description": null,
         "card_picture_path": "dlc01_life_drain.png",
         "card_inner_base_path": null,
@@ -62,7 +72,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": "${eE01}${eR01}",
-                "text": "${tR01}，你的回合中：选以下1个效果启用，那之后你可以移除最多3个本回合累积的伤口<br>· 为1个植物累积4点采集进度<br>· 对1个生物造成3点伤害"
+                "text": "${tR01}，你的回合中：选以下1个效果启用，那之后你可以移除最多3个本回合累积的伤口<br>· 为1个植物累积3点采集进度<br>· 对1个生物造成3点伤害"
             }
         ]
     }

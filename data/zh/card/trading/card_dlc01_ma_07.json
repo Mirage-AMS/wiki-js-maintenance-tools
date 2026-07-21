@@ -16,6 +16,10 @@
         {
             "date": "2025-12-15",
             "content": "新增单人模式的循环标记"
+        },
+        {
+            "date": "2026-07-28",
+            "content": "【囤积居奇】表述调整，获得的效果现在依附能力，原能力被移除后不再有效。"
         }
     ],
     "card": {
@@ -35,7 +39,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>永久 / 抬价\n<n04>只在解锁该技能时，选1种卡牌类型，将以下效果永久启用，\n<n04>· 交易区该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1",
+        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>永久 / 抬价\n<n04>只在解锁该技能时，选1种卡牌类型，该技能永久获得以下效果，\n<n04>· 永久/ 交易区该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1",
         "card_info_description": null,
         "card_picture_path": "dlc01_corner_the_market.png",
         "card_inner_base_path": null,
@@ -67,7 +71,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "只在解锁该技能时，选1种卡牌类型，将以下效果永久启用，<br>· 交易区该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1"
+                "text": "只在解锁该技能时，选1种卡牌类型，该技能永久获得以下效果，<br>· 永久/ 交易区该类型的商品在你的回合中售价-1，在其他玩家回合中售价+1"
             }
         ]
     }

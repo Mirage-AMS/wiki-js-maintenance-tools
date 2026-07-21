@@ -31,7 +31,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 连胜\n<n02>${tPrp}：投掷3个骰子，根据其点数获得金币，若那些骰子的骰面不全相同，本轮你不能将同名效果再次发动\n<n02> <n20> ",
+        "card_info_effect": "<b00>解锁：${aP12}\n<b00>启动 / 连胜\n<n02>${tPrp}：投掷3个骰子，根据其点数获得金币，若那些骰子的骰面不全相同，本轮你不能再将同名效果发动\n<n02> <n20> ",
         "card_info_description": "<n02>人总道久赌必输，他却是常胜将军 ",
         "card_picture_path": "kay_win_again.png",
         "card_inner_base_path": "base_inner_role_kay.png",
@@ -64,7 +64,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tPrp}：投掷3个骰子，根据其点数获得金币，若那些骰子的骰面不全相同，本轮你不能将同名效果再次发动"
+                "text": "${tPrp}：投掷3个骰子，根据其点数获得金币，若那些骰子的骰面不全相同，本轮你不能再将同名效果发动"
             }
         ]
     },
