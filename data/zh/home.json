@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 345
+                "itemCount": 348
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-07-21",
+                "title": "【博里，疫境独行】上线",
+                "description": "深入地穴的先遣军带回了绝世珍宝，却也染上了绝命怪疾。",
+                "category": "角色更新",
+                "link": "/card/role/card_rol03_ri_07"
+            },
             {
                 "date": "2026-07-06",
                 "title": "26-07-06：常规平衡性更新",
