@@ -131,6 +131,15 @@ class WikiPTLRenderer(WikiRenderer):
         "[复制效果]": {
             "": ("/rule/rule_advanced/rule_classified_effects", "#h-23-复制效果", "复制效果")
         },
+        "[濒死状态]": {
+            "": ("/rule/rule_advanced/rule_classified_mechanisms", "#h-11-濒死状态", "濒死状态")
+        },
+        "[战利品状态]": {
+            "": ("/rule/rule_advanced/rule_classified_mechanisms", "#h-12-战利品状态", "战利品状态")
+        },
+        "[狩猎生物时点]" : {
+            "": ("/rule/rule_advanced/rule_classified_timing", "#h-241-狩猎生物中", "狩猎生物时点")
+        }
     }
 
     def __init__(self):
