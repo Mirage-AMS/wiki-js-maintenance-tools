@@ -194,6 +194,24 @@ tags: ['规则']
 
 <br>
 
+### 2.4.1 狩猎生物中
+
+1. 自由时点：狩猎开始时
+2. 自由时点：攻击宣言时
+3. 自由时点：攻击结束时
+4. 自由时点：狩猎结束时
+
+<div style="text-align: left; margin: 20px 0;">
+  <figure style="display: inline-block; max-width: 50%; width: 100%; text-align: center; margin: 0;">
+    <a href="/assets/image/process_hunting_creature.jpg" target="_blank" style="display: block;">
+      <img src="/assets/image/process_hunting_creature.jpg" alt="狩猎生物流程图" style="width: 100%; height: auto;">
+    </a>
+    <figcaption style="font-size: 14px; color: #666; margin-top: 10px; font-family: sans-serif;">
+      流程图：狩猎生物
+    </figcaption>
+  </figure>
+</div>
+
 ## 2.5 结束阶段
 
 1. 自由时点：你的结束阶段时
