@@ -16,6 +16,9 @@ tags: ['关于']
 ## 2.1 技术栈
 
 - **前后端**：Wiki.js 开源框架
+  - **SEO插件**：[wikijs-seo-tools](https://github.com/zivenyang/wikijs-seo-tools/)
+  - **搜索插件**：[wikijs-module-meilisearch](https://github.com/mbround18/wikijs-module-meilisearch/)
+  - **搜索引擎**：[meilisearch](https://www.meilisearch.com/)
 - **维护**：Python 自动化数据上传
   - **数据来源**：设计数据
   - **渲染流程**：Jinja2 模板引擎
@@ -24,6 +27,9 @@ tags: ['关于']
 <br>
 
 # 3. 更新日志
+
+> **2026-07-29**
+> 1. 使用meilisearch优化搜索体验
 
 > **2025-12-20**
 > 1. 新增版本历史和FAQ相关的页面维护
