@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  wiki:
+    image: requarks/wiki:2.5.308
+    restart: always
+    user: root
+    environment:
+      - DB_TYPE=sqlite
+      - DB_FILEPATH=/wiki/data/db.sqlite
+      - PORT=3000
+      - LOG_LEVEL=info
+      # 可选：反向代理URL（启用时替换为你的域名）
+      - URL=https://wiki.koreha.fun
+    volumes:
+      - ./wiki-data:/wiki/data
+      - ./wiki-modules/search/meilisearch:/wiki/server/modules/search/meilisearch
+    expose:
+      - 3000
+    networks:
+      - frontend
+
+networks:
+    frontend:
+        name: caddy-frontend
+        external: true

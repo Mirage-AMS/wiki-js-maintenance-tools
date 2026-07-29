@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.12
+    container_name: wiki-meilisearch-1               # 给容器起一个固定且唯一的名称
+    restart: always
+    environment:
+      - MEILI_ENV=production
+      - MEILI_MASTER_KEY=
+      - MEILI_NO_ANALYTICS=true
+    volumes:
+      - ./data:/meili_data
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    name: caddy-frontend
+    external: true                                   # 接入外部 caddy 网络

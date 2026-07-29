@@ -1,0 +1,47 @@
+(transparent-proxy) {
+  header_up Host {host}
+  header_up X-Real-IP {remote_host}
+
+  header_up Upgrade {http.request.header.Upgrade}
+  header_up Connection {http.request.header.Connection}
+
+  header_down -Server
+  header_down -X-Powered-By
+}
+
+(common-tls) {
+  tls {
+    #ca https://acme-staging-v02.api.letsencrypt.org/directory
+    protocols tls1.2 tls1.3
+    ciphers TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256 TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+  }
+}
+
+wiki.koreha.fun {
+  import common-tls
+
+  handle /sitemap.xml {
+    rewrite * /sitemap
+    reverse_proxy sitemap-service:8000 {
+      import transparent-proxy
+    }
+  }
+
+  handle /sitemap {
+    reverse_proxy sitemap-service:8000 {
+      import transparent-proxy
+    }
+  }
+
+  handle /timeline {
+    reverse_proxy sitemap-service:8000 {
+      import transparent-proxy
+    }
+  }
+
+  handle {
+    reverse_proxy wiki:3000 {
+      import transparent-proxy
+    }
+  }
+}

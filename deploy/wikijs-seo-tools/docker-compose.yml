@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  sitemap-service:
+    build: .
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - WIKIJS_BASE_URL=https://wiki.koreha.fun
+      - WIKIJS_API_URL=https://wiki.koreha.fun/graphql
+      - WIKIJS_API_TOKEN=
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    name: caddy-frontend
+    external: true
