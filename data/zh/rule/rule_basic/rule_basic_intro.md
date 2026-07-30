@@ -297,7 +297,7 @@ ${tAct}，玩家主要在象征城外的“火山”、“森林”和“地下�
 
 游戏中还包含一些公共配件，它们分别是：
 
-- 烂草袋：一个存放[烂草](/card/accessory/card_std01_ac_01)卡牌的牌堆，烂草是采集植物失败的产物；
+- 烂草袋：一个存放[烂草](/card/accessory/card_std_ac_01)卡牌的牌堆，烂草是采集植物失败的产物；
 - 足金袋：（启用卡牌扩展 01）一个存放[足金](/card/accessory/card_dlc01_ac_01)卡牌的牌堆，其通常由[点石成金](/card/intelligence/card_dlc01_co_27)产生；
 - [标准骰子](/rule/rule_basic/rule_exploration#h-7-投掷标准骰子)：游戏中投掷骰子时使用的唯一一种骰子；
 - 计数骰子：普通的D6骰子，用于记录游戏中的各种临时数值；
