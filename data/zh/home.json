@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 348
+                "itemCount": 351
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-08-18",
+                "title": "【伊芙琳，星罗占影】上线",
+                "description": "故事始于一个闷热的午夜，年幼的伊芙琳因失眠站上露台，抬头的瞬间，群星顺着天幕直坠入双瞳……",
+                "category": "角色更新",
+                "link": "/card/role/card_rol03_ri_08"
+            },
             {
                 "date": "2026-07-28",
                 "title": "26-07-28：常规平衡性更新",
