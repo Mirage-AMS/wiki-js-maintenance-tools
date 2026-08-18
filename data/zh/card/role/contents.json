@@ -353,6 +353,10 @@
             "template": "card_intelligence_template.html",
             "data": "card_rol03_ri_07.json"
         },
+        "card_rol03_ri_08": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ri_08.json"
+        },
         "card_rol03_ro_01": {
             "template": "card_intelligence_template.html",
             "data": "card_rol03_ro_01.json"
@@ -408,6 +412,14 @@
         "card_rol03_ro_14": {
             "template": "card_intelligence_template.html",
             "data": "card_rol03_ro_14.json"
+        },
+        "card_rol03_ro_15": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ro_15.json"
+        },
+        "card_rol03_ro_16": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ro_16.json"
         }
     }
 }

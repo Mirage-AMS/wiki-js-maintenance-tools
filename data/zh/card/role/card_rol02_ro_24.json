@@ -22,7 +22,12 @@
             "answer": "不受到。【芝麻开门】直接转变商品为矿物时，只根据原本价值（即左上角金币标识的数字）进行转变。"
         }
     ],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-08-18",
+            "content": "【芝麻开门】的元素消耗从1个无色元素增加到2个。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -40,7 +45,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eR02}\n<b00>启动 / ${eR01} / 密语 \n<n02>${tR01}：本回合将交易区转变为1个探索区，其中商品转变为采集需求相当于其原本价值-2的矿物\n<n02> <n20> ",
+        "card_info_effect": "<b00>解锁：${eR02}\n<b00>启动 / ${eR02} / 密语 \n<n02>${tR01}：本回合将交易区转变为1个探索区，其中商品转变为采集需求相当于其原本价值-2的矿物\n<n02> <n20> ",
         "card_info_description": "<n02>“开门，开门，芝麻” ",
         "card_picture_path": "kasim_open_sesame.png",
         "card_inner_base_path": "base_inner_role_kasim.png",
@@ -72,7 +77,7 @@
                 "name": "密语",
                 "type": "启动",
                 "location": null,
-                "consumption": "${eR01}",
+                "consumption": "${eR02}",
                 "text": "${tR01}：本回合将交易区转变为1个探索区，其中商品转变为采集需求相当于其原本价值-2的矿物"
             }
         ]

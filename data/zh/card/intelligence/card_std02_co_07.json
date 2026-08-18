@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-08-18",
+            "content": "【侦察小队】调整为明置到低级基础资源时获得金币。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -30,7 +35,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 侦查\n<n02>${tR01}：明置探索区1张卡牌，若其为中级以上基础资源（矿物·植物·生物），你获得${aP01}",
+        "card_info_effect": "<b00>解锁：${aP06}\n<b00>启动 / 侦查\n<n02>${tR01}：明置探索区1张卡牌，若其为低级基础资源（矿物·植物·生物），你获得${aP01}",
         "card_info_description": null,
         "card_picture_path": "scope_team.png",
         "card_inner_base_path": null,
@@ -62,7 +67,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：明置探索区1张卡牌，若其为中级以上基础资源（矿物·植物·生物），你获得${aP01}"
+                "text": "${tR01}：明置探索区1张卡牌，若其为低级基础资源（矿物·植物·生物），你获得${aP01}"
             }
         ]
     }
