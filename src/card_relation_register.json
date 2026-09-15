@@ -180,6 +180,10 @@
             "type": "card",
             "dir": "/card/role"
         },
+        "card_rol03_ri_09.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
         "card_rol01_ro_01.json": {
             "type": "card",
             "dir": "/card/role"
@@ -449,6 +453,14 @@
             "dir": "/card/role"
         },
         "card_rol03_ro_16.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_17.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_18.json": {
             "type": "card",
             "dir": "/card/role"
         }
@@ -857,6 +869,16 @@
         {
             "from": "card_rol03_ri_08.json",
             "to": "card_rol03_ro_16.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_09.json",
+            "to": "card_rol03_ro_17.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_09.json",
+            "to": "card_rol03_ro_18.json",
             "type": "bidirectional"
         }
     ]
