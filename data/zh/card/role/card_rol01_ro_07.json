@@ -13,7 +13,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-09-15",
+            "content": "【活力药剂】的时点修正为采集过程中，避免裁定采集失败时已无法追溯弃置。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +36,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：含${eE01}植物\n<b00>快速 / 活力\n<n02>${tR01}，任意玩家采集植物失败时：使被采集植物只在这次不会因采集失败被弃置\n<n02> <n02> <n20> ",
+        "card_info_effect": "<b00>解锁：含${eE01}植物\n<b00>快速 / 活力\n<n02>${tR01}，任意玩家采集植物中：使被采集植物只在这次采集中不会因采集失败被弃置\n<n02> <n02> <n20> ",
         "card_info_description": "<n02>折而不断，枯而不衰 ",
         "card_picture_path": "life_water.png",
         "card_inner_base_path": "base_inner_role_life.png",
@@ -64,7 +69,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，任意玩家采集植物失败时：使被采集植物只在这次不会因采集失败被弃置"
+                "text": "${tR01}，任意玩家采集植物中：使被采集植物只在这次采集中不会因采集失败被弃置"
             }
         ]
     },

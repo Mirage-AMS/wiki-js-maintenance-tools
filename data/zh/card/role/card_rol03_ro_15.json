@@ -13,7 +13,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-09-15",
+            "content": "【群星之瞳】削弱，现在只能堆叠高级以下的卡牌。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +36,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b02>解锁：含${eW01}矿物\n<b02>启动 / 凝眸\n<n04>${tR01}：弃置探索区2张卡牌，若那些卡牌的类型相同，你可以选其中1张卡牌作为素材堆叠\n<b02>快速 / 显像\n<n04>${tR01}，你的回合中，骰子点数结算前：弃置2个素材，指定1个骰子的骰面",
+        "card_info_effect": "<b02>解锁：含${eW01}矿物\n<b02>启动 / 凝眸\n<n04>${tR01}：弃置探索区2张卡牌，若那些卡牌类型相同，选其中1张高级以下卡牌作为素材堆叠\n<b02>快速 / 显像\n<n04>${tR01}，你的回合中，骰子点数结算前：弃置2个素材，指定1个骰子的骰面",
         "card_info_description": null,
         "card_picture_path": "tmp/card_rol03_ro_15.png",
         "card_inner_base_path": "base_inner_role_evelyn.png",
@@ -64,7 +69,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}：弃置探索区2张卡牌，若那些卡牌的类型相同，你可以选其中1张卡牌作为素材堆叠"
+                "text": "${tR01}：弃置探索区2张卡牌，若那些卡牌类型相同，选其中1张高级以下卡牌作为素材堆叠"
             },
             {
                 "name": "显像",

@@ -13,7 +13,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-09-15",
+            "content": "【试剑真知】加强，现在解锁商店造物时也生效。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +36,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP03}\n<b00>快速 / 试剑\n<n02>你通过支付解锁代价解锁造物时：抽1张卡牌\n<n02> <n02> <n20> ",
+        "card_info_effect": "<b00>解锁：${aP03}\n<b00>快速 / 试剑\n<n02>你解锁造物时：抽1张卡牌\n<n02> <n02> <n02> <n20> ",
         "card_info_description": "<n02>剑心易变，试剑真知 ",
         "card_picture_path": "blade_test.png",
         "card_inner_base_path": "base_inner_role_lion.png",
@@ -64,7 +69,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "你通过支付解锁代价解锁造物时：抽1张卡牌"
+                "text": "你解锁造物时：抽1张卡牌"
             }
         ]
     },

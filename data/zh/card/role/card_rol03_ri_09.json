@@ -1,0 +1,86 @@
+{
+    "path": "card/role/card_rol03_ri_09",
+    "tags": [
+        "卡牌",
+        "角色",
+        "专属"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [
+        {
+            "date": "2026-09-15",
+            "content": "【弗格斯，高地矿工】上线"
+        }
+    ],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "弗格斯，高地矿工",
+        "card_level": "_高级",
+        "card_resource_type": "角色",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>特色：废寝忘食\n<n02>油灯摇曳的深邃矿洞，高地的岩层在沉闷的凿击下微微战栗。弗格斯·高尔已经三天三夜没有合眼，任由混合着汗水的泥屑结成坚硬的硬壳，覆满他粗犷的红须",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ri_09.png",
+        "card_inner_base_path": "base_inner_role_fergus.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包03",
+        "card_match_info": "∞",
+        "card_image_url": "/assets/image/deck_role_intro03_09.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_09.jpg",
+        "card_basic_info": "角色 / 专属",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_level_info": null,
+        "card_types": [
+            "角色"
+        ],
+        "card_type_info": "角色",
+        "card_tags": [
+            "专属"
+        ],
+        "card_tag_info": "专属",
+        "effects": [
+            {
+                "name": "废寝忘食",
+                "type": "特色",
+                "location": null,
+                "consumption": null,
+                "text": "油灯摇曳的深邃矿洞，高地的岩层在沉闷的凿击下微微战栗。弗格斯·高尔已经三天三夜没有合眼，任由混合着汗水的泥屑结成坚硬的硬壳，覆满他粗犷的红须"
+            }
+        ]
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ro_17",
+            "card_name": "皮革手套",
+            "brief_description": "低级 / 情报 / 专属 · 造物",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_17.jpg"
+        },
+        {
+            "path": "/card/role/card_rol03_ro_18",
+            "card_name": "废寝忘食",
+            "brief_description": "中级 / 情报 / 专属 · 技能",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_18.jpg"
+        }
+    ]
+}
