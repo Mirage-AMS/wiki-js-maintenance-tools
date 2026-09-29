@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 354
+                "itemCount": 360
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-09-28",
+                "title": "【瓦西里莎，与兽共舞】上线",
+                "description": "要终结盘踞在黑森林的魔魇，必须掘出女巫深埋在地底的三枚石心……",
+                "category": "角色更新",
+                "link": "/card/role/card_rol03_ri_10"
+            },
             {
                 "date": "2026-09-15",
                 "title": "【弗格斯，高地矿工】上线",

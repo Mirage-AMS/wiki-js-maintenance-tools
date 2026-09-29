@@ -20,6 +20,18 @@
             "type": "card",
             "dir": "/card/role"
         },
+        "card_rol03_ac_01.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ac_02.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol01_ac_03.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
         "card_std01_co_28.json": {
             "type": "card",
             "dir": "/card/intelligence"
@@ -181,6 +193,10 @@
             "dir": "/card/role"
         },
         "card_rol03_ri_09.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ri_10.json": {
             "type": "card",
             "dir": "/card/role"
         },
@@ -461,6 +477,14 @@
             "dir": "/card/role"
         },
         "card_rol03_ro_18.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_19.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_20.json": {
             "type": "card",
             "dir": "/card/role"
         }
@@ -879,6 +903,26 @@
         {
             "from": "card_rol03_ri_09.json",
             "to": "card_rol03_ro_18.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_10.json",
+            "to": "card_rol03_ro_19.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ro_19.json",
+            "to": "card_rol03_ac_01.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ro_19.json",
+            "to": "card_rol03_ac_02.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_10.json",
+            "to": "card_rol03_ro_20.json",
             "type": "bidirectional"
         }
     ]

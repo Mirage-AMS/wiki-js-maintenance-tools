@@ -4,8 +4,15 @@
     {"dir": "accessory", "file": "card_dlc01_ac_01.json"},
     {"dir": "role",      "file": "card_rol01_ac_01.json"},
     {"dir": "accessory", "file": "card_dlc02_ac_01.json"},
+    {"dir": "role",      "file": "card_rol03_ac_03.json"}
+  ],
+  "deck_accessory_dba.json": [
     {"dir": "role",      "file": "card_rol02_ac_01.json"},
-    {"dir": "role",      "file": "card_rol02_ac_02.json"}
+    {"dir": "role",      "file": "card_rol03_ac_01.json"}
+  ],
+  "deck_accessory_dbb.json": [
+    {"dir": "role",      "file": "card_rol02_ac_02.json"},
+    {"dir": "role",      "file": "card_rol03_ac_02.json"}
   ],
   "deck_mountain_std.json": [
     {"dir": "exploration", "file": "card_std01_mo_01.json"},
@@ -311,7 +318,8 @@
     {"dir": "role", "file": "card_rol03_ri_06.json"},
     {"dir": "role", "file": "card_rol03_ri_07.json"},
     {"dir": "role", "file": "card_rol03_ri_08.json"},
-    {"dir": "role", "file": "card_rol03_ri_09.json"}
+    {"dir": "role", "file": "card_rol03_ri_09.json"},
+    {"dir": "role", "file": "card_rol03_ri_10.json"}
   ],
   "deck_role_info01.json": [
     {"dir": "role", "file": "card_rol01_ro_01.json"},
@@ -387,6 +395,8 @@
     {"dir": "role", "file": "card_rol03_ro_15.json"},
     {"dir": "role", "file": "card_rol03_ro_16.json"},
     {"dir": "role", "file": "card_rol03_ro_17.json"},
-    {"dir": "role", "file": "card_rol03_ro_18.json"}
+    {"dir": "role", "file": "card_rol03_ro_18.json"},
+    {"dir": "role", "file": "card_rol03_ro_19.json"},
+    {"dir": "role", "file": "card_rol03_ro_20.json"}
   ]
 }
