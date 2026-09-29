@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>永久 / 清仓\n<n02>只在你的回合中，交易区类型重复的商品售价-1",
+        "card_info_effect": "<n02>  \n<b00>解锁：${aP03}\n<b00>永久 / 清仓\n<n02>只在你的回合中，交易区类型重复的卡牌售价-1",
         "card_info_description": null,
         "card_picture_path": "clearance_sale.png",
         "card_inner_base_path": null,
@@ -62,7 +62,7 @@
                 "type": "永久",
                 "location": null,
                 "consumption": null,
-                "text": "只在你的回合中，交易区类型重复的商品售价-1"
+                "text": "只在你的回合中，交易区类型重复的卡牌售价-1"
             }
         ]
     }

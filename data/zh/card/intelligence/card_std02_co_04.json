@@ -30,7 +30,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${aP03}\n<b00>快速 / 听闻\n<n02>${tR01}，你购买商品时：抽1张卡牌",
+        "card_info_effect": "<b00>解锁：${aP03}\n<b00>快速 / 听闻\n<n02>${tR01}，你购买交易区卡牌时：抽1张卡牌",
         "card_info_description": null,
         "card_picture_path": "intelligence_3.png",
         "card_inner_base_path": null,
@@ -62,7 +62,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，你购买商品时：抽1张卡牌"
+                "text": "${tR01}，你购买交易区卡牌时：抽1张卡牌"
             }
         ]
     }

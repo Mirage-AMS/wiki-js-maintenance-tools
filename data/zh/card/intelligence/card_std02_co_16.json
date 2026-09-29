@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-09-28",
+            "content": "【骨爪魔杖】加强，现在也可以获得探索区的基础资源卡牌。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -30,7 +35,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：中级以上含${eF01}生物\n<b00>启动 / 探囊\n<n02>${tR01}，${tPrp}：获得交易区1个低级基础资源（矿物·植物·生物）；只在本回合你不能将其出售",
+        "card_info_effect": "<b00>解锁：中级以上含${eF01}生物\n<b00>启动 / 探囊\n<n02>${tR01}：获得探索区·交易区1张低级基础资源（矿物·植物·生物）卡牌；只在本回合你不能将其出售",
         "card_info_description": null,
         "card_picture_path": "clawed_staff.png",
         "card_inner_base_path": null,
@@ -62,7 +67,7 @@
                 "type": "启动",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，${tPrp}：获得交易区1个低级基础资源（矿物·植物·生物）；只在本回合你不能将其出售"
+                "text": "${tR01}：获得探索区·交易区1张低级基础资源（矿物·植物·生物）卡牌；只在本回合你不能将其出售"
             }
         ]
     }

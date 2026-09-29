@@ -15,7 +15,11 @@
     "revise": [
         {
             "date": "2025-01-26",
-            "content": "【心灵支配】在未超限状态下不再能对中级基础资源生效，超限后不再能对探索区中级以下生物生效。"
+            "content": "【心灵支配】削弱，在未超限状态下不再能对中级基础资源生效，超限后不再能对探索区中级以下生物生效。"
+        },
+        {
+            "date": "2026-09-28",
+            "content": "【心灵支配】削弱，超限代价从2个无色元素增加到3个。"
         }
     ],
     "card": {
@@ -35,7 +39,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b00>解锁：${eR06}\n<b00>超限：${eR02}\n<b00>启动 / ${eR02} / 支配 \n<n02>${tR01}：获得交易区1个低级商品；若超限，你也可以获得交易区中级以下基础资源",
+        "card_info_effect": "<n02> \n<b00>解锁：${eR06}\n<b00>超限：${eR03}\n<b00>启动 / ${eR02} / 支配 \n<n02>${tR01}：获得交易区1张低级卡牌；若超限，你也可以选择交易区中级基础资源卡牌",
         "card_info_description": null,
         "card_picture_path": "tmp/card_dlc02_ma_12.png",
         "card_inner_base_path": null,
@@ -61,14 +65,14 @@
         ],
         "card_tag_info": "法术",
         "unlock": "${eR06}",
-        "transcend": "${eR02}",
+        "transcend": "${eR03}",
         "effects": [
             {
                 "name": "支配",
                 "type": "启动",
                 "location": null,
                 "consumption": "${eR02}",
-                "text": "${tR01}：获得交易区1个低级商品；若超限，你也可以获得交易区中级以下基础资源"
+                "text": "${tR01}：获得交易区1张低级卡牌；若超限，你也可以选择交易区中级基础资源卡牌"
             }
         ]
     }

@@ -12,7 +12,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-09-28",
+            "content": "【双生魔杖】更新新卡图原画。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -32,7 +37,7 @@
         "card_element_num_air": null,
         "card_info_effect": "<b00>解锁：中级以上含${eA01}植物\n<b00>快速 / 弱化 \n<n02>${tR01}，你的回合中：本回合降低1个矿物·植物的采集需求为其当前采集需求的一半（向下取整）",
         "card_info_description": null,
-        "card_picture_path": "dlc01_twin_wand.png",
+        "card_picture_path": "tmp/card_dlc01_co_14.png",
         "card_inner_base_path": null,
         "card_medal_path": null,
         "card_info_product_tag": null,
@@ -41,7 +46,7 @@
         "card_package_info": "卡牌扩展包01",
         "card_match_info": "C",
         "card_image_url": "/assets/image/deck_conventicle_dlc01_14.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/dlc01_twin_wand.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_dlc01_co_14.jpg",
         "card_basic_info": "中级 / 情报 / 造物",
         "card_element_marks": [],
         "card_element_mark_num": 0,

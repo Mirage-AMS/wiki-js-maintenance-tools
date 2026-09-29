@@ -19,6 +19,10 @@
         {
             "date": "2026-07-06",
             "content": "【魔偶】不再在持有素材时被视为中级；[号令]效果不再表述为泛用打。"
+        },
+        {
+            "date": "2026-09-28",
+            "content": "【魔偶】现在有独立的卡图原画。"
         }
     ],
     "card": {
@@ -40,7 +44,7 @@
         "card_element_num_air": null,
         "card_info_effect": "<b00>启动 / 号令\n<n02>${tR01}：选以下1个效果启用，\n<n02>· 明置探索区1张卡牌\n<n02>· 本回合降低1个矿物3点采集需求\n<n02>· 为1个植物累积2点采集进度\n<n02>· 对1个生物造成3点伤害",
         "card_info_description": null,
-        "card_picture_path": "tmp/card_dlc02_co_26.png",
+        "card_picture_path": "tmp/card_dlc02_ac_01.png",
         "card_inner_base_path": "base_inner_others.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
@@ -49,7 +53,7 @@
         "card_package_info": "卡牌扩展包02",
         "card_match_info": "D",
         "card_image_url": "/assets/image/deck_accessory_std_04.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/card_dlc02_co_26.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_dlc02_ac_01.jpg",
         "card_basic_info": "低级 / 造物",
         "card_element_marks": [],
         "card_element_mark_num": 0,

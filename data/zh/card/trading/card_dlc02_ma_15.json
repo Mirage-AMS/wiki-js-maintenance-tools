@@ -11,7 +11,12 @@
         "keep-rate": null
     },
     "faq": [],
-    "revise": [],
+    "revise": [
+        {
+            "date": "2026-09-28",
+            "content": "【命运之眼】削弱，售价从11增加到12。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -21,7 +26,7 @@
         "card_resource_tag_1": null,
         "card_resource_tag_2": null,
         "card_resource_tag_3": null,
-        "card_price": 11,
+        "card_price": 12,
         "card_hp": null,
         "card_atk": null,
         "card_shield": null,

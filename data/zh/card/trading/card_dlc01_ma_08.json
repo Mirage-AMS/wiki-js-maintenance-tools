@@ -35,7 +35,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>快速 / 抢拍\n<n04>${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：将其视为交易区商品购买",
+        "card_info_effect": "<n02> \n<b02>解锁：${aP03}\n<b02>快速 / 抢拍\n<n04>${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：将其视为交易区卡牌并购买",
         "card_info_description": null,
         "card_picture_path": "dlc01_business_intuition.png",
         "card_inner_base_path": null,
@@ -67,7 +67,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": null,
-                "text": "${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：将其视为交易区商品购买"
+                "text": "${tR01}，其他玩家出售高级以下基础资源（矿物·植物·生物）时：将其视为交易区卡牌并购买"
             }
         ]
     }
