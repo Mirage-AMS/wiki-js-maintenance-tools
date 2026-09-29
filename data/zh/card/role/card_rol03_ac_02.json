@@ -1,0 +1,83 @@
+{
+    "path": "card/role/card_rol03_ac_02",
+    "tags": [
+        "卡牌",
+        "中级",
+        "生物"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 2,
+        "card_name": "玛格波罗斯",
+        "card_level": "中级",
+        "card_resource_type": "生物",
+        "card_resource_tag_1": null,
+        "card_resource_tag_2": null,
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": 1,
+        "card_element_num_water": null,
+        "card_element_num_fire": 1,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>永久（背包） / 帮手\n<n02>你采集累积的采集进度额外+1\n<n32> \n<b00>快速（背包） / 帮凶\n<n02>${tR01}，${tAct}：对1个生物造成3点伤害",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ac_02.png",
+        "card_inner_base_path": "base_inner_role_vasilisa.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包03",
+        "card_match_info": "∞",
+        "card_image_url": "/assets/image/deck_accessory_dbb_02.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ac_02.jpg",
+        "card_basic_info": "中级 / 生物",
+        "card_element_marks": [
+            "${eE01}",
+            "${eF01}"
+        ],
+        "card_element_mark_num": 2,
+        "card_element_mark_info": "${eE01}${eF01}",
+        "card_level_info": "中级",
+        "card_types": [
+            "生物"
+        ],
+        "card_type_info": "生物",
+        "card_tags": [],
+        "card_tag_info": "",
+        "effects": [
+            {
+                "name": "帮手",
+                "type": "永久",
+                "location": "背包",
+                "consumption": null,
+                "text": "你采集累积的采集进度额外+1"
+            },
+            {
+                "name": "帮凶",
+                "type": "快速",
+                "location": "背包",
+                "consumption": null,
+                "text": "${tR01}，${tAct}：对1个生物造成3点伤害"
+            }
+        ]
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ro_19",
+            "card_name": "歃血为盟",
+            "brief_description": "规则 / 专属",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_19.jpg"
+        }
+    ]
+}

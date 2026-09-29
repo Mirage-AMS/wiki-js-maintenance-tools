@@ -325,6 +325,18 @@
             "template": "card_intelligence_template.html",
             "data": "card_rol02_ro_28.json"
         },
+        "card_rol03_ac_01": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ac_01.json"
+        },
+        "card_rol03_ac_02": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ac_02.json"
+        },
+        "card_rol03_ac_03": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ac_03.json"
+        },
         "card_rol03_ri_01": {
             "template": "card_intelligence_template.html",
             "data": "card_rol03_ri_01.json"
@@ -360,6 +372,10 @@
         "card_rol03_ri_09": {
             "template": "card_intelligence_template.html",
             "data": "card_rol03_ri_09.json"
+        },
+        "card_rol03_ri_10": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ri_10.json"
         },
         "card_rol03_ro_01": {
             "template": "card_intelligence_template.html",
@@ -432,6 +448,14 @@
         "card_rol03_ro_18": {
             "template": "card_intelligence_template.html",
             "data": "card_rol03_ro_18.json"
+        },
+        "card_rol03_ro_19": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ro_19.json"
+        },
+        "card_rol03_ro_20": {
+            "template": "card_intelligence_template.html",
+            "data": "card_rol03_ro_20.json"
         }
     }
 }

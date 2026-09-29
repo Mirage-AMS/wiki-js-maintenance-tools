@@ -1,5 +1,5 @@
 {
-    "path": "card/role/card_rol02_ac_01",
+    "path": "card/role/card_rol03_ac_01",
     "tags": [
         "卡牌",
         "低级",
@@ -14,8 +14,8 @@
     "revise": [],
     "card": {
         "card_id": null,
-        "card_num": 1,
-        "card_name": "雏鹰",
+        "card_num": 2,
+        "card_name": "波罗斯",
         "card_level": "低级",
         "card_resource_type": "生物",
         "card_resource_tag_1": null,
@@ -29,18 +29,18 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>永久（背包） / 成长\n<n02>只在该资源累积3个以上成长标记时，将其转变为【矛隼】\n<n02> <n02> <n02> <n20> ",
-        "card_info_description": "<n04>巢边试振翅，目光初露凌云志，静待九霄时 ",
-        "card_picture_path": "role/arya_eaglet.png",
-        "card_inner_base_path": "base_inner_role_arya.png",
+        "card_info_effect": "<b00>永久（背包） / 帮手\n<n02>你采集累积的采集进度额外+1",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ac_01.png",
+        "card_inner_base_path": "base_inner_role_vasilisa.png",
         "card_medal_path": "medal_role_common.png",
         "card_info_product_tag": null,
         "card_info_element_tooltip": null,
         "card_info_solo_mulligan": null,
-        "card_package_info": "角色扩展包02",
+        "card_package_info": "角色扩展包03",
         "card_match_info": "∞",
-        "card_image_url": "/assets/image/deck_accessory_dba_01.jpg",
-        "card_thumbnail_url": "/assets/thumbnail/arya_eaglet.jpg",
+        "card_image_url": "/assets/image/deck_accessory_dba_02.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ac_01.jpg",
         "card_basic_info": "低级 / 生物",
         "card_element_marks": [
             "${eE01}"
@@ -56,26 +56,20 @@
         "card_tag_info": "",
         "effects": [
             {
-                "name": "成长",
+                "name": "帮手",
                 "type": "永久",
                 "location": "背包",
                 "consumption": null,
-                "text": "只在该资源累积3个以上成长标记时，将其转变为【矛隼】"
+                "text": "你采集累积的采集进度额外+1"
             }
         ]
     },
     "related_cards": [
         {
-            "path": "/card/role/card_rol02_ro_15",
-            "card_name": "鹰舍邂逅",
+            "path": "/card/role/card_rol03_ro_19",
+            "card_name": "歃血为盟",
             "brief_description": "规则 / 专属",
-            "card_thumbnail_url": "/assets/thumbnail/arya_gift.jpg"
-        },
-        {
-            "path": "/card/role/card_rol02_ac_02",
-            "card_name": "矛隼",
-            "brief_description": "中级 / 生物",
-            "card_thumbnail_url": "/assets/thumbnail/arya_gyrfalcon.jpg"
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_19.jpg"
         }
     ]
 }
