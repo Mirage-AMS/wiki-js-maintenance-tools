@@ -18,7 +18,7 @@
                 "path": "/card",
                 "description": "卡牌查询",
                 "color": "#3498db",
-                "itemCount": 360
+                "itemCount": 366
             },
             {
                 "title": "关于",
@@ -49,6 +49,13 @@
             }
         ],
         "recentUpdates": [
+            {
+                "date": "2026-10-18",
+                "title": "角色扩展包03 更新",
+                "description": "全新角色【<a href='/card/role/card_rol03_ri_11'>玛琳娜，蛇骨猎人</a>】和【<a href='/card/role/card_rol03_ri_12'>朱利安，未竟之脉</a>】已经上线！",
+                "category": "角色更新",
+                "link": "/rule/rule_overview/#h-75-角色扩展包-03"
+            },
             {
                 "date": "2026-09-28",
                 "title": "【瓦西里莎，与兽共舞】上线",

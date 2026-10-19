@@ -510,6 +510,34 @@
                     "专属"
                 ],
                 "image": "/assets/thumbnail/card_rol03_ri_10.jpg"
+            },
+            {
+                "id": 95,
+                "url": "/card/role/card_rol03_ri_11",
+                "match": "∞",
+                "name": "玛琳娜，蛇骨猎人",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/card_rol03_ri_11.jpg"
+            },
+            {
+                "id": 96,
+                "url": "/card/role/card_rol03_ri_12",
+                "match": "∞",
+                "name": "朱利安，未竟之脉",
+                "level": null,
+                "type": [
+                    "角色"
+                ],
+                "attribute": [
+                    "专属"
+                ],
+                "image": "/assets/thumbnail/card_rol03_ri_12.jpg"
             }
         ]
     }

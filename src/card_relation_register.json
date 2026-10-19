@@ -32,6 +32,10 @@
             "type": "card",
             "dir": "/card/role"
         },
+        "card_rol03_ac_03.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
         "card_std01_co_28.json": {
             "type": "card",
             "dir": "/card/intelligence"
@@ -197,6 +201,14 @@
             "dir": "/card/role"
         },
         "card_rol03_ri_10.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ri_11.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ri_12.json": {
             "type": "card",
             "dir": "/card/role"
         },
@@ -485,6 +497,22 @@
             "dir": "/card/role"
         },
         "card_rol03_ro_20.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_21.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_22.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_23.json": {
+            "type": "card",
+            "dir": "/card/role"
+        },
+        "card_rol03_ro_24.json": {
             "type": "card",
             "dir": "/card/role"
         }
@@ -923,6 +951,31 @@
         {
             "from": "card_rol03_ri_10.json",
             "to": "card_rol03_ro_20.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_11.json",
+            "to": "card_rol03_ro_21.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ro_21.json",
+            "to": "card_rol03_ac_03.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_11.json",
+            "to": "card_rol03_ro_22.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_12.json",
+            "to": "card_rol03_ro_23.json",
+            "type": "bidirectional"
+        },
+        {
+            "from": "card_rol03_ri_12.json",
+            "to": "card_rol03_ro_24.json",
             "type": "bidirectional"
         }
     ]

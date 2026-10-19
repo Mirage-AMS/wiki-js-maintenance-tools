@@ -1,0 +1,92 @@
+{
+    "path": "card/role/card_rol03_ro_24",
+    "tags": [
+        "卡牌",
+        "中级",
+        "情报",
+        "专属",
+        "造物"
+    ],
+    "stat": {
+        "win-rate": null,
+        "unlock-rate": null,
+        "keep-rate": null
+    },
+    "faq": [
+        {
+            "question": "什么是“进入探索区栏位时”，我如果先进行了采集/狩猎，还可以发动这个效果吗？",
+            "answer": "不可以。“进入探索区栏位时”是指你消耗行动或发动效果进入探索区栏位后的那个自由时点，只有离开这个时点才可以继续采集/狩猎。"
+        },
+        {
+            "question": "当我进入任一探索区栏位时，我可以先看到该探索区的卡牌是什么，再决定是否发动【寻宝罗盘】吗？",
+            "answer": "可以。在进入探索区栏位后，当前栏位最上方的卡牌会始终保持明置，这可以被视为一个永久效果启用。之后才会进入自由时点的效果发动确认。"
+        },
+        {
+            "question": "可以使用【寻宝罗盘】明置当前栏位左侧栏位的卡牌后，再选择进入右侧栏位吗？",
+            "answer": "可以。只要求明置相邻栏位卡牌和进入相邻栏位，没有要求这两个栏位必须相同。"
+        }
+    ],
+    "revise": [],
+    "card": {
+        "card_id": null,
+        "card_num": 1,
+        "card_name": "寻宝罗盘",
+        "card_level": "中级",
+        "card_resource_type": "情报",
+        "card_resource_tag_1": "专属",
+        "card_resource_tag_2": "造物",
+        "card_resource_tag_3": null,
+        "card_price": null,
+        "card_hp": null,
+        "card_atk": null,
+        "card_shield": null,
+        "card_element_num_earth": null,
+        "card_element_num_water": null,
+        "card_element_num_fire": null,
+        "card_element_num_air": null,
+        "card_info_effect": "<b00>解锁：中级以上含${eW01}或含${eA01}矿物\n<b00>快速 / 寻宝\n<n02>${tR01}，你进入探索区栏位时：明置相邻栏位1张卡牌，选以下1个效果启用，\n<n02>· 将该探索区1个高级以下基础资源作为你已解锁造物的素材堆叠\n<n02>· 进入1个相邻栏位",
+        "card_info_description": null,
+        "card_picture_path": "tmp/card_rol03_ro_24.png",
+        "card_inner_base_path": "base_inner_role_jullien.png",
+        "card_medal_path": "medal_role_common.png",
+        "card_info_product_tag": null,
+        "card_info_element_tooltip": null,
+        "card_info_solo_mulligan": null,
+        "card_package_info": "角色扩展包03",
+        "card_match_info": "∞",
+        "card_image_url": "/assets/image/deck_role_info03_24.jpg",
+        "card_thumbnail_url": "/assets/thumbnail/card_rol03_ro_24.jpg",
+        "card_basic_info": "中级 / 情报 / 专属 · 造物",
+        "card_element_marks": [],
+        "card_element_mark_num": 0,
+        "card_element_mark_info": "",
+        "card_level_info": "中级",
+        "card_types": [
+            "情报"
+        ],
+        "card_type_info": "情报",
+        "card_tags": [
+            "专属",
+            "造物"
+        ],
+        "card_tag_info": "专属 · 造物",
+        "unlock": "中级以上含${eW01}或含${eA01}矿物",
+        "effects": [
+            {
+                "name": "寻宝",
+                "type": "快速",
+                "location": null,
+                "consumption": null,
+                "text": "${tR01}，你进入探索区栏位时：明置相邻栏位1张卡牌，选以下1个效果启用，<br>· 将该探索区1个高级以下基础资源作为你已解锁造物的素材堆叠<br>· 进入1个相邻栏位"
+            }
+        ]
+    },
+    "related_cards": [
+        {
+            "path": "/card/role/card_rol03_ri_12",
+            "card_name": "朱利安，未竟之脉",
+            "brief_description": "角色 / 专属",
+            "card_thumbnail_url": "/assets/thumbnail/card_rol03_ri_12.jpg"
+        }
+    ]
+}
