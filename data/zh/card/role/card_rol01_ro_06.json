@@ -12,8 +12,18 @@
         "unlock-rate": null,
         "keep-rate": null
     },
-    "faq": [],
-    "revise": [],
+    "faq": [
+        {
+            "question": "【激昂澎湃】效果中的${eF0X}是什么意思？X又是什么意思？",
+            "answer": "${eF0X}是指你在发动这个效果时，可以消耗任意数目的火元素（至少1个），结算效果时，对应的X指的是你发动效果时消耗的火元素数目。"
+        }
+    ],
+    "revise": [
+        {
+            "date": "2026-11-09",
+            "content": "【激昂澎湃】现在是1行动1次的X火打X+1。"
+        }
+    ],
     "card": {
         "card_id": null,
         "card_num": 1,
@@ -31,7 +41,7 @@
         "card_element_num_water": null,
         "card_element_num_fire": null,
         "card_element_num_air": null,
-        "card_info_effect": "<b00>解锁：${eF01}${eF01}${eR02}\n<b00>快速 / ${eF0X} / 澎湃\n<n02>${tAct}：选以下1个效果启用，\n<n02>· 为当前探索区1个矿物累积X点采集进度\n<n02>· 对当前探索区1个生物造成X点伤害\n<n02> <n20>  ",
+        "card_info_effect": "<b00>解锁：${eF01}${eF01}${eR02}\n<b00>快速 / ${eF0X} / 澎湃\n<n02>${tAct}，1行动1次：选以下1个效果启用，\n<n02>· 为1个矿物累积X+1点采集进度\n<n02>· 对1个生物造成X+1点伤害\n<n02> <n20>  ",
         "card_info_description": "<n02>心火不熄，激昂澎湃 ",
         "card_picture_path": "master_fire.png",
         "card_inner_base_path": "base_inner_role_master.png",
@@ -64,7 +74,7 @@
                 "type": "快速",
                 "location": null,
                 "consumption": "${eF0X}",
-                "text": "${tAct}：选以下1个效果启用，<br>· 为当前探索区1个矿物累积X点采集进度<br>· 对当前探索区1个生物造成X点伤害"
+                "text": "${tAct}，1行动1次：选以下1个效果启用，<br>· 为1个矿物累积X+1点采集进度<br>· 对1个生物造成X+1点伤害"
             }
         ]
     },
